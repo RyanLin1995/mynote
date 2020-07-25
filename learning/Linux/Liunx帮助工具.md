@@ -48,4 +48,5 @@ man page 常用按键：
 
 与 man page 相关的文件：
 `/usr/share/man`
-/etc/man_db.config
+`/etc/man_db.config`
+
