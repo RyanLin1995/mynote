@@ -36,9 +36,10 @@ PS:可能还会有 Authors 或 Copyright
 man page 常用按键：
 |按键|进行工作|
 |-|-|
-|空格键|向下翻一页|
+|<kbd>空格键</kbd>|向下翻一页|
 |<kbd>Page Down</kbd>|向下翻一页|
-|<kbd>Page Up<kbd>|向上翻一页|
-|||
-|||
+|<kbd>Page Up</kbd>|向上翻一页|
+|<kbd>Home</kbd>|去到第一页|
+|<kbd>End</kbd>|去到最后一页|
+
 
