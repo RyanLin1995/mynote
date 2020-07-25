@@ -66,10 +66,10 @@ info page 常用按键
 |<kbd>空格键</kbd>|向下翻一页|
 |<kbd>Page Down</kbd>|向下翻一页|
 |<kbd>Page Up</kbd>|向上翻一页|
-|<kbd>tab</kbd>|在 node 之间移动，有 node 的地方，通常会以 * 显示。|
-|<kbd></kbd>||
-|<kbd></kbd>||
-|<kbd></kbd>||
+|<kbd>tab</kbd>|在 node 之间移动，有 node 的地方，通常会以 * 显示|
+|<kbd>Enter</kbd>|当光标在 node 上面时，按下 Enter 可以进入该 node|
+|<kbd>b</kbd>|移动光标到该 info 画面当中的第一个 node 处|
+|<kbd>e</kbd>|移动光标到该 info 画面当中的最后一个 node 处|
 |<kbd></kbd>||
 |<kbd></kbd>||
 |<kbd></kbd>||
