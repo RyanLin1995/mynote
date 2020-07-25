@@ -34,6 +34,11 @@ man page 组成部分：
 PS:可能还会有 Authors 或 Copyright
 
 man page 常用按键：
-|按键||
+|按键|进行工作|
 |-|-|
+|空格键|向下翻一页|
+|`Page Down`||
+|||
+|||
+|||
 
