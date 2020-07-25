@@ -47,7 +47,8 @@ man page 常用按键：
 |<kbd>q</kbd>|退出 man page |
 
 搜索特定指令的man page 文件:
-通过指令名查找 an -f comman`  == `whatis comman`
+通过关键字为指令名查找 `man -f comman`  == `whatis comman`
+通过关键字为说明查找`man -k string` == `
 
 与 man page 相关的文件：
 `/usr/share/man`
