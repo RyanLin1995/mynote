@@ -63,6 +63,10 @@ Linux 特有的在线求助方式。将文件数据拆成一个一个的段落�
 info page 常用按键
 |按键|进行工作|
 |-|-|
+|<kbd>空格键</kbd>|向下翻一页|
+|<kbd>Page Down</kbd>|向下翻一页|
+|<kbd>Page Up</kbd>|向上翻一页|
+|<kbd>tab</kbd>|在 node 之间移动，有 node 的地方，通常会以 * 显示。|
 |<kbd></kbd>||
 |<kbd></kbd>||
 |<kbd></kbd>||
