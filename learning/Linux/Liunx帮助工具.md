@@ -31,6 +31,9 @@ man page 组成部分：
 |FILES|这个程序或数据所使用或参考或链接到的某些文件|
 |SEE ALSO|可以参考的，跟这个指令或数据有关的其他说明|
 |EXAMPLE|一些可以参考的范例|
-PS:可能
+PS:可能还会有 Authors 或 Copyright
 
+man page 常用按键：
+|按键||
+|-|-|
 
