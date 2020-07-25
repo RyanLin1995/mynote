@@ -81,4 +81,6 @@ info page 常用按键
 `/usr/share/info`
 
 ---
-## 其他
+## 其他有用文件：
+`/usr/share/doc`:
+放置了软件的说明文档
