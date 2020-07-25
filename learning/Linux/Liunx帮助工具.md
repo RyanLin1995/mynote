@@ -8,8 +8,9 @@
 查询`comman`的具体用法
 
 * man page左上角指令名称后代号解析：
-|column1|column2|
-|-|-|-|
-|content1|content2|content3|
+|代号|代表内容|
+|1|用户在shell环境中可以操作的指令或可执行文件|
+|1|content2|
+|-|-|
 
 
