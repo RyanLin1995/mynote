@@ -71,6 +71,9 @@ info page 常用按键
 |<kbd>b</kbd>|移动光标到该 info 画面当中的第一行|
 |<kbd>e</kbd>|移动光标到该 info 画面当中的最后一行|
 |<kbd>n</kbd>|前往下一个 node 处|
+|<kbd>p</kbd>|前往上一个 node 处|
+|<kbd>u</kbd>|向上移动一层|
+|<kbd>s,/</kbd>|在 info page 当中进行搜寻|
+|<kbd>h,?</kbd>||
 |<kbd></kbd>||
-|<kbd></kbd>||
-|<kbd></kbd>||
+
