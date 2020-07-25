@@ -57,4 +57,5 @@ man page 常用按键：
 
 ---
 ## info page
-用法：``
+用法：`info comman`
+Linux 特有的的在线求助方式。文本模式的网页数据
