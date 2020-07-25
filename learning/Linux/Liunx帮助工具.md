@@ -7,5 +7,9 @@
 用法：`man comman`
 查询`comman`的具体用法
 
-###
-|代号|代表内容|
+* man page左上角指令名称后代号解析：
+|column1|column2|
+|-|-|-|
+|content1|content2|content3|
+
+
