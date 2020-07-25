@@ -37,8 +37,8 @@ man page 常用按键：
 |按键|进行工作|
 |-|-|
 |空格键|向下翻一页|
-|`Page Down`||
-|||
+|<kbd>Page Down</kbd>|向下翻一页|
+|<kbd>Page Up<kbd>|向上翻一页|
 |||
 |||
 
