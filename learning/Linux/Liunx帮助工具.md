@@ -6,3 +6,6 @@
 ## man page(男人页)
 用法：`man comman`
 查询`comman`的具体用法
+
+###
+|代号|代表内容|
