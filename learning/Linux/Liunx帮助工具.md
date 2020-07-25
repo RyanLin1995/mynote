@@ -26,8 +26,8 @@ man page 组成部分：
 |NAME|简短的指令、数据名称说明|
 |SYNOPSIS|简短的指令下达语法(syntax)简介|
 |DESCRIPTION|较为完整的说明，最好细看|
-|||
-|||
+|OPTIONS|针对SYNOPSIS部分中，有列举的所有可用的选项说明|
+|COMMANDS|当这个程序(软件)执行的时候，可以在此程序(软件)|
 |||
 
 
