@@ -31,7 +31,7 @@ man page 组成部分：
 |FILES|这个程序或数据所使用或参考或链接到的某些文件|
 |SEE ALSO|可以参考的，跟这个指令或数据有关的其他说明|
 |EXAMPLE|一些可以参考的范例|
-PS:可能还会有 Authors 或 Copyright
+* PS:可能还会有 Authors 或 Copyright
 
 man page 常用按键：
 |按键|进行工作|
@@ -45,6 +45,9 @@ man page 常用按键：
 |`?string`|向[上]搜寻 string 这个字符串|
 |<kbd>n,N</kbd>|利用 / 或 ? 来搜寻字符串时，可以用 n 来继续下一个搜寻 (不论是 / 或 ?) ，可以利用 N 来进行[反向]搜寻。举例来说，我以 /vbird 搜寻 vbird 字符串， 那么可以 n 继续往下查询，用 N 往上查询。若以 ?vbird 向上查询 vbird 字符串， 那我可以用 n 继续[向上]查询，用 N 反向查询。|
 |<kbd>q</kbd>|退出 man page |
+
+man page 搜索特定指令:
+`man -f comman`  == `whatis comman`
 
 与 man page 相关的文件：
 `/usr/share/man`
