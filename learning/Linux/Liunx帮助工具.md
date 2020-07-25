@@ -56,4 +56,5 @@ man page 常用按键：
 `/etc/man_db.config`
 
 ---
-## info
+## info page
+
