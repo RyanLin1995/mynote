@@ -41,5 +41,8 @@ man page 常用按键：
 |<kbd>Page Up</kbd>|向上翻一页|
 |<kbd>Home</kbd>|去到第一页|
 |<kbd>End</kbd>|去到最后一页|
-
+|`/string`|向下搜寻 string 这个字符串|
+|`?string`|向上搜寻 string |
+|||
+|||
 
