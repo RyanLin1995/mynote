@@ -74,6 +74,6 @@ info page 常用按键
 |<kbd>p</kbd>|前往上一个 node 处|
 |<kbd>u</kbd>|向上移动一层|
 |<kbd>s,/</kbd>|在 info page 当中进行搜寻|
-|<kbd>h,?</kbd>||
-|<kbd></kbd>||
+|<kbd>H</kbd>|显示求助选单|
+|<kbd>q</kbd>|退出info page|
 
