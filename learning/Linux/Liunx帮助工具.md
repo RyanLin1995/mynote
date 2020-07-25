@@ -51,7 +51,7 @@ man page 常用按键：
 通过关键字为说明查找`man -k string` == `apropos string`
 要使用这两个命令，需要先在root底下`mandb`建立数据库才行
 
-与 man page 相关的文件：
+与 man page 相关的文件夹：
 `/usr/share/man`
 `/etc/man_db.config`
 
@@ -77,3 +77,8 @@ info page 常用按键
 |<kbd>H</kbd>|显示求助选单|
 |<kbd>q</kbd>|退出info page|
 
+与info page 相关的文件夹：
+`/usr/share/info`
+
+---
+## 其他
