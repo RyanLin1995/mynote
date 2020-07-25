@@ -49,8 +49,11 @@ man page 常用按键：
 搜索特定指令的man page 文件:
 通过关键字为指令名查找 `man -f string`  == `whatis string`
 通过关键字为说明查找`man -k string` == `apropos string`
+要使用这两个命令，需要先在root底下`mandb`建立数据库才行
 
 与 man page 相关的文件：
 `/usr/share/man`
 `/etc/man_db.config`
 
+---
+## info
