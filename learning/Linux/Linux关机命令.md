@@ -26,4 +26,4 @@
 
 ---
 ## systemctl
-无论是`shotdown`,`reboot`,`halt`还是`poweroff`，都是在呼叫`systemctl`这个命令，因此，可以使用`systemctl`
+无论是`shutdown`,`reboot`,`halt`还是`poweroff`，都是在呼叫`systemctl`这个命令，因此，可以使用`systemctl shutdown`之类的命令来进行关机或重启(前提是在 root 底下或者拥有 )
