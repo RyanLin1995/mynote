@@ -22,4 +22,6 @@
 
 ---
 ## reboot、halt、poweroff
-三个命令作用相似，其中`reboot`是重启系统，`halt`和`poweroff` 可以重启系统或关机
+三个命令作用相似，其中`reboot`是重启系统，`halt`和`poweroff` 可以关闭系统
+
+---
