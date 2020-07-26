@@ -26,4 +26,4 @@
 
 ---
 ## systemctl
-无论是`shotdown`,`reboot`,`halt`还是``
+无论是`shotdown`,`reboot`,`halt`还是`poweroff`
