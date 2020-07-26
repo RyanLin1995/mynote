@@ -11,4 +11,4 @@
 |时间|指定系统关机的时间|
 
 例子：
-`shutdown`
+`shutdown -h 10 'I will shutdown after 10 mins` : 设备将于10分钟
