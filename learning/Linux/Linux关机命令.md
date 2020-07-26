@@ -22,3 +22,4 @@
 
 ---
 ## reboot、halt、poweroff
+三个命令作用相似，其中`reboot`是重启系统，`halt`和``
