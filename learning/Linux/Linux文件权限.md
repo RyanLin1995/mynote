@@ -2,6 +2,8 @@
 范例：`drwxr-xr-x.   2    ryan   ryan    6      7月 11 10:09   Desktop`
 
 * `drwxr-xr-x.`：代表文件的类型和权限
-文件的额
+第一个字符代表文件的类型，有：
+
+
 
 
