@@ -1,3 +1,2 @@
 ## 基本权限
-drwxr-xr-x.   2    ryan   ryan    6      7月 11 10:09   Desktop
-[ 权限 ]    [连结][拥有者][群组][文件容量][ 修改日期 ]    [ 檔名 ]
+`drwxr-xr-x.   2    ryan   ryan    6      7月 11 10:09   Desktop`
