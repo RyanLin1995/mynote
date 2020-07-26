@@ -25,3 +25,5 @@
 三个命令作用相似，其中`reboot`是重启系统，`halt`和`poweroff` 可以关闭系统
 
 ---
+## systemctl
+无论是`shotdown`,`reboot`,`halt`还是``
