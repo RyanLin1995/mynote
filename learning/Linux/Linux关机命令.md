@@ -19,3 +19,6 @@
 
 `shutdown -k now 'This system will reboot'`
 仅发出警告，不做任何重启/关机操作
+
+---
+## 
