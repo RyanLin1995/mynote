@@ -8,7 +8,8 @@
 |-r|在将系统的服务停掉之后就重新启动(常用)|
 |-h|将系统的服务停掉后，立即关机(常用)|
 |-c|取消已经在进行的 shutdown 指令内容|
-|时间|指定系统关机的时间|
+|时间|指定系统关机的时间，通常不加时间，会默认1分钟后关机|
 
 例子：
-`shutdown -h 10 'I will shutdown after 10 mins` : 设备将于10分钟
+`shutdown -h 10 'I will shutdown after 10 mins`
+设备将于10分钟后关闭
