@@ -10,6 +10,8 @@
 |-c|取消已经在进行的 shutdown 指令内容|
 |时间|指定系统关机的时间，通常不加时间，会默认1分钟后关机|
 
-例子：
+范例：
 `shutdown -h 10 'I will shutdown after 10 mins`
 设备将于10分钟后关闭
+
+`shutdown -r now`
