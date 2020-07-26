@@ -11,7 +11,11 @@
 |时间|指定系统关机的时间，通常不加时间，会默认1分钟后关机|
 
 范例：
-`shutdown -h 10 'I will shutdown after 10 mins`
+`shutdown -h 10 'I will shutdown after 10 mins'`
 设备将于10分钟后关闭
 
 `shutdown -r now`
+设备将马上重启
+
+`shutdown -k now 'This system will reboot'`
+仅发出
