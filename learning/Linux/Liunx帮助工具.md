@@ -54,6 +54,7 @@ man page 常用按键：
 与 man page 相关的文件夹：
 `/usr/share/man`
 `/etc/man_db.config`
+`/usr/local/man`
 
 ---
 ## info page
