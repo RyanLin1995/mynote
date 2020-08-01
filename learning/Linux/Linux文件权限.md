@@ -57,6 +57,5 @@ PS:`chown :组名 文件或目录` 与 `chown .组名 文件或目录` 可以更
 
 用法2：
 `chmod [-R] ugoa +-= rwx 文件或目录`
-|chmod|u
-|
-|-|-|
+|chmod|ugoa|+-=|rwx|文件或目录|
+|-|-|-|-|-|
