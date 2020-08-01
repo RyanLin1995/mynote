@@ -52,5 +52,5 @@ PS:`chown :组名 文件或目录` 与 `chown .组名 文件或目录` 可以更
 `chomd [-R] xyz 文件或目录`
 |选项与参数|说明|
 |-|-|
-|xyz|数字权限，其中read:4, write:2, execu|
+|xyz|数字权限，其中read(r):4 write(w):2, execute(x):1|
 |-R|递归的持续变更，即连同次级目录下所有目录、文件都更改为这个组|
