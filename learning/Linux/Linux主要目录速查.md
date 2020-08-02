@@ -2,7 +2,7 @@
 
 - **/bin、/usr/bin**：可执行二进制文件的目录，如常用的命令 ls、tar、mv、cat 等
 
-- **/boot**：放置 linux 系统启动时用到的一些文件，如 linux 的内核文件：/boot/vmlinuz，系统引导管理器：/boot/grub
+- **/boot**：放置 linux 系统启动时用到的一些文件，如linux 的内核文件：/boot/vmlinuz，系统引导管理器：/boot/grub
 
 - **/dev**：存放linux系统下的设备文件，访问该目录下某个文件，相当于访问某个设备，常用的是挂载光驱mount /dev/cdrom /mnt
 
