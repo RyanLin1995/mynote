@@ -43,8 +43,9 @@
   * /usr/src: 放置一般的原始码 (/usr/src/linux放置核心原始码)
 - **/var**：放置系统执行过程中经常变化的文件
   * /var/log：随时更改的日志文件
+  * /var/spool: 
   * /var/spool/mail：邮件存放的目录
   * /var/run：程序或服务启动后，其 PID 存放在该目录下
-  * /var/lock: 确保某些一次只被
+  * /var/lock: 确保某些文件资源一次只被一个程序占用
 
 PS: 其中`/`、`usr`与`/var`受FHS定义
