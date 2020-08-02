@@ -34,11 +34,11 @@
 
 - **/usr (Unix Software Resource)**：应用程序存放目录
   * /usr/bin：存放应用程序
-  * /usr/share：存放共享数据
+  * /usr/share：主要放置只读架构的数据文件，也存放共享数据
   * /usr/lib：存放不能直接运行的，却是许多程序运行所必需的一些函数库文件
   * /usr/local：自行下载的软件存放的目录，可以与原先版本区分开来，如软件升级包
-  * /usr/share/doc：系统说明文件存放目录
-  * /usr/share/man：程序说明文件存放目录
+  * /usr/share/doc：软件杂项的文件说明
+  * /usr/share/man：联机帮助文件
 - **/var**：放置系统执行过程中经常变化的文件
   * /var/log：随时更改的日志文件
   * /var/spool/mail：邮件存放的目录
