@@ -42,4 +42,4 @@
   * /var/spool/mail：邮件存放的目录
   * /var/run：程序或服务启动后，其 PID 存放在该目录下
 
-PS: 其中`/`
+PS: 其中`/`、`usr`与`/var`受FHS定义
