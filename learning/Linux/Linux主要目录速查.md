@@ -40,10 +40,11 @@
   * /usr/share/doc：软件杂项的文件说明
   * /usr/share/man：联机帮助文件
   * /usr/include: c/c++等程序语言的档头(header)与包含档(include)放置处，当我们以tarball 方式 (*.tar.gz 的方式安装软件)安装某些数据时，会使用到里头的许多包含档
-  * /usr/src: 放置一般的原始码(/usr/src/linux放置)
+  * /usr/src: 放置一般的原始码 (/usr/src/linux放置核心原始码)
 - **/var**：放置系统执行过程中经常变化的文件
   * /var/log：随时更改的日志文件
   * /var/spool/mail：邮件存放的目录
   * /var/run：程序或服务启动后，其 PID 存放在该目录下
+  * /var/lock: 确保某些一次只被
 
 PS: 其中`/`、`usr`与`/var`受FHS定义
