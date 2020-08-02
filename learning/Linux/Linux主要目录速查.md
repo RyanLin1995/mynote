@@ -2,11 +2,11 @@
 
 - **/bin、/usr/bin**：可执行二进制文件的目录，如常用的命令 ls、tar、mv、cat 等
 
-- **/boot**：放置 linux 系统启动时用到的一些文件，如linux 的内核文件：/boot/vmlinuz，系统引导管理器：/boot/grub
+- **/boot**：放置 linux 系统启动时用到的一些文件，如linux 的内核文件：/boot/vmlinuz、系统引导管理器：/boot/grub
 
 - **/dev**：存放linux系统下的设备文件，访问该目录下某个文件，相当于访问某个设备，常用的是挂载光驱mount /dev/cdrom /mnt
 
-- **/etc**：系统配置文件存放的目录，不建议在此目录下存放可执行文件，重要的配置文件有/etc/modprobe.d/, /etc/passwd, /etc/fstab, /etc/issue
+- **/etc**：系统配置文件存放的目录，不建议在此目录下存放可执行文件，重要的配置文件有/etc/modprobe.d/、/etc/passwd、/etc/fstab、/etc/issue
 
 - **/home**：系统默认的用户家目录，新增用户账号时，用户的家目录都存放在此目录下
 
