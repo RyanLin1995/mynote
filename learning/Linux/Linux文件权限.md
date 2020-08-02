@@ -82,4 +82,6 @@ PS: 所更改的组必须存在于
 
 ---
 ## 4. 绝对路径与相对路径
-* 绝对路径
+* 绝对路径(absolute path)：由根目录(/)开始写起的文件名或目录名称， 例如 /home/dmtsai/.bashrc
+* 相对路径(relative path)：相对于目前路径的文件名写法。 例如 ./home/dmtsai 或 ../../home/dmtsai/ 等等。反正开头不是 /
+就属于相对路径的写法
