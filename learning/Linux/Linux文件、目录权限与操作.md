@@ -95,3 +95,5 @@ PS: 所更改的组必须存在于
 ### 变化目录: cd(Change Directory)
 用法: `cd 相对路径或绝对路径`
 * PS: 仅输入`cd`，结果与`cd ~`一样
+
+### 显示当前所在目录: pwd(Print Working Directory)
