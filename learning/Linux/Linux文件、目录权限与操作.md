@@ -91,4 +91,6 @@ PS: 所更改的组必须存在于
 * `~account`: 代表account这个用户的家目录
 
 ---
-## 5.目录
+## 5.目录操作指令
+### cd(Change Directory)
+用法
