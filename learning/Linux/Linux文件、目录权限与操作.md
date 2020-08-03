@@ -97,3 +97,6 @@ PS: 所更改的组必须存在于
 * PS: 仅输入`cd`，结果与`cd ~`一样
 
 ### 显示当前所在目录: pwd(Print Working Directory)
+用法: `pwd [-P]`
+|选项与参数|说明|
+|-|-|
