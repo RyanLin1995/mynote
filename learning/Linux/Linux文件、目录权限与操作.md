@@ -93,4 +93,4 @@ PS: 所更改的组必须存在于
 ---
 ## 5.目录操作指令
 ### 变化目录: cd(Change Directory)
-用法: `cd `
+用法: `cd xiangduilu`
