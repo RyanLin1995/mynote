@@ -9,3 +9,5 @@
 ---
 ## tty切换
 可以通过<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>F1 ~ F7</kbd>切换tty1 ~ tty7
+
+---
