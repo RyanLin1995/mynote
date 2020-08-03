@@ -11,3 +11,5 @@
 可以通过<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>F1 ~ F7</kbd>切换tty1 ~ tty7
 
 ---
+## ll链接文档的问题
+当`ll 链接文档`时，如果是输入了
