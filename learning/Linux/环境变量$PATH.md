@@ -4,6 +4,9 @@ PATH为Linux的环境变量，当你需要使用一个`命令`时，系统会根
 * 查看PATH: `echo $PATH`
 ($后面接的是变量
 )
+* 修改PATH: `PATH="${PATH}:/root"`
+（把/root添加到PATH）
 
 变量PATH由一堆目录组成，目录之间用`:`隔开，每个目录有顺序之分
+
 
