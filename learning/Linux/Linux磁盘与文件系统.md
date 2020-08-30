@@ -18,7 +18,9 @@
 ## Linux文件系统
 标准的 Linux 文件系统 Ext2 就是使用 inode 为基础的文件系统。inode 的内容在记录文件的权限与相关属性，至于 block 区块则是在记录文件的实际内容。 而且文件系统一开始就将 inode 与 block 规划好了，除非重新格式化(或者利用 resize2fs 等指令变更文件系统大小)，否则 inode 与 block 固定后就不再变动。但是如果仔细考虑一下，如果我的文件系统高达数百 GB 时， 那么将所有的 inode 与 block 通通放置在一起将是很不智的决定，因为 inode 与 block 的数量太庞大，不容易管理。为此之故，因此 Ext2 文件系统在格式化的时候基本上是区分为多个区块群组 (block group) 的，每个区块群组都有独立的 inode/block/superblock 系统
 
-故 Ext2 文件系统
+故 Ext2 文件系统格式化后类似于:
+|Boot sector|Block Group1|Block Group2|Block Group3|Block Group...|
+|-|-|
 
 Block Group组成:
 1. Superblock
