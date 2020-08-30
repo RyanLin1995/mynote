@@ -21,18 +21,20 @@
 故 Ext2 文件系统格式化后类似于:
 |Boot sector|Block Group1|Block Group2|Block Group3|Block Group...|
 |-|-|-|-|-|
+PS: 在整体的规划当中，文件系统最前面有一个启动扇区(boot sector)，这个启动扇区可以安装开机管理程序，这是个非常重要的设计，因为如此一来我们就能够将不同的开机管理程序安装到个别的文件系统最前端，而不用覆盖整颗磁盘唯一的 MBR，这样也才能够制作出多重引导的环境
 
 ### Block Group
-为了减少由于碎片而造成的性能问题，块分配器非常努力地将每个文件的块保持在同一组中，从而减少查找时间
+为了减少由于碎片而造成的性能问题，块分配器非常努力地将每个文件的 block 保持在同一组中，从而减少查找时间
+
+ext4以 block 为单位分配存储空间。block是一组介于 1KiB 和 64KiB 之间的扇区，扇区数必须是2的整数次幂。block 依次被分组成更大的单元，称为block group
 
 block group 的大小在 sb.s_block_per_group 块中指定，但也可以计算为 8*block_size_in_bytes。默认 block 大小为 4KiB 时，每个组将包含32768个blocks，长度为128MiB。块组的数量是设备的大小除以块组的大小。
 
-Block Group组成:
-1. Superblock
-2. block group描述符
-3. block Bitmap(block位图/block对照表)
-4. inode Bitmap(inode位图/inode对照表)
-5. inode table(inode表)
-6. block table(block表)
+标准Block Group的布局大致如下所示:
+Group 0 Padding|ext4 Super Block|Group Descriptors|Reserved GDT Blocks|Data Block Bitmap|inode Bitmap|inode Table|Data Blocks
+|-|-|-|-|-|-|-|-|
+1024 bytes|1 block|many blocks|many blocks|1 block|1 block|many blocks|many more blocks|
 
-在整体的规划当中，文件系统最前面有一个启动扇区(boot sector)，这个启动扇区可以安装开机管理程序，这是个非常重要的设计，因为如此一来我们就能够将不同的开机管理程序安装到个别的文件系统最前端，而不用覆盖整颗磁盘唯一的 MBR，这样也才能够制作出多重引导的环境
+对于block group 0的特殊情况，前1024个字节未使用，以允许安装x86引导扇区和其他奇数。super block将从1024字节开始，无论哪个块恰好是(通常为0) 但是，如果出于某种原因，块大小=1024，则块0被标记为正在使用，而super block将进入块1
+
+ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descriptors 。super block 和 Group Descriptors 的冗余副本被写入磁盘上的一些块组，以防磁盘的开头被丢弃，尽管并非所有 block group 都必须承载冗余副本。如果 group 没有冗余副本，则 block group 从 data block bitmap 开始。还请注意，当文件系统刚格式化时，mkfs将在块组描述符之后和块位图开始之前分配 reserve GDT block 空间，以便将来扩展文件系统。默认情况下，允许文件系统比原始文件系统大小增加1024倍。
