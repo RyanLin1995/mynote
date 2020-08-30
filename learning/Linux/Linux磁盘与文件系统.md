@@ -25,6 +25,8 @@
 ### Block Group
 为了减少由于碎片而造成的性能问题，块分配器非常努力地将每个文件的块保持在同一组中，从而减少查找时间
 
+块组的大小在sb.s_block_per_group块中指定，但也可以计算为8*block_size_in_bytes。默认数据块大小为4KiB时，每个组将包含32,768个数据块，长度为128MiB。 块组的数量是设备的大小除以块组的大小。
+
 Block Group组成:
 1. Superblock
 2. block group描述符
