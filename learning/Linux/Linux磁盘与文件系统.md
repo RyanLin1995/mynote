@@ -23,5 +23,7 @@ Block Group组成:
 2. 文件系统描述(MBR or GPT)
 3. block对照表(block位图)
 4. inode对照表(inode位图)
-5. inode table(inode)
-6. block table
+5. inode table(inode表)
+6. block table(block表)
+
+
