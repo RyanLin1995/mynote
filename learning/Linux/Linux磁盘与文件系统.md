@@ -20,4 +20,5 @@
 
 Block Group组成:
 1. Superblock
-2. 文件系统描述
+2. 文件系统描述(MBR or GPT)
+3. inode
