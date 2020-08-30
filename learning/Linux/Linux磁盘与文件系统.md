@@ -22,6 +22,7 @@
 |Boot sector|Block Group1|Block Group2|Block Group3|Block Group...|
 |-|-|-|-|-|
 
+### Block Group
 Block Group组成:
 1. Superblock
 2. 文件系统描述符(MBR or GPT)
