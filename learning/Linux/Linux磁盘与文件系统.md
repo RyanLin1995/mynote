@@ -26,7 +26,7 @@ Block Group组成:
 1. Superblock
 2. 文件系统描述符(MBR or GPT)
 3. block Bitmap(block位图/block对照表)
-4. inode Bitmap(inode位图/inode)
+4. inode Bitmap(inode位图/inode对照表)
 5. inode table(inode表)
 6. block table(block表)
 
