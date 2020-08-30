@@ -20,7 +20,7 @@
 
 故 Ext2 文件系统格式化后类似于:
 |Boot sector|Block Group1|Block Group2|Block Group3|Block Group...|
-|-|-|
+|-|-|-|-|-|
 
 Block Group组成:
 1. Superblock
