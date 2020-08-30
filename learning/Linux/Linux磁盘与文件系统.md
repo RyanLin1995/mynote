@@ -23,6 +23,8 @@
 |-|-|-|-|-|
 
 ### Block Group
+为了减少由于碎片而造成的性能问题，块分配器非常努力地将每个文件的块保持在同一组中，从而减少查找时间
+
 Block Group组成:
 1. Superblock
 2. block group描述符
