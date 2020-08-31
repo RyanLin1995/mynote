@@ -37,4 +37,5 @@ Group 0 Padding|ext4 Super Block|Group Descriptors|Reserved GDT Blocks|Data Bloc
 
 对于block group 0的特殊情况，前1024个字节未使用，以允许安装x86引导扇区和其他奇怪的程序。super block将从1024字节开始， block 通常为 0。但是，如果出于某种原因，block size = 1024，则 block 0 被标记为正在使用，而super block将进入 block 1
 
-ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descriptors 。super block 和 Group Descriptors 的冗余副本被写入磁盘上的一些 ，以防磁盘的开头被丢弃，尽管并非所有 block group 都必须承载冗余副本。如果 group 没有冗余副本，则 block group 从 data block bitmap 开始。还请注意，当文件系统刚格式化时，mkfs将在块组描述符之后和块位图开始之前分配 reserve GDT block 空间，以便将来扩展文件系统。默认情况下，允许文件系统比原始文件系统大小增加1024倍。
+ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descriptors 。super block 和 Group Descriptors 的冗余副本被写入磁盘上的一些 block group，以防磁盘的开头被丢弃，尽管并非所有 block group 都必须承载冗余副本。如果 group 没有冗余副本，则 block group 从 data block bitmap 开始。还请注意，当文件系统刚格式化时，mkfs将在block group
+ descriptors描述符之后和块位图开始之前分配 reserve GDT block 空间，以便将来扩展文件系统。默认情况下，允许文件系统比原始文件系统大小增加1024倍。
