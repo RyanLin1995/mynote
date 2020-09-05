@@ -27,7 +27,7 @@ PS: 在整体的规划当中，文件系统最前面有一个启动扇区(boot s
 
 ext4 以 block 为单位分配存储空间。block是一组介于 1KiB 和 64KiB 之间的扇区，扇区数必须是2的整数次幂。block 依次被分组成更大的单元，称为block group
 
-为了减少由于碎片而造成的性能问题，块分配器非常努力地将每个文件的 block 保持在同一组中，从而减少查找时间。因此，ext4 引进了 Extent 文件存储方式，以取代 ext2/3 使用的 block mapping 方式。Extent 指的是一连串的连续实体 block，这种方式可以增加大型文件的效率并减少分裂文件
+为了减少由于碎片而造成的性能问题，块分配器非常努力地将每个文件的 block 保持在同一组中，从而减少查找时间。
 
 block group 的大小在 sb.s_block_per_group 块中指定，但也可以计算为 8*block_size_in_bytes(由于每个位图仅限于单个块，这意味着块组的最大大小是块大小的8倍)。默认 block 大小为 4KiB 时，每个组将包含32768个blocks，长度为128MiB。块组的数量是设备的大小除以块组的大小。
 
@@ -78,6 +78,6 @@ block 大小而产生的 Ext4 文件系统限制如下：
 |Inodes Per Block Group|8,192|16,384|32,768|524,288|
 |Block Group Size|8MiB|32MiB|128MiB|32GiB|
 |Blocks Per File, Extents|2^32|2^32|2^32|2^32|
-|Blocks Per File, Block Maps|16,843,020|134,480,396|1,074,791,436|4,398,314,962,956(really 2^32 due to field size limitations)
-File Size, Extents	4TiB	8TiB	16TiB	256TiB
-File Size, Block Maps	16GiB	256GiB	4TiB	256TiB
+|Blocks Per File, Block Maps|16,843,020|134,480,396|1,074,791,436|4,398,314,962,956(really 2^32 due to field size limitations)|
+File Size, Extents|4TiB|8TiB|16TiB|256TiB|
+File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
