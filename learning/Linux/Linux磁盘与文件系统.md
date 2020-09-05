@@ -69,14 +69,15 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 由于 Ext2 文件系统中一个 block 仅能容纳一个文件，因此每个 block 会浪费 4096-50=4046(byte)，系统中总共有一万个小文件，所有文件容量为:50(bytes)x10000=488.3Kbytes，但此时浪费的容量为：4046(bytes)x10000=38.6MBytes。想一想，不到 1MB 的总文件容量却浪费将近 40MB 的容量，且文件越多将造成越多的磁盘容量浪费。
 
 block 大小而产生的 Ext4 文件系统限制如下：
-|Item|1KiB|2KiB	4KiB	64KiB
-Blocks	2^32	2^32	2^32	2^32
-Inodes	2^32	2^32	2^32	2^32
-File System Size	4TiB	8TiB	16TiB	256PiB
-Blocks Per Block Group	8,192	16,384	32,768	524,288
-Inodes Per Block Group	8,192	16,384	32,768	524,288
-Block Group Size	8MiB	32MiB	128MiB	32GiB
-Blocks Per File, Extents	2^32	2^32	2^32	2^32
-Blocks Per File, Block Maps	16,843,020	134,480,396	1,074,791,436	4,398,314,962,956 (really 2^32 due to field size limitations)
+|Item|1KiB|2KiB|4KiB|64KiB|
+|-|-|-|-|-|
+|Blocks|2^32|2^32|2^32|2^32|
+|Inodes|2^32|2^32|2^32|2^32|
+|File System Size|4TiB|8TiB|16TiB|256PiB|
+|Blocks Per Block Group|8,192|16,384|32,768|524,288|
+|Inodes Per Block Group|8,192|16,384|32,768|524,288|
+|Block Group Size|8MiB|32MiB|128MiB|32GiB|
+|Blocks Per File, Extents|2^32|2^32|2^32|2^32|
+|Blocks Per File, Block Maps|16,843,020|134,480,396|1,074,791,436|4,398,314,962,956(really 2^32 due to field size limitations)
 File Size, Extents	4TiB	8TiB	16TiB	256TiB
 File Size, Block Maps	16GiB	256GiB	4TiB	256TiB
