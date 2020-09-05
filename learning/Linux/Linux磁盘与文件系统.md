@@ -45,4 +45,4 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 即放置文件数据的地方。Ext2 文件系统支持的 Block 大小有 1k, 2k, 4k 和 8k，在格式化时 block 的大小就固定了，且每个 block 都有编号，以方便 inode 的记录。不过要注意的是，由于 block 大小的差异，会导致该文件系统能够支持的最大磁盘容量与最大单一文件容量并不相同。因为 block 大小而产生的 Ext2 文件系统限制如下：
 |Block大小|1KB|2KB|4KB|8KB|
 |-|-|-|-|-|
-||||||
+|file system blocks|2,147,483,647|2,147,483,647|2,147,483,647|2,147,483,647|
