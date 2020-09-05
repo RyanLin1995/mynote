@@ -1,7 +1,7 @@
 ## 文件系统特性
 我们都知道磁盘分区完毕后还需要进行格式化(format)，之后操作系统才能够使用这个文件系统。 为什么需要进行格式化呢？这是因为每种操作系统所设定的文件属性/权限并不相同，为了存放这些文件所需的数据，因此就需要将分区槽进行格式化，以成为操作系统能够利用的文件系统格式(filesystem)。
 
-由此我们也能够知道，每种操作系统能够使用的文件系统并不相同。举例来说，windows 98 以前的微软操作系统主要利用的文件系统是 FAT (或 FAT16)，windows 2000 以后的版本有所谓的 NTFS文件系统，至于 Linux 的正统文件系统则为 Ext2 (Linux second extended file system, ext2fs)这一个。此外，在默认的情况下，windows 操作系统是不会认识 Linux 的 Ext2 的。传统的磁盘与文件系统之应用中，一个分区槽就是只能够被格式化成为一个文件系统，所以我们可以说一个 filesystem 就是一个 partition。但是由于新技术的利用，例如我们常听到的 LVM 与软件磁盘阵列(software raid)，这些技术可以将一个分区槽格式化为多个文件系统(例如 LVM)，也能够将多个分区槽合成一个文件系统(LVM, RAID)！所以说，目前我们在格式化时已经不再说成针对 partition来格式化了， 通常我们可以称呼一个可被挂载的数据为一个文件系统而不是一个分区槽喔！
+由此我们也能够知道，每种操作系统能够使用的文件系统并不相同。举例来说，windows 98 以前的微软操作系统主要利用的文件系统是 FAT (或 FAT16)，windows 2000 以后的版本有所谓的 NTFS文件系统，至于 Linux 的正统文件系统则为 Ext2 (Linux second extended file system, ext2fs)这一个。此外，在默认的情况下，windows 操作系统是不会认识 Linux 的 Ext2 的。传统的磁盘与文件系统之应用中，一个分区槽就是只能够被格式化成为一个文件系统，所以我们可以说一个 filesystem 就是一个 partition。但是由于新技术的利用，例如我们常听到的 LVM 与软件磁盘阵列(software raid)，这些技术可以将一个分区槽格式化为多个文件系统(例如 LVM)，也能够将多个分区槽合成一个文件系统(LVM, RAID)！所以说，目前我们在格式化时已经不再说成针对 partition来格式化了， 通常我们可以称呼一个可被挂载的数据为一个文件系统而不是一个分区槽
 
 那么文件系统是如何运作的呢？这与操作系统的文件数据有关。较新的操作系统的文件数据除了文件实际内容外， 通常含有非常多的属性，例如 Linux 操作系统的文件权限(rwx)与文件属性(拥有者、群组、时间参数等)。 文件系统通常会将这两部份的数据分别存放在不同的区块，权限与属性放置到 inode 中，至于实际数据则放置到 data block 区块中。另外，还有一个超级区块 (superblock) 会记录整个文件系统的整体信息，包括 inode 与 block 的总量、使用量、剩余量等。
 
@@ -10,7 +10,7 @@
 * inode：记录文件的属性，一个文件占用一个 inode，同时记录此文件的数据所在的 block 号码；
 * block：实际记录文件的内容，若文件太大时，会占用多个 block 。
 
-由于每个 inode 与 block 都有编号，而每个文件都会占用一个 inode ，inode 内则有文件数据放置的 block 号码。因此，我们可以知道的是，如果能够找到文件的 inode 的话，那么自然就会知道这个文件所放置数据的 block 号码，当然也就能够读出该文件的实际数据了。这是个比较有效率的作法，因为如此一来我们的磁盘就能够在短时间内读取出全部的数据，读写的效能比较好啰。
+由于每个 inode 与 block 都有编号，而每个文件都会占用一个 inode ，inode 内则有文件数据放置的 block 号码。因此，我们可以知道的是，如果能够找到文件的 inode 的话，那么自然就会知道这个文件所放置数据的 block 号码，当然也就能够读出该文件的实际数据了。这是个比较有效率的作法，因为如此一来我们的磁盘就能够在短时间内读取出全部的数据，读写的效能比较好。
 
 ### inode 与 block 区块说明
 文件系统先格式化出 inode 与 block的区块，假设某一个文件的属性与权限数据是放置到 inode 的 4 号，而这个 inode 记录了文件数据的实际放置点为 2, 7, 13, 15 这四个 block 号码，此时我们的操作系统就能够据此来排列磁盘的阅读顺序，可以一口气将四个 block 内容读出来这种数据存取的方法我们称为索引式文件系统(indexed allocation)
@@ -31,10 +31,11 @@ PS: 在整体的规划当中，文件系统最前面有一个启动扇区(boot s
 block group 的大小在 sb.s_block_per_group 块中指定，但也可以计算为 8*block_size_in_bytes。默认 block 大小为 4KiB 时，每个组将包含32768个blocks，长度为128MiB。块组的数量是设备的大小除以块组的大小。
 
 标准Block Group的布局大致如下所示(以Ext4为例):
-ext4引进了Extent文件存储方式，以取代ext2/3使用的block mapping方式。Extent指的是一连串的连续实体block，这种方式可以增加大型文件的效率并减少分裂文件
 Group 0 Padding|ext4 Super Block|Group Descriptors|Reserved GDT Blocks|Data Block Bitmap|inode Bitmap|inode Table|Data Blocks
 |-|-|-|-|-|-|-|-|
 1024 bytes|1 block|many blocks|many blocks|1 block|1 block|many blocks|many more blocks|
+
+ext4引进了Extent文件存储方式，以取代ext2/3使用的block mapping方式。Extent指的是一连串的连续实体block，这种方式可以增加大型文件的效率并减少分裂文件
 
 对于block group 0的特殊情况，前1024个字节未使用，以允许安装x86引导扇区和其他奇怪的程序。super block将从1024字节开始， block 通常为 0。但是，如果出于某种原因，block size = 1024，则 block 0 被标记为正在使用，而super block将进入 block 1
 
