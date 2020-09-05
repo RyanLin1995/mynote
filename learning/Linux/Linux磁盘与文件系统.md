@@ -56,7 +56,7 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 |file size (Linux 2.6.28)|17,247,252,480 (16GiB)|274,877,906,944 (256GiB)|2,199,023,255,552 (2TiB)|2,199,023,255,552 (2TiB)|
 * a: In Ext4 file system, the 32-bit filesystems blocks and inodes limits are 2^32^, the 64-bit blocks limits is 2^64^, inodes is 2^32^
 * b: This limit comes from the maximum size of a block device in Linux 2.4; it is unclear whether a Linux 2.6 kernel using a 1KiB block size could properly format and mount a Ext2 partition larger than 2TiB.
-
+* c: 
 
  Ext2 文件系统的 block 基本限制如下：
 * 原则上，block 的大小与数量在格式化完就不能够再改变了(除非重新格式化)；
