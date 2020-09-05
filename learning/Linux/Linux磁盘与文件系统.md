@@ -49,12 +49,12 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 |file system blocks|2,147,483,647^[a]^|2,147,483,647|2,147,483,647|2,147,483,647|
 |blocks per block group|8192|16384|32768|65536|
 |inodes per block group|8192|16384|32768|65536|
-|bytes per block group|8,388,608(8MiB)|33,554,432(32MiB)|134,217,728 (128MiB)|536,870,912 (512MiB)|
-|file system size (real)|4,398,046,509,056(4TiB)|8,796,093,018,112 (8TiB)|17,592,186,036,224 (16TiB)|35,184,372,080,640 (32TiB)|
-|file system size (Linux)|2,199,023,254,528(2TiB)^[b]^|8,796,093,018,112 (8TiB)|17,592,186,036,224 (16TiB)|35,184,372,080,640 (32TiB)|
+|bytes per block group|8,388,608(8MiB)|33,554,432(32MiB)|134,217,728(128MiB)|536,870,912(512MiB)|
+|file system size(real)|4,398,046,509,056(4TiB)|8,796,093,018,112(8TiB)|17,592,186,036,224(16TiB)|35,184,372,080,640(32TiB)|
+|file system size(Linux)|2,199,023,254,528(2TiB)^[b]^|8,796,093,018,112(8TiB)|17,592,186,036,224(16TiB)|35,184,372,080,640(32TiB)|
 |blocks per file|16,843,020|134,217,728|1,074,791,436|8,594,130,956
-|file size (real)|17,247,252,480 (16GiB)|274,877,906,944(256GiB)|2,199,023,255,552 (2TiB)|2,199,023,255,552 (2TiB)|
-|file size (Linux 2.6.28)|17,247,252,480 (16GiB)|274,877,906,944 (256GiB)|2,199,023,255,552 (2TiB)|2,199,023,255,552 (2TiB)|
+|file size(real)|17,247,252,480(16GiB)|274,877,906,944(256GiB)|2,199,023,255,552(2TiB)|2,199,023,255,552(2TiB)|
+|file size(Linux 2.6.28)|17,247,252,480(16GiB)|274,877,906,944(256GiB)|2,199,023,255,552(2TiB)|2,199,023,255,552(2TiB)|
 * a: In Ext4 file system, the 32-bit filesystems blocks and inodes limits are 2^32^, the 64-bit blocks limits is 2^64^, inodes is 2^32^
 * b: This limit comes from the maximum size of a block device in Linux 2.4; it is unclear whether a Linux 2.6 kernel using a 1KiB block size could properly format and mount a Ext2 partition larger than 2TiB.
 
