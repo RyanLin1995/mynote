@@ -94,7 +94,7 @@ For 64-bit filesystems, limits are as follows:
 |-|-|-|-|-|
 |Blocks|2^64|2^64|2^64|2^64|
 |Inodes|2^32|2^32|2^32|2^32|
-|File System Size|16ZiB|32ZiB|64ZiB|256PiB|
+|File System Size|16ZiB|32ZiB|64ZiB|1YiB|
 |Blocks Per Block Group|8,192|16,384|32,768|524,288|
 |Inodes Per Block Group|8,192|16,384|32,768|524,288|
 |Block Group Size|8MiB|32MiB|128MiB|32GiB|
