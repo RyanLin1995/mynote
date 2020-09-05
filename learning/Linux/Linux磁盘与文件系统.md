@@ -71,13 +71,30 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 
 #### Ext4 
 ext4 引进了 Extent 文件存储方式，以取代 ext2/3 使用的 block mapping 方式。Extent 指的是一连串的连续实体 block，这种方式可以增加大型文件的效率并减少分裂文件
+
 block 大小而产生的 Ext4 文件系统限制如下：
+
 For 32-bit filesystems, limits are as follows:
 |Item|1KiB|2KiB|4KiB|64KiB|
 |-|-|-|-|-|
 |Blocks|2^32|2^32|2^32|2^32|
 |Inodes|2^32|2^32|2^32|2^32|
 |File System Size|4TiB|8TiB|16TiB|256PiB|
+|Blocks Per Block Group|8,192|16,384|32,768|524,288|
+|Inodes Per Block Group|8,192|16,384|32,768|524,288|
+|Block Group Size|8MiB|32MiB|128MiB|32GiB|
+|Blocks Per File, Extents|2^32|2^32|2^32|2^32|
+|Blocks Per File, Block Maps|16,843,020|134,480,396|1,074,791,436|4,398,314,962,956(really 2^32 due to field size limitations)|
+File Size, Extents|4TiB|8TiB|16TiB|256TiB|
+File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
+
+For 64-bit filesystems, limits are as follows:
+
+|Item|1KiB|2KiB|4KiB|64KiB|
+|-|-|-|-|-|
+|Blocks|2^64|2^64|2^64|2^64|
+|Inodes|2^32|2^32|2^32|2^32|
+|File System Size|16ZiB|32ZiB|64ZiB|256PiB|
 |Blocks Per Block Group|8,192|16,384|32,768|524,288|
 |Inodes Per Block Group|8,192|16,384|32,768|524,288|
 |Block Group Size|8MiB|32MiB|128MiB|32GiB|
