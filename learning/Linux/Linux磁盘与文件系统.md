@@ -41,7 +41,7 @@ Group 0 Padding|ext4 Super Block|Group Descriptors|Reserved GDT Blocks|Data Bloc
 ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descriptors 。super block 和 Group Descriptors 的冗余副本被写入磁盘上的一些 block group，以防磁盘的开头被丢弃，尽管并非所有 block group 都必须承载冗余副本。如果 group 没有冗余副本，则 block group 从 data block bitmap 开始。还请注意，当文件系统刚格式化时，mkfs将在block group
  descriptors(块组描述符)之后和 block bitmap(块位图)开始之前分配 reserve GDT block 空间，以便将来扩展文件系统。默认情况下，允许文件系统比原始文件系统大小增加1024倍。
 
-### Data Block
+### Data Block(以Ext2为例)
 即放置文件数据的地方。Ext2 文件系统支持的 Block 大小有 1k, 2k, 4k 和 8k，在格式化时 block 的大小就固定了，且每个 block 都有编号，以方便 inode 的记录。不过要注意的是，由于 block 大小的差异，会导致该文件系统能够支持的最大磁盘容量与最大单一文件容量并不相同。因为 block 大小而产生的 Ext2 文件系统限制如下：
 |Block大小|1KB|2KB|4KB|8KB|
 |-|-|-|-|-|
@@ -56,6 +56,7 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 |file size (Linux 2.6.28)|17,247,252,480 (16GiB)|274,877,906,944 (256GiB)|2,199,023,255,552 (2TiB)|2,199,023,255,552 (2TiB)|
 * a: In Ext4 file system, the 32-bit filesystems blocks and inodes limits are 2^32^, the 64-bit blocks limits is 2^64^, inodes is 2^32^
 * b: This limit comes from the maximum size of a block device in Linux 2.4; it is unclear whether a Linux 2.6 kernel using a 1KiB block size could properly format and mount a Ext2 partition larger than 2TiB.
+
 
  Ext2 文件系统的 block 基本限制如下：
 * 原则上，block 的大小与数量在格式化完就不能够再改变了(除非重新格式化)；
