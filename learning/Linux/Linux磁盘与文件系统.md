@@ -68,7 +68,7 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 答：
 由于 Ext2 文件系统中一个 block 仅能容纳一个文件，因此每个 block 会浪费 4096-50=4046(byte)，系统中总共有一万个小文件，所有文件容量为:50(bytes)x10000=488.3Kbytes，但此时浪费的容量为：4046(bytes)x10000=38.6MBytes。想一想，不到 1MB 的总文件容量却浪费将近 40MB 的容量，且文件越多将造成越多的磁盘容量浪费。
 
-block 大小而产生的 Ext4 文件系统限制如下：
+#### 扩展：block 大小而产生的 Ext4 文件系统限制如下：
 ext4 引进了 Extent 文件存储方式，以取代 ext2/3 使用的 block mapping 方式。Extent 指的是一连串的连续实体 block，这种方式可以增加大型文件的效率并减少分裂文件
 |Item|1KiB|2KiB|4KiB|64KiB|
 |-|-|-|-|-|
