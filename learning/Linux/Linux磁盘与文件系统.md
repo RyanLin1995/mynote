@@ -42,4 +42,4 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
  descriptors(块组描述符)之后和 block bitmap(块位图)开始之前分配 reserve GDT block 空间，以便将来扩展文件系统。默认情况下，允许文件系统比原始文件系统大小增加1024倍。
 
 ### Data Block
-即放置文件数据的地方。Ext2 支持
+即放置文件数据的地方。Ext2 文件系统支持的 Block 大小有 1k, 2l
