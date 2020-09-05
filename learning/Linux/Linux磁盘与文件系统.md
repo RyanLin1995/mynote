@@ -56,7 +56,6 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 |file size (Linux 2.6.28)|17,247,252,480 (16GiB)|274,877,906,944 (256GiB)|2,199,023,255,552 (2TiB)|2,199,023,255,552 (2TiB)|
 * a: In Ext4 file system, the 32-bit filesystems blocks and inodes limits are 2^32^, the 64-bit blocks limits is 2^64^, inodes is 2^32^
 * b: This limit comes from the maximum size of a block device in Linux 2.4; it is unclear whether a Linux 2.6 kernel using a 1KiB block size could properly format and mount a Ext2 partition larger than 2TiB.
-* c: 
 
  Ext2 文件系统的 block 基本限制如下：
 * 原则上，block 的大小与数量在格式化完就不能够再改变了(除非重新格式化)；
@@ -68,3 +67,5 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 假设你的 Ext2 文件系统使用 4K block，而该文件系统中有 10000 个小文件，每个文件大小均为 50bytes，请问此时你的磁盘浪费多少容量？
 答：
 由于 Ext2 文件系统中一个 block 仅能容纳一个文件，因此每个 block 会浪费 4096-50=4046(byte)，系统中总共有一万个小文件，所有文件容量为:50(bytes)x10000=488.3Kbytes，但此时浪费的容量为：4046(bytes)x10000=38.6MBytes。想一想，不到 1MB 的总文件容量却浪费将近 40MB 的容量，且文件越多将造成越多的磁盘容量浪费。
+
+EXT4 
