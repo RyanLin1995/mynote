@@ -30,7 +30,8 @@ PS: 在整体的规划当中，文件系统最前面有一个启动扇区(boot s
 
 block group 的大小在 sb.s_block_per_group 块中指定，但也可以计算为 8*block_size_in_bytes。默认 block 大小为 4KiB 时，每个组将包含32768个blocks，长度为128MiB。块组的数量是设备的大小除以块组的大小。
 
-标准Block Group的布局大致如下所示:
+标准Block Group的布局大致如下所示(以Ext4为例):
+ext4引进了Extent文件存储方式，以取代ext2/3使用的block mapping方式。Extent指的是一连串的连续实体block，这种方式可以增加大型文件的效率并减少分裂文件
 Group 0 Padding|ext4 Super Block|Group Descriptors|Reserved GDT Blocks|Data Block Bitmap|inode Bitmap|inode Table|Data Blocks
 |-|-|-|-|-|-|-|-|
 1024 bytes|1 block|many blocks|many blocks|1 block|1 block|many blocks|many more blocks|
