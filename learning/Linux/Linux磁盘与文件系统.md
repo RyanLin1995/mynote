@@ -41,4 +41,4 @@ Group 0 Padding|ext4 Super Block|Group Descriptors|Reserved GDT Blocks|Data Bloc
 ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descriptors 。super block 和 Group Descriptors 的冗余副本被写入磁盘上的一些 block group，以防磁盘的开头被丢弃，尽管并非所有 block group 都必须承载冗余副本。如果 group 没有冗余副本，则 block group 从 data block bitmap 开始。还请注意，当文件系统刚格式化时，mkfs将在block group
  descriptors(块组描述符)之后和 block bitmap(块位图)开始之前分配 reserve GDT block 空间，以便将来扩展文件系统。默认情况下，允许文件系统比原始文件系统大小增加1024倍。
 
-### Data
+### Data Block
