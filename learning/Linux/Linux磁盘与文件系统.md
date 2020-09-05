@@ -47,4 +47,6 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 |-|-|-|-|-|
 |file system blocks|2,147,483,647|2,147,483,647|2,147,483,647|2,147,483,647|
 |blocks per block group|8192|16384|32768|65536|
-|blocks per block group|8192|16384|32768|65536|
+|inodes per block group|8192|16384|32768|65536|
+|bytes per block group|8,388,608 (8MiB)|33,554,432 (32MiB)|134,217,728 (128MiB)|536,870,912 (512MiB)|
+|
