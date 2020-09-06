@@ -25,11 +25,11 @@ PS: 在整体的规划当中，文件系统最前面有一个启动扇区(boot s
 
 ### Block Group(以Ext4为例)
 
-ext4 以 block 为单位分配存储空间。block是一组介于 1KB 和 64KiB 之间的扇区，扇区数必须是2的整数次幂。block 依次被分组成更大的单元，称为block group
+ext4 以 block 为单位分配存储空间。block是一组介于 1KB 和 64KB 之间的扇区，扇区数必须是2的整数次幂。block 依次被分组成更大的单元，称为block group
 
 为了减少由于碎片而造成的性能问题，块分配器非常努力地将每个文件的 block 保持在同一组中，从而减少查找时间。
 
-block group 的大小在 sb.s_block_per_group 块中指定，但也可以计算为 8*block_size_in_bytes(由于每个位图仅限于单个块，这意味着块组的最大大小是块大小的8倍)。默认 block 大小为 4KiB 时，每个组将包含32768个blocks，长度为128MiB。块组的数量是设备的大小除以块组的大小。
+block group 的大小在 sb.s_block_per_group 块中指定，但也可以计算为 8*block_size_in_bytes(由于每个位图仅限于单个 block ，这意味着 block group 的最大大小是block size 的8倍)。默认 block 大小为 4KiB 时，每个组将包含32768个blocks，长度为128MiB。块组的数量是设备的大小除以块组的大小。
 
 标准Block Group的布局大致如下所示:
 Group 0 Padding|ext4 Super Block|Group Descriptors|Reserved GDT Blocks|Data Block Bitmap|inode Bitmap|inode Table|Data Blocks
