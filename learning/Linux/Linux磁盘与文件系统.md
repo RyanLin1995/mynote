@@ -70,7 +70,7 @@ ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descript
 由于 Ext2 文件系统中一个 block 仅能容纳一个文件，因此每个 block 会浪费 4096-50=4046(byte)，系统中总共有一万个小文件，所有文件容量为:50(bytes)x10000=488.3Kbytes，但此时浪费的容量为：4046(bytes)x10000=38.6MBytes。想一想，不到 1MB 的总文件容量却浪费将近 40MB 的容量，且文件越多将造成越多的磁盘容量浪费。
 
 #### Ext4 
-ext4 引进了 Extent 文件存储方式，以取代 ext2/3 使用的 block mapping 方式。Extent 指的是一连串的连续实体 block，这种方式可以增加大型文件的效率并减少分裂文件
+因 ext4 引进了 Extent 文件存储方式，以取代 ext2/3 使用的 block mapping 方式。Extent 指的是一连串的连续实体 block，这种方式可以增加大型文件的效率并减少分裂文件
 
 block 大小而产生的 Ext4 文件系统限制如下：
 
@@ -103,7 +103,7 @@ For 64-bit filesystems, limits are as follows:
 File Size, Extents|4TiB|8TiB|16TiB|256TiB|
 File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 
-### inode table
+### Inode table
 文件储存在硬盘上，硬盘的最小存储单位叫做"扇区"（Sector）。每个扇区储存512字节（相当于0.5KB）。
 操作系统读取硬盘的时候，不会一个个扇区地读取，这样效率太低，而是一次性连续读取多个扇区，即一次性读取一个"块"（block）。这种由多个扇区组成的"块"，是文件存取的最小单位。"块"的大小，最常见的是4KB，即连续八个 sector 组成一个 block。
 文件数据都储存在"块"中，那么很显然，我们还必须找到一个地方储存文件的元数据（metadata），比如文件的创建者、文件的创建日期、文件的大小以及该文件实际资料是放置在哪个 data block 内等等。这种储存文件元信息的区域就叫做 inode，中文译名为"索引节点"。
