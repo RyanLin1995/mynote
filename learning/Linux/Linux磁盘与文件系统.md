@@ -116,3 +116,5 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 * 最近修改的时间(mtime)；
 * 定义文件特性的旗标(flag)，如SetUID...；
 * 该文件真正内容的指向(pointer)；
+
+inode 的数量与大小也是在格式化时就已经固定了，除此之外 inode 还有以下特色:
