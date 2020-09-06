@@ -102,3 +102,6 @@ For 64-bit filesystems, limits are as follows:
 |Blocks Per File, Block Maps|16,843,020|134,480,396|1,074,791,436|4,398,314,962,956(really 2^32 due to field size limitations)|
 File Size, Extents|4TiB|8TiB|16TiB|256TiB|
 File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
+
+### inode table
+
