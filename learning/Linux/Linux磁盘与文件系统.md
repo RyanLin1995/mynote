@@ -118,3 +118,7 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 * 该文件真正内容的指向(pointer)；
 
 inode 的数量与大小也是在格式化时就已经固定了，除此之外 inode 还有以下特色:
+* 每个 inode 大小均固定为 128 bytes (新的 ext4 与 xfs 可设定到 256 bytes 甚至到 512 bytes)；
+* 每个文件都仅会占用一个 inode 而已；
+* 承上，因此文件系统能够建立的文件数量与 inode 的数量有关；
+* 系统读取文件时需要先找到 inode，并分析 inode 所记录的权限与用户是否符合，若符合才能够开始实际读取 block 的内容。
