@@ -140,3 +140,9 @@ inode 中关于 block 号的记录一共包含有12个直接连接、1个间接�
 目录：
 目录也是一种文件，只是是一种特殊的文件，可以简单地理解为是一张表，这张表里面存放了隶属于该目录的文件的文件名，以及所匹配的 inode 编号。目录文件的读权限（r）和写权限（w），都是针对目录文件本身。由于目录文件内只有文件名和inode号码，所以如果只有读权限，只能获取文件名，无法获取其他信息，因为其他信息都储存在inode节点中，而读取inode节点内的信息需要目录文件的执行权限（x）。
 
+#### Inode number和 Inode table
+当一个分区被格式化为文件系统的时候，会自动产生 inode number。
+inode number 可以决定在这个分区中存储多少文件或目录，因为每个文件和目录都会有与之相对应的 inode number。
+
+每个 inode number 都有对应的 inode table。
+inode table 记录这个 inode number 对应文件所对应的 metadata（元数据）。
