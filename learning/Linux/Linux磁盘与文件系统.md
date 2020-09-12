@@ -16,7 +16,7 @@
 文件系统先格式化出 inode 与 data block 的区块，假设某一个文件的属性与权限数据是放置到 inode 的 4 号，而这个 inode 记录了文件数据的实际放置点为 2, 7, 13, 15 这四个 block 号码，此时我们的操作系统就能够据此来排列磁盘的阅读顺序，可以一口气将四个 block 内容读出来这种数据存取的方法我们称为索引式文件系统(indexed allocation)
 
 ## Linux文件系统
-标准的 Linux 文件系统 Ext2 就是使用 inode 为基础的文件系统。inode 记录文件的权限与相关属性，至于 data block 区块则记录文件的实际内容。而且文件系统一开始就将 inode 与 block 规划好了，除非重新格式化 (或者利用 resize2fs 等指令变更文件系统大小)，否则 inode 与 block 固定后就不再变动。但是仔细考虑一下，如果我的文件系统高达数百 GB 时，那么将所有的 inode 与 block 通通放置在一起将是很不智的决定，因为 inode 与 block 的数量太庞大，不容易管理。因此 Ext2 文件系统在格式化的时候基本上是区分为多个区块群组 (block group) 的，每个区块群组都有独立的 inode/block/superblock 系统
+标准的 Linux 文件系统 Ext2 就是使用 inode 为基础的文件系统。inode 记录文件的权限与相关属性，至于 data block 区块则记录文件的实际内容。而且文件系统一开始就将 inode 与 data block 规划好了，除非重新格式化 (或者利用 resize2fs 等指令变更文件系统大小)，否则 inode 与 data block 固定后就不再变动。但是仔细考虑一下，如果我的文件系统高达数百 GB 时，那么将所有的 inode 与 data block 通通放置在一起将是很不智的决定，因为 inode 与 data block 的数量太庞大，不容易管理。因此 Ext2 文件系统在格式化的时候基本上是区分为多个区块群组 (block group) 的，每个区块群组都有独立的 inode/block/superblock 系统
 
 故 Ext2 文件系统格式化后类似于:
 |Boot sector|Block Group1|Block Group2|Block Group3|Block Group...|
@@ -25,7 +25,7 @@ PS: 在整体的规划当中，文件系统最前面有一个启动扇区(boot s
 
 ### Block Group(以Ext4为例)
 
-ext4 以 block 为单位分配存储空间。block 是一组介于 1KB 和 64KB 之间的扇区，扇区数必须是2的整数次幂。block 依次被分组成更大的单元，称为block group
+Linux 以 block 为单位分配存储空间。block 是一组介于 1KB 和 64KB 之间的扇区，扇区数必须是2的整数次幂。block 依次被分组成更大的单元，称为block group
 
 为了减少由于碎片而造成的性能问题，块分配器非常努力地将每个文件的 block 保持在同一组中，从而减少查找时间。
 
