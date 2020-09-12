@@ -149,4 +149,6 @@ inode number 可以决定在这个分区中存储多少文件或目录，因为�
 inode table 记录这个 inode number 对应文件所对应的 metadata（元数据）。
 
 ### SuperBlock
-SuperBlock 是记录整个 filesystem 
+SuperBlock 是记录整个 filesystem 相关信息的地方，包括以下主要信息：
+1. inodes 和 blocks 的总数
+2. 
