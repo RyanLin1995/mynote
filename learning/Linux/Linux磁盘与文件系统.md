@@ -151,4 +151,5 @@ inode table 记录这个 inode number 对应文件所对应的 metadata（元数
 ### SuperBlock
 SuperBlock 是记录整个 filesystem 相关信息的地方，包括以下主要信息：
 1. inodes 和 blocks 的总数
-2. 
+2. 未使用/已使用的 inodes 和 blocks 数量
+3. 
