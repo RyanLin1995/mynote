@@ -153,4 +153,5 @@ SuperBlock 是记录整个 filesystem 相关信息的地方，包括以下主要
 1. inode 和 block 的总数
 2. 未使用/已使用的 inode 和 block 数量
 3. 每个 block group 的 inode 和 block 数量
-4. inode 和 block 的
+4. inode 和 block 的大小(block 大小有1k, 2k, 4k; inode 大小有128bytes, 256bytes, 512bytes)
+5. 
