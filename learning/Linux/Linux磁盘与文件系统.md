@@ -141,7 +141,7 @@ inode 中关于 block 号的记录一共包含有12个直接连接、1个间接�
 目录：
 目录也是一种文件，只是是一种特殊的文件，可以简单地理解为是一张表，这张表里面存放了隶属于该目录的文件的文件名，以及所匹配的 inode 编号。目录文件的读权限（r）和写权限（w），都是针对目录文件本身。由于目录文件内只有文件名和inode号码，所以如果只有读权限，只能获取文件名，无法获取其他信息，因为其他信息都储存在inode节点中，而读取inode节点内的信息需要目录文件的执行权限（x）。
 
-#### Inode number和 Inode table
+#### Inode number 和 Inode table
 当一个分区被格式化为文件系统的时候，会自动产生 inode number。
 inode number 可以决定在这个分区中存储多少文件或目录，因为每个文件和目录都会有与之相对应的 inode number。
 
@@ -150,9 +150,14 @@ inode table 记录这个 inode number 对应文件所对应的 metadata（元数
 
 ### SuperBlock
 SuperBlock 是记录整个 filesystem 相关信息的地方，包括以下主要信息：
-1. inode 和 block 的总数
+1. 每个 block group 的 inode 和 block 数量
 2. 未使用/已使用的 inode 和 block 数量
-3. 每个 block group 的 inode 和 block 数量
-4. inode 和 block 的大小(block 大小有1k, 2k, 4k; inode 大小有128bytes, 256bytes, 512bytes)
-5. filesystem 的挂载时间、最近一次写入数据的时间、最近一次检验磁盘 (fsck) 的时间等文件系统的相关信息
-6. 
+3. inode 和 block 的大小(block 大小有1k, 2k, 4k; inode 大小有128bytes, 256bytes, 512bytes)
+4. filesystem 的挂载时间、最近一次写入数据的时间、最近一次检验磁盘 (fsck) 的时间等文件系统的相关信息
+5. 一个 valid bit 数值，若此文件系统已被挂载，则 valid bit 为 0，若未被挂载，则 valid bit 为 1
+
+### Block Group Description
+用于定义 block group 参数，如 block group 开始和结束的 block 号码，同时提供 super block 位置、 inode bitmap 和 inode table 的位置、block bitmap、空闲block 和 inode 的数量，以及其他一些有用的信息。
+
+### Block bitmap and Inode bitmap
+block bitmap(块位图) 跟 inode bitmap(inode位图)，用于跟踪 block group内 data block 跟 inode 的使用情况。data block 跟 inode 如果被使用了，用 1 表示，没有被使用，用 0 表示
