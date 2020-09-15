@@ -24,21 +24,96 @@
 PS: 在整体的规划当中，文件系统最前面有一个启动扇区(boot sector)，这个启动扇区可以安装开机管理程序，这是个非常重要的设计，因为如此一来我们就能够将不同的开机管理程序安装到个别的文件系统最前端，而不用覆盖整颗磁盘唯一的 MBR，这样也才能够制作出多重引导的环境
 
 ### Block Group(以Ext4为例)
+文件储存在硬盘上，硬盘的最小存储单位叫做"扇区"（Sector）。每个扇区储存512字节（相当于0.5KB）。操作系统读取硬盘的时候，不会一个个扇区地读取，这样效率太低，而是一次性连续读取多个扇区，即一次性读取一个"块"（block）。这种由多个扇区组成的"块"，是文件存取的最小单位。"块"的大小，最常见的是4KB，即连续八个 sector 组成一个 block。
 
-Linux 以 block 为单位分配存储空间。block 是一组介于 1KB 和 64KB 之间的扇区，扇区数必须是2的整数次幂。block 依次被分组成更大的单元，称为block group
+block group 的大小在 sb.s_block_per_group 块中指定，但也可以计算为 8*block_size_in_bytes。(由于每个位图仅限于单个 block ，这意味着 block group 的最大大小是 block size 的8倍，即如果一个 block 大小为4K，那么可以映射标识4 x 1024 x 8=32768个 block 的使用状态；由于一个 group 只有一个 Data Block Bitmap，所以一个 block group 最大为 32768 x 4KB=128MB)
 
-为了减少由于碎片而造成的性能问题，块分配器非常努力地将每个文件的 block 保持在同一组中，从而减少查找时间。
-
-block group 的大小在 sb.s_block_per_group 块中指定，但也可以计算为 8*block_size_in_bytes(由于每个位图仅限于单个 block ，这意味着 block group 的最大大小是 block size 的8倍)。默认 block 大小为 4KB 时，每个组将包含32768个 blocks，长度为128MB。block group的数量是设备的大小除以块组的大小。
-
-标准Block Group的布局大致如下所示:
+#### 标准Block Group的布局大致如下所示:
 Group 0 Padding|ext4 Super Block|Group Descriptors|Reserved GDT Blocks|Data Block Bitmap|inode Bitmap|inode Table|Data Blocks
 |-|-|-|-|-|-|-|-|
 1024 bytes|1 block|many blocks|many blocks|1 block|1 block|many blocks|many more blocks|
 
 对于block group 0的特殊情况，前1024个字节未使用，以允许安装x86引导扇区和其他奇怪的程序。super block将从1024字节开始， block 通常为 0。但是，如果出于某种原因，block size = 1024，则 block 0 被标记为正在使用，而super block将进入 block 1
 
-ext4 驱动程序主要处理 block group 0 中的 super block 和Group Descriptors 。super block 和 Group Descriptors 的冗余副本被写入磁盘上的一些 block group，以防磁盘的开头被丢弃，尽管并非所有 block group 都必须承载冗余副本。如果 group 没有冗余副本，则 block group 从 data block bitmap 开始。还请注意，当文件系统刚格式化时，mkfs将在block group descriptors(块组描述符)之后和 block bitmap(块位图)开始之前分配 reserve GDT block 空间，以便将来扩展文件系统。默认情况下，允许文件系统比原始文件系统大小增加1024倍。
+ext4 主要处理 block group 0 中的 super block 和Group Descriptors 。super block 和 Group Descriptors 的冗余副本被写入磁盘上的一些 block group，以防磁盘的开头被丢弃，尽管并非所有 block group 都必须承载冗余副本。如果 group 没有冗余副本，则 block group 从 data block bitmap 开始。
+
+### SuperBlock
+SuperBlock 是记录整个 filesystem 相关信息的地方，包括以下主要信息：
+1. 每个 block group 的 inode 和 block 数量
+2. 未使用/已使用的 inode 和 block 数量
+3. inode 和 block 的大小(block 大小有1k, 2k, 4k; inode 大小有128bytes, 256bytes, 512bytes)
+4. filesystem 的挂载时间、最近一次写入数据的时间、最近一次检验磁盘 (fsck) 的时间等文件系统的相关信息
+5. 一个 valid bit 数值，若此文件系统已被挂载，则 valid bit 为 0，若未被挂载，则 valid bit 为 1
+
+### Block Group Description
+用于定义 block group 参数，如 block group 开始和结束的 block 号码，同时提供 super block 位置、 inode bitmap 和 inode table 的位置、block bitmap、空闲block 和 inode 的数量，以及其他一些有用的信息。每一个描述符的大小64byte，GDBs所占用block多少是与卷的大小有关的。
+
+### Reserved GDT Blocks
+当文件系统刚格式化时，mkfs将在block group descriptors(块组描述符)之后和 block bitmap(块位图)开始之前分配 reserve GDT block 空间，以便将来扩展文件系统。默认情况下，允许文件系统比原始文件系统大小增加1024倍。
+
+### Block bitmap and Inode bitmap
+block bitmap(块位图) 跟 inode bitmap(inode位图)，用于跟踪 block group内 data block 跟 inode 的使用情况。data block 跟 inode 如果被使用了，用 1 表示，没有被使用，用 0 表示。
+
+
+### Inode table
+#### Inode table基本概念
+文件数据都储存在"块"中，那么很显然，我们还必须找到一个地方储存文件的元数据（metadata），比如文件的创建者、文件的创建日期、文件的大小以及该文件实际资料是放置在哪个 data block 内等等。这种储存文件元信息的区域就叫做 inode，中文译名为"索引节点"。
+
+每一个文件都有对应的 inode，里面包含了以下基本信息:
+* 该文件的存取模式(read/write/excute)；
+* 该文件的拥有者与群组(owner/group)；
+* 该文件的容量；
+* 该文件建立或状态改变的时间(ctime)；
+* 最近一次的读取时间(atime)；
+* 最近修改的时间(mtime)；
+* 定义文件特性的旗标(flag)，如SetUID...；
+* 该文件真正内容的指向(pointer)；
+
+inode 的数量与大小也是在格式化时就已经固定了，除此之外 inode 还有以下特色:
+* 每个 inode 大小均固定为 128 bytes (新的 ext4 与 xfs 可设定到 256 bytes 甚至到 512 bytes)；
+* 每个文件都仅会占用一个 inode 而已；
+* 承上，因此文件系统能够建立的文件数量与 inode 的数量有关；
+* 系统读取文件时需要先找到 inode，并分析 inode 所记录的权限与用户是否符合，若符合才能够开始实际读取 block 的内容
+
+#### Inode 的多间接
+inode 中关于 block 号的记录一共包含有12个直接连接、1个间接连接、1个双间连接和1个三间连接。Inode结构图如下：
+![inode.jpg](https://i.loli.net/2020/09/06/ugikvxfNnAq1VHo.jpg)
+上图最左边为 inode 本身 (本例为128 bytes)，里面有 12 个直接指向 block 号码的对照，这 12 笔记录就能够直接取得 block 号码。至于所谓的间接就是再拿一个 block 来当作记录 block 号码的记录区，如果文件太大时，就会使用间接的 block 来记录编号。同理，如果文件持续增加，那么就会利用所谓的双间接，第一个 block 仅再指出下一个记录编号的 block 在哪里，实际记录的在第二个 block 当中。依此类推，三间接就是利用第三层 block 来记录编号
+
+可以想象成口袋里装了一个车钥匙，车钥匙打开的车里装了一车车钥匙，便需要乘1024，一个 inode 指向 block 需要消耗自身 4Bytes，一个 block 里内存为 4KB ,即为 inode 的1024倍，所以一个间接的话容量大小为1024*4。
+
+一个 inode 数据大小为256bytes，inode block 默认为512个 block，所以一个 group 中的文件多少为512*4096/256=8192个
+
+#### Inode工作方式
+文件:
+1. 系统找到这个文件名对应的 inode 号码
+2. 通过 inode 获取相关信息(一般为权限与data block所在位置)
+3. 根据 inode 记录的 data block 所在，读取数据
+
+目录：
+目录也是一种文件，只是是一种特殊的文件，可以简单地理解为是一张表，这张表里面存放了隶属于该目录的文件的文件名，以及所匹配的 inode 编号。即当我们在 Linux 下的文件系统建立一个目录时，文件系统会分配一个 inode 与至少一块 block 给该
+目录。目录文件的读权限（r）和写权限（w），都是针对目录文件本身。由于目录文件内只有文件名和inode号码，所以如果只有读权限，只能获取文件名，无法获取其他信息，因为其他信息都储存在inode节点中，而读取inode节点内的信息需要目录文件的执行权限（x）。
+
+例子：读取 /etc/password 文件
+通过 `ll -di / /etc/ /etc/passwd` 得
+`/` 的inode为128
+`/etc` 的inode为1357
+`/etc/passwd` 的inode为7890
+
+读取流程:
+1. `/` 的 inode: 透过挂载点的信息找到 inode 号码为 128 的根目录 inode，且 inode 规范的权限让我们可以读取该 block 的内容(有 r 与 x)
+2. `/` 的 block: 通过上述步骤拿到 `/` 的block号码，找到 `/etc/` 目录的 inode 号码(1357)
+3. `/etc/` 的 inode: 读取 `/etc/` 的inode，有 r 跟 x 权限，因此可读取 block 内容
+4. `/etc/` 的 block: 读取 `/etc/` 的block，找到 `/etc/passwd` 的 inode(7890)
+5. `/passwd` 的 inode: 读取 `/etc/passwd` 的 inode 得知有 r 跟 x 权限，可读取 `/etc/passwd` 的 block 内容
+6. `/passwd` 的 block: 将 `/etc/passwd` 的block内容读取出来
+
+#### Inode number 和 Inode table
+当一个分区被格式化为文件系统的时候，会自动产生 inode number。
+inode number 可以决定在这个分区中存储多少文件或目录，因为每个文件和目录都会有与之相对应的 inode number。
+
+每个 inode number 都有对应的 inode table。
+inode table 记录这个 inode number 对应文件所对应的 metadata（元数据）。
 
 ### Data Block
 #### Ext2:
@@ -102,62 +177,14 @@ For 64-bit filesystems, limits are as follows:
 File Size, Extents|4TiB|8TiB|16TiB|256TiB|
 File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 
-### Inode table
-#### Inode table基本概念
-文件储存在硬盘上，硬盘的最小存储单位叫做"扇区"（Sector）。每个扇区储存512字节（相当于0.5KB）。
+---
+## 查询 filesystem 相关信息的命令
+### Ext filesystem: dumpe2fs
+用法: `dumpe2fs [-bh] 装置文件名`
+|选项与参数|说明|
+|-|-|
+|-b|列出保留为坏轨的部分|
+|-h|仅列出superblock，不列出其他区段的内容|
 
-操作系统读取硬盘的时候，不会一个个扇区地读取，这样效率太低，而是一次性连续读取多个扇区，即一次性读取一个"块"（block）。这种由多个扇区组成的"块"，是文件存取的最小单位。"块"的大小，最常见的是4KB，即连续八个 sector 组成一个 block。
-
-文件数据都储存在"块"中，那么很显然，我们还必须找到一个地方储存文件的元数据（metadata），比如文件的创建者、文件的创建日期、文件的大小以及该文件实际资料是放置在哪个 data block 内等等。这种储存文件元信息的区域就叫做 inode，中文译名为"索引节点"。
-
-每一个文件都有对应的 inode，里面包含了以下基本信息:
-* 该文件的存取模式(read/write/excute)；
-* 该文件的拥有者与群组(owner/group)；
-* 该文件的容量；
-* 该文件建立或状态改变的时间(ctime)；
-* 最近一次的读取时间(atime)；
-* 最近修改的时间(mtime)；
-* 定义文件特性的旗标(flag)，如SetUID...；
-* 该文件真正内容的指向(pointer)；
-
-inode 的数量与大小也是在格式化时就已经固定了，除此之外 inode 还有以下特色:
-* 每个 inode 大小均固定为 128 bytes (新的 ext4 与 xfs 可设定到 256 bytes 甚至到 512 bytes)；
-* 每个文件都仅会占用一个 inode 而已；
-* 承上，因此文件系统能够建立的文件数量与 inode 的数量有关；
-* 系统读取文件时需要先找到 inode，并分析 inode 所记录的权限与用户是否符合，若符合才能够开始实际读取 block 的内容。
-
-inode 中关于 block 号的记录一共包含有12个直接连接、1个间接连接、1个双间连接和1个三间连接。Inode结构图如下：
-![inode.jpg](https://i.loli.net/2020/09/06/ugikvxfNnAq1VHo.jpg)
-上图最左边为 inode 本身 (本例为128 bytes)，里面有 12 个直接指向 block 号码的对照，这 12 笔记录就能够直接取得 block 号码。至于所谓的间接就是再拿一个 block 来当作记录 block 号码的记录区，如果文件太大时，就会使用间接的 block 来记录编号。同理，如果文件持续增加，那么就会利用所谓的双间接，第一个 block 仅再指出下一个记录编号的 block 在哪里，实际记录的在第二个 block 当中。依此类推，三间接就是利用第三层 block 来记录编号
-
-可以想象成口袋里装了一个车钥匙，车钥匙打开的车里装了一车车钥匙，便需要乘1024，一个 inode 指向 block 需要消耗自身 4Bytes，一个 block 里内存为 4KB ,即为 inode 的1024倍，所以一个间接的话容量大小为1024*4。
-
-#### Inode工作方式
-文件打开:
-1. 系统找到这个文件名对应的 inode 号码
-2. 通过 inode 获取相关信息(一般为权限与data block所在位置)
-3. 根据 inode 记录的 data block 所在，读取数据
-
-目录：
-目录也是一种文件，只是是一种特殊的文件，可以简单地理解为是一张表，这张表里面存放了隶属于该目录的文件的文件名，以及所匹配的 inode 编号。目录文件的读权限（r）和写权限（w），都是针对目录文件本身。由于目录文件内只有文件名和inode号码，所以如果只有读权限，只能获取文件名，无法获取其他信息，因为其他信息都储存在inode节点中，而读取inode节点内的信息需要目录文件的执行权限（x）。
-
-#### Inode number 和 Inode table
-当一个分区被格式化为文件系统的时候，会自动产生 inode number。
-inode number 可以决定在这个分区中存储多少文件或目录，因为每个文件和目录都会有与之相对应的 inode number。
-
-每个 inode number 都有对应的 inode table。
-inode table 记录这个 inode number 对应文件所对应的 metadata（元数据）。
-
-### SuperBlock
-SuperBlock 是记录整个 filesystem 相关信息的地方，包括以下主要信息：
-1. 每个 block group 的 inode 和 block 数量
-2. 未使用/已使用的 inode 和 block 数量
-3. inode 和 block 的大小(block 大小有1k, 2k, 4k; inode 大小有128bytes, 256bytes, 512bytes)
-4. filesystem 的挂载时间、最近一次写入数据的时间、最近一次检验磁盘 (fsck) 的时间等文件系统的相关信息
-5. 一个 valid bit 数值，若此文件系统已被挂载，则 valid bit 为 0，若未被挂载，则 valid bit 为 1
-
-### Block Group Description
-用于定义 block group 参数，如 block group 开始和结束的 block 号码，同时提供 super block 位置、 inode bitmap 和 inode table 的位置、block bitmap、空闲block 和 inode 的数量，以及其他一些有用的信息。
-
-### Block bitmap and Inode bitmap
-block bitmap(块位图) 跟 inode bitmap(inode位图)，用于跟踪 block group内 data block 跟 inode 的使用情况。data block 跟 inode 如果被使用了，用 1 表示，没有被使用，用 0 表示
+### 查询文件系统类型: blkid
+用法: `blkid`
