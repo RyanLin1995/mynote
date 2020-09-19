@@ -229,3 +229,8 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 * 你可以手动使用 sync 来强迫内存中设定为 Dirty 的文件回写到磁盘中；
 * 若正常关机时，关机指令会主动呼叫 sync 来将内存的数据回写入磁盘内；
 * 但若不正常关机(如跳电、当机或其他不明原因)，由于数据尚未回写到磁盘内，因此重新启动后可能会花很多时间在进行磁盘检验。甚至可能导致文件系统的损毁(非磁盘损毁)
+
+---
+
+## 挂载点的意义(mount point)
+filesystem 有独立的 inode/block/superblo
