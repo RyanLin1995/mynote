@@ -197,4 +197,4 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 3. 根据 block bitmap 找到没有使用中的 block 号码，并将实际的数据写入 block 中，且更新 inode 的 block 指向数据；
 4. 将刚刚写入的 inode 与 block 数据同步更新 inode bitmap 与 block bitmap，并更新 superblock 的内容。
 
-其中，inode table 与 data block 称为数据存放区域，
+其中，inode table 与 data block 称为数据存放区域，其他如 super block、block bitmap、inode bitmap 等区段称为metadata(中介资料)
