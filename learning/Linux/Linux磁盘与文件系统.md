@@ -236,6 +236,7 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 每个 filesystem 有独立的 inode/block/superblock 信息。磁盘格式化并创建 filesystem 后，需要链接到目录树才能被访问。将 filesystem 跟目录树链接起来的动作称为挂载(mount)。挂载点一定是目录，该目录为进入该 filesystem 的入口。
 
 例子：
-`/`、`/home` 和 `/boot` 均使用 xfs filesystem，且三者均为挂载点，为什么三者 inode 为128，`/boot` 与 `/home` 又在 `/` 底下？
-
+问: `/`、`/home` 和 `/boot` 均使用 xfs filesystem，且三者均为挂载点，为什么三者 inode 为128，`/boot` 与 `/home` 又在 `/` 底下？
+答: 按照目录树结构，`/` 所在的位置为最高父节点，也是一个文件系统的入口，针对该文件系统来说，`/` 的 inode 为128（XFS filesystem最顶层目录一般128，然后其中有两个目录 `/boot` 跟 `/home` 分别对应另外两个文件系统的入口，`/boot` 跟 `/home来说针对各自的文件系统的inode也为128；
+所以其实如果找/boot目录，实际上是先进入/的文件系统中然后找到boot目录，然后进入boot的文件系统，实现从一个文件系统到另外一个文件系统的访问；
 
