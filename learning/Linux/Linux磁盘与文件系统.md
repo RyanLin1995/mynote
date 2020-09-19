@@ -188,3 +188,6 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 
 ### 查询文件系统类型: blkid
 用法: `blkid`
+
+---
+## 日志式文件系统: EXT
