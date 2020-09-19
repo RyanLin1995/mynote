@@ -219,4 +219,4 @@ PS: 查看 Journal 信息: `dumpe2fs` 中关于 Journal 字样的
 ---
 
 ## 文件系统与内存
-数据都要先加载到内存，然后 cpu 再对其进行处理。
+数据都要先加载到内存，然后 cpu 再对其进行处理。Linux 使用异步处理(asynchronously)的方式
