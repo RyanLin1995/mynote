@@ -206,8 +206,10 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 日志式文件系统，在 filesystem 中划分了一小块区域，用于记录写入或修改文件或目录时的步骤。也就是说，存储一个文件或目录时的步骤更新如下:
 1. 预备：当系统要写入一个文件时，会先在日志记录区块中纪录某个文件准备要写入的信息；
 2. 实际写入：
-	* 2.1 先确定用户对于欲新增文件的目录是否具有 w 与 x 的权限，若有的话才能新增；
-	* 2.2 根据 inode bitmap 找到没有使用的 inode 号码，并将新文件的权限/属性写入；
-	* 2.3 根据 block bitmap 找到没有使用中的 block 号码，并将实际的数据写入 block 中，且更新 inode 的 block 指向数据；
-	* 2.4 将刚刚写入的 inode 与 block 数据同步更新 inode bitmap 与 block bitmap，并更新 superblock 的内容。
+   * 2.1 先确定用户对于欲新增文件的目录是否具有 w 与 x 的权限，若有的话才能新增；
+   * 2.2 根据 inode bitmap 找到没有使用的 inode 号码，并将新文件的权限/属性写入；
+   * 2.3 根据 block bitmap 找到没有使用中的 block 号码，并将实际的数据写入 block 中，且更新 inode 的 block 指向数据；
+   * 2.4 将刚刚写入的 inode 与 block 数据同步更新 inode bitmap 与 block bitmap，并更新 superblock 的内容。
 3. 结束：完成数据与 metadata 的更新后，在日志记录区块当中完成该文件的纪录。
+
+一旦出现
