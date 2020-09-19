@@ -214,9 +214,10 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 
 一旦出现数据不一致性，系统只需要检查日志记录即可。该功能在 EXT3/EXT4 实现。
 
-PS: 查看 Journal 信息: `dumpe2fs` 中关于 Journal 字样的
+PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 
 ---
 
 ## 文件系统与内存
-数据都要先加载到内存，然后 cpu 再对其进行处理。为了解决频繁读取内存和硬盘，Linux 使用异步处理(asynchronously)的方式
+数据都要先加载到内存，然后 cpu 再对其进行处理。为了解决处理中频繁读取内存和硬盘，Linux 使用异步处理(asynchronously)的方式。即：
+
