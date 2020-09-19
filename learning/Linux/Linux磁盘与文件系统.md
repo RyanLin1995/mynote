@@ -203,4 +203,4 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 一般情况下，新建文件都是可以正常完成的。但是如果遇到不可抗力(突然停电，机房漏水等)，数据仅仅写入到 inode table 跟 block data， 没有同步到 metadata 中，就会产生 metadata 内容与实际数据存放区不一致的问题。在 EXT2 中，如果发生这个问题，将会有 superblock 中的 valid bit(是否有挂载) 与 filesystem state(clean 与否) 等状态来判断是否强制进行数据一致性的检查！若有需要检查时则以 e2fsck 这支程序来进行，但是 e2fsck 检查是针对整个 filesystem 进行的，相当费时，因此出现日志式文件系统
 
 ### 日志式文件系统 (Journaling filesystem)
-日志式文件系统，在 filesystem 中划分了
+日志式文件系统，在 filesystem 中划分了一小块区域，用于记录写入或修改文件或目录时的步骤。也就是说，存储一个文件或目录时的步骤更新
