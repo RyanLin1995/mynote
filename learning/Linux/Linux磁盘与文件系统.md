@@ -190,4 +190,10 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 用法: `blkid`
 
 ---
-## 文件存取与日志式文件系统: EXT3/EXT4
+## 文件储存与日志式文件系统: EXT3/EXT4
+当新建一个文件或目录时，文件系统的行为如下:
+1. 先确定用户对于欲新增文件的目录是否具有 w 与 x 的权限，若有的话才能新增；
+2. 根据 inode bitmap 找到没有使用的 inode 号码，并将新文件的权限/属性写入；
+3. 根据 block bitmap 找到没有使用中的 block 号码，并将实际的数据写入 block 中，且更新 inode 的 block
+指向数据；
+4. 将刚刚写入的 inode 与 block 数据同步更新 inode bitmap 与 block bitmap，并更新 superblock 的内容。
