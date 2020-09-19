@@ -218,4 +218,4 @@ PS: 查看 Journal 信息: `dumpe2fs` 中关于 Journal 字样的
 
 ---
 
-## 文件系统与 
+## 文件系统与内存
