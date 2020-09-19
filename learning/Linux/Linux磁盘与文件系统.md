@@ -199,4 +199,4 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 
 其中，inode table 与 data block 称为数据存放区域，其他如 super block、block bitmap、inode bitmap 等区段称为metadata(中介数据)，因为 super block、inode bitmap、block bitmap 的数据是经常变动的，每次新增、移除、编辑文件或目录时都会影响到这三部分的数据，因此称为中介数据(或中介资料)
 
-一般情况下，新建文件都是可以正常完成的。但是如果遇到不可抗力()
+一般情况下，新建文件都是可以正常完成的。但是如果遇到不可抗力(突然停电，机房漏水等)，数据仅仅写入到 inode table 跟 block data， 没有同步到 metadata 中，就会
