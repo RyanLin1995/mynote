@@ -212,4 +212,6 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
    * 2.4 将刚刚写入的 inode 与 block 数据同步更新 inode bitmap 与 block bitmap，并更新 superblock 的内容。
 3. 结束：完成数据与 metadata 的更新后，在日志记录区块当中完成该文件的纪录。
 
-一旦出现
+一旦出现数据不一致性，系统只需要检查日志记录即可。该功能在 EXT3/EXT4 实现。
+
+PS: 查看
