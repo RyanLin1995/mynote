@@ -233,4 +233,4 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 ---
 
 ## 挂载点的意义(mount point)
-每个 filesystem 有独立的 inode/block/superblock 信息。磁盘格式化并创建 filesystem 后，需要链接到目录树才能被访问。将 filesys
+每个 filesystem 有独立的 inode/block/superblock 信息。磁盘格式化并创建 filesystem 后，需要链接到目录树才能被访问。将 filesystem 跟目录树链接起来的动作称为挂载(mount)。挂载点一定是目录，该目录为进入该 filesystem 的入口。
