@@ -233,4 +233,4 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 ---
 
 ## 挂载点的意义(mount point)
-filesystem 有独立的 inode/block/superblo
+每个 filesystem 有独立的 inode/block/superblock 信息。磁盘格式化并创建 filesys后，
