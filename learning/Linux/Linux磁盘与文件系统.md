@@ -241,3 +241,4 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
  `/boot` 目录，然后进入 `/boot` 的文件系统，实现从一个文件系统到另外一个文件系统的访问；
 
 两个栗子: 
+问: 为什么 `/`、 `/.` 和 ``
