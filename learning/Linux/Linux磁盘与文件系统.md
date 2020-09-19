@@ -242,4 +242,4 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 
 两个栗子: 
 问: 为什么 `/`、 `/.` 和 `/..`都指向 `/`?
-答: 从文件系统的观点来看，同一个 filesystem 的某个 inode 只会对应到一个文件内容而已(因为一个文件占用一个 inode 之故)，因此
+答: 从文件系统的观点来看，同一个 filesystem 的某个 inode 只会对应到一个文件内容而已(因为一个文件占用一个 inode 之故)，因为三个文件都在同一个 filesystem 且 inode 均为128，因此三者指向同一个 inode 号码.
