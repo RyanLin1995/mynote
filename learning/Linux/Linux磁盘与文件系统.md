@@ -190,4 +190,4 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 用法: `blkid`
 
 ---
-## 日志式文件系统: EXT
+## 文件存取与日志式文件系统: EXT3/EXT4
