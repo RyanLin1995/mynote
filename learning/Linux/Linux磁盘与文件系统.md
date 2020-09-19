@@ -215,3 +215,7 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 一旦出现数据不一致性，系统只需要检查日志记录即可。该功能在 EXT3/EXT4 实现。
 
 PS: 查看 Journal 信息: `dumpe2fs` 中关于 Journal 字样的
+
+---
+
+## 文件系统与 
