@@ -281,5 +281,7 @@ extent 最好不要乱动，因为可能会影响到实体磁盘的性能。
 ## 查看 XFS filesystem 命令
 ### xfs_info
 用法: `xfs_info 挂载点|装置文件名`
-||
-isize: inode size
+|信息|说明|
+|-|-|
+|isize|inode size|
+|agcount|AG()数量|
