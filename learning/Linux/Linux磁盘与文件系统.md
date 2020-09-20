@@ -266,3 +266,4 @@ XFS Filesystem 简介
 从 Centos7 开始，预设的文件系统有 Ext 变为了 XFS， 主要是为了应对大数据的产生。EXT 家族对于文件格式化处理，是先固定好inode/block/metadata 的，这种处理在对于大容量磁盘(TB级及以上)不友好。于是 Centos7 使用了对大容量磁盘更友好的 xfs filesystem
 
 XFS filesystem 也是日志式文件系统，主要分为三个部分
+* 资料区(data section)
