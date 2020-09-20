@@ -96,9 +96,9 @@ inode 中关于 block 号的记录一共包含有12个直接连接、1个间接�
 
 例子：读取 /etc/password 文件
 通过 `ll -di / /etc/ /etc/passwd` 得
-`/` 的inode为128
-`/etc` 的inode为1357
-`/etc/passwd` 的inode为7890
+`/` 的 inode 为128
+`/etc` 的 inode 为1357
+`/etc/passwd` 的 inode 为7890
 
 读取流程:
 1. `/` 的 inode: 透过挂载点的信息找到 inode 号码为 128 的根目录 inode，且 inode 规范的权限让我们可以读取该 block 的内容(有 r 与 x)
