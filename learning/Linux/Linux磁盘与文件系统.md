@@ -245,11 +245,14 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 答: 从文件系统的观点来看，同一个 filesystem 的某个 inode 只会对应到一个文件内容而已(因为一个文件占用一个 inode 之故)，因为三个文件都在同一个 filesystem 且 inode 均为128，因此三者指向同一个 inode 号码，获取同样的内容(即指向 `/`)
 
 ---
-## Linux 支持的其他文件系统以及 VFS
+## Linux 支持的其他文件系统
 * 传统文件系统：ext2 / minix / MS-DOS / FAT (用 vfat 模块) / iso9660 (光盘)等等；
 * 日志式文件系统： ext3 /ext4 / ReiserFS / Windows' NTFS / IBM's JFS / SGI's XFS / ZFS
 * 网络文件系统： NFS / SMBFS
 
 PS:
 1. 查看 Linux 支持多少种 filesystem ,可以用 `ls -l /lib/modules/$(uname -r)/kernel/fs`
-2. 
+2. 查看加载到内存中的 filesystem ,可以用 `cat /proc/filesystems`
+
+---
+## VFS (Virtual )
