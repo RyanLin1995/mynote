@@ -251,4 +251,5 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 * 网络文件系统： NFS / SMBFS
 
 PS:
-1. Z
+1. 查看 Linux 支持多少种 filesystem ,可以用 `ls -l /lib/modules/$(uname -r)/kernel/fs`
+2. 
