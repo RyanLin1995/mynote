@@ -267,4 +267,4 @@ XFS Filesystem 简介
 
 XFS filesystem 也是日志式文件系统，主要分为三个部分
 * 资料区(data section)
-基本与 EXT 的一致，也是包含了 inode/block/metadata 等。类似于 EXT 的 
+基本与 EXT 的一致，也是包含了 inode/block/metadata 等。类似于 EXT 的 block group, 即该区分了多个储存区群组(allocaiton groups)
