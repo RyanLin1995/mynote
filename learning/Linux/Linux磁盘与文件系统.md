@@ -265,10 +265,10 @@ VFS 简略图：
 XFS Filesystem 简介
 从 Centos7 开始，预设的文件系统有 Ext 变为了 XFS， 主要是为了应对大数据的产生。EXT 家族对于文件格式化处理，是先固定好inode/block/metadata 的，这种处理在对于大容量磁盘(TB级及以上)不友好。于是 Centos7 使用了对大容量磁盘更友好的 xfs filesystem
 
-XFS filesystem 也是日志式文件系统，主要分为三个部分
+XFS filesystem 也是日志式文件系统，主要分为三个部分:
 * 资料区(data section)
-基本与 EXT 的一致，也是包含了 inode/block/metadata 等。类似于 EXT 的 block group, 即该区分了多个储存区群组(allocaiton groups)来放置文件系统所需的数据，每个储存区群组包括(1)整个文件系统的 superblock、(2)剩余空间的管理机制、(3) inode 的分配与追踪。而且，inode 与 block 都是系统需要用到时，才动态配置产生。
+基本与 EXT 的一致，也是包含了 inode/block/metadata 等。类似于 EXT 的 block group, 即该区分了多个储存区群组(allocaiton groups, AG)来放置文件系统所需的数据，每个储存区群组包括(1)整个文件系统的 superblock、(2)剩余空间的管理机制、(3) inode 的分配与追踪。而且，inode 与 block 都是系统需要用到时，才动态配置产生。
 
 另外，与 ext 家族不同的是， xfs 的 block 与 inode 有多种不同的容量可供设定。
 block size: 512bytes ~ 64K。不过，Linux 的环境下，由于内存控制的关系 (页面文件 pagesize 的容量之故)，因此最高可以使用的 block 大小为 4K
-inode size: 256bytes ~ 2M，默认是 256
+inode size: 256bytes ~ 2M，默认是 256bytes
