@@ -289,5 +289,6 @@ extent 最好不要乱动，因为可能会影响到实体磁盘的性能。
 |bsize|block size|
 |sunit|与磁盘阵列 stripe 相关|
 |swidth|与磁盘阵列 stripe 相关|
-|log = ||
+|log = internal|指登录区在 filesystem 内|
+|||
 
