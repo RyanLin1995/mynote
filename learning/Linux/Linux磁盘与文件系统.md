@@ -287,6 +287,7 @@ extent 最好不要乱动，因为可能会影响到实体磁盘的性能。
 |agcount|AG(allocaiton groups)数量|
 |sectsz|sector size|
 |bsize|block size|
-|sunit||
-
+|sunit|与磁盘阵列 stripe 相关|
+|swidth|与磁盘阵列 stripe 相关|
+|log = ||
 
