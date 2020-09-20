@@ -273,4 +273,4 @@ block size: 512bytes ~ 64K。不过，Linux 的环境下，由于内存控制的
 inode size: 256bytes ~ 2M，默认是 256bytes
 
 * filesystem 活动登录区(log section)
-扥分录取
+登录区类似于 EXT3/EXT4 的日志区，主要用来记录文件系统的变化。件的变化会在这里纪录下来，直到该变化完整的写入到数据区后， 该笔纪录才会被终结
