@@ -278,4 +278,6 @@ inode size: 256bytes ~ 2M，默认是 256bytes
 当有文件要被建立时，xfs 会在这个区段里面找一个到数个的 extent 区块，将文件放置在这个区块内，等到分配完毕后，再写入到 data section 的 inode 与 block 去。这个 extent 区块的大小得要在格式化的时候就先指定，最小值是 4K 最大可到 1G。一般非磁盘阵列的磁盘默认为 64K容量，而具有类似磁盘阵列的 stripe 情况下，则建议 extent 设定为与 stripe 一样大较佳。这个
 extent 最好不要乱动，因为可能会影响到实体磁盘的性能。
 
-## XFS filesystem
+## 查看 XFS filesystem 命令
+### xfs_info
+用法: `xfs_info 挂载点|装置文件名`
