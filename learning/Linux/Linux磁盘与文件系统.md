@@ -263,4 +263,4 @@ VFS 简略图：
 
 ---
 XFS Filesystem 简介
-从 Centos7 开始，预设的文件系统有 Ext 变为了 XFS， 主要是为了应对大数据的产生。EXT 家族
+从 Centos7 开始，预设的文件系统有 Ext 变为了 XFS， 主要是为了应对大数据的产生。EXT 家族对于文件格式化处理，是先
