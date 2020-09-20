@@ -255,4 +255,5 @@ PS:
 2. 查看加载到内存中的 filesystem ,可以用 `cat /proc/filesystems`
 
 ---
-## VFS (Virtual Filesystem Switch)
+## VFS (Virtual Filesystem Switch or Virtual file system)
+Linux 透过 VFSVFS的目的是允许客户端应用程序以统一的方式访问不同类型的具体文件系统。
