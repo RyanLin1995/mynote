@@ -256,4 +256,4 @@ PS:
 
 ---
 ## VFS (Virtual Filesystem Switch or Virtual file system)
-Linux 透过 VFS 管理所有 filesystem。VFS 的目的是允许客户端应用程序以统一的方式访问不同类型的具体文件系统，是内核中的软件层。
+Linux 透过 VFS 管理所有 filesystem，是内核中的软件层。VFS 的目的是允许客户端应用程序以统一的方式访问不同类型的具体文件系统。如无缝地访问本地磁盘和网络磁盘。其通过
