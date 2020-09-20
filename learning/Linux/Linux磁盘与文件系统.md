@@ -255,4 +255,4 @@ PS:
 2. 查看加载到内存中的 filesystem ,可以用 `cat /proc/filesystems`
 
 ---
-## VFS (Virtual )
+## VFS (Virtual Filesystem Switch)
