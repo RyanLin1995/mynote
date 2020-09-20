@@ -267,4 +267,7 @@ XFS Filesystem 简介
 
 XFS filesystem 也是日志式文件系统，主要分为三个部分
 * 资料区(data section)
-基本与 EXT 的一致，也是包含了 inode/block/metadata 等。类似于 EXT 的 block group, 即该区分了多个储存区群组(allocaiton groups)来放置文件系统所需的数据，每个储存区群组包括(1)整个文件系统的 superblock、(2)剩余空间的管理机制、(3) inode 的分配与追踪。而且，inode 与 block 都是系统
+基本与 EXT 的一致，也是包含了 inode/block/metadata 等。类似于 EXT 的 block group, 即该区分了多个储存区群组(allocaiton groups)来放置文件系统所需的数据，每个储存区群组包括(1)整个文件系统的 superblock、(2)剩余空间的管理机制、(3) inode 的分配与追踪。而且，inode 与 block 都是系统需要用到时，才动态配置产生。
+
+另外，与 ext 家族不同的是， xfs 的 block 与 inode 有多种不同的容量可供设定。
+block size: 
