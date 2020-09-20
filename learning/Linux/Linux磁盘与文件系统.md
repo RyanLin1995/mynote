@@ -258,7 +258,7 @@ PS:
 Linux 透过 VFS 管理所有 filesystem，是内核中的软件层。VFS 的目的是允许客户端应用程序以统一的方式访问不同类型的具体文件系统。如无缝地访问本地磁盘和网络磁盘。
 
 VFS 简略图：
-![centos7_vfs.gif](https://i.loli.net/2020/09/20/iUnlEVIyuwGjo7x.gif)
+![centos7_vfs.gif](https://i.loli.net/2020/09/20/xQZpS8kCnDfal4j.gif)
 
 ---
 XFS Filesystem 简介
