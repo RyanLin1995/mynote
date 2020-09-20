@@ -262,3 +262,4 @@ VFS 简略图：
 ![centos7_vfs.gif](https://i.loli.net/2020/09/20/iUnlEVIyuwGjo7x.gif)
 
 ---
+XFS Filesystem jianji
