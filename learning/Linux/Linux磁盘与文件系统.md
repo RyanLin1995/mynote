@@ -260,3 +260,6 @@ Linux 透过 VFS 管理所有 filesystem，是内核中的软件层。VFS 的目
 
 VFS 简略图：
 ![centos7_vfs.gif](https://i.loli.net/2020/09/20/iUnlEVIyuwGjo7x.gif)
+
+---
++
