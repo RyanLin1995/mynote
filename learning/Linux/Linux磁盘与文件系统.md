@@ -217,7 +217,6 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 
 ---
-
 ## 文件系统与内存
 数据都要先加载到内存，然后 cpu 再对其进行处理。为了解决处理中频繁读取内存和硬盘，Linux 使用异步处理(asynchronously)的方式。即：
 
@@ -277,4 +276,6 @@ inode size: 256bytes ~ 2M，默认是 256bytes
 
 * 实时运作区(realtime section)
 当有文件要被建立时，xfs 会在这个区段里面找一个到数个的 extent 区块，将文件放置在这个区块内，等到分配完毕后，再写入到 data section 的 inode 与 block 去。这个 extent 区块的大小得要在格式化的时候就先指定，最小值是 4K 最大可到 1G。一般非磁盘阵列的磁盘默认为 64K容量，而具有类似磁盘阵列的 stripe 情况下，则建议 extent 设定为与 stripe 一样大较佳。这个
-extent 最好不要乱动，因为可能会影响到实体磁盘的性能
+extent 最好不要乱动，因为可能会影响到实体磁盘的性能。
+
+## XFS filesystem
