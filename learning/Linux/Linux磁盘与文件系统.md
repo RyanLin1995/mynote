@@ -266,7 +266,7 @@ XFS Filesystem 简介
 XFS filesystem 也是日志式文件系统，主要分为三个部分:
 * 资料区(data section)
 基本与 EXT 的一致，也是包含了 inode/block/metadata 等。类似于 EXT 的 block group, 即该区分了多个储存区群组(allocaiton groups, AG)来放置文件系统所需的数据，每个储存区群组包括(1)整个文件系统的 superblock、(2)剩余空间的管理机制、(3) inode 的分配与追踪。而且，inode 与 block 都是系统需要用到时，才动态配置产生。
-另外，与 ext 家族不同的是， xfs 的 block 与 inode 有多种不同的容量可供设定。
+另外，与 ext 家族不同的是，xfs 的 block 与 inode 有多种不同的容量可供设定。
    * block size: 512bytes ~ 64K。不过，Linux 的环境下，由于内存控制的关系 (页面文件 pagesize 的容量之故)，因此最高可以使用的 block 大小为 4K
    * inode size: 256bytes ~ 2M，默认是 256bytes
 
@@ -274,7 +274,7 @@ XFS filesystem 也是日志式文件系统，主要分为三个部分:
 登录区类似于 EXT3/EXT4 的日志区，主要用来记录文件系统的变化。文件的变化会在这里纪录下来，直到该变化完整的写入到数据区后，该笔纪录才会被终结。因此，文件系统所有动作都会记录在这个区块中。但是这个区域可以指定外部磁盘作为 xfs filesystem 的日志区块，如用 SSD 作为 xfs filesystem 的登录区，以提升该区域性能
 
 * 实时运作区(realtime section)
-当有文件要被建立时，xfs 会在这个区段里面找一个到数个的 extent 区块，将文件放置在这个区块内，等到分配完毕后，再写入到 data section 的 inode 与 block 去。这个 extent 区块的大小得要在格式化的时候就先指定，最小值是 4K 最大可到 1G。一般非磁盘阵列的磁盘默认为 64K容量，而具有类似磁盘阵列的 stripe 情况下，则建议 extent 设定为与 stripe 一样大较佳。这个 extent 最好不要乱动，因为可能会影响到实体磁盘的性能。
+当有文件要被建立时，xfs 会在这个区段里面找一个到数个的 extent 区块，将文件放置在这个区块内，等到分配完毕后，再写入到 data section 的 inode 与 block 去。这个 extent 区块的大小得要在格式化的时候就先指定，最小值是4K 最大可到1G。一般非磁盘阵列的磁盘默认为64K容量，而具有类似磁盘阵列的 stripe 情况下，则建议 extent 设定为与 stripe 一样大较佳。这个 extent 最好不要乱动，因为可能会影响到实体磁盘的性能。
 
 ## 查看 XFS filesystem 命令
 ### xfs_info
