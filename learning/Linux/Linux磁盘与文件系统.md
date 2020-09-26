@@ -1,4 +1,4 @@
-## 文件系统特性
+## 1. 文件系统特性
 磁盘分区完毕后还需要进行格式化(format)，之后操作系统才能够使用这个文件系统。为什么需要进行格式化呢？这是因为每种操作系统所设定的文件属性/权限并不相同，为了存放这些文件所需的数据，因此就需要将分区槽进行格式化，以成为操作系统能够利用的文件系统格式(filesystem)。
 
 每种操作系统能够使用的文件系统并不相同。举例来说，windows 98 以前的微软操作系统主要利用的文件系统是 FAT (或 FAT16)，windows 2000 以后的版本有所谓的 NTFS文件系统，至于 Linux 的正统文件系统则为 Ext2 (Linux second extended file system, ext2fs) 这一个。此外，在默认的情况下，windows 操作系统是不会认识 Linux 的 Ext2 的。传统的磁盘与文件系统之应用中，一个分区槽就是只能够被格式化成为一个文件系统，所以我们可以说一个 filesystem 就是一个 partition。但是由于新技术的利用，例如我们常听到的 LVM 与软件磁盘阵列(software raid)，这些技术可以将一个分区槽格式化为多个文件系统(例如 LVM)，也能够将多个分区槽合成一个文件系统(LVM, RAID)！所以说，目前我们在格式化时已经不再说成针对 partition 来格式化了，通常我们可以称呼一个可被挂载的数据为一个文件系统而不是一个分区槽
@@ -15,7 +15,8 @@
 ### inode 与 data block 区块说明
 文件系统先格式化出 inode 与 data block 的区块，假设某一个文件的属性与权限数据是放置到 inode 的 4 号，而这个 inode 记录了文件数据的实际放置点为 2, 7, 13, 15 这四个 block 号码，此时我们的操作系统就能够据此来排列磁盘的阅读顺序，可以一口气将四个 block 内容读出来这种数据存取的方法我们称为索引式文件系统(indexed allocation)
 
-## Linux文件系统
+---
+## 2. Linux文件系统
 标准的 Linux 文件系统 Ext2 就是使用 inode 为基础的文件系统。inode 记录文件的权限与相关属性，至于 data block 区块则记录文件的实际内容。而且文件系统一开始就将 inode 与 data block 规划好了，除非重新格式化 (或者利用 resize2fs 等指令变更文件系统大小)，否则 inode 与 data block 固定后就不再变动。但是仔细考虑一下，如果我的文件系统高达数百 GB 时，那么将所有的 inode 与 data block 通通放置在一起将是很不智的决定，因为 inode 与 data block 的数量太庞大，不容易管理。因此 Ext2 文件系统在格式化的时候基本上是区分为多个区块群组 (block group) 的，每个区块群组都有独立的 inode/block/superblock 系统
 
 故 Ext2 文件系统格式化后类似于:
@@ -178,7 +179,7 @@ File Size, Extents|4TiB|8TiB|16TiB|256TiB|
 File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 
 ---
-## 查询 filesystem 相关信息的命令
+## 3. 查询 filesystem 相关信息的命令
 ### Ext filesystem: dumpe2fs
 用法: `dumpe2fs [-bh] 装置文件名`
 |选项与参数|说明|
@@ -190,7 +191,7 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 用法: `blkid`
 
 ---
-## 文件储存与日志式文件系统: EXT3/EXT4
+## 4. 文件储存与日志式文件系统: EXT3/EXT4
 当新建一个文件或目录时，文件系统的行为如下:
 1. 先确定用户对于欲新增文件的目录是否具有 w 与 x 的权限，若有的话才能新增；
 2. 根据 inode bitmap 找到没有使用的 inode 号码，并将新文件的权限/属性写入；
@@ -217,7 +218,7 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 
 ---
-## 文件系统与内存
+## 5. 文件系统与内存
 数据都要先加载到内存，然后 cpu 再对其进行处理。为了解决处理中频繁读取内存和硬盘，Linux 使用异步处理(asynchronously)的方式。即：
 
 当系统加载一个文件到内存后，如果该文件没有被更动过，则在内存区段的文件数据会被设定为干净(clean)的。但如果内存中的文件数据被更改过了(例如你用 nano 去编辑过这个文件)，此时该内存中的数据会被设定为脏的(Dirty)。此时所有的动作都还在内存中执行，并没有写入到磁盘中！系统会不定时的将内存中设定为【Dirty】的数据写回磁盘，以保持磁盘与内存数据的一致性。你也可以用 `sync` 指令来手动强迫写入磁盘。
@@ -230,8 +231,7 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 * 但若不正常关机(如跳电、当机或其他不明原因)，由于数据尚未回写到磁盘内，因此重新启动后可能会花很多时间在进行磁盘检验。甚至可能导致文件系统的损毁(非磁盘损毁)
 
 ---
-
-## 挂载点的意义(mount point)
+## 6. 挂载点的意义(mount point)
 每个 filesystem 有独立的 inode/block/superblock 信息。磁盘格式化并创建 filesystem 后，需要链接到目录树才能被访问。将 filesystem 跟目录树链接起来的动作称为挂载(mount)。挂载点一定是目录，该目录为进入该 filesystem 的入口。
 
 一个栗子: 
@@ -243,7 +243,7 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 答: 从文件系统的观点来看，同一个 filesystem 的某个 inode 只会对应到一个文件内容而已(因为一个文件占用一个 inode 之故)，因为三个文件都在同一个 filesystem 且 inode 均为128，因此三者指向同一个 inode 号码，获取同样的内容(即指向 `/`)
 
 ---
-## Linux 支持的其他文件系统
+## 7. Linux 支持的其他文件系统
 * 传统文件系统：ext2 / minix / MS-DOS / FAT (用 vfat 模块) / iso9660 (光盘)等等；
 * 日志式文件系统： ext3 /ext4 / ReiserFS / Windows' NTFS / IBM's JFS / SGI's XFS / ZFS
 * 网络文件系统： NFS / SMBFS
@@ -253,14 +253,14 @@ PS:
 2. 查看加载到内存中的 filesystem ,可以用 `cat /proc/filesystems`
 
 ---
-## VFS (Virtual Filesystem Switch or Virtual file system)
+## 8. VFS (Virtual Filesystem Switch or Virtual file system)
 Linux 透过 VFS 管理所有 filesystem，是内核中的软件层。VFS 的目的是允许客户端应用程序以统一的方式访问不同类型的具体文件系统。如无缝地访问本地磁盘和网络磁盘。
 
 VFS 简略图：
 ![centos7_vfs.gif](https://i.loli.net/2020/09/20/xQZpS8kCnDfal4j.gif)
 
 ---
-XFS Filesystem 简介
+## 9. XFS Filesystem 简介
 从 Centos7 开始，预设的文件系统有 Ext 变为了 XFS， 主要是为了应对大数据的产生。EXT 家族对于文件格式化处理，是先固定好inode/block/metadata 的，这种处理在对于大容量磁盘(TB级及以上)不友好。于是 Centos7 使用了对大容量磁盘更友好的 xfs filesystem
 
 XFS filesystem 也是日志式文件系统，主要分为三个部分:
@@ -276,13 +276,14 @@ XFS filesystem 也是日志式文件系统，主要分为三个部分:
 * 实时运作区(realtime section)
 当有文件要被建立时，xfs 会在这个区段里面找一个到数个的 extent 区块，将文件放置在这个区块内，等到分配完毕后，再写入到 data section 的 inode 与 block 去。这个 extent 区块的大小得要在格式化的时候就先指定，最小值是4K 最大可到1G。一般非磁盘阵列的磁盘默认为64K容量，而具有类似磁盘阵列的 stripe 情况下，则建议 extent 设定为与 stripe 一样大较佳。这个 extent 最好不要乱动，因为可能会影响到实体磁盘的性能。
 
-## 查看 XFS filesystem 命令
+## 10. 查看 XFS filesystem 命令
 ### xfs_info
 用法: `xfs_info 挂载点|装置文件名`
 |信息|说明|
 |-|-|
 |isize|inode size|
 |agcount|AG(allocaiton groups)数量|
+|agsize|每个 AG 的 block 数量|
 |sectsz|sector size|
 |bsize|block size|
 |sunit|与磁盘阵列 stripe 相关|
@@ -290,3 +291,23 @@ XFS filesystem 也是日志式文件系统，主要分为三个部分:
 |log = internal|指登录区在 filesystem 内|
 |extsz|指 realtime section 里的 extent 容量|
 
+---
+## 11. 文件系统的简单操作
+### 列出文件系统的整体磁盘使用量: df
+用法: `df [-ahHikmT] [目录或文件名]`
+
+|选项与参数|说明|
+|-|-|
+|-a|列出所有的文件系统，包括系统特有的 /proc 等文件系统|
+|-h|以人们易读的格式显示容量单位|
+|-H|以 M=1000k 取代 M=1024k 的进位方式|
+|-i|显示 inode 数量而不是磁盘容量|
+|-k|以 KBytes 的容量显示各文件系统|
+|-m|以 MBytes 的容量显示各文件系统|
+|-T|显示该 partition 的 filesystem 名称|
+
+PS: 
+1. `df` 主要读取的范围为 superblock 内的信息，因此速度快。但是要注意 / 目录的容量，因为所有的数据由根目录衍生，当 / 目录剩余容量为 0 ，那就自求多福
+2. 当使用 `df -a [目录或文件名]` 时出现的 /proc 挂载点，都是 Linux 系统需要加载的系统数据，而且是挂载在内存中，因此显示为0
+3. 挂载点 /dev/shm 目录，其实是用内存虚拟出来的磁盘空间，通常是总物理内存的一半。由于是内存虚拟出来的磁盘，在这个目录下建立任何数据文件时，访问的速度都非常快，但是建立的东西下次开机时就会消失
+4. 当使用 `df -h 文件名` 时， 会显示该文件所在的 partition 信息
