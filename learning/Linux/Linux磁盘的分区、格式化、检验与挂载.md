@@ -20,3 +20,5 @@
 |RO|是否为只读装置|
 |TYPE|装置类型，是磁盘(disk)、分区(parttion)还是只读装置(rom)|
 |MOUTPOINT|挂载点|
+
+### 2. 
