@@ -22,4 +22,6 @@
 |MOUTPOINT|挂载点|
 
 ### 2. 查看全局唯一标识符: blkid
-全局唯一标识符(universally unique identifier, UUID): Linux 给予
+全局唯一标识符(universally unique identifier, UUID): Linux 给予装置独一无二的标识符，可用来挂载或使用
+用法:`blkid`
+
