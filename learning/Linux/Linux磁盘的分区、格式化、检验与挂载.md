@@ -21,4 +21,5 @@
 |TYPE|装置类型，是磁盘(disk)、分区(parttion)还是只读装置(rom)|
 |MOUTPOINT|挂载点|
 
-### 2. 
+### 2. 查看全局唯一标识符: blkid
+全局唯一标识符(universally unique identifier)
