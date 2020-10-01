@@ -187,9 +187,6 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 |-b|列出保留为坏轨的部分|
 |-h|仅列出superblock，不列出其他区段的内容|
 
-### 查询文件系统类型: blkid
-用法: `blkid`
-
 ---
 ## 4. 文件储存与日志式文件系统: EXT3/EXT4
 当新建一个文件或目录时，文件系统的行为如下:
