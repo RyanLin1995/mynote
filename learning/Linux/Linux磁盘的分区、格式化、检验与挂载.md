@@ -22,4 +22,4 @@
 |MOUTPOINT|挂载点|
 
 ### 2. 查看全局唯一标识符: blkid
-全局唯一标识符(universally unique identifier)
+全局唯一标识符(universally unique identifier, UUID): Linux 给予
