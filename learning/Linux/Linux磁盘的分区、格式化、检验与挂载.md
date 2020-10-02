@@ -54,7 +54,7 @@ PS:
 |Name|文件系统名称|
 
 新增一个磁盘: `gdisk n`
-
+![tempsnip.png](https://i.loli.net/2020/10/02/6LiZXkMvYdRDz31.png)
 PS:
    1. 
 
