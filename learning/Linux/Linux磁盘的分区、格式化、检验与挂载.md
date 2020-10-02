@@ -36,7 +36,8 @@
 #### GPT分区表使用的工具: gdisk
 用法: `gdisk [device name]`
 
-1. 详细解析:
+`gdisk` 详细解析:
 ![捕获1.PNG](https://i.loli.net/2020/10/02/VpAM6JsB4OjbEKn.png)
 PS:
-   1. 利用 `gdisk` 打开了磁盘后，可以先看到磁盘的分区情况。在 ``
+   1. 利用 `gdisk` 打开了磁盘后，可以先看到磁盘的分区情况。在 `Command` 中输入 `?` 或 `help` 即可打印 `gdisk` 菜单
+   2. 
