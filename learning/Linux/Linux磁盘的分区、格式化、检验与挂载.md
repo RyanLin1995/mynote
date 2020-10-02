@@ -31,4 +31,5 @@
 #### GPT分区表使用的工具: gdisk
 用法: `gdisk [device name]`
 
-详细解析
+1. 详细解析:
+
