@@ -55,6 +55,7 @@ PS:
 
 新增一个磁盘: `gdisk n`
 ![tempsnip.png](https://i.loli.net/2020/10/02/6LiZXkMvYdRDz31.png)
-PS:
-   1. 
+PS：
+1. 新增分区号码时，按照默认值即可
+   2. 
 
