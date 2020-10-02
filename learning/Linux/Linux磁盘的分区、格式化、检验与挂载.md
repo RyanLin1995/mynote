@@ -34,4 +34,4 @@
 1. 详细解析:
 ![捕获1.PNG](https://i.loli.net/2020/10/02/VpAM6JsB4OjbEKn.png)
 PS:
-   1. 检查磁盘信息完整过程: 利用`lsblk`
+   1. 检查磁盘信息完整过程: 利用`lsblk` 或 `blkid` 或 `df -h` 获取目前磁盘数量 ---> 利用 `parted [device name] print` 获取磁盘
