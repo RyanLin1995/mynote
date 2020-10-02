@@ -43,4 +43,5 @@ PS:
    2. `gdisk` 退出方式有两种，分别为 `q` 和 `w`。其中 `q` 仅退出而不保存，`w` 退出且保存操作。
 
 `gdisk p` 解析:
- 
+ ![捕获3.PNG](https://i.loli.net/2020/10/02/EkHlo3Jbd79jcaw.png)
+|||
