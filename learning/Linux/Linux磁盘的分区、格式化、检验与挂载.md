@@ -32,4 +32,6 @@
 用法: `gdisk [device name]`
 
 1. 详细解析:
-
+![捕获1.PNG](https://i.loli.net/2020/10/02/VpAM6JsB4OjbEKn.png)
+PS:
+   1. 在 
