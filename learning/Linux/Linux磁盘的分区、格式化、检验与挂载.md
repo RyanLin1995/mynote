@@ -31,7 +31,7 @@
 检查磁盘信息完整过程: 
 1. 利用`lsblk` 或 `blkid` 或 `df -h` 获取目前磁盘数量 
 2. 利用 `parted [device name] print` 获取磁盘分区信息 
-3. 用对应的磁盘管理工具打开磁盘
+3. 用对应的磁盘管理工具[ `gdisk` 或 `fdisk` ]打开磁盘
 
 #### GPT分区表使用的工具: gdisk
 用法: `gdisk [device name]`
@@ -39,4 +39,4 @@
 1. 详细解析:
 ![捕获1.PNG](https://i.loli.net/2020/10/02/VpAM6JsB4OjbEKn.png)
 PS:
-   1. 
+   1. 利用 `gdisk` 打开了磁盘后，可以先看到磁盘的分区情况。在 ``
