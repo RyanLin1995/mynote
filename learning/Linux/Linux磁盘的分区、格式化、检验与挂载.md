@@ -57,5 +57,6 @@ PS:
 ![tempsnip.png](https://i.loli.net/2020/10/02/6LiZXkMvYdRDz31.png)
 PS：
 1. 新增分区号码时，按照默认值即可
-   2. 
+2. 开始扇区也是默认即可，是目前所用扇区的号码+1
+3. 结束扇区
 
