@@ -44,4 +44,6 @@ PS:
 
 `gdisk p` 解析:
  ![捕获3.PNG](https://i.loli.net/2020/10/02/EkHlo3Jbd79jcaw.png)
-|||
+|分区表信息名称|意义|
+|-|-|
+|Number|分区槽编号，1指的是|
