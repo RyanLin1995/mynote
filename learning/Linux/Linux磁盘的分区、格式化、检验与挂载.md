@@ -40,4 +40,6 @@
 ![捕获1.PNG](https://i.loli.net/2020/10/02/VpAM6JsB4OjbEKn.png)
 PS:
    1. 利用 `gdisk` 打开了磁盘后，可以先看到磁盘的分区情况。在 `Command` 中输入 `?` 或 `help` 即可打印 `gdisk` 菜单
-   2. `gdisk` 退出方式有两种，分别为 `q` 和 `w`。其中 
+   2. `gdisk` 退出方式有两种，分别为 `q` 和 `w`。其中 `q` 仅退出而不保存，`w` 退出且保存操作。
+
+##### `gdisk` 
