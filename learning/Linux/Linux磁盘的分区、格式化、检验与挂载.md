@@ -65,3 +65,6 @@ PS：
 7. 如果不想重启的话，可以使用 `partprobe [-s]` 更新 Linux 核心分区表，使分区生效
 
 删除一个分区: `gdisk d`
+![tempsnip2.png](https://i.loli.net/2020/10/03/NoJyz9PbCKOx2ju.png)
+PS:
+1.
