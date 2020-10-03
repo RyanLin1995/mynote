@@ -67,4 +67,4 @@ PS：
 删除一个分区: `gdisk d`
 ![tempsnip2.png](https://i.loli.net/2020/10/03/NoJyz9PbCKOx2ju.png)
 PS:
-1.
+1. 不能直接删除正在使用的分区。直接杀出如果想删除正在使用的分区，必须先卸载掉
