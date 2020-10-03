@@ -1,4 +1,4 @@
-## 1. 磁盘分区
+## 1. 磁盘信息显示
 ### 列出系统上所有的磁盘列表: lsblk
 用法: `lsblk [-dfimpt] device`
 
@@ -28,13 +28,13 @@
 
 `blkid` 信息解析: 装置名称:UUID:文件系统类型
 
-### 磁盘分区
+## 磁盘分区
 检查磁盘信息完整过程: 
 1. 利用`lsblk` 或 `blkid` 或 `df -h` 获取目前磁盘数量 
 2. 利用 `parted [device name] print` 获取磁盘分区信息 
 3. 用对应的磁盘管理工具[ `gdisk` 或 `fdisk` ]打开磁盘
 
-#### GPT分区表使用的工具: gdisk
+### GPT分区表使用的工具: gdisk
 用法: `gdisk [device name]`
 
 `gdisk` 解析:
@@ -70,7 +70,7 @@ PS：
 PS:
 1. 不能直接删除正在使用的分区。直接删除正在使用的分区，可能导致系统稳定性问题。如果想删除正在使用的分区，必须先卸载掉，再删除，最后更新分区表
 
-#### MBR 分区工具:fdisk
+### MBR 分区工具:fdisk
 ![tempsnip3.png](https://i.loli.net/2020/10/03/souOrSU1bhQRfkn.png)
 
 PS:
