@@ -73,4 +73,4 @@ PS:
 ![tempsnip3.png](https://i.loli.net/2020/10/03/souOrSU1bhQRfkn.png)
 
 PS:
-`fdisk` 用法跟 `gdisk` 用法基本一致。只不过 MBR 中有
+`fdisk` 用法跟 `gdisk` 用法基本一致。只不过新建 MBR分区时有 Primary, Extended, Logical等限制。而且 `fdisk` 有时会用磁柱(cylinder)
