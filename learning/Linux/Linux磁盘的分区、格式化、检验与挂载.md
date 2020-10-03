@@ -1,4 +1,5 @@
-### 1. 列出系统上所有的磁盘列表: lsblk
+## 1. 磁盘分区
+### 列出系统上所有的磁盘列表: lsblk
 用法: `lsblk [-dfimpt] device`
 
 |选项与参数|说明|
@@ -21,13 +22,13 @@
 |TYPE|装置类型，是磁盘(disk)、分区(parttion)还是只读装置(rom)|
 |MOUTPOINT|挂载点|
 
-### 2. 查看全局唯一标识符: blkid
+### 查看全局唯一标识符: blkid
 全局唯一标识符(universally unique identifier, UUID): Linux 给予装置独一无二的标识符，可用来挂载或使用
 用法:`blkid`
 
 `blkid` 信息解析: 装置名称:UUID:文件系统类型
 
-### 3. 磁盘分区
+### 磁盘分区
 检查磁盘信息完整过程: 
 1. 利用`lsblk` 或 `blkid` 或 `df -h` 获取目前磁盘数量 
 2. 利用 `parted [device name] print` 获取磁盘分区信息 
@@ -73,4 +74,4 @@ PS:
 ![tempsnip3.png](https://i.loli.net/2020/10/03/souOrSU1bhQRfkn.png)
 
 PS:
-`fdisk` 用法跟 `gdisk` 用法基本一致。只不过新建 MBR分区时有 Primary, Extended, Logical等限制。而且 `fdisk` 有时会用磁柱(cylinder)
+`fdisk` 用法跟 `gdisk` 用法基本一致。只不过新建 MBR分区时有 Primary, Extended, Logical等限制。而且 `fdisk` 有时会用磁柱(cylinder)作为分区最小单位，与 `gdisk` 以扇区作为最小单位不一样
