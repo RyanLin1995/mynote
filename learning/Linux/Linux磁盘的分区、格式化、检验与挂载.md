@@ -87,4 +87,6 @@ PS:
 
 |选项与参数|说明|
 |-|-|
-|-b|block size，一般是 512b - 64 kb，但是 Linux 限制最大为 4 k|
+|-b|block size，一般是 512b - 64 kb，但是 Linux 限制最大为 4k|
+|-d|后面接data section的相关参数|
+|-d agcount=数值|设定几个储存群组(AG)的意思，通常与CPU有关，例如|
