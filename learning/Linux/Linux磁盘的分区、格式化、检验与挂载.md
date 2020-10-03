@@ -89,4 +89,4 @@ PS:
 |-|-|
 |-b|block size，一般是 512b - 64 kb，但是 Linux 限制最大为 4k|
 |-d|后面接data section的相关参数|
-|-d agcount=数值|设定几个储存群组(AG)的意思，通常与CPU有关，例如|
+|-d agcount=数值|设定几个储存群组(AG)的意思，通常与CPU有关，例如通过 `grep 'processor' /proc/cpuinfo`得到CPU数量后，把agcount设置为跟CPU数量一致的数值|
