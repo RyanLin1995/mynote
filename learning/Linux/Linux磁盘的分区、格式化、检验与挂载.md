@@ -83,3 +83,8 @@ PS:
 建立文件系统的命令: `mkfs` (make filesystem)
 
 ### 格式化xfs文件系统: mkfs.xfs
+用法: `mkfs.xfs [-b bsize] [-d parms] [-i parms] []`
+
+|选项与参数|说明|
+|-|-|
+|||
