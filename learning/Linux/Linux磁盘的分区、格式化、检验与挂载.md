@@ -69,4 +69,7 @@ PS：
 PS:
 1. 不能直接删除正在使用的分区。直接删除正在使用的分区，可能导致系统稳定性问题。如果想删除正在使用的分区，必须先卸载掉，再删除，最后更新分区表
 
+#### MBR 分区工具:fdisk
+![tempsnip3.png](https://i.loli.net/2020/10/03/souOrSU1bhQRfkn.png)
 
+PS:
