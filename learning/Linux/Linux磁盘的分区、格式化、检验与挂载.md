@@ -28,7 +28,8 @@
 
 `blkid` 信息解析: 装置名称:UUID:文件系统类型
 
-## 磁盘分区
+---
+## 2. 磁盘分区
 检查磁盘信息完整过程: 
 1. 利用`lsblk` 或 `blkid` 或 `df -h` 获取目前磁盘数量 
 2. 利用 `parted [device name] print` 获取磁盘分区信息 
@@ -75,3 +76,6 @@ PS:
 
 PS:
 `fdisk` 用法跟 `gdisk` 用法基本一致。只不过新建 MBR分区时有 Primary, Extended, Logical等限制。而且 `fdisk` 有时会用磁柱(cylinder)作为分区最小单位，与 `gdisk` 以扇区作为最小单位不一样
+
+---
+## 3. 磁盘格式化(建立文件系统)
