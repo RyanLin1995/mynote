@@ -53,7 +53,7 @@ PS:
 |Code|分区的文件系统类型。Linux 为8300，swap为8200.不过只是一个提示，不代表真正的文件系统|
 |Name|文件系统名称|
 
-新增一个磁盘: `gdisk n`
+新增一个分区: `gdisk n`
 ![tempsnip.png](https://i.loli.net/2020/10/02/6LiZXkMvYdRDz31.png)
 PS：
 1. 新增分区号码时，按照默认值即可
@@ -64,4 +64,4 @@ PS：
 6. 但是利用`cat /proc/partitions` 、'lsblk'、`blkid` 等命令没有看到新建磁盘，是因为系统在运行当中，为了防止系统出现问题，需要重启后分区才能生效
 7. 如果不想重启的话，可以使用 `partprobe [-s]` 更新 Linux 核心分区表，使分区生效
 
-删除一个磁盘: `gdisk d`
+删除一个分区: `gdisk d`
