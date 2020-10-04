@@ -82,7 +82,7 @@ PS:
 磁盘分区完成后，需要进行格式化(建立文件系统)使系统可以识别到磁盘。
 建立文件系统的命令: `mkfs` (make filesystem)
 
-### 格式化xfs文件系统: mkfs.xfs
+### 格式化 xfs 文件系统: mkfs.xfs
 用法: `mkfs.xfs [-b bsize] [-d parms] [-i parms] [-l parms] [-L label] [-f] [-r parms] 装置名称`
 
 |选项与参数|说明|
@@ -107,3 +107,5 @@ PS:
 |-L|文件系统标头名称(Label name)|
 |-r|realtime section 相关设定|
 |-r extsize|即 extent 数值，一般不需更改。但是如果存在 RAID 时，最好与 swidth 数值一致。最小4K，最大1G|
+
+### 格式化
