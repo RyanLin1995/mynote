@@ -103,4 +103,5 @@ PS:
 |-l|与 log section 相关设定|
 |-l internal=[0|1]|log 是否为内建。1为内建(预设为1)|
 |-l logdev=device|log 如果不为内建(即-i internal=0)时所用，后面接装置名称|
-|-l size=||
+|-l size=数值|指定登录区的容量，通常至少需要有512个 block，大约2M以上|
+
