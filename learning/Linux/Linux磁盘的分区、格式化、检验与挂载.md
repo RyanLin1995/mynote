@@ -106,4 +106,4 @@ PS:
 |-l size=数值|指定登录区的容量，通常至少需要有512个 block，大约2M以上|
 |-L|文件系统标头名称(Label name)|
 |-r|realtime section 相关设定|
-|-r extsize|即 extent 数值，一般不需更改。|
+|-r extsize|即 extent 数值，一般不需更改。但是如果存在 RAID 时，最好与 swidth 数值一致。最小4K，最大1G|
