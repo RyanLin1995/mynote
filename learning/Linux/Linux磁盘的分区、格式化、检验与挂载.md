@@ -123,4 +123,4 @@ PS:
 用法: `mkfs.(filesystem) 装置名称` 或 `mkfs -t (filesystem) 装置名称`
 其中(filesystem)指需要格式化的文件系统，可以用
  `mkfs.`<kbd>tab</kbd><kbd>tab</kbd> 查看更多支持的文件系统。
-而 `mkfs -t (files)`
+而 `mkfs -t (filesystem) 装置名称` 可以显示相关参数
