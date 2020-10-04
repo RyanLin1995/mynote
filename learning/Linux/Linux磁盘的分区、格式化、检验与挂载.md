@@ -88,7 +88,7 @@ PS:
 |选项与参数|说明|
 |-|-|
 |-b|block size，一般是 512b - 64 kb，但是 Linux 限制最大为 4k|
-|-d|后面接 data section 的相关参数|
+|-d|data section 相关设定|
 |-d agcount=数值|设定几个储存群组(AG)的意思，通常与CPU有关，例如通过 `grep 'processor' /proc/cpuinfo`得到CPU数量后，把 agcount 设置为跟CPU数量一致的数值|
 |-d agsize|每个AG设定多少容量的意思，通常 agcount 跟 agsize 只设定一个|
 |-d file|指把装置格式化为文件(例如虚拟磁盘)|
@@ -98,11 +98,11 @@ PS:
 |-d sunit=数值|与 su 相当，只是单位使用的是几个 sector(512bytes大小) 的意思|
 |-d swidth=数值|即 su*sw 的数值，但是以几个 sector(512bytes大小) 来设定|
 |-f|如果装置内已经有文件系统，将会强制格式化|
-|-i|与 inode 相关的设定|
+|-i|inode 相关设定|
 |-i size=数值|inode 的容量，最小为 256bytes，最大为2K|
 |-l|与 log section 相关设定|
 |-l internal=[0|1]|log 是否为内建。1为内建(预设为1)|
 |-l logdev=device|log 如果不为内建(即-i internal=0)时所用，后面接装置名称|
 |-l size=数值|指定登录区的容量，通常至少需要有512个 block，大约2M以上|
 |-L|文件系统标头名称(Label name)|
-|-r|指|
+|-r|与 realtime section |
