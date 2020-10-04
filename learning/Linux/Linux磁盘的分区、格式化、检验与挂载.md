@@ -100,9 +100,10 @@ PS:
 |-f|如果装置内已经有文件系统，将会强制格式化|
 |-i|inode 相关设定|
 |-i size=数值|inode 的容量，最小为 256bytes，最大为2K|
-|-l|与 log section 相关设定|
+|-l|log section 相关设定|
 |-l internal=[0|1]|log 是否为内建。1为内建(预设为1)|
 |-l logdev=device|log 如果不为内建(即-i internal=0)时所用，后面接装置名称|
 |-l size=数值|指定登录区的容量，通常至少需要有512个 block，大约2M以上|
 |-L|文件系统标头名称(Label name)|
-|-r|与 realtime section |
+|-r|realtime section 相关设定|
+
