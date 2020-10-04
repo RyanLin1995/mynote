@@ -101,5 +101,6 @@ PS:
 |-i|与 inode 相关的设定|
 |-i size=数值|inode 的容量，最小为 256bytes，最大为2K|
 |-l|与 log section 相关设定|
-|-i internal=[0|1]|log 是否为内建。1为内建(预设为1)|
-|-i logdev=device|log 如果不为内建(即-i internal=0)时所用，后面接装置名称|
+|-l internal=[0|1]|log 是否为内建。1为内建(预设为1)|
+|-l logdev=device|log 如果不为内建(即-i internal=0)时所用，后面接装置名称|
+|-l size=||
