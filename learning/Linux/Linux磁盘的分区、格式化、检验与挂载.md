@@ -93,4 +93,5 @@ PS:
 |-d agsize|每个AG设定多少容量的意思，通常 agcount 跟 agsize 只设定一个|
 |-d file|指把装置格式化为文件(例如虚拟磁盘)|
 |-d size=数值|data section容量，指可以不将全部装置容量用完|
-|-d su=||
+|-d su=数值|当存在 RAID 时，stripe 数值的意思，与 sw 搭配使用|
+|-d sw=数值|当存在 RAID 时，用于|
