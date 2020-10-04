@@ -95,4 +95,4 @@ PS:
 |-d size=数值|data section容量，指可以不将全部装置容量用完|
 |-d su=数值|当存在 RAID 时，stripe 数值的意思，与 sw 搭配使用|
 |-d sw=数值|当存在 RAID 时，用于存储数据的磁盘数量(需扣除备份盘跟备用盘)|
-|-d sunit=数值|与 su 相当|
+|-d sunit=数值|与 su 相当，只是单位为|
