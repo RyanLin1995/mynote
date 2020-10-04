@@ -108,4 +108,8 @@ PS:
 |-r|realtime section 相关设定|
 |-r extsize|即 extent 数值，一般不需更改。但是如果存在 RAID 时，最好与 swidth 数值一致。最小4K，最大1G|
 
-### 格式化
+### 格式化 ext 文件系统: mkfs.ext4
+用法: `mkfs.ext4 [-b size][-L label] 装置名称`
+
+|选项与参数|说明|
+|-|-|
