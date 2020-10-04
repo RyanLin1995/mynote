@@ -99,4 +99,5 @@ PS:
 |-d swidth=数值|即 su*sw 的数值，但是以几个 sector(512bytes大小) 来设定|
 |-f|如果装置内已经有文件系统，将会强制格式化|
 |-i|与 inode 相关的设定|
-|-i size=数值|inode 的容量，最小为 256|
+|-i size=数值|inode 的容量，最小为 256bytes，最大为2K|
+|-i internal=[0|1]|log 是否为内建。1为|
