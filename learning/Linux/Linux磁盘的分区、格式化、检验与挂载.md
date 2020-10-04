@@ -121,3 +121,4 @@ PS:
 
 ### 格式化其他文件系统: mkfs
 用法: `mkfs.(filesystem) 装置名称` 或 `mkfs -t (filesystem) 装置名称`
+其中(filesystem)指需要格式化的文件系统，可以用`mkfs.<kbd>tab</kbd><k>tab</k>`
