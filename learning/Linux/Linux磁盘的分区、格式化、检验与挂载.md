@@ -96,4 +96,5 @@ PS:
 |-d su=数值|当存在 RAID 时，stripe 数值的意思，与 sw 搭配使用|
 |-d sw=数值|当存在 RAID 时，用于存储数据的磁盘数量(需扣除备份盘跟备用盘)|
 |-d sunit=数值|与 su 相当，只是单位使用的是几个 sector(512bytes大小) 的意思|
-|-d swidth=||
+|-d swidth=数值|即 su*sw 的数值，但是以几个 sector(512bytes大小) 来设定|
+|-f|如果装置内已经有文件系统，|
