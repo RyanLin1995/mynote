@@ -89,5 +89,6 @@ PS:
 |-|-|
 |-b|block size，一般是 512b - 64 kb，但是 Linux 限制最大为 4k|
 |-d|后面接 data section 的相关参数|
-|-d agcount=数值|设定几个储存群组(AG)的意思，通常与CPU有关，例如通过 `grep 'processor' /proc/cpuinfo`得到CPU数量后，把agcount设置为跟CPU数量一致的数值|
-|-d agsize|每个AG设定多少容量的意思，通常agcount跟|
+|-d agcount=数值|设定几个储存群组(AG)的意思，通常与CPU有关，例如通过 `grep 'processor' /proc/cpuinfo`得到CPU数量后，把 agcount 设置为跟CPU数量一致的数值|
+|-d agsize|每个AG设定多少容量的意思，通常 agcount 跟 agsize 只设定一个|
+|-d file|指把装置格式化为文件(例如虚拟磁盘)|
