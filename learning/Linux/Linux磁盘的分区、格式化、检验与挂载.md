@@ -175,4 +175,8 @@ PS:
 `mount [-t 文件系统] LABEL=`` 挂载点`
 `mount [-t 文件系统] UUID=`` 挂载点`
 `mount [-t 文件系统] 装置文件名 挂载点`
-`mount [-o] [prams] UUID|`
+`mount [-o] [prams] UUID|LABEL|装置文件名 挂载点`
+
+|选项与参数|说明|
+|-|-|
+|-a|根据配置文件/etc/fstab的数据将所有未挂载的磁盘都挂上来|
