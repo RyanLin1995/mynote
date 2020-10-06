@@ -175,4 +175,4 @@ PS:
 `mount [-t 文件系统] LABEL=`` 挂载点`
 `mount [-t 文件系统] UUID=`` 挂载点`
 `mount [-t 文件系统] 装置文件名 挂载点`
-`mount [-o] [prams]`
+`mount [-o] [prams] UUID|`
