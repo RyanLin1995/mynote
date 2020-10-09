@@ -224,4 +224,7 @@ Linux 下所有的装置均为文件。因此 Linux 会通过文件的 major 与
 |/dev/sda|8|0-15|
 |/dev/sdb|8|16-31|
 |/dev/loop0|7|0|
-||||
+|/dev/loop1|7|1|
+|/dev/vda|252|0-15|
+
+基本上 Linux 会自动实时产生
