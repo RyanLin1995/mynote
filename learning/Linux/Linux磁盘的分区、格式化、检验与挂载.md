@@ -238,4 +238,7 @@ Linux 下所有的装置均为文件。因此 Linux 会通过文件的 major 与
 |Minor|次要装置代码|
 
 PS:
-1. Major 跟 Minor 一定要根据规范设置，
+1. Major 跟 Minor 一定要根据规范设置，不能随便填写
+
+### 修改文件系统的 UUID 与 Label Name
+#### 修改 xfs 文件系统的 UUID 与 Label name
