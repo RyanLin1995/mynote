@@ -257,3 +257,6 @@ PS:
 |-l|类似于 `dumpe2fs -h`，将 superblock 的数据列出来|
 |-L|设定这个装置的 label name|
 |-U|设定这个装置的 UUID|
+
+PS:
+1. 为什么推荐使用 UUID 进行挂载而不是 装置文件名(/dev/sda4) 挂载，是因为如果
