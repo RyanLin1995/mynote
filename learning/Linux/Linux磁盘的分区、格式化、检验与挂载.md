@@ -179,6 +179,38 @@ PS:
 
 |选项与参数|说明|
 |-|-|
-|-a|根据配置文件/etc/fstab的数据将所有未挂载的磁盘都挂载上来|
+|-a|根据配置文件 /etc/fstab 的数据将所有未挂载的磁盘都挂载上来|
 |-l|如果只是输入 `mount` 那么只会显示目前挂载的信息，加上 -l 后会显示 Label 名称|
-|-n|默认情况下，系统会把实际挂载的情况|
+|-n|默认情况下，系统会把实际挂载的情况实时写入到 /etc/fstab中，以供其他程序运作。但是某些情况下(单人维护模式)如果不想写入，可以加上-n选项|
+|-t|加上文件系统种类来指定需要挂载的类型，常见的 Linux 支持的类型有:xfs、ext3、ext4、reiserfs、vfat、iso9660、nfs、cifs、smbfs(后三种为网络文件类型)|
+|-o|接挂载时额外加上的参数，如账号、密码、读写权限等|
+|-o async，sync|被挂载的文件系统采用同步(sync)还是异步(async)的内存机制|
+|-o atime，noatime|是否修改读取时间(atime)。某些情况下为了效能，可以使用noatime|
+|-o ro，rw|被挂载的文件系统为只读(ro)还是读写(rw)|
+|-o auto，noauto|是否允许此文件系统被 `mount -a` 自动挂载(auto)|
+|-o dev，nodev|是否允许文件系统上建立装置文件，dev为允许|
+|-o suid，nosuid|是否允许文件系统上含有 suid/sgid 的文件格式|
+|-o exec，noexec|是否允许文件系统上拥有 binary 文件|
+|-o user，nouser|是否允许任何用户在此文件系统上执行 `mount`。一般来说，`mount`仅仅 root 可以进行，如果使用了 user 参数，那么一般的 user 也可以对这个文件系统进行 `mount`|
+|-o default|-o 的默认值为:rw，suid，dev，exec，auto，nouser，async|
+|-o remount|重新挂载，在系统出错或更新了参数时很有用|
+
+PS:
+1. 目前 Centos7 会自动根据 /etc/filesystems(系统指定的测试挂载文件系统类型的优先级) 和 /proc/filesystems(Linux系统已经加载的文件系统类型)，分析 superblock 搭配存在于 /lib/mudules/$(uname -r)/kernel/fs 的驱动来测试是否成功，如果成功就自动把文件系统挂载起来。因此不需要再使用 `mount -t` 
+2. 挂载了光驱后，需要卸载才能退出光盘
+3. 如果挂载的光盘或U盘中有中文，可以用 `mount -o codepage=950,iocharset=utf8` 来处理
+4. 当系统出现问题或改动了挂载参数，可以使用 `mount -o remount [prams]` 来进行重新挂载，如 / 目录从只读状态重新挂载为可读写状态: `mount -o remount,rw,auto /`
+5. 可以用 `mount` 把一个目录挂载到另一个目录下，用 `mount --bind`，如把 /var 挂载到 /data/var : `mount --bind /var /data/var`
+
+### 文件系统的卸载: umount
+用法: `umount [-fln] 装置名称或挂载点`
+
+|选项与参数|说明|
+|-|-|
+|-f|强制卸载，可用于网络文件系统(NFS)无法读取时卸载|
+|-l|立刻卸载文件系统，比 -f 强|
+|-n|不更新 /etc/mtab 下进行卸载|
+
+PS:
+1. 如果要卸载的装置有其他挂载，一定要用挂载点作为卸载
+2. 如果卸载时出现 target is busy 的错误，需要先切换到其他路径再卸载，因为可能正在使用该文件系统
