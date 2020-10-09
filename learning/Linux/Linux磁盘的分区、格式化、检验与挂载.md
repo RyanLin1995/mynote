@@ -236,3 +236,6 @@ Linux 下所有的装置均为文件。因此 Linux 会通过文件的 major 与
 |-p|建立一个FIFO文件|
 |Major|主要装置代码|
 |Minor|次要装置代码|
+
+PS:
+1. Major 跟 Minor 一定要根据规范设置，
