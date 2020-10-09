@@ -250,4 +250,5 @@ PS:
 |-L|设定这个装置的 label name|
 |-U|设定这个装置的 UUID|
 
-#### 修改 ext4 文件系统的 UUID 与 
+#### 修改 ext4 文件系统的 UUID 与 Label name: tune2fs
+用法:
