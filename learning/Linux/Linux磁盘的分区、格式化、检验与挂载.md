@@ -243,3 +243,9 @@ PS:
 ### 修改文件系统的 UUID 与 Label Name
 #### 修改 xfs 文件系统的 UUID 与 Label name: xfs_admin
 用法: `xfs_admin [-lu] [-L label] [-U uuid] 装置文件名`
+|选项与参数|说明|
+|-|-|
+|-l|列出这个装置的 label name|
+|-u|列出这个装置的 UUID|
+|-L|设定这个装置的 label name|
+|-U|设定这个装置的|
