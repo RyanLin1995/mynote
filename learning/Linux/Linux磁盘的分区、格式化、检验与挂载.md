@@ -251,4 +251,9 @@ PS:
 |-U|设定这个装置的 UUID|
 
 #### 修改 ext4 文件系统的 UUID 与 Label name: tune2fs
-用法:
+用法: `tune2fs [-l] [-L Label] [-U uuid] 装置文件名`
+|选项与参数|说明|
+|-|-|
+|-l|类似于 `dumpe2fs -h`，将 superblock 的数据列出来|
+|-L|设定这个装置的 label name|
+|-U|设定这个装置的 UUID|
