@@ -241,4 +241,5 @@ PS:
 1. Major 跟 Minor 一定要根据规范设置，不能随便填写
 
 ### 修改文件系统的 UUID 与 Label Name
-#### 修改 xfs 文件系统的 UUID 与 Label name
+#### 修改 xfs 文件系统的 UUID 与 Label name: xfs_admin
+用法: `xfs_admin [-lu] [-L label] [-U uuid] 装置文件名`
