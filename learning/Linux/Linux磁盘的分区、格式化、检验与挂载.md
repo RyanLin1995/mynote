@@ -294,5 +294,5 @@ PS:
 一个例子:
 在 /srv 下建立一个 512MB 左右的大文件，然后将这个大文件格式化并且实际挂载
 1. 通过 `dd` 建立大文件: `dd if=/dev/zero of=/srv/loopdev bs=1M count=512`
-2. 格式化 /srv/loopdev 为 xfs: `mkfs.xfs -f /srv/loopdev` （因为 /srv/loopdev 为文件，因此格式化时要加上 -f）
-3. 
+2. 格式化 /srv/loopdev 为 xfs : `mkfs.xfs -f /srv/loopdev` （因为 /srv/loopdev 为文件，因此格式化时要加上 -f）
+3. 挂载 /srv/loopdev 到 /mnt : `mount /srv/loopdev /mnt`
