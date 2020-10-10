@@ -275,5 +275,4 @@ PS:
 字段解析:
 ![tempsnip4.png](https://i.loli.net/2020/10/10/EoHxynkKZtvUDul.png)
 
-* 第一栏: 磁盘装置文件名/UUID/Label Name
-    
+* 第一栏: 磁盘装置文件名/UUID/Label Name: 可以填写装置文件名(如:/dev/sda2)、UUID(如:UUID=)或
