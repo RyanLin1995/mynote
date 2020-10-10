@@ -275,3 +275,5 @@ PS:
 字段解析:
 ![tempsnip4.png](https://i.loli.net/2020/10/10/EoHxynkKZtvUDul.png)
 
+* 第一栏: 磁盘装置文件名/UUID/Label Name
+    
