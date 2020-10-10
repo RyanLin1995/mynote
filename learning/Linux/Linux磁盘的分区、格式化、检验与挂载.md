@@ -288,3 +288,5 @@ PS:
 ### 挂载 ISO 文件
 当需要读取 ISO 文件时，不需要刻录成光盘即可读取里面的数据，用法为: `mount -o loop [iso name] [mount poing]`
 
+一个例子:
+
