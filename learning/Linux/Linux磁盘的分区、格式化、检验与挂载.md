@@ -275,4 +275,6 @@ PS:
 字段解析:
 ![tempsnip4.png](https://i.loli.net/2020/10/10/EoHxynkKZtvUDul.png)
 
-* 第一栏: 磁盘装置文件名/UUID/Label Name: 可以填写装置文件名(如:/dev/sda2)、UUID(如:UUID=)或
+* 第一栏: 磁盘装置文件名/UUID/Label Name: 可以填写装置文件名(如:/dev/sda2)、UUID(如:UUID=)或Label name(如: Label=)
+* 第二栏: 挂载点: 必须是 Linux 已存在的目录
+* 第三栏: 
