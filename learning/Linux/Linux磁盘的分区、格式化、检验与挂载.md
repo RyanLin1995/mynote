@@ -273,7 +273,7 @@ PS:
 ### 开机自动挂载文件: /etc/fstab
 /etc/fstab 是开机时自动挂载磁盘的配置文件。但是实际上 filesystem 的挂载记录是写入到 /etc/mtab 与 /roc/mounts 这两个文件中。因此，每次 filesystem 的挂载有变化时，这两个文件也会相应的变化。
 
-如果 /etc/fstab 因此填写错误无法开机，可以进入
+如果 /etc/fstab 因此填写错误无法开机，可以进入单人维护模式，然后重新挂载根目录 / 去修改 /etc/fstab ，具体命令: `mount -n -oremount,rw /`
 
 字段解析:
 ![tempsnip4.png](https://i.loli.net/2020/10/10/EoHxynkKZtvUDul.png)
