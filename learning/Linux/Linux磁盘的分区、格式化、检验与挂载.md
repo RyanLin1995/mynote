@@ -296,4 +296,4 @@ PS:
 1. 通过 `dd` 建立大文件: `dd if=/dev/zero of=/srv/loopdev bs=1M count=512`
 2. 格式化 /srv/loopdev 为 xfs : `mkfs.xfs -f /srv/loopdev` （因为 /srv/loopdev 为文件，因此格式化时要加上 -f）
 3. 挂载 /srv/loopdev 到 /mnt : `mount /srv/loopdev /mnt`
-4. 如果需要添加开机自动挂载: /srv/loopdev /data/file xfs defaults,loop 0 0(因为)
+4. 如果需要添加开机自动挂载: /srv/loopdev /data/file xfs defaults,loop 0 0(因为是使用文件建立的文件系统，最好在写入 /etc/fstab 时还是用原本的文件名)
