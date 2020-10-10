@@ -271,6 +271,7 @@ PS:
 * 如果需要卸载挂载，先确保工作目录不在要被卸载的目录内
 
 ### 开机自动挂载文件: /etc/fstab
+/etc/fstab 是开机时自动挂载磁盘的配置文件。但是实际上 
 
 字段解析:
 ![tempsnip4.png](https://i.loli.net/2020/10/10/EoHxynkKZtvUDul.png)
