@@ -277,4 +277,4 @@ PS:
 
 * 第一栏: 磁盘装置文件名/UUID/Label Name: 可以填写装置文件名(如:/dev/sda2)、UUID(如:UUID=)或Label name(如: Label=)
 * 第二栏: 挂载点: 必须是 Linux 已存在的目录
-* 第三栏: 
+* 第三栏: 磁盘分区的文件系统类型: 如果是使用 `mount`
