@@ -273,3 +273,5 @@ PS:
 ### 开机自动挂载文件: /etc/fstab
 
 字段解析:
+![tempsnip4.png](https://i.loli.net/2020/10/10/EoHxynkKZtvUDul.png)
+
