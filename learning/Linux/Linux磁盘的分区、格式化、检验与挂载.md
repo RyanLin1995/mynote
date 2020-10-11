@@ -299,4 +299,6 @@ PS:
 4. 如果需要添加开机自动挂载: /srv/loopdev /data/file xfs defaults,loop 0 0(因为是使用文件建立的文件系统，最好在写入 /etc/fstab 时还是用原本的文件名)
 
 第二个例子:
-在 /tmp 下建立一个128Mde  /tmp/swap 文件
+在 /tmp 下建立一个128M的 /tmp/swap 文件，作为 swap 空间
+1. 通过 `dd` 命令建立文件: `dd if=/dev/zero of=/tmp/swap bs=1M count=128`
+2. 
