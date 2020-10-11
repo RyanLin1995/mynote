@@ -331,4 +331,5 @@ PS:
 一些例子:
 1. 以 MB 为单位打印显示容量: `parted /dev/sda unit MB print`
 2. 把分区表从 MBR 更改为 GPT(不能随便用，会导致分区所有资料丢失): `parted /dev/sda mklabel gpt`
-3. 
+3. 建立一个512MB的 vfat 分区，并挂载到 /data/win
+   ``
