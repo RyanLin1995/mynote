@@ -332,5 +332,7 @@ PS:
 1. 以 MB 为单位打印显示容量: `parted /dev/sda unit MB print`
 2. 把分区表从 MBR 更改为 GPT(不能随便用，会导致分区所有资料丢失): `parted /dev/sda mklabel gpt`
 3. 建立一个512MB的 vfat 分区，并挂载到 /data/win
-   1. `parted /dev/sda print`得到前一个分区结束的容量为35.4G
+   1. 利用 `parted /dev/sda print` 得到前一个分区结束的容量为35.4G
    2. 新建一个500MB的分区: `parted /dev/sda mkpart primary fat32 35.4G 35.9G`
+   3. 通过`parted /dev/sda print`得到新的分区后，用
+ `partprobe` 使新的分区生效
