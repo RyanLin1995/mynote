@@ -318,3 +318,6 @@ PS:
 |mkpart [primary\|logical\|extended] [ext4\|vfat\|xfs] 开始容量 结束容量|新建分区|
 |print|显示分区|
 |rm [partition]| 删除分区|
+
+#### parted [装置] print 详解
+
