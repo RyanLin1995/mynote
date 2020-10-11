@@ -312,4 +312,7 @@ PS:
 
 ### 利用 parted 进行分区
 `parted` 命令支持对 GPT 跟 MBR 分区表进行分区。而且还可以一条命令完成分区工作。如果需要编写分区脚本，可以使用 `parted` 命令减少交互
-用法: `parted []`
+用法: `parted [装置] [指令 [参数]]`
+|选项与参数|说明|
+|-|-|
+|mkpart [primary|logical|extended] [ext4]||
