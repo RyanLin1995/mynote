@@ -325,4 +325,5 @@ PS:
 2. Start: 该分区起始容量
 3. End: 该分区结束容量
 4. Siza: 该分区容量，通过 start 跟 end 分析
-5. File system: 
+5. File system: 分析可能的文件系统类型
+6. Name: 类似于 gdisk 的 System ID
