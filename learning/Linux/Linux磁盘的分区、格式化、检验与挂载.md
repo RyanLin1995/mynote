@@ -323,4 +323,6 @@ PS:
 ![tempsnip5.png](https://i.loli.net/2020/10/11/aPGNxTuqyQo41mF.png)
 1. Number: 即分区号码，如1表示/dev/sda1
 2. Start: 该分区起始容量
-3. 
+3. End: 该分区结束容量
+4. Siza: 该分区容量，通过 start 跟 end 分析
+5. File system: 
