@@ -303,7 +303,9 @@ PS:
 1. 通过 `dd` 命令建立文件: `dd if=/dev/zero of=/tmp/swap bs=1M count=128`
 2. 更改 /tmp/swap 权限为0600: `chmod 0600 /tmp/swap`
 3. 格式化 /tmp/swap 为 swap : `mkswap /tmp/swap`
-4. 挂载 swap 并查看 swap 状态: `swapon /tmp/swap` `swapon -s`
+4. 挂载 swap 并查看 swap 状态: 
+   挂载: `swapon /tmp/swap` 
+   查看: `swapon -s`
 5. 卸载 swap : `swapoff /tmp/swap`
 6. 如果需要添加开机自动挂载: /tmp/swap swap swap defaults,loop 0 0(因为是使用文件建立的文件系统，最好在写入 /etc/fstab 时还是用原本的文件名)
 7. 根据 /etc/fstab 自动挂载 swap : `swapon -a`
