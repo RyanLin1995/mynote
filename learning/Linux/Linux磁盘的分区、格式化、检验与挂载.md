@@ -329,4 +329,7 @@ PS:
 6. Name: 类似于 gdisk 的 System ID
 
 一些例子:
-1. 以 MB 为单位打印显示容量: `parted /dev/sda unit MB `
+1. 以 MB 为单位打印显示容量: `parted /dev/sda unit MB print`
+2. 更改分区表(不能随便用，会导致分区所有资料丢失)
+   `parted /dev/sda mklabel `
+3. 
