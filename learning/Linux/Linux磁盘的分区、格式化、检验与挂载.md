@@ -315,6 +315,6 @@ PS:
 用法: `parted [装置] [指令 [参数]]`
 |选项与参数|说明|
 |-|-|
-|mkpart [primary|logical|extended] [ext4|vfat|xfs] 开始容量 结束容量|新建分区|
+|mkpart [primary\|logical\|extended] [ext4\|vfat\|xfs] 开始容量 结束容量|新建分区|
 |print|显示分区|
-|||
+|rm [partition]| 删除分区|
