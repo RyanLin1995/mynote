@@ -304,3 +304,5 @@ PS:
 2. 更改 /tmp/swap 权限为0600: `chmod 0600 /tmp/swap`
 3. 格式化 /tmp/swap 为 swap : `mkswap /tmp/swap`
 4. 挂载 swap 并查看 swap 状态: `swapon /tmp/swap` `swapon -s`
+5. 卸载 swap : `swapoff /tmp/swap`
+6. 根据 /etc/fstab 自动挂载 swap
