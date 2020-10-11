@@ -302,4 +302,5 @@ PS:
 在 /tmp 下建立一个128M的 /tmp/swap 文件，作为 swap 空间
 1. 通过 `dd` 命令建立文件: `dd if=/dev/zero of=/tmp/swap bs=1M count=128`
 2. 更改 /tmp/swap 权限为0600: `chmod 0600 /tmp/swap`
-3. 格式化 /tmp/swap 为 swap : ``
+3. 格式化 /tmp/swap 为 swap : `mkswap /tmp/swap`
+4. 挂载 swap 并查看 swap 状态: `swapon /tmp/swap` `swapon -s`
