@@ -320,4 +320,7 @@ PS:
 |rm [partition]| 删除分区|
 
 #### parted [装置] print 详解
-
+![tempsnip5.png](https://i.loli.net/2020/10/11/aPGNxTuqyQo41mF.png)
+1. Number: 即分区号码，如1表示/dev/sda1
+2. Start: 该分区起始容量
+3. 
