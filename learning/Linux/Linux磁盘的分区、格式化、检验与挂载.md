@@ -327,3 +327,6 @@ PS:
 4. Siza: 该分区容量，通过 start 跟 end 分析
 5. File system: 分析可能的文件系统类型
 6. Name: 类似于 gdisk 的 System ID
+
+一些例子:
+1. 以 MB 为单位打印显示容量: `parted /dev/sda unit MB `
