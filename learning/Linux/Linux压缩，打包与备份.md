@@ -15,3 +15,5 @@ Linux 常见压缩扩展名:
 |*.tar.gz|tar 程序打包的数据，经过了 gzip 的压缩|
 |*.tar.bz2|tar 程序打包的数据，经过了 bzip2 的压缩|
 |*.tar.xz|tar 程序打包的数据，经过了 xz 的压缩|
+
+### gzip 压缩命令和 zcat/zmore/zless/
