@@ -31,5 +31,5 @@ PS:
 1. 使用`gzip 文件名`压缩完文件后，源文件会被删除
 2. gzip 文件能被 Windows 下的压缩文件打开
 3. 使用`gzip -d 文件名`解压缩完文件后，原压缩文件会被删除
-4. 使用`gzip`
+4. 使用`gzip -c`
 5. zcat/zmore/zless/zgrep 可用于不解压情况下查看的 gzip 文本压缩文件
