@@ -35,5 +35,6 @@ PS:
 5. zcat/zmore/zless/zgrep 可用于不解压情况下查看的 gzip 文本压缩文件
 6. 如果还存在 .Z 文件，可以通过 `znew 文件名` 转为 gzip 文件
 
-### bzip2 压缩命令
+### bzip2 压缩命令与 bzcat/bzmore/bzless/bzgrep
+用法: `bzip2 []`
 
