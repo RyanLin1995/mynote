@@ -60,5 +60,5 @@ PS:
 |-#|压缩的等级，-1最快但是压缩比最差，-9最慢但是压缩比最好。默认为-6|
 
 PS:
-1. gzip/bzip2/xz 三个压缩命令，越往右压缩比越高，但是所花费时间越长(time [gzip|])
+1. gzip/bzip2/xz 三个压缩命令，越往右压缩比越高，但是所花费时间越长(`time [gzip|bzip2|xz] -c services > services.[gz|bz2|xz]`)
 2. gzip/bzip2/xz 三个压缩命令参数基本通用
