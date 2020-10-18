@@ -101,4 +101,4 @@ PS:
 * * 利用 xz 备份: `tar -JPpcvf /root/etc.tar.xz /etc`
 
 * 查看备份的 /etc 文件，完整显示权限和属性: `tar -jtvf /root/etc.tar.bz2`
-* 查看备份的 /etc 文件，仅查看文件名: `tar -`
+* 查看备份的 /etc 文件，仅查看文件名: `tar -ztf /root/etc.tar.gz`
