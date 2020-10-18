@@ -100,4 +100,4 @@ PS:
 * * 利用 bzip2 备份: `tar -jPpcvf /root/etc.tar.bzip2 /etc`
 * * 利用 xz 备份: `tar -JPpcvf /root/etc.tar.xz /etc`
 
-* 查看
+* 查看备份的 /etc 文件: `tar -jtvf /root/etc.tar.bz2`
