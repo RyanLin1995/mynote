@@ -89,10 +89,11 @@ PS:
 |-P|保留绝对路径，即备份数据中可以含有根目录|
 |--exclude=FILE|将 FILE 排除外，即压缩过程中不包括 FILE|
 
-一些例子:
-* 备份 /etc，并保留权限与属性
+#### 一些例子:
+* 备份 /etc，并保留权限与属性，保存到 /root
 * * 利用 gzip 备份: `tar -zpcvf /root/etc.tar.gz /etc`
 * * 利用 bzip 备份: `tar -jpcvf /root/etc.tar.bz2 /etc`
 * * 利用 xz 备份: `tar -Jpcvf /root/etc.tar.xz /etc`
 
-* 备份 /etc，保留权限、属性和
+* 备份 /etc，保留权限、属性和绝对路径
+* * 利用 gzip 备份: `tar -zPpcvf /root`
