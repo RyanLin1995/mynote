@@ -90,7 +90,7 @@ PS:
 |--exclude=FILE|将 FILE 排除外，即压缩过程中不包括 FILE|
 
 一些例子:
-备份 /etc
-利用 gzip 备份: `tar -zpcvf /root/etc.tar.gz /etc`
-利用 bzip 备份: `tar -jpcvf /root/etc.tar.bz2 /etc`
-利用 xz 备份: ``
+* 备份 /etc，并保留
+* * 利用 gzip 备份: `tar -zpcvf /root/etc.tar.gz /etc`
+* * 利用 bzip 备份: `tar -jpcvf /root/etc.tar.bz2 /etc`
+* * 利用 xz 备份: `tar -`
