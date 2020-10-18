@@ -91,4 +91,6 @@ PS:
 
 一些例子:
 备份 /etc
-利用 gzip 备份 `tar -gpcvf /root/etc.tar.gz /etc`
+利用 gzip 备份: `tar -zpcvf /root/etc.tar.gz /etc`
+利用 bzip 备份: `tar -jpcvf /root/etc.tar.bz2 /etc`
+利用 xz 备份: ``
