@@ -98,4 +98,6 @@ PS:
 * 备份 /etc，保留权限、属性和绝对路径，保存到 /root
 * * 利用 gzip 备份: `tar -zPpcvf /root/etc.tar.gz /etc`
 * * 利用 bzip2 备份: `tar -jPpcvf /root/etc.tar.bzip2 /etc`
-* * 利用 xz 备份: `tar -J`
+* * 利用 xz 备份: `tar -JPpcvf /root/etc.tar.xz /etc`
+
+* 查看
