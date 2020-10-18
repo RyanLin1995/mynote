@@ -70,4 +70,4 @@ PS:
 ### tar 基本命令
 压缩: `tar [-z|-j|-J][cv] [-f 待建立的文件名] filename`
 查询: `tar [-z|-j|-J][tv] [-f 现有的 tar 文件名]`
-解压缩: `tar [-z|-j|-J][xv] [-f ]`
+解压缩: `tar [-z|-j|-J][xv] [-f 现有的 tar 文件名] [-C 目录]`
