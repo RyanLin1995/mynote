@@ -62,3 +62,6 @@ PS:
 PS:
 1. gzip/bzip2/xz 三个压缩命令，越往右压缩比越高，但是所花费时间越长(`time [gzip|bzip2|xz] -c services > services.[gz|bz2|xz]`)
 2. gzip/bzip2/xz 三个压缩命令参数基本通用
+
+---
+## 2. 打包
