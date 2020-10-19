@@ -90,6 +90,7 @@ PS:
 |--exclude=FILE|将 FILE 排除外，即压缩过程中不包括 FILE|
 
 #### 一些例子:
+1. 压缩
 * 备份 /etc，并保留权限与属性，保存到 /root
 * * 利用 gzip 备份: `tar -zpcvf /root/etc.tar.gz /etc`
 * * 利用 bzip 备份: `tar -jpcvf /root/etc.tar.bz2 /etc`
@@ -100,5 +101,8 @@ PS:
 * * 利用 bzip2 备份: `tar -jPpcvf /root/etc.tar.bz2 /etc`
 * * 利用 xz 备份: `tar -JPpcvf /root/etc.tar.xz /etc`
 
+2. 查看
 * 查看备份的 /etc 文件，完整显示权限和属性: `tar -jtvf /root/etc.tar.bz2`
 * 查看备份的 /etc 文件，仅查看文件名: `tar -ztf /root/etc.tar.gz`
+
+3. 
