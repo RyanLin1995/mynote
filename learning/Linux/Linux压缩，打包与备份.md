@@ -105,4 +105,6 @@ PS:
 * 查看备份的 /etc 文件，完整显示权限和属性: `tar -jtvf /root/etc.tar.bz2`
 * 查看备份的 /etc 文件，仅查看文件名: `tar -ztf /root/etc.tar.gz`
 
-3. 
+3. 解压缩
+* 解压缩备份的 /root/etc 到本地
+* * 利用 gzip 解压缩`tar -z`
