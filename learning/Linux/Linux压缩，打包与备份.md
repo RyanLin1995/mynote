@@ -112,4 +112,6 @@ PS:
 * * 利用 xz 解压缩: `tar -Jxvf etc.tar.xz`
 
 * 解压缩备份的 /root/etc 到指定的目录 /tmp
-* * 利用 gzip 解压缩: 'tar -zxvf e'
+* * 利用 gzip 解压缩: 'tar -zxvf etc.tar.gz -C /tmp'
+* * 利用 bzip2 解压缩: 'tar -jxvf etc.tar.bz2 -C /tmp'
+* * 利用 xz 解压缩: `tar -Jxvf`
