@@ -107,4 +107,6 @@ PS:
 
 3. 解压缩
 * 解压缩备份的 /root/etc 到本地
-* * 利用 gzip 解压缩`tar -z`
+* * 利用 gzip 解压缩: `tar -zxvf etc.tar.gz`
+* * 利用 bzip2 解压缩: `tar -jxvf etc.tar.bz2`
+* * 利用 xz 解压缩: `tar -Jxvf`
