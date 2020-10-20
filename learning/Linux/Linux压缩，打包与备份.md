@@ -118,4 +118,4 @@ PS:
 
 4.解压缩单一文件
 * 先找到文件名: `tar -ztvf etc.tar.gz | grep 'shadow'`
-* 再解压所需要的的文件: `tar -zxvf etc.tar.gz etc/shadow`
+* 再利用 `tar -[z|j|J]xvf 压缩文件名 需解压文件名` 解压所需要的的文件: `tar -zxvf etc.tar.gz etc/shadow`
