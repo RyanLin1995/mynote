@@ -115,3 +115,6 @@ PS:
 * * 利用 gzip 解压缩: 'tar -zxvf etc.tar.gz -C /tmp'
 * * 利用 bzip2 解压缩: 'tar -jxvf etc.tar.bz2 -C /tmp'
 * * 利用 xz 解压缩: `tar -Jxvf etc.tar.xz -C /tmp`
+
+4.解压缩单一文件
+* 先找到文件名: `tar -ztvf etc.tar.gz `
