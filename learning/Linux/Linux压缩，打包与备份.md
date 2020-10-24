@@ -124,4 +124,7 @@ PS:
 5. 压缩某个目录但是需要排除某些文件
 * 利用 --exclude 参数，如使用 xz 备份 /root 与 /etc 但是不备份 /root 下的 /etc 与 自身: `tar -Jcvf /root/system.tar.xz --exclude=/root/etc --exclude=/root/system.tar.xz /etc /root`
  
-6. 
+6. 备份比某个时刻新的文件
+* 
+
+7. 
