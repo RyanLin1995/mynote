@@ -134,4 +134,5 @@ PS:
 * * 再利用 `tar -zcvf /root/etc.mtine.new.than.passwd --newer-mtime"2020/8/29" /etc` 对 /etc 中 mtime 比2020/8/29新的文件进行备份
 * * 最后进行比对，看通过 find` 找出来的文件是否存在于压缩包中
 
-7. 
+7. 特殊应用: 利用管线和标准输入输出
+通过数据流重定向，实现利用 tar 
