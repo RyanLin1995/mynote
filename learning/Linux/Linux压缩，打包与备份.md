@@ -126,6 +126,6 @@ PS:
  
 6. 备份比某个时刻新的文件
 * 利用 --newer 或 --newer-mtime 备份，其中 --newer 是包含 mtime 跟 atime , --newer-mtime 只包含 mtime
-* * 先利用 `find /etc -mnewer /etc/passwd` 找出 mtime 比
+* * 先利用 `find /etc -mnewer /etc/passwd` 找出 mtime 比 /etc/passwd 新的文件
 
 7. 
