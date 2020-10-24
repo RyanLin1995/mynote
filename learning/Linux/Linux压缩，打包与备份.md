@@ -88,7 +88,7 @@ PS:
 |-p|保留备份数据的权限与属性，常用于备份重要的配置文件|
 |-P|保留绝对路径，即备份数据中可以含有根目录|
 |--exclude=FILE|将 FILE 排除外，即压缩过程中不包括 FILE|
-|--newer-mtime||
+|--newer-mtime="time"|备份 mtime 比 time 时间的文件|
 
 #### 一些例子:
 1. 压缩
