@@ -128,5 +128,6 @@ PS:
 * 利用 --newer 或 --newer-mtime 备份，其中 --newer 是包含 mtime 跟 atime , --newer-mtime 只包含 mtime
 * * 先利用 `find /etc -newer /etc/passwd` 找出 mtime 比 /etc/passwd 新的文件
 * * 再利用 `tar -zcvf /root/etc.mtine.new.than.passwd --newer-mtime"2020/8/29" /etc` 对 /etc 中 mtime 比2020/8/29新的文件进行备份
-* * 最后进行比对
+* * 最后进行比对，看通过 find` 找出来的文件是否存在于压缩包中
+
 7. 
