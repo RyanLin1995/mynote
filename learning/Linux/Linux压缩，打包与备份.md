@@ -121,6 +121,6 @@ PS:
 * 再利用 `tar -[z|j|J]xvf 压缩文件名 需解压文件名` 解压所需要的的文件: `tar -zxvf etc.tar.gz etc/shadow`
 
 5. 压缩某个目录但是需要排除某些文件
-* 利用 --exclude 参数，如使用 xz 备份 /root 与 /etc 但是不备份 /root 下的 /etc 与 自身: `tar -Jcvf /root/system.tar.xz --exclude=/root/etc `
+* 利用 --exclude 参数，如使用 xz 备份 /root 与 /etc 但是不备份 /root 下的 /etc 与 自身: `tar -Jcvf /root/system.tar.xz --exclude=/root/etc --exclude=/root/system.tar.xz /etc /root`
  
 6. 
