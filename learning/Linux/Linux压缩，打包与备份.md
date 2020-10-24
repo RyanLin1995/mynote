@@ -90,6 +90,9 @@ PS:
 |--exclude=FILE|将 FILE 排除外，即压缩过程中不包括 FILE|
 |--newer-mtime="time"|备份 mtime 比 time 时间的文件|
 
+PS:
+1. 如果文件仅仅是打包而没有压缩的话，那么文件称为 tarfile
+
 #### 一些例子:
 1. 压缩
 * 备份 /etc，并保留权限与属性，保存到 /root
