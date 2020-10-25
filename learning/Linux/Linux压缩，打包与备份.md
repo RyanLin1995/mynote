@@ -174,4 +174,4 @@ PS：
 3. 备份完成后，通过 `xfsdump -I` 会观察到有一个 level0 的资料存在，因此可以进行增量备份
 4. 在 /boot 中创建一个10M的 img 文件：`dd if=/dev/zero of=/boot/testing.img bs=1M count=10`
 5. 对 /boot 进行增量备份: `xfsdump -l 1 -M boot_1 -L boot_1 -f /srv/boot.dump1 /boot`
-6. 通过 `ll -h /srv/boot*` 发现新增了一个10M的文件，然后通过 `xfsdump -I` 发现level1
+6. 通过 `ll -h /srv/boot*` 发现新增了一个10M的文件，然后通过 `xfsdump -I` 发现 level1 信息的存在，增量备份成功
