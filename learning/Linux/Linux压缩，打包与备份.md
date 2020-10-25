@@ -168,6 +168,7 @@ PS：
 1. xfsdump 只能备份整个文件系统，不能单独备份某一个文件
 2. 使用 `xfsdump` 命令备份文件系统时，如果不加上 -M 跟 -L 参数，会进入到交互模式，让你填写这两个label
 
-一个备份 /boot 的案例:
+一个把备份 /boot 备份到 /srv 的案例:
 1. 先通过 `df-h /boot` 确保 /boot 为独立的 xfs 文件系统
-2. 对 /boot 进行备份: `xfsdump -l 0 -M boot_all -L boot_all -f `
+2. 对 /boot 进行备份: `xfsdump -l 0 -M boot_all -L boot_all -f /srv/boot.bump /boot`
+3. 备份
