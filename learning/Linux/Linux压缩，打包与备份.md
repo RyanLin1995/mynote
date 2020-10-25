@@ -141,4 +141,4 @@ PS:
 ---
 ## 3. 备份
 ### XFS 文件系统备份: xfsdump
-xfsdump 是用于 xfs 文件系统备份的命令，其
+xfsdump 是用于 xfs 文件系统备份的命令，其备份类型可分为完整备份 (full backup) 和累计备份 (incremental backup)。完整备份即把整个
