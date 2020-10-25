@@ -154,4 +154,4 @@ xfsdump 注意事项:
 * xfsdump 备份的数据只能通过 xfsrestore 解析
 * xfsdump 是通过 UUID 来分辨备份档的，因此不能备份两个具有相同 UUID 的文件系统
 
-xfsdump
+用法: `xfsdump [-L S_label] [-M M_label] [-l#] [-f 备份档]`
