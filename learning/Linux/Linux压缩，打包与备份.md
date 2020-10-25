@@ -149,3 +149,7 @@ xfsdump 是用于 xfs 文件系统备份的命令，其备份类型可分为完�
 
 xfsdump 注意事项:
 * xfsdump 不能备份没有挂载的文件系统
+* xfsdump 必须需要 root 权限进行(设计文件系统)
+* xfsdump 只能备份 xfs 文件系统
+* xfsdump 备份的数据只能通过 xfsrestore 解析
+* xfsdump 
