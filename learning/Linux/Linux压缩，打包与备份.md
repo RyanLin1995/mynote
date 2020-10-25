@@ -145,4 +145,7 @@ xfsdump 是用于 xfs 文件系统备份的命令，其备份类型可分为完�
 
 ![centos7_dump-1.gif](https://i.loli.net/2020/10/25/6MZFbjapJGEq8Uz.gif)
 
-如图所示，系统在运行过程中，数据会随时间变化而变化。当使用 xfsdump 进行进行备份时，第一次是完整备份(levle1)，第二次是累积备份，并且只比较目前文件系统与 level0 的差异，备份差异文件，level2 与 level1 对比，以此类推。
+如图所示，系统在运行过程中，数据会随时间变化而变化。当使用 xfsdump 进行进行备份时，第一次是完整备份(level0)，第二次是累积备份(level1)，并且只比较目前文件系统与 level0 的差异，备份差异文件，level2 与 level1 对比，以此类推。
+
+xfsdump 注意事项:
+* xfsdump 不能备份没有挂载的文件系统
