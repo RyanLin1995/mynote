@@ -171,5 +171,5 @@ PS：
 一个把备份 /boot 备份到 /srv 的案例:
 1. 先通过 `df-h /boot` 确保 /boot 为独立的 xfs 文件系统
 2. 对 /boot 进行备份: `xfsdump -l 0 -M boot_all -L boot_all -f /srv/boot.bump /boot`
-3. 备份完成后，通过 `xfsdump -I` 会观察到有一个 level0 的资料存在，因此可以进行累积备份
-4. 
+3. 备份完成后，通过 `xfsdump -I` 会观察到有一个 level0 的资料存在，因此可以进行增量备份
+4. 在 /boot 中创建一个 img 文件：`dd if=/dev/zero of=/boot/testi`
