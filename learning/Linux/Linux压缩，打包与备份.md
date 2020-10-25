@@ -162,4 +162,7 @@ xfsdump 注意事项:
 |-M|xfsdump 可以记录储存媒体的标头，-M 后可以接针对储存媒体的简易说明|
 |-l|小写的L，指定备份等级，有0-9共10个等级(预设为0，即完整备份)|
 |-f|类似于 tar -f，接文件名或装置名|
-|-I|从 /var/lib/xfsdump/inventory|
+|-I|从 /var/lib/xfsdump/inventory 列出目前备份的信息状态|
+
+PS：
+1. xfsdump 只能备份整个文件系统，不能单独备份某一个文件
