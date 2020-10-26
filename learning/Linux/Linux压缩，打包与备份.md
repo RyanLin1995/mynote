@@ -177,4 +177,5 @@ PS：
 6. 通过 `ll -h /srv/boot*` 发现新增了一个10M的文件，然后通过 `xfsdump -I` 发现 level1 信息的存在，增量备份成功
 
 ### xfs 文件系统备份还原: xfsrestore
-用法: `xfsrestore -I`
+查看已有备份: `xfsrestore -I`
+单一文件系统复原: `xfsrestore [-f 备份文件] [-L S-label] [-s] 待复原目录`
