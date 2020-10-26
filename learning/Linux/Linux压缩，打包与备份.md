@@ -181,3 +181,7 @@ PS：
 单一文件复原: `xfsrestore [-f 备份文件] [-L S-label] [-s] 待复原目录`
 累积备份文件复原: `xfsrestore [-f 备份文件] -r 待复原目录`
 交互模式: `xfsrestore -i`
+
+|选项与参数|说明|
+|-|-|
+|-I|跟 xfsdump -I 效果一致，输出的是|
