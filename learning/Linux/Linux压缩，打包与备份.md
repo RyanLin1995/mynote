@@ -178,4 +178,5 @@ PS：
 
 ### xfs 文件系统备份还原: xfsrestore
 查看已有备份: `xfsrestore -I`
-单一文件系统复原: `xfsrestore [-f 备份文件] [-L S-label] [-s] 待复原目录`
+单一文件复原: `xfsrestore [-f 备份文件] [-L S-label] [-s] 待复原目录`
+累积备份文件复原: `xfsrestore [-f ]`
