@@ -199,8 +199,9 @@ PS：
 * `mkdir /tmp/boot && xfsrestore -f /srv/boot.dimp /tmp/boot`
 * `diff -r /tmp/boot /boot` 比对两个文件夹发现有差异，即还原只会覆盖同名文件，其他新的文件不做修改
 
-3. 还原 /boot 增量备份到 /tmp/boot，:
+3. 还原 /boot 增量备份到 /tmp/boot，再比对两个文件夹:
 * 增量备份还原与还原单一文件系统方法一致，只需从 level0 --> level1 --> level2 ... 一直还原即可
 * `xfsrestore -f /srv/boot.dump1 /tmp/boot`
+* `diff -r /tmp/boot /boot`
 
 4. 
