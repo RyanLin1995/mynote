@@ -204,5 +204,9 @@ PS：
 * `xfsrestore -f /srv/boot.dump1 /tmp/boot`
 * `diff -r /tmp/boot /boot`
 
-4. xfsrestore 交互模式:
-* xfsrestore 交互模式一般用于复原未知备份档中文件内容
+4. 仅复原备份文件中某一文档:
+
+
+5. xfsrestore 交互模式:
+* xfsrestore 交互模式一般用于复原未知文件内容的备份档
+* 
