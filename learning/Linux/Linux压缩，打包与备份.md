@@ -221,4 +221,6 @@ PS：
 |-|-|
 |-o|接镜像文件名|
 |-J|生成兼容 Windows 的镜像文件，可增加文件名长度到64个 Unicode 字符|
-|-r|通过 Rock Ridge 生成支持 Unix / Linux 的文件数据，可以记录|
+|-r|通过 Rock Ridge 生成支持 Unix / Linux 的文件数据，可以记录较多信息(如 UID / GID 等)|
+|-v|显示 ISO 文件建立过程|
+|-V vol|建立 Volume ，类似于 Windows 中的 CD |
