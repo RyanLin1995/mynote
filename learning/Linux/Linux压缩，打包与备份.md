@@ -204,4 +204,5 @@ PS：
 * `xfsrestore -f /srv/boot.dump1 /tmp/boot`
 * `diff -r /tmp/boot /boot`
 
-4. 
+4. xfsrestore 交互模式:
+* xfsrestore 交互模式一般用
