@@ -225,4 +225,4 @@ PS：
 |-v|显示 ISO 文件建立过程|
 |-V vol|建立 Volume ，类似于 Windows 中的 CD title|
 |-m file|接需要排除的文件，即不需要备份的文件，可用通配符|
-|-graft-point isodir=systemdir|将 ISO 文件中的文件夹与 Linux 中的文件夹一致|
+|-graft-point isodir=systemdir|因为一般情况下，所有要被加到镜像文件中的文件都会被放置到镜像文件中的根目录。加上该参数，将 ISO 文件中的文件夹与 Linux 中的文件夹一致|
