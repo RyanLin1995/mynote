@@ -205,7 +205,7 @@ PS：
 * `diff -r /tmp/boot /boot`
 
 4. 仅复原备份文件中某一文档:
-* 复原 /srv/boot.dump 中的 grub2 到 /tmp/boot2: `mkdir /tmp/boot2 && xfsrestore -f /srv/boot.dump /tmp/boot2`
+* 复原 /srv/boot.dump 中的 grub2 到 /tmp/boot2: `mkdir /tmp/boot2 && xfsrestore -f /srv/boot.dump -s grub2 /tmp/boot2`
 
 5. xfsrestore 交互模式:
 * xfsrestore 交互模式一般用于复原未知文件内容的备份档
