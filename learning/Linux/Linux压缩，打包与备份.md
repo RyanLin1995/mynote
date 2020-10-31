@@ -232,5 +232,5 @@ PS:
 
 ### 一些案例:
 1. 不使用 -graft-point 刻录 /root /home /etc:
-* `mkisofs -o /tmp/system.img -r -v /root `
+* `mkisofs -o /tmp/system.img -r -v /root /home /etc` 会发现出现了文件名冲突的错误，而且 /root /home /etc 文件在 ISO 根目录
 2. 
