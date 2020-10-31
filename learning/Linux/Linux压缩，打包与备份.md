@@ -192,4 +192,5 @@ PS：
 |-i|进入交互模式，一般用不到|
 
 ### 一些案例:
-1. 复原已有的 /boot 备份: `xfsrestore `
+1. 复原已有的 /boot 备份: `xfsrestore -f /srv/boot.dump -L boot_all /boot` 或 `xfsrestore -f /srv/boot.dump /boot`
+2. 
