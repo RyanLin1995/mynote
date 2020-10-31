@@ -235,4 +235,4 @@ PS:
 * `mkisofs -o /tmp/system.img -r -v /root /home /etc` 会发现出现了文件名冲突的错误，而且 /root /home /etc 文件均在 ISO 根目录，没有根据文件夹分类
 
 2. 使用 -graft-point 刻录 /root /home /etc:
-* `mkisofs -o /tmp/system.img -r -v /root /home /etc -graft-point /root=/root /home=/home `
+* `mkisofs -o /tmp/system.img -r -v -graft-point /root=/root /home=/home /etc=/etc`
