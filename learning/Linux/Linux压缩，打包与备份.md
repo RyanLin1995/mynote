@@ -205,4 +205,4 @@ PS：
 * `diff -r /tmp/boot /boot`
 
 4. xfsrestore 交互模式:
-* xfsrestore 交互模式一般用于未知备份档中文件内容
+* xfsrestore 交互模式一般用于复原未知备份档中文件内容
