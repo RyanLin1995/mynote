@@ -209,4 +209,5 @@ PS：
 
 5. xfsrestore 交互模式:
 * xfsrestore 交互模式一般用于复原未知文件内容的备份档
-* 通过交互模式把 grub grub2 和 最后一个
+* 进入交互模式，把文件恢复到 /tmp/boot3: `mkdir /tmp/boot3 && xfsrestore -f /srv/boot.dump -i /tmp/boot3`
+* 交互模式详解:
