@@ -195,7 +195,11 @@ PS：
 1. 复原已有的 /boot 备份: 
 * `xfsrestore -f /srv/boot.dump -L boot_all /boot` 或 `xfsrestore -f /srv/boot.dump /boot`
 
-2. 复原已有的 /boot 备份到指定文件夹 /tmp/boot， 并比对两个文件夹之间的差异
+2. 复原已有的 /boot 备份到指定文件夹 /tmp/boot， 并比对两个文件夹之间的差异:
 * `mkdir /tmp/boot && xfsrestore -f /srv/boot.dimp /tmp/boot`
-* `diff -r /tmp/boot /boot` 比对两个文件夹发现有差异，即还原只会覆盖同名文件，其他新的文件
-3. 
+* `diff -r /tmp/boot /boot` 比对两个文件夹发现有差异，即还原只会覆盖同名文件，其他新的文件不做修改
+
+3. 增量备份还原:
+* 增量备份还原与
+
+4. 
