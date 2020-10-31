@@ -231,6 +231,6 @@ PS:
 1. 制作 ISO 文件时最好加上 -r，不然的话会使用旧的 iso9660 格式(只支持 DOS 文件名，即文件名8个字符+3个扩展名字符)
 
 ### 一些案例:
-1. 不使用 -graft-point 制作 ISO 文件:
-**
+1. 不使用 -graft-point 刻录 /root /home /etc:
+* `mkisofs -o /tmp/system.img -r -v /root `
 2. 
