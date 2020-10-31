@@ -197,5 +197,5 @@ PS：
 
 2. 复原已有的 /boot 备份到指定文件夹 /tmp/boot， 并比对两个文件夹之间的差异
 * `mkdir /tmp/boot && xfsrestore -f /srv/boot.dimp /tmp/boot`
-* `diff -r /tmp`
+* `diff -r /tmp/boot /boot` 比对两个文件夹发现有差异，即还原只会覆盖同名文件，其他新的文件
 3. 
