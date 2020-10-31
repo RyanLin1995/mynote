@@ -216,3 +216,8 @@ PS：
 ## 4. 光盘写入工具
 ### 建立镜像文件: mkisofs
 用法: `mkisofs [-o 镜像文件名] [-Jrv] [-V vol] [-m file] 需要备份的文件 -graft-point isodir=systemdir`
+
+|选项与参数|说明|
+|-|-|
+|-o|接镜像文件名|
+|-J|生成兼容 Windows 的镜像文件，可增加|
