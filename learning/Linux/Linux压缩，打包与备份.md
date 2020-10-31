@@ -212,3 +212,6 @@ PS：
 * 进入交互模式，把文件恢复到 /tmp/boot3: `mkdir /tmp/boot3 && xfsrestore -f /srv/boot.dump -i /tmp/boot3`
 * 交互模式详解: ![tempsnip6.png](https://i.loli.net/2020/10/31/1nvSLmp6QqGyEZO.png)
 
+---
+## 4. 光盘写入工具
+### 建立镜像文件: mkisofs
