@@ -196,5 +196,5 @@ PS：
 * `xfsrestore -f /srv/boot.dump -L boot_all /boot` 或 `xfsrestore -f /srv/boot.dump /boot`
 
 2. 复原已有的 /boot 备份到指定文件夹 /tmp/boot， 并比对两个文件夹之间的差异
-* `xfsrestore `
+* `mkdir /tmp/boot && `
 3. 
