@@ -238,3 +238,6 @@ PS:
 
 2. 使用 -graft-point 刻录 /root /home /etc:
 * `mkisofs -o /tmp/system.img -r -v -graft-point /root=/root /home=/home /etc=/etc`
+
+---
+## 5. 其他
