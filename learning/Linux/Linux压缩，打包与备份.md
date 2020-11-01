@@ -241,5 +241,7 @@ PS:
 
 ---
 ## 5. 其他常见的压缩与备份工具
-### DD
-用法: `dd of=""`
+### 直接读取磁盘装置内容的工具: DD
+用法: `dd of="input_file" of="outputfile" bs="block_size" count="number"`
+
+|||
