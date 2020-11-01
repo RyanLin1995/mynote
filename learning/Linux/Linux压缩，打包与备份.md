@@ -282,6 +282,7 @@ PS:
 1. cpio 命令不会自动寻找备份文件，因此需要配合 find 等命令进行备份
 2. 如上所述，请在需要备份的文件/目录下使用 find 命令而不是通过绝对/相对路径搜索文件/目录。因为 cpio 不会识别路径，如果使用了绝对路径，那么还原时会直接覆盖掉绝对路径的文件
 
-### 一个案例: 通过 cpio 备份 /boot 文件到 /tmp/boot.cpio
+### 一个案例: 通过 cpio 备份/还原 /boot 文件到 /tmp/boot.cpio
 1. 先切换工作目录到 / : `cd /`
 2. 找出 boot 文件夹并通过 cpio 备份到 /tmp/boot.cpio : `find boot | cpio -ocvB > /tmp/boot.cpio`
+3. 还原 boot 文件到 /root : `cd root && cpio `
