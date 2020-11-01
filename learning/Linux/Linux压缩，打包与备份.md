@@ -213,7 +213,7 @@ PS：
 * 交互模式详解: ![tempsnip6.png](https://i.loli.net/2020/10/31/1nvSLmp6QqGyEZO.png)
 
 ---
-## 4. 光盘写入工具
+## 4. 光盘制作工具
 ### 建立镜像文件: mkisofs
 用法: `mkisofs [-o 镜像文件名] [-Jrv] [-V vol] [-m file] 需要备份的文件 -graft-point isodir=systemdir`
 
