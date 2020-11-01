@@ -244,4 +244,8 @@ PS:
 ### 直接读取磁盘装置内容的工具: DD
 用法: `dd of="input_file" of="outputfile" bs="block_size" count="number"`
 
-|||
+|选项与参数|说明|
+|-|-|
+|if|即input file，也可以是装置|
+|of|即output file，也可以是装置|
+|bs|规划一个 block 的大小|
