@@ -248,4 +248,8 @@ PS:
 |-|-|
 |if|即input file，也可以是装置|
 |of|即output file，也可以是装置|
-|bs|规划一个 block 的大小|
+|bs|规划一个 block 的大小，如果未指定，预设为 512 bytes|
+|count|多少个 bs 的意思|
+
+PS:
+1. 
