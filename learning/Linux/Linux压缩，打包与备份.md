@@ -240,4 +240,6 @@ PS:
 * `mkisofs -o /tmp/system.img -r -v -graft-point /root=/root /home=/home /etc=/etc`
 
 ---
-## 5. 其他
+## 5. 其他常见的压缩与备份工具
+### DD
+用法: ``
