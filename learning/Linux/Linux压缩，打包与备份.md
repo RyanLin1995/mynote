@@ -258,4 +258,9 @@ PS:
 
 ### 可以备份任何东西的备份工具: cpio
 备份用法: `cpio -ovcB > [file|device]`
-还原用法: `cpio -ivcdu < `
+还原用法: `cpio -ivcdu < [file|device]`
+查看用法: `cpio -ivct < [file|device]`
+
+|备份用到的选项与参数|说明|
+|-|-|
+|-o|将数据 |
