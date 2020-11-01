@@ -252,4 +252,5 @@ PS:
 |count|多少个 bs 的意思|
 
 PS:
-1. 使用 dd 对文件进行备份时，可以不输入bs，例如 `dd if=/etc/passwd of=/tmp/passwd.bak` 即备份/etc/passwd到
+1. 使用 dd 对文件进行备份时，可以不输入bs，例如 `dd if=/etc/passwd of=/tmp/passwd.bak` 即备份 /etc/passwd 到 /tmp/passwd.bak 中
+2. dd 进行备份时，是是一个一个扇区去读/写的，因此会
