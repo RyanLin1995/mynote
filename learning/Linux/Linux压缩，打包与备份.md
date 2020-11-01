@@ -255,3 +255,5 @@ PS:
 1. 使用 dd 对文件进行备份时，可以不输入bs，例如 `dd if=/etc/passwd of=/tmp/passwd.bak` 即备份 /etc/passwd 到 /tmp/passwd.bak 中
 2. dd 进行备份时，是是一个一个扇区去读/写的，因此会把整个 if 信息抓下来输出到 of (包括superblock, boot sector, meta data 等等)
 3. 如上所述，可以利用 dd 进行整个磁盘的复制，复制完成后，需要利用 `xfs_repair -L of` 修复一下。如果需要用到别的 UUID，需要重新生成，最后使用 `xfs_growfs of` 放大空间
+
+### 可以备份任何东西的备份工具: 
