@@ -253,4 +253,5 @@ PS:
 
 PS:
 1. 使用 dd 对文件进行备份时，可以不输入bs，例如 `dd if=/etc/passwd of=/tmp/passwd.bak` 即备份 /etc/passwd 到 /tmp/passwd.bak 中
-2. dd 进行备份时，是是一个一个扇区去读/写的，因此会
+2. dd 进行备份时，是是一个一个扇区去读/写的，因此会把整个 if 信息抓下来输出到 of (包括未使用的空间，)
+3. 如上所述，可以利用 dd 进行磁盘
