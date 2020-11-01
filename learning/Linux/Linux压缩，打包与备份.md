@@ -284,4 +284,4 @@ PS:
 
 ### 一个案例: 通过 cpio 备份 /boot 文件到 /tmp/boot.cpio
 1. 先切换工作目录到 / : `cd /`
-2. 找出 boot 文件夹并通过 cpio 备份到 /tmp/boot.cpio : `find boot | cpio -ocvB /tmp/boot.cpio`
+2. 找出 boot 文件夹并通过 cpio 备份到 /tmp/boot.cpio : `find boot | cpio -ocvB > /tmp/boot.cpio`
