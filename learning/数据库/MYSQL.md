@@ -16,4 +16,5 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 
 ## MYSQL 安装
 ### Ubuntu apt 安装
-1. 先确定是否有安装 MYSQL: ``
+1. 先确定是否有安装 MYSQL: `apt list --installed | grep 'mysql'`
+2. 
