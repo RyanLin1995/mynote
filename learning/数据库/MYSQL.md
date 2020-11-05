@@ -8,6 +8,13 @@ RDBMS(Relational Database Management System):关系型数据库管理系统，�
 3. ms sql server: 在微软的项目中使用
 4. sqlite: 轻量级数据库，用于移动平台
 
+RDBMS特点：
+1. 数据以表格的形式出现
+2. 每行为各种记录
+3. 每列为字段
+4. 许多的行和列组成一张表单
+5. 若干的表单组成database
+
 ## 什么是SQL语句
 SQL(Structured Query Language): 结构化查询语言，是一种用来操作RDBMS的数据库语言，当前关系型数据库都支持SQL语言
 SQL语句主要分为:
