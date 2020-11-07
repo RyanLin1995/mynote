@@ -13,3 +13,5 @@
 4. 刷新数据库: `flush privileges;`
 
 ## 重置 MYSQL/ MariaDB 密码的方法:
+1. 验证 MYSQL/MariaDB 版本: `mysql -V`
+2. 停止服务: `systemctl `
