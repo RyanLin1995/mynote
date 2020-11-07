@@ -29,5 +29,6 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 
 ### 初始化 MYSQL : 
 1. 验证 MYSQL 是否安装完成: `mysql -V`
-2. 初始化 MYSQL : `mysql `
+2. 初始化 MYSQL : `mysql --initialize`
+3. 获取随机生成的 root 密码: `vim /var/log/mysql.log`
 
