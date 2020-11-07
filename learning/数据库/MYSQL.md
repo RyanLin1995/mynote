@@ -17,4 +17,6 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ## MYSQL 安装
 ### Ubuntu apt 安装(因为为了后续升级需要，选择使用 apt 安装)
 1. 先确定是否有安装 MYSQL: `apt list --installed | grep 'mysql'`
-2. 换源(如果 apt )
+2. 换源(如果 apt 能直接找到 mysql-server 则不需要换源): `cp /etc/apt/source.list /etc/apt/source.list.bak`
+ranho
+3. 
