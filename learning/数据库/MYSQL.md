@@ -24,3 +24,8 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ### Centos yum/dnf 安装
 1. 先确保是否有安装 MYSQL: ` yum list installed | grep 'mysql'`
 2. 安装 MYSQL: `yum/dnf install mysql-server`
+
+- [ ] ### Centos 源码安装 
+
+### 初始化 MYSQL : 
+
