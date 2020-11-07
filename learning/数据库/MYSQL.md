@@ -30,4 +30,4 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 `deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse`
 `deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse`
 `deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse`
-3. 更新软件源: 
+3. 更新软件源: `apt update`
