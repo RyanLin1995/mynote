@@ -12,3 +12,4 @@
 3. update user 表: `update user set password=password('new_password') where user='root' and host='localhost';`
 4. 刷新数据库: `flush privileges`
 
+### 方法四: 
