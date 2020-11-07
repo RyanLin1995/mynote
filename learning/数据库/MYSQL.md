@@ -34,5 +34,5 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 4. 修改文件夹拥有者为 MYSQL: `chown mysql:mysql -R /var/lib/mysql`
 5. 修改 root 密码: `mysqladmin -uroot -p 'old_password' password 'new_password'` 或 创建 root 密码: `mysqladmin -u root password "password"`
 6. 开机 MYSQL 服务: `systemctl start mysql.services`
-7. 登录 MYSQL: `mysql -h `
+7. 登录 MYSQL: `mysql -h 'hostname' -u root -p `
 
