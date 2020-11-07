@@ -20,5 +20,14 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 2. 换源(如果 apt 能直接找到 mysql-server 则不需要换源): 
 2.1 先备份源文件: `cp /etc/apt/source.list /etc/apt/source.list.bak`
 2.2 然后 `vim /etc/apt/source.list` 把以下代码添加到末尾:
-``
+`deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse`
+`deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse`
+`deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse`
+`deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse`
+`deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse`
+`deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse`
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
 3. 
