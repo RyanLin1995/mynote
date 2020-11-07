@@ -17,4 +17,6 @@
 2. 停止服务: `systemctl stop mariadb.service/mysqld.service`
 3. 以免登录模式开启 MYSQL/MariaDB: `mysqld_safe --skip-grant-tables &`
 4. 新建一个窗口，登录 MYSQL: `mysql -uroot`
-5. * MYSQL 5.7.6 跟 MariaDB 10.1.20 版本后重置密码方法: `ALTER USER 'root'@'localhost' IDENTIFIED BY 'MY_NEW_PASSWORD';`
+5. * MYSQL 5.7.6 跟 MariaDB 10.1.20 版本后重置密码方法: `ALTER USER 'root'@'localhost' IDENTIFIED BY 'NEW_PASSWORD';` 或 `UPDATE mysql.user SET authentication_string = PASSWORD('MY_NEW_PASSWORD') WHERE User = 'root' AND Host = 'localhost';`
+   * MYSQL 5.7.6 跟 MariaDB 10.1.20 版本前重置密码方法: ``
+6. 
