@@ -15,20 +15,6 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 11. EXAMPLE: 存储引擎是一个不做任何事情的存根引擎。它的目的是作为 MySQL 源代码中的一个例子，用来演示如何开始编写一个新存储引擎。同样，它的主要兴趣是对开发者。EXAMPLE 存储引擎不支持编索引。另外，MySQL 的存储引擎接口定义良好。有兴趣的开发者可以通过阅读文档编写自己的存储引擎。
 
 ## MYSQL 安装
-### Ubuntu apt 安装(因为为了后续升级需要，选择使用 apt 安装)
+### Deepin apt 安装
 1. 先确定是否有安装 MYSQL: `apt list --installed | grep 'mysql'`
-2. 换源(如果 apt 能直接找到 mysql-server 则不需要换源): 
-2.1 先备份源文件: `cp /etc/apt/source.list /etc/apt/source.list.bak`
-2.2 然后 `vim /etc/apt/source.list` 把以下代码添加到末尾:
-`deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse`
-`deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse`
-`deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse`
-`deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse`
-`deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse`
-`deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse`
-`deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse`
-`deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse`
-`deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse`
-`deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse`
-3. 更新软件源: `apt update`，如果出现Key错误，使用`apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $key` 将 key 导入
-4. 安装 mysql : `apt install mysql-server`
+2. 安装 MariaDB (因为为了后续升级需要，且 Deepin )
