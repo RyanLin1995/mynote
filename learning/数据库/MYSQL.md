@@ -36,4 +36,3 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 6. 开机 MYSQL 服务: `systemctl start mysql.services`
 7. 登录 MYSQL: `mysql -h 'hostname' -u root -p `
 
-### 
