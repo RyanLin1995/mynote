@@ -27,7 +27,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 
 - [ ] ### Centos 源码安装 
 
-### 初始化 MYSQL : 
+## 初始化 MYSQL : 
 1. 验证 MYSQL 是否安装完成: `mysqladmin -V`
 2. 初始化 MYSQL : `mysql --initialize`
 3. 获取随机生成的 root 密码: `cat /var/log/mysql/mysqld.log |grep 'password'`
@@ -36,7 +36,8 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 6. 开机 MYSQL 服务: `systemctl start mysql.services`
 7. 登录 MYSQL: `mysql -h 'hostname' -u root -p `
 
-### 关闭数据库: 
+## 关闭数据库: 
 `mysqladmin -u root -p shutdown`
 
-### MYSQL 用户设置
+## MYSQL 用户设置:
+### 使用 insert 命令:
