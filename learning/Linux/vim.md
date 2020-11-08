@@ -96,4 +96,4 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 |:w [filename]|将编辑的数据储存成另一个文件(类似另存新档)|
 |:r [filename]|在编辑的数据中，读入另一个文件的数据。亦即将 filename 这个文件内容加到游标所在列后面|
 |:n1,n2 w [filename]|将 n1 到 n2 的内容储存成 filename 这个文件|
-|:! command|暂时离开 vim 到指令列模式下执行 command 的显示结果.例如『:! ls /home』即可在 vi 当中察看 /home 底下以 ls 输出的文件信息
+|:! command|暂时离开 vim 到指令列模式下执行 command 的显示结果。例如 `:! ls /home` 即可在 vim 当中察看 /home 底下以 ls 输出的文件信息|
