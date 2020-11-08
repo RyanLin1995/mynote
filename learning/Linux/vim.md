@@ -109,4 +109,4 @@ vim 环境的变更
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
 
 ### vim 救援模式
-vim 打开文件时，都会在当前工作目录建立一个 .filename.swap 的临时文件
+vim 打开文件时，都会在当前工作目录建立一个 .filename.swap 的临时文件，如果文件被不正常关闭或打开
