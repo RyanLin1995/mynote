@@ -45,7 +45,7 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 |<kbd>N</kbd>|与 <kbd>n</kbd> 刚好相反，为反向进行前一个搜寻动作。 例如 /test 后，按下 N 则表示向上搜寻 test |
 |:n1,n2s/word1/word2/g|n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 。如在 100 到 200 列之间搜寻 test 并取代为 TEST 则：`:100,200s/test/TEST/g`(常用)|
 |:1,$s/word1/word2/g|从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2(常用)|
-|:%s/word1/word2/g|同`:1,$s/word1/word2/g`|
+|:%s/word1/word2/g|同`:1,$s/word1/word2/g`一样，都是整个文件替换|
 |:1,$s/word1/word2/gc|从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代(常用)|
 
 删除、复制与粘贴:
