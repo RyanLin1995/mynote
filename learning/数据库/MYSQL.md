@@ -44,4 +44,5 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 2. 选择需要添加用户的表: `use 'database'`
 3. 创建用户: `create 'username'@'host' identified by 'password';` 或 `create user 'username' identified by 'password';`
 4. 修改密码: `ALTER USER 'root'@'localhost' IDENTIFIED BY 'NEW_PASSWORD';` 或 `UPDATE mysql.user SET authentication_string = md5('MY_NEW_PASSWORD') WHERE User = 'root' AND Host = 'localhost';`
-5. 授予权限: `grant select, insert, update, delete, create, drop on 'databasename'.'tablename' to 'user'@'host' identified by 'password';`
+5. 单独授予权限: `grant select, insert, update, delete, create, drop on 'databasename'.'tablename' to 'user'@'host' identified by 'password';`
+6. 授予全部权限: `grant all privileges on `
