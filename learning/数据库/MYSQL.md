@@ -56,6 +56,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ### MYSQL 表格相关:
 1. 查看数据库: `show databases;`
 2. 创建数据库: `create database 'databasename';`
+3. 显示数据库创建过程: `show create database 'databasename';`
 
 ### MYSQL 其他命令:
 1. 显示时间: `select now();`
