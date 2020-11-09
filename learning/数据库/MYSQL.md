@@ -59,7 +59,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 3. 显示数据库创建过程: `show create database 'databasename';`
 4. 创建指定编码的数据库: `create database 'databasename' charset=utf8;`
 5. 删除数据库: `drop database 'databasename';`
-6. 创建/删除需要转移的数据库: `create/drop database ``databasename``;`
+6. 创建/删除需要转移的数据库: `create/drop database `\`databasename\`;
 
 ### MYSQL 其他命令:
 1. 显示时间: `select now();`
