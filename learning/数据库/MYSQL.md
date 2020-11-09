@@ -50,3 +50,4 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 8. 撤销权限: `revoke all privileges from 'user';`
 9. 删除用户: `drop user 'user';`
 10. 生效: `flush privileges;`
+11. 
