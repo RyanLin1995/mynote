@@ -69,4 +69,4 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 
 ### MYSQL 数据表格相关
 1. 查看数据表: `show tables;`
-2. 创建数据表: `create table 'tablename'('field(字段)','type(类型)','constraint(约束)')`
+2. 创建数据表: `create table 'tablename'('field(字段)','type(类型)','constraint(约束)')` 例如: `create table test(id int primary key)`
