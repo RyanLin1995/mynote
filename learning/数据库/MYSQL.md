@@ -67,4 +67,6 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 显示时间: `select now();`
 2. 显示当前版本: `select version();`
 
-### MYSQL 数据表
+### MYSQL 数据表格相关
+1. 查看数据表: `show tables;`
+2. 
