@@ -53,14 +53,14 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 11. 生效: `flush privileges;`
 12. 查看用户: `select user, host from user;`
 
-### MYSQL  数据相关:
+### MYSQL 数据库相关:
 1. 查看数据库: `show databases;`
 2. 创建数据库: `create database 'databasename';`
 3. 显示数据库创建过程: `show create database 'databasename';`
 4. 创建指定编码的数据库: `create database 'databasename' charset=utf8;`
 5. 删除数据库: `drop database 'databasename';`
 6. 创建/删除需要转移的数据库: `create/drop database `\`databasename\`;
-7. 
+7. 查看当前数据库: `select database();`
 
 ### MYSQL 其他命令:
 1. 显示时间: `select now();`
