@@ -56,7 +56,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ### MYSQL 数据库相关:
 1. 查看数据库: `show databases;`
 2. 创建数据库: `create database 'databasename';`
-3. 创建数据库2: `create database if not e`
+3. 创建数据库2: `create database if not exists 'databasename' default charset utf8 collate utf8_general_ci;`
 4. 显示数据库创建过程: `show create database 'databasename';`
 5. 创建指定编码的数据库: `create database 'databasename' charset=utf8;`
 6. 删除数据库: `drop database 'databasename';`
@@ -67,4 +67,4 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 显示时间: `select now();`
 2. 显示当前版本: `select version();`
 
-### 
+### MYSQL 数据表
