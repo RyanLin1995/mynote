@@ -125,5 +125,5 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
    * 例子1: `create table test(id int primary key not null auto_increment,name varchar(30));`
    * 例子2: 
 3. 查看数据表表头信息: `desc 'tablename';`
-4. 插入数据: `insert into 'tablename' values('value')`
+4. 插入数据: `insert into 'tablename' values('value');`
 
