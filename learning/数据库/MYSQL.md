@@ -123,7 +123,8 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 查看数据表: `show tables;`
 2. 创建数据表: `create table 'tablename'('field(字段) type(类型) constraint(约束)','field(字段) type(类型) constraint(约束)')` 
    * 例子1: `create table test(id int primary key not null auto_increment,name varchar(30));`
-   * 例子2: 
+   * 例子2: ![捕获5.PNG](https://i.loli.net/2020/11/11/qGeoDFIUPbNtg8Z.png)
 3. 查看数据表表头信息: `desc 'tablename';`
 4. 插入数据: `insert into 'tablename' values('value');`
+5. 
 
