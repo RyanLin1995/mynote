@@ -15,7 +15,12 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 11. EXAMPLE: 存储引擎是一个不做任何事情的存根引擎。它的目的是作为 MySQL 源代码中的一个例子，用来演示如何开始编写一个新存储引擎。同样，它的主要兴趣是对开发者。EXAMPLE 存储引擎不支持编索引。另外，MySQL 的存储引擎接口定义良好。有兴趣的开发者可以通过阅读文档编写自己的存储引擎。
 
 ## MYSQL 数据类型
-
+常用数据类型如下：
+* 整数：int，bit
+* 小数：decimal
+* 字符串：varchar,char
+* 日期时间: date, time, datetime
+* 枚举类型(enum)
 
 
 ## MYSQL 安装
@@ -78,5 +83,5 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 查看数据表: `show tables;`
 2. 创建数据表: `create table 'tablename'('field(字段) type(类型) constraint(约束)','field(字段) type(类型) constraint(约束)')` 
    * 例如: `create table test(id int primary key not null auto_increment,name varchar(30));`
-3. 查看数据表表头信息: `ddesc 'tablename';`
+3. 查看数据表表头信息: `desc 'tablename';`
 
