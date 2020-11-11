@@ -122,6 +122,15 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ## MYSQL 数据表格相关
 1. 查看数据表: `show tables;`
 2. 创建数据表: `create table 'tablename'('field(字段) type(类型) constraint(约束)','field(字段) type(类型) constraint(约束)')` 
-   * 例如: `create table test(id int primary key not null auto_increment,name varchar(30));`
+   * 例子1: `create table test(id int primary key not null auto_increment,name varchar(30));`
+   * 例子2: `create table student(
+	id int unsigned not null auto_increment primary key,
+	name varchar(30),
+	age tinyint unsigned default 0,
+	high decimal(5,2),
+	gender enum("男", "女", "中性", "保密") default "保密",
+	cls_id int unsigned
+);`
 3. 查看数据表表头信息: `desc 'tablename';`
+4. 
 
