@@ -138,7 +138,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
    * 例: `alter table students add birthday datetime;`
 2.1 修改字段(重命名版): `alter table 'tablename' change 'old columnname' 'new columnname' 'type and constraint';`
    * 例: `alter table students change birthday birth datetime not null;`
-2.2 修改字段(不重命名版): `alter table '' modify 列名 类型及约束;`
+2.2 修改字段(不重命名版): `alter table 'tablename' modify 'columnname' 'type and constraint';`
    * 例: `alter table students modify birth date not null;`
-3. 删除字段: `alter table 表名 drop 列名;`
+3. 删除字段: `alter table 'tablename' drop 'colunmname';`
    * 例: `alter table students drop birthday;`
