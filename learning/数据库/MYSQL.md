@@ -134,7 +134,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 6. 查看表格信息: `select * from 'tablename';`
 
 ### 修改表:
-1. 添加字段: `alter table 表名 add 列名 类型;`
+1. 添加字段: `alter table 'tablename' add 'columnname' 'type';`
    * 例: `alter table students add birthday datetime;`
 2.1 修改字段(重命名版): `alter table 表名 change 原名 新名 类型及约束;`
    * 例: `alter table students change birthday birth datetime not null;`
