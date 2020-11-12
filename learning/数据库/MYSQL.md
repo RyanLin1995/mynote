@@ -120,6 +120,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 2. 显示当前版本: `select version();`
 
 ## MYSQL 数据表格相关
+### 创建表:
 1. 查看数据表: `show tables;`
 2. 创建数据表: `create table 'tablename'('field(字段) type(类型) constraint(约束)','field(字段) type(类型) constraint(约束)')` 
    * 例子1: `create table test(id int primary key not null auto_increment,name varchar(30));`
@@ -132,3 +133,5 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ![捕获6.PNG](https://i.loli.net/2020/11/11/Jbc3Zzw92aDk1gB.png)
 6. 查看表格信息: `select * from 'tablename';`
 
+### 修改表:
+1. 
