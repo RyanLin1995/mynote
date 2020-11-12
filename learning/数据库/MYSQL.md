@@ -126,7 +126,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
    * 例子2: 
 ![捕获5.PNG](https://i.loli.net/2020/11/11/qGeoDFIUPbNtg8Z.png)
 3. 查看数据表表头信息: `desc 'tablename';`
-4. 查看数据表创建过程: `show create 'tablename';`
+4. 查看数据表创建过程: `show create table 'tablename';`
 5. 插入数据: `insert into 'tablename' values('value');`
    * 例子: 
 ![捕获6.PNG](https://i.loli.net/2020/11/11/Jbc3Zzw92aDk1gB.png)
