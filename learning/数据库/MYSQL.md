@@ -142,3 +142,5 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
    * 例: `alter table students modify birth date not null;`
 3. 删除字段: `alter table 'tablename' drop 'colunmname';`
    * 例: `alter table students drop birthday;`
+
+### 删除表:
