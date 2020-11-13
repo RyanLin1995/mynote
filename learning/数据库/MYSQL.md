@@ -153,5 +153,6 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 插入数据: `insert into 'tablename' values('value');`
    * 例子: 
 ![捕获6.PNG](https://i.loli.net/2020/11/11/Jbc3Zzw92aDk1gB.png)
+2. 部分插入数据: `insert into 'tablename'()`
 
 
