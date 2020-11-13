@@ -118,6 +118,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ## MYSQL 其他命令:
 1. 显示时间: `select now();`
 2. 显示当前版本: `select version();`
+3. 查看引擎: `show engines;`
 
 ## MYSQL 数据表格相关
 ### 创建表:
