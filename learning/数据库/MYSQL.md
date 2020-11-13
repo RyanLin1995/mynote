@@ -154,6 +154,11 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
    * 例子: 
 ![捕获6.PNG](https://i.loli.net/2020/11/11/Jbc3Zzw92aDk1gB.png)
 2. 部分插入数据: `insert into 'tablename'(columnname1, columnname2) values();`
-3. 多次插入: `insert into 'tablename'(columnname1, columnname2) values('column1_data','colu'),('data2');`
+   * 例子:
+
+3. 多次插入: `insert into 'tablename'(columnname1, columnname2) values('column1_data','column2_data'),('column1_data','column2_data');`
+   * 例子:
+
+4. 
 
 
