@@ -131,7 +131,13 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 |:sp [filename]|开启一个新的窗口，如果加上了 filename，表示新窗口开启了一个新文件，否则两个窗口显示同一个文件内容|
 |<kbd>ctrl</kbd> + <kbd>w</kbd> + <kbd>j</kbd>/<kbd>↓</kbd>|光标切换到下方窗口|
 |<kbd>ctrl</kbd> + <kbd>w</kbd> + <kbd>k</kbd>/<kbd>↑</kbd>|光标切换到上方窗口|
-|<kbd>ctrl</kbd> + <kbd>w</kbd> + <kbd>q</kbd>||
+|<kbd>ctrl</kbd> + <kbd>w</kbd> + <kbd>q</kbd>|退出窗口|
+
+字符补全
+
+|指令|说明|
+|-|-|
+|<kbd>ctrl</kbd> + <kbd>w</kbd>||
 
 图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
