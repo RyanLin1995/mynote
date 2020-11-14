@@ -122,7 +122,7 @@ vim 额外命令
 |-|-|
 |:n|编辑下一个文件|
 |:N|编辑上一个文件|
-|:files|显示目前通过 |
+|:files|显示目前通过 vim 打开的文件|
 
 图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
