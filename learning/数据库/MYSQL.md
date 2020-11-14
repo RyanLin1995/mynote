@@ -152,7 +152,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 查询表格所有内容: `select * from 'tablename';`
 2. 根据条件查询表格所有内容: `select * from 'tablename' where 'column' <|>|= 'data';`
 3. 只查询表格特定内容: `select 'column1', 'column2' from 'tablename';`
-4. 查询表格特定类容并设定别名: ``
+4. 查询表格特定类容并设定别名: `select 'column1' as 'name1', 'column2' as 'name2' from 'tablename';`
 
 ### 增加:
 1. 插入数据: `insert into 'tablename' values('value');`
