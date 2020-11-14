@@ -105,7 +105,11 @@ vim 环境设置命令
 |:set nonu|与 set nu 相反，为取消行号|
 |:noh|取消高亮|
 
-vim 二
+vim 额外命令
+区块选择
+|指令|说明|
+|-|-|
+
 
 图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
