@@ -142,7 +142,7 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 |<kbd>ctrl</kbd> + <kbd>x</kbd> --> <kbd>ctrl</kbd> + <kbd>f</kbd>|以当前目录内的文件名作为关键词，予以补齐|
 |<kbd>ctrl</kbd> + <kbd>x</kbd> --> <kbd>ctrl</kbd> + <kbd>o</kbd>|以扩展名作为语法补充，以 vim 内建的关键词，予以补齐|
 
-##图解:
+#### vim 命令详细图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
 
 ### vim 救援模式
