@@ -178,7 +178,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 2. 物理删除数据表特定数据: `delete from 'tablename' where 'column'='data';`
 3. 逻辑删除数据(即给表格添加一个 bit column, 默认为0, 删除为1, 显示数据是只显示 bit column 为0的): 
 3.1 设置逻辑删除字段: `alter 'tablename' add 'deletecolumn' bit default 0;`
-3.1 进行逻辑删除: `update 'tablename' `deletecolumn'=1;
+3.1 进行逻辑删除: `update 'tablename' set `deletecolumn'=1`;
 
 
 
