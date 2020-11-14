@@ -173,6 +173,8 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
    * 例子:
 ![捕获2.PNG](https://i.loli.net/2020/11/14/WGPmagX5hkvIlTq.png)
 
+### 删除(delete):
+1. 删除整个数据表: `delete from ''`
 
 
 
