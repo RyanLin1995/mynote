@@ -111,7 +111,9 @@ vim 额外命令
 |-|-|
 |<kbd>v</kbd>|字符选择，将光标经过的地方泛白选择|
 |<kbd>V</kbd>|列选择，将光标经过的列泛白选择|
-|<kbd>ctrl</kbd> + <kbd>v<kbd>||
+|<kbd>ctrl</kbd> + <kbd>v</kbd>|区块选择，可用长方块选择资料(不能在 ssh 下操作)|
+|y|将泛白的地方复制|
+|d|将|
 
 图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
