@@ -181,8 +181,8 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 3.1 进行逻辑删除: `update 'tablename' set `deletecolumn'=1`;
 
 ## MySQL 导出与导入:
-1. 数据表的导出: `mysqldump -uroot -p 'databasename' > 'filename'.sql`
-2. 
+1. 数据库和表结构的导出: `mysqldump -uroot -p 'databasename' > 'filename'.sql`
+2. 只导出数据表的表结构: `mysqldump -uroot -p -d 'databasename'`
 
 
 
