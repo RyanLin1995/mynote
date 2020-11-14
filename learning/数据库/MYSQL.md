@@ -161,6 +161,6 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ![捕获8.PNG](https://i.loli.net/2020/11/13/jR62Dlym9NPn5Z3.png)
 
 ### 修改(update):
-1. 修改全部数据: `update 'tablename' set 'column'='data';`
+1. 修改全部数据: `update 'tablename' set 'column1'='data1', 'column2'='data2';`
 
 
