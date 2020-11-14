@@ -109,7 +109,7 @@ vim 额外命令
 区块选择
 |指令|说明|
 |-|-|
-
+|v|字符选择，将|
 
 图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
