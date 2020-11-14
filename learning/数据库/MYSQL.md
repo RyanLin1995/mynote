@@ -163,8 +163,10 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ### 修改(update):
 1. 修改全部数据: `update 'tablename' set 'column1'='data1', 'column2'='data2';`
    * 例子:
-
+![捕获.PNG](https://i.loli.net/2020/11/14/qfMBJPb6xDtwIsv.png)
 2. 修改特定行的部分数据: `update 'tablename' set 'column1'='data1' where 'column'='data';`
+   * 例子:
+![捕获2.PNG](https://i.loli.net/2020/11/14/WGPmagX5hkvIlTq.png)
 
 ### 查询(Retrieve):
 
