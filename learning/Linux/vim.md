@@ -137,7 +137,8 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 
 |指令|说明|
 |-|-|
-|<kbd>ctrl</kbd> + <kbd>w</kbd>||
+|<kbd>ctrl</kbd> + <kbd>x</kbd> --> <kbd>ctrl</kbd> + <kbd>n</kbd>|透过目前正在编辑的这个文件的内容文字作为关键词，予以补齐|
+|<kbd>ctrl</kbd> + <kbd>x</kbd> --> <kbd>ctrl</kbd> + <kbd>f</kbd>|透过目前正在编辑的这个『文件的内容文字』作为关键词，予以补齐|
 
 图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
