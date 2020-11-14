@@ -128,6 +128,7 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 多窗口功能
 
 |指令|说明|
+|:sp [filename]|开启一个新的窗口，如果加上了 filename，表示新窗口开启了一个新文件，否则|
 
 图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
