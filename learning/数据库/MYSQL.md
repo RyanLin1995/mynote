@@ -180,6 +180,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 3.1 设置逻辑删除字段: `alter table 'tablename' add 'deletecolumn' bit default 0;`
 3.1 进行逻辑删除: `update 'tablename' set `deletecolumn'=1`;
 
+## MySQL 
 
 
 
