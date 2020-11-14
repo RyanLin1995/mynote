@@ -98,12 +98,14 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 |:n1,n2 w [filename]|将 n1 到 n2 的内容储存成 filename 这个文件|
 |:! command|暂时离开 vim 到指令列模式下执行 command 的显示结果。例如 `:! ls /home` 即可在 vim 当中察看 /home 底下以 ls 输出的文件信息|
 
-vim 环境的变更
+vim 环境设置命令
 |指令|说明|
 |-|-|
 |:set nu|显示行号，设定之后，会在每一行的前缀显示该行的行号|
 |:set nonu|与 set nu 相反，为取消行号|
 |:noh|取消高亮|
+
+vim 二
 
 图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
@@ -119,3 +121,4 @@ vim 打开文件时，都会在当前工作目录建立一个 .filename.swap 的
 * (D)elete it：当确定那个临时文件是无用的，那么开启文件前会先将这个临时文件删除
 * (Q)uit：按下 q 就离开 vim ，不会进行任何动作回到命令提示字符。
 * (A)bort：忽略这个编辑行为，与 quit 非常类似
+
