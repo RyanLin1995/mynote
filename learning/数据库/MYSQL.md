@@ -150,6 +150,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 
 ### 查询:
 1. 查询表格所有内容: `select * from 'tablename';`
+2. 根据条件
 
 ### 增加:
 1. 插入数据: `insert into 'tablename' values('value');`
@@ -166,7 +167,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 修改全部数据: `update 'tablename' set 'column1'='data1', 'column2'='data2';`
    * 例子:
 ![捕获.PNG](https://i.loli.net/2020/11/14/qfMBJPb6xDtwIsv.png)
-2. 修改特定行的部分数据: `update 'tablename' set 'column1'='data1' where 'column'='data';`
+2. 根据条件修改数据: `update 'tablename' set 'column1'='data1' where 'column'='data';`
    * 例子:
 ![捕获2.PNG](https://i.loli.net/2020/11/14/WGPmagX5hkvIlTq.png)
 
