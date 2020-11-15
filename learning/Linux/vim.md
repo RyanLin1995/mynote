@@ -100,7 +100,7 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 |:r filename|读入其他文件|
 |:e!|将文件恢复成原始状态|
 
-#### vim 环境设置命令:
+## vim 环境设置命令:
 * .viminfo: 在每个家目录下的文件，用于记录 vim 曾经做过的行为
 * .vimrc(/etc/vimrc): vim 环境设置文件，可以把下边的设置直接写入这个文件，那么下次打开 
 vim 时将会按照以下设置打开
@@ -114,8 +114,7 @@ vim 时将会按照以下设置打开
 |noh|vim 中直接取消高亮|
 |:set autoindent|设置自动缩进|
 |:set noautoindent|不设置自动缩进|
-|:set backup|是否自动储存备份档，如果设置了 backup, 那么当你改动任何文件时, 源文件会被另存为一个名为
- filename~ 的文件, 默认值为 nobackup|
+|:set backup|是否自动储存备份档，如果设置了 backup, 那么当你改动任何文件时, 源文件会被另存为一个名为 filename~ 的文件, 默认值为 nobackup|
 |:set ruler|是否显示右下角状态说明栏|
 |:set showmode|是否显示左下角 --INSERT-- 状态栏|
 |:set backspace=(012)|通常情况下可以在编辑模式中使用退格键<kbd>backspace</kbd>删除任意字符。但是某些发行版本不允许这样操作。那么就可以通过 backspace 设置。0和1指只能删除刚刚输入的字符，不能删除之前已存在的字符；2为可以删除任意字符|
@@ -126,7 +125,7 @@ vim 时将会按照以下设置打开
 |:set bg=light|设置背景颜色为浅色|
 |"|vimrc 中的注释|
 
-#### vim 额外命令:
+## vim 额外命令:
 区块选择
 |指令|说明|
 |-|-|
