@@ -181,4 +181,5 @@ vim 打开文件时，都会在当前工作目录建立一个 .filename.swap 的
 用法: `dos2unix [-kn] file [newfile]`
 |选项与参数|说明|
 |-|-|
-|-k||
+|-k|保留该文件原本的 mtime 时间格式|
+|-n|保留源文件并输出新文件，如: `dos2unix -n 'oldfile' newfile`|
