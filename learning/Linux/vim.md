@@ -187,4 +187,7 @@ vim 打开文件时，都会在当前工作目录建立一个 .filename.swap 的
 ### 语系编码问题
 通过 `file` 命令可以看出文件所使用的编码格式。如果需要在 Linux 中转换编码格式，可以使用 `iconv` 命令
 
-用法: `iconv`
+用法: `iconv -f 原文件编码 -t 新文件编码 filename [-o newfile]`
+|选项与参数|说明|
+|-|-|
+|-f|from，后面接|
