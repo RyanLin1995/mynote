@@ -174,3 +174,6 @@ vim 打开文件时，都会在当前工作目录建立一个 .filename.swap 的
 * (Q)uit：按下 q 就离开 vim ，不会进行任何动作回到命令提示字符。
 * (A)bort：忽略这个编辑行为，与 quit 非常类似
 
+## vim 的一些注意事项
+### Windows 与 Linux 换行问题
+Windows 文件的换行为 
