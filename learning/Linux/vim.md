@@ -103,14 +103,14 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 .vimrc(/etc/vimrc): vim 环境设置文件，可以把下边的设置直接写入这个文件，那么下次打开 vim 时将会按照以下设置打开
 |指令|说明|
 |-|-|
-|:set nu|显示行号，设定之后，会在每一行的前缀显示该行的行号|
-|:set nonu|与 set nu 相反，为取消行号|
+|:set nu|显示行号，设定之后, 会在每一行的前缀显示该行的行号|
+|:set nonu|与 set nu 相反, 为取消行号|
 |:set hlsearch|high light search(高亮度搜寻)，默认值|
 |:set nohlsearch|vimrc 中取消高亮度搜寻|
 |noh|vim 中直接取消高亮|
 |:set autoindent|设置自动缩进|
 |:set noautoindent|不设置自动缩进|
-|:set backup|是否自动储存备份档|
+|:set backup|是否自动储存备份档，如果设置了 backup, 那么当你改动任何文件时, 源文件会被另存为一个名为filename~|
 
 #### vim 额外命令:
 区块选择
