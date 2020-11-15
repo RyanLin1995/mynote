@@ -176,4 +176,4 @@ vim 打开文件时，都会在当前工作目录建立一个 .filename.swap 的
 
 ## vim 的一些注意事项
 ### Windows 与 Linux 换行问题
-Windows 文件的换行为 
+在 Linux 中通过 `cat -A` 观察发现，Windows 文件的换行字符为 ^M$(CRLF) 而 Linux 的为
