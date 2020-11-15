@@ -110,7 +110,10 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 |noh|vim 中直接取消高亮|
 |:set autoindent|设置自动缩进|
 |:set noautoindent|不设置自动缩进|
-|:set backup|是否自动储存备份档，如果设置了 backup, 那么当你改动任何文件时, 源文件会被另存为一个名为filename~|
+|:set backup|是否自动储存备份档，如果设置了 backup, 那么当你改动任何文件时, 源文件会被另存为一个名为
+ filename~ 的文件,默认值为 nobackup|
+|:set ruler|是否显示右下角状态说明栏|
+|:set showmode||
 
 #### vim 额外命令:
 区块选择
