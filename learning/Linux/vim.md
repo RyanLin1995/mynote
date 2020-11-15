@@ -100,7 +100,7 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 |:r filename|读入其他文件|
 |:e!|将文件恢复成原始状态|
 
-## vim 环境设置命令:
+### vim 环境设置命令:
 * .viminfo: 在每个家目录下的文件，用于记录 vim 曾经做过的行为
 * .vimrc(/etc/vimrc): vim 环境设置文件，可以把下边的设置直接写入这个文件，那么下次打开 
 vim 时将会按照以下设置打开
@@ -125,7 +125,7 @@ vim 时将会按照以下设置打开
 |:set bg=light|设置背景颜色为浅色|
 |"|vimrc 中的注释|
 
-## vim 额外命令:
+### vim 额外命令:
 区块选择
 |指令|说明|
 |-|-|
@@ -162,7 +162,7 @@ vim 时将会按照以下设置打开
 |<kbd>ctrl</kbd> + <kbd>x</kbd> --> <kbd>ctrl</kbd> + <kbd>f</kbd>|以当前目录内的文件名作为关键词，予以补齐|
 |<kbd>ctrl</kbd> + <kbd>x</kbd> --> <kbd>ctrl</kbd> + <kbd>o</kbd>|以扩展名作为语法补充，以 vim 内建的关键词，予以补齐|
 
-#### vim 命令详细图解:
+### vim 命令详细图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
 
 ### vim 救援模式
