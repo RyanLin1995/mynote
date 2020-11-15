@@ -114,7 +114,7 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
  filename~ 的文件,默认值为 nobackup|
 |:set ruler|是否显示右下角状态说明栏|
 |:set showmode|是否显示左下角 --INSERT-- 状态栏|
-|:set backspace=(012)|通常情况下可以|
+|:set backspace=(012)|通常情况下可以在编辑模式中使用退格键<kbd>backspace</kbd>删除任意字符。但是某些发行版本不允许这样操作。|
 
 
 #### vim 额外命令:
