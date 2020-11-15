@@ -190,4 +190,6 @@ vim 打开文件时，都会在当前工作目录建立一个 .filename.swap 的
 用法: `iconv -f 原文件编码 -t 新文件编码 filename [-o newfile]`
 |选项与参数|说明|
 |-|-|
-|-f|from，后面接|
+|-f|from，后面接原本的格式编码|
+|-t|to，后面接需要转换到的编码|
+|-o file||
