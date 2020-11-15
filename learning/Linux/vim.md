@@ -105,7 +105,7 @@ vim 是每个 Linux 发行版本都自带的纯文本编辑器，一本分为3�
 |-|-|
 |:set nu|显示行号，设定之后，会在每一行的前缀显示该行的行号|
 |:set nonu|与 set nu 相反，为取消行号|
-|:
+|:set hlsearch|high light search(高亮度搜寻)
 |:set noh|取消高亮|
 
 #### vim 额外命令:
