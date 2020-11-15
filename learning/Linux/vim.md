@@ -182,4 +182,7 @@ vim 打开文件时，都会在当前工作目录建立一个 .filename.swap 的
 |选项与参数|说明|
 |-|-|
 |-k|保留该文件原本的 mtime 时间格式|
-|-n|保留源文件并输出新文件，如: `dos2unix -n 'oldfile' newfile`|
+|-n|保留源文件并输出新文件，如: `dos2unix -n 'oldfile' 'newfile'`|
+
+### 语系问题
+通过 `file` 命令可以看出文件所使用的
