@@ -23,8 +23,8 @@ PS:
 
 ### Windows 客户端 snmp 配置
 `net stop sharedaccess`
-reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\ValidCommunities /v public /t REG_DWORD_LITTLE_ENDIAN /d 4 /f`
-`reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\PermittedManagers /v 1 /t REG_SZ /d 10.86.176.249 /f`
+`reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\ValidCommunities /v 'Community Name' /t REG_DWORD_LITTLE_ENDIAN /d 4 /f`
+`reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\PermittedManagers /v 1 /t REG_SZ /d 'IP' /f`
 `net stop SNMP`
 `net start SNMP`
 `exit`
