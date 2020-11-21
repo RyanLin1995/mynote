@@ -30,4 +30,4 @@ PS:
 ![auto discover.png](https://i.loli.net/2020/11/21/JEWnmpPuh1HIfN8.png)
 
 ### 5. 开始手动添加主机
-因为局域网中包括用户跟
+因为局域网中 IP 段包含其他设备(VM, 磁盘管理器等)，因此不进行自动添加
