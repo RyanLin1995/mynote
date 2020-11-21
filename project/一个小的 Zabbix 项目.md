@@ -15,5 +15,6 @@ PS:
 1. 安装必须参考以上 zabbix 的链接
 2. 配置时如果出现数据库无法连接，检查数据库 host
 
-### 2. snmp 安装
-
+### 2. snmp 配置
+1. 安装: `yum install net-snmp* -y`
+2. 
