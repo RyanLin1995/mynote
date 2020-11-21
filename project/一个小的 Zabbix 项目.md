@@ -27,4 +27,5 @@ PS:
 ![user2.png](https://i.loli.net/2020/11/21/auliWVtSLpIosZC.png)
 
 ### 4. 配置自动发现
-
+配置--->自动发现
+通过 
