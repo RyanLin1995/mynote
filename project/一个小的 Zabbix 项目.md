@@ -21,9 +21,12 @@ PS:
 3. 检测 SNMP 连通性: `snmpwalk -v 2c -c public 'IP'`
 
 ### 3. 添加相对应人员
-本次一共需要创建两类用户(管理员跟访问者，其中访问者不可登录)
+本次一共需要创建两类用户(管理员跟访问者，其中访问者不可登录前端)
 ![user.png](https://i.loli.net/2020/11/21/tN8gBUzslAKaYoR.png)
 
 ### 4. 配置自动发现
 配置--->自动发现
-通过 ICMP 进行自动发现
+通过 ICMP 进行自动发现，但不自动添加 host
+![auto discover.png](https://i.loli.net/2020/11/21/JEWnmpPuh1HIfN8.png)
+
+### 5. 开始
