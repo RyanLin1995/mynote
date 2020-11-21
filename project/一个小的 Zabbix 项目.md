@@ -17,4 +17,5 @@ PS:
 
 ### 2. snmp 配置
 1. 安装: `yum install net-snmp* -y`
-2. 查看 SNMP community name: `vim /etc/snmp/snmpd.conf `
+2. 查看 SNMP community name: `vim /etc/snmp/snmpd.conf`
+3. 检测 SNMP 连通性: `snmpwalk -v 2c -c public 'IP'`
