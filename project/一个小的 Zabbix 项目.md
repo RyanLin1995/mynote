@@ -21,6 +21,7 @@ PS:
 3. 检测 SNMP 连通性: `snmpwalk -v 2c -c public 'IP'`
 
 ### 3. 添加相对应人员
+本次一共需要创建两类用户(管路员跟访问者，其中访问者不可登录)
 1. 管理--->用户--->创建用户
 ![user.png](https://i.loli.net/2020/11/21/XQ4BufRUZIzHV9o.png)
 2. 创建相关人员
