@@ -24,7 +24,7 @@ PS:
 1. 管理--->用户--->创建用户
 ![user.png](https://i.loli.net/2020/11/21/XQ4BufRUZIzHV9o.png)
 2. 创建相关人员
-
+![user2.png](https://i.loli.net/2020/11/21/auliWVtSLpIosZC.png)
 
 ### 4. 配置自动发现
 
