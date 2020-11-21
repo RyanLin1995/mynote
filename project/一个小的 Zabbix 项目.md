@@ -22,7 +22,7 @@ PS:
 
 ### 3. 添加相对应人员
 管理--->用户--->创建用户
-
+![user.png](https://i.loli.net/2020/11/21/XQ4BufRUZIzHV9o.png)
 
 ### 4. 配置自动发现
 
