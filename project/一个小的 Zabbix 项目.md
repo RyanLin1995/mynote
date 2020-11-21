@@ -21,6 +21,10 @@ PS:
 2. 查看 SNMP community name: `vim /etc/snmp/snmpd.conf`
 3. 检测 SNMP 连通性: `snmpwalk -v 2c -c public 'IP'`
 
+### Windows 客户端 snmp 配置
+Communitiy name: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\ValidCommunities`
+IP: ``
+
 ### 3. 添加相对应人员
 本次一共需要创建两类用户(管理员跟访问者，其中访问者不可登录前端)
 ![user.png](https://i.loli.net/2020/11/21/tN8gBUzslAKaYoR.png)
