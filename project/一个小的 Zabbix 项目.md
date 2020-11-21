@@ -3,7 +3,9 @@
 
 ## 需求
 1. 监控方式: 通过 SNMP 进行监控，目前 Windows 上已经完成 snmp 配置。
-2. 设备数量: 以 Windows 为主，有
+2. 主机类型: 以 Windows 为主，有少量 Linux 跟 服务器
+3. 特定主机出现问题通知相关管理人员
+4. Zabbix LDAP 认证
 
 ## Zabbix 安装
 [Zabbix下载链接](https://www.zabbix.com/cn/download?zabbix=5.0&os_distribution=centos&os_version=7&db=mysql&ws=apache)
