@@ -22,8 +22,12 @@ PS:
 3. 检测 SNMP 连通性: `snmpwalk -v 2c -c public 'IP'`
 
 ### Windows 客户端 snmp 配置
-Communitiy name: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\ValidCommunities`
-IP: ``
+`net stop sharedaccess`
+reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\ValidCommunities /v public /t REG_DWORD_LITTLE_ENDIAN /d 4 /f`
+`reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\PermittedManagers /v 1 /t REG_SZ /d 10.86.176.249 /f`
+`net stop SNMP`
+`net start SNMP`
+`exit`
 
 ### 3. 添加相对应人员
 本次一共需要创建两类用户(管理员跟访问者，其中访问者不可登录前端)
