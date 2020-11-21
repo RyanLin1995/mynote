@@ -21,8 +21,10 @@ PS:
 3. 检测 SNMP 连通性: `snmpwalk -v 2c -c public 'IP'`
 
 ### 3. 添加相对应人员
-管理--->用户--->创建用户
+1. 管理--->用户--->创建用户
 ![user.png](https://i.loli.net/2020/11/21/XQ4BufRUZIzHV9o.png)
+2. 创建相关人员
+
 
 ### 4. 配置自动发现
 
