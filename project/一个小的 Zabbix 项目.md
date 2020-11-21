@@ -29,4 +29,5 @@ PS:
 通过 ICMP 进行自动发现，但不自动添加 host
 ![auto discover.png](https://i.loli.net/2020/11/21/JEWnmpPuh1HIfN8.png)
 
-### 5. 开始
+### 5. 开始手动添加主机
+因为局域网中包括用户跟
