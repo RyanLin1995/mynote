@@ -7,10 +7,12 @@
 3. 特定主机出现问题通知相关管理人员
 4. Zabbix LDAP 认证
 
-## 
-Zabbix 安装与配置
+## 准备工作
+### 1. Zabbix 安装与配置
 [Zabbix下载链接](https://www.zabbix.com/cn/download?zabbix=5.0&os_distribution=centos&os_version=7&db=mysql&ws=apache)
 
 PS: 
 1. 安装必须参考以上 zabbix 的链接
-2. 
+2. 配置时如果出现数据库无法连接，检查数据库 host
+
+### 2. snmp
