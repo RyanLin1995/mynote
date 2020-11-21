@@ -16,6 +16,7 @@ PS:
 2. 配置时如果出现数据库无法连接，检查数据库 host
 
 ### 2. snmp 配置
+#### zabbix 服务器 snmp 配置
 1. 安装: `yum install net-snmp* -y`
 2. 查看 SNMP community name: `vim /etc/snmp/snmpd.conf`
 3. 检测 SNMP 连通性: `snmpwalk -v 2c -c public 'IP'`
