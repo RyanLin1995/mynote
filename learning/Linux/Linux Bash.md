@@ -18,6 +18,7 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 4. 工作控制、前景背景控制(job control, foreground, background)：前、背景的控制
 5. 程序化脚本(shell scripts)：可以编写 Shell scrips
 6. 通配符(Wildcard)：即 *
+7. 快速编辑``
 
 ### 查看指令为 Bash 内建指令还是外部指令: type
 用法: `type -tpa name`
@@ -27,6 +28,6 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 ||不加任何选项与参数时，type 会显示出 name 是外部指令还是 bash 内建指令|
 |-t|当加入 -t 参数时，type 会将 name 以这些字眼显示出他的意义: file(表示为外部指令)，alias(表示该指令为命令别名所设定的名称)，builtin(表示该指令为 bash 内建的指令功能)|
 |-p|如果后面接的 name 为外部指令时，才会显示完整文件名|
--a ：会由 PATH 变量定义的路径中，将所有含 name 的指令都列出来，包含 alias
+|-a|会由 PATH 变量定义的路径中，将所有含 name 的指令都列出来，包含 alias|
 
 
