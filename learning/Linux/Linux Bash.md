@@ -11,4 +11,5 @@ Shell 是可以与操作系统核心沟通的一个应用程序，即壳程序�
 ## 什么是Bash
 Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bourne SHell)。
 主要优点有:
-1. 命令编修能力(history)
+1. 命令编修能力(history): 可以通过上下键查询历史指令，最多保存一千条，保存位置为~/.bash_history
+2. 命令与文件补全功能:([tab] 
