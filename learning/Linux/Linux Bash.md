@@ -8,7 +8,8 @@ Shell 是可以与操作系统核心沟通的一个应用程序，即壳程序�
 
 在 Linux 中，可以透过 `cat /etc/shells` 查看支持的 Shell
 
-## 什么是Bash
+## Bash
+### 什么是 Bash
 Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bourne SHell)。
 主要优点有:
 1. 命令编修能力(history): 可以通过上下键查询历史指令，最多保存一千条，保存位置为~/.bash_history
@@ -17,3 +18,5 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 4. 工作控制、前景背景控制(job control, foreground, background)：前、背景的控制
 5. 程序化脚本(shell scripts)：可以编写 Shell scrips
 6. 通配符(Wildcard)：即 *
+
+### 查看指令为 Bash 内奸
