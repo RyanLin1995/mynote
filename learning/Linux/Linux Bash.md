@@ -6,4 +6,7 @@ Shell 是可以与操作系统核心沟通的一个应用程序，即壳程序�
 狭义的 Shell 指的是指令列程序，如 Powershell，bash
 广义的 Shell 指的是指令列程序，图形接口等可以调用系统核心与其他软件的应用程序
 
-## 什么是
+在 Linux 中，可以透过 `cat /etc/shells` 查看支持的 Shell
+
+## 什么是Bash
+Bash: 
