@@ -21,13 +21,10 @@ PS:
 2. 查看 SNMP community name: `vim /etc/snmp/snmpd.conf`
 3. 检测 SNMP 连通性: `snmpwalk -v 2c -c public 'IP'`
 
-### Windows 客户端 snmp 配置
-`net stop sharedaccess`
-`reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\ValidCommunities /v 'Community Name' /t REG_DWORD_LITTLE_ENDIAN /d 4 /f`
-`reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\PermittedManagers /v 1 /t REG_SZ /d 'IP' /f`
-`net stop SNMP`
-`net start SNMP`
-`exit`
+#### Windows 客户端 snmp 配置
+Community Name 设置: `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\ValidCommunities /v 'Community Name' /t REG_DWORD_LITTLE_ENDIAN /d 4 /f`
+
+IP 设置: `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\PermittedManagers /v 1 /t REG_SZ /d 'IP' /f`
 
 ### 3. 添加相对应人员
 本次一共需要创建两类用户(管理员跟访问者，其中访问者不可登录前端)
