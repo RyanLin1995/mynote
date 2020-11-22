@@ -25,6 +25,8 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 |选项与参数|说明|
 |-|-|
 ||不加任何选项与参数时，type 会显示出 name 是外部指令还是 bash 内建指令|
-|-t|当加入 -t 参数时，type 会将 name 以这些字眼显示出他的意义: file(表示为外部指令),alias(表示该指令为命令别名所设定的名称),builtin(表示该指令为 bash 内建的指令功能)|
+|-t|当加入 -t 参数时，type 会将 name 以这些字眼显示出他的意义: file(表示为外部指令)，alias(表示该指令为命令别名所设定的名称)，builtin(表示该指令为 bash 内建的指令功能)|
+|-p|如果后面接的 name 为外部指令时，才会显示完整文件名|
+-a ：会由 PATH 变量定义的路径中，将所有含 name 的指令都列出来，包含 alias
 
 
