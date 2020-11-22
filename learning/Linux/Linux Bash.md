@@ -19,4 +19,9 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 5. 程序化脚本(shell scripts)：可以编写 Shell scrips
 6. 通配符(Wildcard)：即 *
 
-### 查看指令为 Bash 内奸
+### 查看指令为 Bash 内建指令还是外部指令: type
+用法: `type -tpa name`
+
+|选项与参数|说明|
+|-|-|
+|||
