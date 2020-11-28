@@ -3,7 +3,9 @@
 
 ## 变量的显示与设置
 ### 变量的显示: `echo`
-echo 可以输出
+echo 可以输出变量的值，具体用法为 `echo $varname`
+
+### 
 
 ## PATH
 ### PATH说明
