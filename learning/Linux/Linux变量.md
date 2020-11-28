@@ -8,9 +8,10 @@ echo 可以输出变量的值，具体用法为 `echo $varname`
 ### 变量赋值: =
 可以使用 = 给变量赋值
 例如赋予变量名 name 的值为 ryan : `name = ryan`
-输出变量 name 的值为: `echo $name`
+输出变量 name 的值为: `echo 'varname'`
 
-### 
+### 取消变量赋值: `unset`
+可以直接使用 unset 来取消变量名的赋值，具体用法: `unset $name`
 
 ## PATH
 ### PATH说明
