@@ -2,16 +2,19 @@
 变量就是以一组文字或符号等，来取代一些设定或者是一串保留的数据
 
 ## 变量的显示与设置
-### 变量的显示: `echo`
-echo 可以输出变量的值，具体用法为 `echo $varname`
+### 变量的显示: echo
+echo 可以输出变量的值，具体用法为 `echo $'varname'`
 
 ### 变量赋值: =
 可以使用 = 给变量赋值
 例如赋予变量名 name 的值为 ryan : `name = ryan`
-输出变量 name 的值为: `echo 'varname'`
+输出变量 name 的值为: `echo $name`
 
-### 取消变量赋值: `unset`
-可以直接使用 unset 来取消变量名的赋值，具体用法: `unset $name`
+### 取消变量赋值: unset
+可以直接使用 unset 来取消变量名的赋值，具体用法: `unset 'varname'`
+
+## 变量设定规则
+
 
 ## PATH
 ### PATH说明
