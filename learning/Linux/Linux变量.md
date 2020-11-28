@@ -6,7 +6,11 @@
 echo 可以输出变量的值，具体用法为 `echo $varname`
 
 ### 变量赋值: =
-可以使用 = 给变量赋值，例如赋予
+可以使用 = 给变量赋值
+例如赋予变量名 name 的值为 ryan : `name = ryan`
+输出变量 name 的值为: `echo $name`
+
+### 
 
 ## PATH
 ### PATH说明
