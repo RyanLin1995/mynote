@@ -37,3 +37,7 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 图解:
 ![ppid.gif](https://i.loli.net/2020/11/29/LZJlN6zAmdsG4QB.gif)
 
+如图所示，在原有的 bash 中执行了另一个 bash，
+
+PS:
+子程序仅会继承父程序的环境变量，不会继承父程序的自定义变量
