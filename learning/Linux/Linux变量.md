@@ -68,3 +68,5 @@ Linux 自带邮件系统的邮件保存路径
 
 随机生成 0-9 的数字: `declare -i number=$RANDOM*10/32768 ; echo $number`
 
+### 查看所有变量(环境变量与自定义变量): set
+用法: `set`
