@@ -31,4 +31,4 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 |-p|如果后面接的 name 为外部指令时，才会显示完整文件名|
 |-a|会由 PATH 变量定义的路径中，将所有含 name 的指令都列出来，包含 alias|
 
-
+### 父程序与子程序
