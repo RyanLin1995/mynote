@@ -43,9 +43,11 @@ echo 可以输出变量的值，具体用法为 `echo $'varname'`
 用户的家目录。通过 cd ~ 或者 cd 直接回到用户家目录，就是取用这个变量。
 
 ##### SHELL:
-说明用户目前使用的shell，Linux 默认为 /bin/shell
+说明用户目前使用的 SHELL 是哪个 shell，Linux 默认为 /bin/shell
 
-##### 
+##### HISTSIZE
+历史指令，即用户曾输入的指令，
+
 ##### PATH:
 PATH为Linux的环境变量，当你需要使用一个`命令`时，系统会根据PATH的设定去查找PATH定义的目录下是否含有这个`命令`的可执行文件。如果含有多个同名的`命令`可执行文件，先搜寻到的将会被执行
 * 查看PATH: `echo $PATH`
