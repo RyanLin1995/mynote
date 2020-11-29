@@ -32,4 +32,4 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 |-a|会由 PATH 变量定义的路径中，将所有含 name 的指令都列出来，包含 alias|
 
 ### 父程序与子程序
-在登录到 Linux 并且获得 bash 后，该 bash 会作为一个
+在登录到 Linux 并且获得 bash 后，该 bash 会作为一个独立的程序，并获得 PID。那么在这个程序下下达的任何指令，都是由这个程序衍生出来的，所
