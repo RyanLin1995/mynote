@@ -40,4 +40,4 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 如图所示，在原有的 bash 中执行了另一个 bash，那么新的 bash 即为原本 bash 的子程序。新输入的所有制令都会在这个新的 bash 中运行，只有退出(exit)这个 bash，才能回到父程序的 bash 中
 
 PS:
-子程序仅会继承父程序的环境变量，不会继承父程序的自定义变量，如果需要继承父程序的变量，可以使用`export`
+子程序仅会继承父程序的环境变量，不会继承父程序的自定义变量，如果需要继承父程序的变量，可以使用`export` 命令
