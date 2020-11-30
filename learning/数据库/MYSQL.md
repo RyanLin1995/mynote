@@ -192,7 +192,8 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 2.2 导入数据库: `source 'filepath'.sql;`
 
 ## 外键:
-外键，即将别的表的主键作为该表的值。作用为防止无效信息的插入
-外键约束:对数据的有效性进行验证
-
-关键字: foreign key,只有innodb数据库引擎支持外键约束
+* 外键: 即将别的表的主键作为该表的值。作用为防止无效信息的插入
+* 外键约束: 对数据的有效性进行验证
+* 关键字: foreign key,只有innodb数据库引擎支持外键约束
+* 外键添加: `alter table 'table1' add foregin key ('table1 column') references 'table2(column)'`
+* 如: `alter table goods `
