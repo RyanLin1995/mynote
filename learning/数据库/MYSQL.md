@@ -196,4 +196,4 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 * 外键约束: 对数据的有效性进行验证
 * 关键字: foreign key,只有innodb数据库引擎支持外键约束
 * 外键添加: `alter table 'table1' add foregin key ('table1 column') references 'table2(column)'`
-* 如: `alter table goods `
+* 如把 goods 表中的 brand_id 与 goods_: `alter table goods add foreign key (brand_id) references goods_brands(id)`
