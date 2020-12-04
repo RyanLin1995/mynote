@@ -68,13 +68,13 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 
 ## MYSQL 安装
 ### Deepin apt 安装
-1. 先确定是否有安装 MYSQL: `apt list --installed | grep 'mysql'`
+1. 先确定是否有安装 MYSQL: `apt list --installed | grep mysql`
 2. 安装 MariaDB (因为为了后续升级需要，且 Deepin 软件库没有 MYSQL ，所以直接用 MariaDB 替代): `apt install mariadb-server`
 
 - [ ] ### Deepin 源码安装 
 
 ### Centos yum/dnf 安装
-1. 先确保是否有安装 MYSQL: ` yum list installed | grep 'mysql'`
+1. 先确保是否有安装 MYSQL: ` yum list installed | grep mysql`
 2. 安装 MYSQL: `yum/dnf install mysql-server`
 
 - [ ] ### Centos 源码安装 
@@ -197,3 +197,4 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 * 关键字: foreign key,只有innodb数据库引擎支持外键约束
 * 外键添加: `alter table 'table1' add foregin key ('table1 column') references 'table2(column)'`
 * 如把 goods_brands 表中的 id 作为 goods 表中的 brand_id 的外键: `alter table goods add foreign key (brand_id) references goods_brands(id)`
+* 查看表中是否有外键存在: 
