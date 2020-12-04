@@ -123,16 +123,16 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ## MYSQL 数据表格相关
 ### 创建表:
 1. 查看数据表: `show tables;`
-2. 创建数据表: `create table tablename(field(字段) type(类型) constraint(约束),field(字段) type(类型) constraint(约束))` 
+2. 创建数据表: `create table 表名(field(字段) type(类型) constraint(约束),field(字段) type(类型) constraint(约束))` 
    * 例子1: `create table test(id int primary key not null auto_increment,name varchar(30));`
    * 例子2: 
 ![捕获5.PNG](https://i.loli.net/2020/11/11/qGeoDFIUPbNtg8Z.png)
-3. 查看数据表表头信息: `desc tablename;`
-4. 查看数据表创建过程: `show create table tablename;`
-5. 查看表格信息: `select * from tablename;`
+3. 查看数据表表头信息: `desc 表名;`
+4. 查看数据表创建过程: `show create table 表名;`
+5. 查看表格信息: `select * from 表名;`
 
 ### 修改表:
-1. 添加字段: `alter table tablename add columnname type;`
+1. 添加字段: `alter table 表名 add 类名 类型和约束;`
    * 例: `alter table students add birthday datetime;`
 2.1 修改字段(重命名版): `alter table 表名 change 旧列名 新列名 类型和约束;`
    * 例: `alter table students change birthday birth datetime not null;`
