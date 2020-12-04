@@ -132,25 +132,25 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 5. 查看表格信息: `select * from tablename;`
 
 ### 修改表:
-1. 添加字段: `alter table tablename add 'columnname' 'type';`
+1. 添加字段: `alter table tablename add columnname type;`
    * 例: `alter table students add birthday datetime;`
-2.1 修改字段(重命名版): `alter table 'tablename' change 'old columnname' 'new columnname' 'type and constraint';`
+2.1 修改字段(重命名版): `alter table tablename change old columnname new columnname type and constraint;`
    * 例: `alter table students change birthday birth datetime not null;`
-2.2 修改字段(不重命名版): `alter table 'tablename' modify 'columnname' 'type and constraint';`
+2.2 修改字段(不重命名版): `alter table tablename modify columnname type and constraint;`
    * 例: `alter table students modify birth date not null;`
-3. 删除字段: `alter table 'tablename' drop 'colunmname';`
+3. 删除字段: `alter table tablename drop colunmname;`
    * 例: `alter table students drop birthday;`
-4. 修改表名称: `alter table 'old tablename' rename 'new tablename';`
+4. 修改表名称: `alter table old tablename rename new tablename;`
 
 ### 删除表:
-1. 删除数据表: `drop table 'tablename';`
+1. 删除数据表: `drop table tablename;`
 
 ## MYSQL 数据相关:
 即数据的增删改查(curd): 创建(create),更新(update),读取(Retrieve),删除(delete)
 
 ### 查询:
-1. 查询表格所有内容: `select * from 'tablename';`
-2. 根据条件查询表格所有内容: `select * from 'tablename' where 'column' <|>|= 'data';`
+1. 查询表格所有内容: `select * from tablename;`
+2. 根据条件查询表格所有内容: `select * from tablename where column <|>|= data;`
 3. 只查询表格特定内容: `select 'column1', 'column2' from 'tablename';`
 4. 查询表格特定类容并设定别名(哪个 column 在前先显示哪个 column): `select 'column1' as 'name1', 'column2' as 'name2' from 'tablename';`
 
