@@ -177,8 +177,8 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 物理删除整个数据表: `delete from tablename;`
 2. 物理删除数据表特定数据: `delete from tablename where column=data;`
 3. 逻辑删除数据(即给表格添加一个 bit column, 默认为0, 删除为1, 显示数据是只显示 bit column 为0的): 
-3.1 设置逻辑删除字段: `alter table tablename add deletecolumn bit default 0;`
-3.1 进行逻辑删除: `update tablename set deletecolumn=1`;
+3.1 设置逻辑删除字段: `alter table 表名 add deletecolumn bit default 0;`
+3.1 进行逻辑删除: `update 表名 set deletecolumn=1`;
 
 ## MySQL 导出与导入:
 导出:
@@ -186,10 +186,10 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 2. 只导出数据表的表结构: `mysqldump -uroot -p -d databasename > filename.sql`
 
 导入:
-1. 直接导入数据库: `mysql -uroot -p < filename.sql`
+1. 直接导入数据库: `mysql -uroot -p < 文件绝对路径.sql`
 2. 使用 source 导入:
 2.1 创建数据库: `create database if not exists databasename charset=utf8;`
-2.2 导入数据库: `source filepath.sql;`
+2.2 导入数据库: `source 文件绝对路径.sql;`
 
 ## 外键:
 * 外键: 即将别的表的主键作为该表的值。作用为防止无效信息的插入
