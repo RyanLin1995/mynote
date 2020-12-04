@@ -150,18 +150,18 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 
 ### 查询:
 1. 查询表格所有内容: `select * from tablename;`
-2. 根据条件查询表格所有内容: `select * from tablename where column <|>|= data;`
-3. 只查询表格特定内容: `select 'column1', 'column2' from 'tablename';`
-4. 查询表格特定类容并设定别名(哪个 column 在前先显示哪个 column): `select 'column1' as 'name1', 'column2' as 'name2' from 'tablename';`
+2. 根据条件查询表格所有内容: `select * from tablename where column = data;`
+3. 只查询表格特定内容: `select column1,column2 from tablename;`
+4. 查询表格特定类容并设定别名(哪个 column 在前先显示哪个 column): `select column1 as name1, column2 as name2 from tablename;`
 
 ### 增加:
-1. 插入数据: `insert into 'tablename' values('value');`
+1. 插入数据: `insert into tablename values(value);`
    * 例子: 
 ![捕获6.PNG](https://i.loli.net/2020/11/11/Jbc3Zzw92aDk1gB.png)
-2. 部分插入数据: `insert into 'tablename'(columnname1, columnname2) values('value');`
+2. 部分插入数据: `insert into tablename(columnname1, columnname2) values(value);`
    * 例子:
 ![捕获7.PNG](https://i.loli.net/2020/11/13/E7D5JNdg8VySO26.png)
-3. 多次插入: `insert into 'tablename'(columnname1, columnname2) values('column1_data','column2_data'),('column1_data','column2_data');`
+3. 多次插入: `insert into tablename(columnname1, columnname2) values(column1_data,'column2_data'),('column1_data','column2_data');`
    * 例子:
 ![捕获8.PNG](https://i.loli.net/2020/11/13/jR62Dlym9NPn5Z3.png)
 
