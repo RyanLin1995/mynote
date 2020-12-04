@@ -95,11 +95,11 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 登录 MYSQL: `mysql -uroot -p`
 2. 选择数据库: `use 数据库名`
 3. 创建用户: `create 用户名@主机名 identified by 密码;` 或 `create user 用户名 identified by 密码;`
-4. 修改密码: `ALTER USER 用户名@主机名 IDENTIFIED BY 密码;` 或 `UPDATE mysql.user SET authentication_string = md5(密码) WHERE User = username AND Host = host;`
-5. 单独授予权限: `grant select, insert, update, delete, create, drop on databasename.tablename to user@host identified by password;`
-6. 针对某用户单独授予某数据库权限: `grant all privileges on database.* to user`
-7. 授予全部权限: `grant all privileges on *.* to user@% identified by password;`
-8. 授予全部权限并使用户有权限授权别人权限: `grant all privileges on *.* to user@% identified by password with grant option;`
+4. 修改密码: `ALTER USER 用户名@主机名 IDENTIFIED BY 密码;` 或 `UPDATE mysql.user SET authentication_string = md5(密码) WHERE User = 用户名 AND Host = 主机名;`
+5. 单独授予权限: `grant select, insert, update, delete, create, drop on 数据库名.表名 to 用户名@主机 identified by 密码;`
+6. 针对某用户单独授予某数据库权限: `grant all privileges on 数据库名.* to user`
+7. 授予全部权限: `grant all privileges on *.* to 用户名@% identified by 密码;`
+8. 授予全部权限并使用户有权限授权别人权限: `grant all privileges on *.* to 用户名@% identified by 密码 with grant option;`
 9. 撤销权限: `revoke all privileges from user;`
 10. 删除用户: `drop user user;`
 11. 生效: `flush privileges;`
