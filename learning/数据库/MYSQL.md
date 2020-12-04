@@ -138,9 +138,9 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
    * 例: `alter table students change birthday birth datetime not null;`
 2.2 修改字段(不重命名版): `alter table tablename modify columnname type and constraint;`
    * 例: `alter table students modify birth date not null;`
-3. 删除字段: `alter table tablename drop colunmname;`
+3. 删除字段: `alter table 表名 drop 列名;`
    * 例: `alter table students drop birthday;`
-4. 修改表名称: `alter table old tablename rename new tablename;`
+4. 修改表名称: `alter table 旧表名 rename 新表名;`
 
 ### 删除表:
 1. 删除数据表: `drop table 表名;`
@@ -174,9 +174,9 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ![捕获2.PNG](https://i.loli.net/2020/11/14/WGPmagX5hkvIlTq.png)
 
 ### 删除(delete):
-1. 物理删除整个数据表: `delete from 表名;`
-2. 物理删除数据表特定数据: `delete from 表名 where column=data;`
-3. 逻辑删除数据(即给表格添加一个 bit column, 默认为0, 删除为1, 显示数据是只显示 bit column 为0的): 
+1. 物理删除整个表的数据: `delete from 表名;`
+2. 物理删除表中特定数据: `delete from 表名 where column=data;`
+3. 逻辑删除表中数据(即给表格添加一个 bit column, 默认为0, 删除为1, 显示数据是只显示 bit column 为0的): 
 3.1 设置逻辑删除字段: `alter table 表名 add 删除列名称 bit default 0;`
 3.1 进行逻辑删除: `update 表名 set 删除列名称=1`;
 
