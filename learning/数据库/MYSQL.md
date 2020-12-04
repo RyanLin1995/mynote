@@ -158,10 +158,10 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 插入数据: `insert into tablename values(value);`
    * 例子: 
 ![捕获6.PNG](https://i.loli.net/2020/11/11/Jbc3Zzw92aDk1gB.png)
-2. 部分插入数据: `insert into tablename(columnname1, columnname2) values(value);`
+2. 部分插入数据: `insert into 表名(列1, 列2) values(列1数据,列2数据);`
    * 例子:
 ![捕获7.PNG](https://i.loli.net/2020/11/13/E7D5JNdg8VySO26.png)
-3. 多次插入: `insert into 表名(列1, 列2) values(列1数据,列2数据),(column1_data,column2_data);`
+3. 多次插入: `insert into 表名(列1, 列2) values(列1数据,列2数据),(列1数据,列2数据);`
    * 例子:
 ![捕获8.PNG](https://i.loli.net/2020/11/13/jR62Dlym9NPn5Z3.png)
 
