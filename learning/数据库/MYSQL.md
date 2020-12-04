@@ -161,34 +161,34 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 2. 部分插入数据: `insert into tablename(columnname1, columnname2) values(value);`
    * 例子:
 ![捕获7.PNG](https://i.loli.net/2020/11/13/E7D5JNdg8VySO26.png)
-3. 多次插入: `insert into tablename(columnname1, columnname2) values(column1_data,'column2_data'),('column1_data','column2_data');`
+3. 多次插入: `insert into tablename(columnname1, columnname2) values(column1_data,column2_data),(column1_data,column2_data);`
    * 例子:
 ![捕获8.PNG](https://i.loli.net/2020/11/13/jR62Dlym9NPn5Z3.png)
 
 ### 修改(update):
-1. 修改全部数据: `update 'tablename' set 'column1'='data1', 'column2'='data2';`
+1. 修改全部数据: `update tablename set column1=data1, column2=data2;`
    * 例子:
 ![捕获.PNG](https://i.loli.net/2020/11/14/qfMBJPb6xDtwIsv.png)
-2. 根据条件修改数据: `update 'tablename' set 'column1'='data1' where 'column'='data';`
+2. 根据条件修改数据: `update tablename set column1=data1 where column=data;`
    * 例子:
 ![捕获2.PNG](https://i.loli.net/2020/11/14/WGPmagX5hkvIlTq.png)
 
 ### 删除(delete):
-1. 物理删除整个数据表: `delete from 'tablename';`
-2. 物理删除数据表特定数据: `delete from 'tablename' where 'column'='data';`
+1. 物理删除整个数据表: `delete from tablename;`
+2. 物理删除数据表特定数据: `delete from tablename where column=data;`
 3. 逻辑删除数据(即给表格添加一个 bit column, 默认为0, 删除为1, 显示数据是只显示 bit column 为0的): 
-3.1 设置逻辑删除字段: `alter table 'tablename' add 'deletecolumn' bit default 0;`
-3.1 进行逻辑删除: `update 'tablename' set `deletecolumn'=1`;
+3.1 设置逻辑删除字段: `alter table tablename add deletecolumn bit default 0;`
+3.1 进行逻辑删除: `update tablename set deletecolumn=1`;
 
 ## MySQL 导出与导入:
 导出:
-1. 数据库和表结构的导出: `mysqldump -uroot -p 'databasename' > 'filename'.sql`
-2. 只导出数据表的表结构: `mysqldump -uroot -p -d 'databasename' > 'filename'.sql`
+1. 数据库和表结构的导出: `mysqldump -uroot -p databasename > filename.sql`
+2. 只导出数据表的表结构: `mysqldump -uroot -p -d databasename > filename.sql`
 
 导入:
-1. 直接导入数据库: `mysql -uroot -p < 'filename'.sql`
+1. 直接导入数据库: `mysql -uroot -p < filename.sql`
 2. 使用 source 导入:
-2.1 创建数据库: `create database if not exists 'databasename' charset=utf8;`
+2.1 创建数据库: `create database if not exists databasename charset=utf8;`
 2.2 导入数据库: `source 'filepath'.sql;`
 
 ## 外键:
