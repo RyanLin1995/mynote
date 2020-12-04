@@ -82,20 +82,20 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ## 初始化 MYSQL : 
 1. 验证 MYSQL 是否安装完成: `mysqladmin -V`
 2. 初始化 MYSQL : `mysql --initialize`
-3. 获取随机生成的 root 密码: `cat /var/log/mysql/mysqld.log |grep 'password'`
+3. 获取随机生成的 root 密码: `cat /var/log/mysql/mysqld.log |grep password`
 4. 修改文件夹拥有者为 MYSQL: `chown mysql:mysql -R /var/lib/mysql`
-5. 修改 root 密码: `mysqladmin -uroot -p 'old_password' password 'new_password'` 或 创建 root 密码: `mysqladmin -u root password "password"`
+5. 修改 root 密码: `mysqladmin -uroot -p old_password password new_password` 或 创建 root 密码: `mysqladmin -u root password password`
 6. 开机 MYSQL 服务: `systemctl start mysql.services`
-7. 登录 MYSQL: `mysql -h 'hostname' -u root -p `
+7. 登录 MYSQL: `mysql -h hostname -u root -p `
 
 ## 关闭数据库: 
 `mysqladmin -u root -p shutdown`
 
 ## MYSQL 用户设置:
 1. 登录 MYSQL: `mysql -uroot -p`
-2. 选择数据库: `use 'database'`
-3. 创建用户: `create 'username'@'host' identified by 'password';` 或 `create user 'username' identified by 'password';`
-4. 修改密码: `ALTER USER 'root'@'localhost' IDENTIFIED BY 'NEW_PASSWORD';` 或 `UPDATE mysql.user SET authentication_string = md5('MY_NEW_PASSWORD') WHERE User = 'root' AND Host = 'localhost';`
+2. 选择数据库: `use database`
+3. 创建用户: `create username@host identified by password;` 或 `create user username identified by password;`
+4. 修改密码: `ALTER USER root@localhost IDENTIFIED BY NEW_PASSWORD;` 或 `UPDATE mysql.user SET authentication_string = md5(MY_NEW_PASSWORD) WHERE User = username AND Host = localhost;`
 5. 单独授予权限: `grant select, insert, update, delete, create, drop on 'databasename'.'tablename' to 'user'@'host' identified by 'password';`
 6. 针对某用户单独授予某数据库权限: `grant all privileges on database.* to 'user'`
 7. 授予全部权限: `grant all privileges on *.* to 'user'@'%' identified by 'password';`
