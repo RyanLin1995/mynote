@@ -149,13 +149,13 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 即数据的增删改查(curd): 创建(create),更新(update),读取(Retrieve),删除(delete)
 
 ### 查询:
-1. 查询表格所有内容: `select * from tablename;`
-2. 根据条件查询表格所有内容: `select * from tablename where column = data;`
-3. 只查询表格特定内容: `select column1,column2 from tablename;`
-4. 查询表格特定类容并设定别名(哪个 column 在前先显示哪个 column): `select column1 as name1, column2 as name2 from tablename;`
+1. 查询表格所有内容: `select * from 表名;`
+2. 根据条件查询表格所有内容: `select * from 表名 where 列=数据;`
+3. 只查询表格特定内容: `select 列1,列2 from 表名;`
+4. 查询表格特定类容并设定别名(哪个 column 在前先显示哪个 column): `select 列1 as name1, 列2 as name2 from 表名;`
 
 ### 增加:
-1. 插入数据: `insert into tablename values(value);`
+1. 插入数据: `insert into 表名 values(数据);`
    * 例子: 
 ![捕获6.PNG](https://i.loli.net/2020/11/11/Jbc3Zzw92aDk1gB.png)
 2. 部分插入数据: `insert into 表名(列1, 列2) values(列1数据,列2数据);`
