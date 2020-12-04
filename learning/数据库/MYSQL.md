@@ -100,19 +100,19 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 6. 针对某用户单独授予某数据库权限: `grant all privileges on 数据库名.* to user`
 7. 授予全部权限: `grant all privileges on *.* to 用户名@% identified by 密码;`
 8. 授予全部权限并使用户有权限授权别人权限: `grant all privileges on *.* to 用户名@% identified by 密码 with grant option;`
-9. 撤销权限: `revoke all privileges from user;`
-10. 删除用户: `drop user user;`
+9. 撤销权限: `revoke all privileges from 用户名;`
+10. 删除用户: `drop user 用户名;`
 11. 生效: `flush privileges;`
-12. 查看用户: `select user,host from user;`
+12. 查看用户(先use mysql): `select user,host from user;`
 
 ## MYSQL 数据库相关:
 1. 查看数据库: `show databases;`
-2. 创建数据库: `create database databasename;`
-3. 创建数据库2: `create database if not exists databasename default charset utf8 collate utf8_general_ci;`
-4. 显示数据库创建过程: `show create database databasename;`
-5. 创建指定编码的数据库: `create database databasename charset=utf8;`
-6. 删除数据库: `drop database databasename;`
-7. 创建/删除需要转移的数据库: `create/drop database databasename;`
+2. 创建数据库: `create database 数据库名;`
+3. 创建数据库2: `create database if not exists 数据库名 default charset utf8 collate utf8_general_ci;`
+4. 显示数据库创建过程: `show create database 数据库名;`
+5. 创建指定编码的数据库: `create database 数据库名 charset=utf8;`
+6. 删除数据库: `drop database 数据库名;`
+7. 创建/删除需要转移的数据库: `create/drop database 数据库名;`
 8. 查看当前数据库: `select database();`
 
 ## MYSQL 其他命令:
@@ -188,7 +188,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 导入:
 1. 直接导入数据库: `mysql -uroot -p < 文件绝对路径.sql`
 2. 使用 source 导入:
-2.1 创建数据库: `create database if not exists databasename charset=utf8;`
+2.1 创建数据库: `create database if not exists 数据库名 charset=utf8;`
 2.2 导入数据库: `source 文件绝对路径.sql;`
 
 ## 外键:
