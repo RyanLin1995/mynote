@@ -161,15 +161,15 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 2. 部分插入数据: `insert into tablename(columnname1, columnname2) values(value);`
    * 例子:
 ![捕获7.PNG](https://i.loli.net/2020/11/13/E7D5JNdg8VySO26.png)
-3. 多次插入: `insert into tablename(columnname1, columnname2) values(column1_data,column2_data),(column1_data,column2_data);`
+3. 多次插入: `insert into 表名(列1, columnname2) values(column1_data,column2_data),(column1_data,column2_data);`
    * 例子:
 ![捕获8.PNG](https://i.loli.net/2020/11/13/jR62Dlym9NPn5Z3.png)
 
 ### 修改(update):
-1. 修改全部数据: `update tablename set column1=data1, column2=data2;`
+1. 修改全部数据: `update 表名 set 列1=列1数据, 列2=列2数据;`
    * 例子:
 ![捕获.PNG](https://i.loli.net/2020/11/14/qfMBJPb6xDtwIsv.png)
-2. 根据条件修改数据: `update 表名 set 列1=data1 where column=data;`
+2. 根据条件修改数据: `update 表名 set 列1=列1数据 where 列=数据;`
    * 例子:
 ![捕获2.PNG](https://i.loli.net/2020/11/14/WGPmagX5hkvIlTq.png)
 
