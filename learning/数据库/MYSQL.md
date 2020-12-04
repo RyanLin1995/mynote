@@ -169,16 +169,16 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 修改全部数据: `update tablename set column1=data1, column2=data2;`
    * 例子:
 ![捕获.PNG](https://i.loli.net/2020/11/14/qfMBJPb6xDtwIsv.png)
-2. 根据条件修改数据: `update tablename set column1=data1 where column=data;`
+2. 根据条件修改数据: `update 表名 set 列1=data1 where column=data;`
    * 例子:
 ![捕获2.PNG](https://i.loli.net/2020/11/14/WGPmagX5hkvIlTq.png)
 
 ### 删除(delete):
-1. 物理删除整个数据表: `delete from tablename;`
-2. 物理删除数据表特定数据: `delete from tablename where column=data;`
+1. 物理删除整个数据表: `delete from 表名;`
+2. 物理删除数据表特定数据: `delete from 表名 where column=data;`
 3. 逻辑删除数据(即给表格添加一个 bit column, 默认为0, 删除为1, 显示数据是只显示 bit column 为0的): 
-3.1 设置逻辑删除字段: `alter table 表名 add deletecolumn bit default 0;`
-3.1 进行逻辑删除: `update 表名 set deletecolumn=1`;
+3.1 设置逻辑删除字段: `alter table 表名 add 删除列名称 bit default 0;`
+3.1 进行逻辑删除: `update 表名 set 删除列名称=1`;
 
 ## MySQL 导出与导入:
 导出:
