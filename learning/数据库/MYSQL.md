@@ -143,7 +143,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 4. 修改表名称: `alter table old tablename rename new tablename;`
 
 ### 删除表:
-1. 删除数据表: `drop table tablename;`
+1. 删除数据表: `drop table 表名;`
 
 ## MYSQL 数据相关:
 即数据的增删改查(curd): 创建(create),更新(update),读取(Retrieve),删除(delete)
