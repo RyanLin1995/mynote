@@ -109,10 +109,10 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 查看数据库: `show databases;`
 2. 创建数据库: `create database databasename;`
 3. 创建数据库2: `create database if not exists databasename default charset utf8 collate utf8_general_ci;`
-4. 显示数据库创建过程: `show create database 'databasename';`
-5. 创建指定编码的数据库: `create database 'databasename' charset=utf8;`
-6. 删除数据库: `drop database 'databasename';`
-7. 创建/删除需要转移的数据库: `create/drop database `\`databasename\`;
+4. 显示数据库创建过程: `show create database databasename;`
+5. 创建指定编码的数据库: `create database databasename charset=utf8;`
+6. 删除数据库: `drop database databasename;`
+7. 创建/删除需要转移的数据库: `create/drop database databasename;`
 8. 查看当前数据库: `select database();`
 
 ## MYSQL 其他命令:
@@ -123,16 +123,16 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ## MYSQL 数据表格相关
 ### 创建表:
 1. 查看数据表: `show tables;`
-2. 创建数据表: `create table 'tablename'('field(字段) type(类型) constraint(约束)','field(字段) type(类型) constraint(约束)')` 
+2. 创建数据表: `create table tablename(field(字段) type(类型) constraint(约束),field(字段) type(类型) constraint(约束))` 
    * 例子1: `create table test(id int primary key not null auto_increment,name varchar(30));`
    * 例子2: 
 ![捕获5.PNG](https://i.loli.net/2020/11/11/qGeoDFIUPbNtg8Z.png)
-3. 查看数据表表头信息: `desc 'tablename';`
-4. 查看数据表创建过程: `show create table 'tablename';`
-5. 查看表格信息: `select * from 'tablename';`
+3. 查看数据表表头信息: `desc tablename;`
+4. 查看数据表创建过程: `show create table tablename;`
+5. 查看表格信息: `select * from tablename;`
 
 ### 修改表:
-1. 添加字段: `alter table 'tablename' add 'columnname' 'type';`
+1. 添加字段: `alter table tablename add 'columnname' 'type';`
    * 例: `alter table students add birthday datetime;`
 2.1 修改字段(重命名版): `alter table 'tablename' change 'old columnname' 'new columnname' 'type and constraint';`
    * 例: `alter table students change birthday birth datetime not null;`
