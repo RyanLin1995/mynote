@@ -95,20 +95,20 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 1. 登录 MYSQL: `mysql -uroot -p`
 2. 选择数据库: `use database`
 3. 创建用户: `create username@host identified by password;` 或 `create user username identified by password;`
-4. 修改密码: `ALTER USER root@localhost IDENTIFIED BY NEW_PASSWORD;` 或 `UPDATE mysql.user SET authentication_string = md5(MY_NEW_PASSWORD) WHERE User = username AND Host = localhost;`
-5. 单独授予权限: `grant select, insert, update, delete, create, drop on 'databasename'.'tablename' to 'user'@'host' identified by 'password';`
-6. 针对某用户单独授予某数据库权限: `grant all privileges on database.* to 'user'`
-7. 授予全部权限: `grant all privileges on *.* to 'user'@'%' identified by 'password';`
-8. 授予全部权限并使用户有权限授权别人权限: `grant all privileges on *.* to 'user'@'%' identified by 'password' with grant option;`
-9. 撤销权限: `revoke all privileges from 'user';`
-10. 删除用户: `drop user 'user';`
+4. 修改密码: `ALTER USER root@localhost IDENTIFIED BY NEW_PASSWORD;` 或 `UPDATE mysql.user SET authentication_string = md5(MY_NEW_PASSWORD) WHERE User = username AND Host = host;`
+5. 单独授予权限: `grant select, insert, update, delete, create, drop on databasename.tablename to user@host identified by password;`
+6. 针对某用户单独授予某数据库权限: `grant all privileges on database.* to user`
+7. 授予全部权限: `grant all privileges on *.* to user@% identified by password;`
+8. 授予全部权限并使用户有权限授权别人权限: `grant all privileges on *.* to user@% identified by password with grant option;`
+9. 撤销权限: `revoke all privileges from user;`
+10. 删除用户: `drop user user;`
 11. 生效: `flush privileges;`
-12. 查看用户: `select user, host from user;`
+12. 查看用户: `select user,host from user;`
 
 ## MYSQL 数据库相关:
 1. 查看数据库: `show databases;`
-2. 创建数据库: `create database 'databasename';`
-3. 创建数据库2: `create database if not exists 'databasename' default charset utf8 collate utf8_general_ci;`
+2. 创建数据库: `create database databasename;`
+3. 创建数据库2: `create database if not exists databasename default charset utf8 collate utf8_general_ci;`
 4. 显示数据库创建过程: `show create database 'databasename';`
 5. 创建指定编码的数据库: `create database 'databasename' charset=utf8;`
 6. 删除数据库: `drop database 'databasename';`
