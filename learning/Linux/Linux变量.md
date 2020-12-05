@@ -104,3 +104,6 @@ $ 表示 shell 自己的线程号(Process ID，PID)。查看 shell 自身线程�
 ### 转变自定义变量为环境变量: export
 单纯显示环境变量: `export`
 将变量转为环境变量: `export 自定义变量名称`
+
+### 影响变量输出的语系变量: locale
+Linux 支持众多语系
