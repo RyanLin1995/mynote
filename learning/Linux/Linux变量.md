@@ -108,7 +108,7 @@ $ 表示 shell 自己的线程号(Process ID，PID)。查看 shell 自身线程�
 ### 影响变量输出的语系变量: locale
 Linux 支持众多语系，如果在使用命令输出时出现了乱码的情况，说明系统语系出现了问题，此时可以通过 `locale` 查询
 * 查询系统支持语系(即查看 usr/lib/locale 目录): `locale -a`
-* 查看当前语系(即查看/etc/locale): `locale`
+* 查看当前语系(即查看/etc/locale.conf): `locale`
 PS:
 1. 可以单独设置每项语系的数据，但是一般通过设置 LANG 或 LC_ALL 对全部语系进行设置
-2. 需要临时改变语系，可以使用 `export LC_ALL="语系"` 或 `export LANG="语系"` 进行设置。但是如果想永久
+2. 需要临时改变语系，可以使用 `export LC_ALL="语系"` 或 `export LANG="语系"` 进行设置。但是如果想永久改变语系，需要改动 /etc/locale.conf 目录
