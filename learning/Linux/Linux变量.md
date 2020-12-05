@@ -109,4 +109,6 @@ $ 表示 shell 自己的线程号(Process ID，PID)。查看 shell 自身线程�
 Linux 支持众多语系，如果在使用命令输出时出现了乱码的情况，说明系统语系出现了问题，此时可以通过 `locale` 查询
 * 查询系统支持语系(即查看 usr/lib/locale 目录): `locale -a`
 * 查看当前语系(即查看/etc/locale): `locale`
-
+PS:
+1. 可以单独设置每项语系的数据，但是一般通过设置 LANG 或 LC_ALL 对全部语系进行设置
+2. 
