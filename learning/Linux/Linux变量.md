@@ -145,5 +145,5 @@ PS:
 1. 计算 sum=100+200+300 的结果:
 ![图像 7.png](https://i.loli.net/2020/12/06/smuCnf7xdr4OXYU.png)
 2. 输出/取消 sum 为环境变量:
-
+![图像 13.png](https://i.loli.net/2020/12/06/vTOU76VLh2Qctsb.png)
 3. 列出变量类型:
