@@ -129,6 +129,6 @@ PS:
 ![图像 5.png](https://i.loli.net/2020/12/06/K2ku4pJUZVcHxGR.png)
 
 #### 宣告变量类型: declare/typeset
-在 bash 中，默认所有的
+在 bash 中，默认所有的变量类型为字符串，因此如果不指定变量类型，则任何算术都是字符串而不是计算式
 
 
