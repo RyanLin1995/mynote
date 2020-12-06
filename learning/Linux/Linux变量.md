@@ -150,4 +150,5 @@ PS:
 ![图像 14.png](https://i.loli.net/2020/12/06/5DkrvTZMsWm7FPB.png)
 
 #### 数组类型: array
-数组类型一般用于写程序用，
+数组类型一般用于写程序用，设定方式为: `变量名[index]=content`
+但是输出时注意，一定要使用 ``
