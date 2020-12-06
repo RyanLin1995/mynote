@@ -148,3 +148,6 @@ PS:
 ![图像 13.png](https://i.loli.net/2020/12/06/vTOU76VLh2Qctsb.png)
 3. 列出变量类型:
 ![图像 14.png](https://i.loli.net/2020/12/06/5DkrvTZMsWm7FPB.png)
+
+#### 数组类型: array
+数组类型一般用于写程序用，
