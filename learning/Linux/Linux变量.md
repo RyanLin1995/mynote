@@ -147,3 +147,4 @@ PS:
 2. 输出/取消 sum 为环境变量:
 ![图像 13.png](https://i.loli.net/2020/12/06/vTOU76VLh2Qctsb.png)
 3. 列出变量类型:
+![图像 14.png](https://i.loli.net/2020/12/06/5DkrvTZMsWm7FPB.png)
