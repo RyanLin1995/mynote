@@ -128,4 +128,7 @@ PS:
 2.让用户输入名字并保存到 name 变量，等待10秒:
 ![图像 5.png](https://i.loli.net/2020/12/06/K2ku4pJUZVcHxGR.png)
 
+#### 宣告变量类型: declare/typeset
+在 bash 中，默认所有的
+
 
