@@ -138,4 +138,7 @@ PS:
 |-a|宣告为数组(array)|
 |-i|宣告为整数数字(integer)|
 |-x|与 export 一样，把变量输出为环境变量|
-|-r|将变量设置为 readonly 类型，不能被更改跟unse|
+|-r|将变量设置为 readonly 类型，不能被更改跟 unset|
+
+* 例子:
+1. 计算 sum=100+200+300
