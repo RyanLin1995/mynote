@@ -124,7 +124,8 @@ PS:
 
 * 例子:
 1. 让用户输入任意内容并保存到 test 变量:
-
+![图像 4.png](https://i.loli.net/2020/12/06/wVfAONtvUCFWIZe.png)
 2.让用户输入名字并保存到 name 变量，等待10秒:
+![图像 5.png](https://i.loli.net/2020/12/06/K2ku4pJUZVcHxGR.png)
 
 
