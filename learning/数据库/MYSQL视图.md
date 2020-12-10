@@ -11,4 +11,6 @@
 2. 查看视图: `show tables;`
 3. 使用视图: `select * from 视图名称;`
 4. 删除视图: `drop view 视图名称;`
-5. 视图demo: 
+5. 视图demo: `create view v_goods_info as select g.*,c.name,b.name from goods as g left join goods_cates as c on c.id=g.cate_id left join goods_brands as b on b.id=g.brand_id;`
+![图像 1.png](https://i.loli.net/2020/12/10/Ha7EIA5OCWtDbSm.png)
+6. 
