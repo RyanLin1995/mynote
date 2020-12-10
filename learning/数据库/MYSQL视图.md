@@ -8,4 +8,7 @@
 
 ## 视图相关命令
 1. 定义视图: `create view 视图名称 as select 语句;`
-2. chak
+2. 查看视图: `show tables;`
+3. 使用视图: `select * from 视图名称;`
+4. 删除视图: `drop view 视图名称;`
+5. 视图demo: 
