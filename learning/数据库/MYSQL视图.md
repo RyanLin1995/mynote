@@ -6,6 +6,9 @@
 特点:
 方便操作，特别是查询操作，减少复杂的SQL语句，增强可读性；
 
+注意:
+视图只能查询，不能
+
 ## 视图相关命令
 1. 定义视图: `create view 视图名称 as select 语句;`
 2. 查看视图: `show tables;`
@@ -13,4 +16,5 @@
 4. 删除视图: `drop view 视图名称;`
 5. 视图demo: `create view v_goods_info as select g.*,c.name,b.name from goods as g left join goods_cates as c on c.id=g.cate_id left join goods_brands as b on b.id=g.brand_id;`
 ![图像 1.png](https://i.loli.net/2020/12/10/Ha7EIA5OCWtDbSm.png)
-6. 
+6. 视图的作用:
+    * 提高了重用性
