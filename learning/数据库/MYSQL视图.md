@@ -7,4 +7,5 @@
 方便操作，特别是查询操作，减少复杂的SQL语句，增强可读性；
 
 ## 视图相关命令
-1. 定义视图: `create view 视图名称 as select 语句`
+1. 定义视图: `create view 视图名称 as select 语句;`
+2. chak
