@@ -15,7 +15,13 @@
   3. 在储蓄帐户余额中增加200美元。
  
 上述三个步骤的操作必须打包在一个事务中，任何一个步骤失败，则必须回滚所有的步骤。
-那么可以
+
+那么可以使用以下语句对上边的描述进行操作:
+`1. start transaction;`
+`2. select balance from checking where customer_id = 10233276;`
+`3. update checking set balance = balance - 200.00 where customer_id = 10233276;`
+`4. update savings set balance = balance + 200.00 where customer_id = 10233276;`
+`5. commit;`
 
 ### 原子性(Atomicity)
 一个事务必须被视为一个不可分割的最小工作单元，整个事务中的所有操作要么全部提交成功，要么全部失败回滚，对于一个事务来说，不可能只执行其中的一部分操作，这就是事务的原子性。(例如上边的事例就是一个事务)
