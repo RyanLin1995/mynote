@@ -186,6 +186,7 @@ PS:
 |var=${str-content}|var=content|var=|var=$str|
 |var=${str:-content}|var=content|var=content|var=$str|
 |var=${str+content}|var=|var=content|var=content|
-|var=${str+:content}|var=|var=|var=content|
-|var=${str=content}|str=content;var=content|str不变;var=content|str不变;var=content|
-|var=${}||
+|var=${str:+content}|var=|var=|var=content|
+|var=${str=content}|str=content;var=content|str不变;var=content|str不变;var=$str|
+|var=${str:=content}|str=content;var=content|str=content;var=content|str不变;var=$str|
+|||||
