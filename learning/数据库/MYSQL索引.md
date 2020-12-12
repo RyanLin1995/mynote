@@ -11,4 +11,6 @@
 
 ## 索引命令
 1. 查看索引: `show index from 表名;`
-2. 
+2. 创建索引: `create index 索引名称 on 表名(字段名称(长度));`
+3. 删除索引: `drop index 索引名称 on 表名;`
+
