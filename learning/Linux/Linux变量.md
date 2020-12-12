@@ -179,4 +179,6 @@ PS:
 ![图像 4.png](https://i.loli.net/2020/12/12/cvyajqAGlSzIspC.png)
 
 ### 变量的测试与替换
-命令格式: `new_var=${old_var[-+=?]content}`
+命令格式: `var=${str[-+=?]content}`
+
+|变量设定方式|str 没有赋值时|str 为空时||
