@@ -177,3 +177,6 @@ PS:
 
 4. 从**右边**开始进行最**长**匹配原则删除 path 变量中 sbin: 结尾的数据:
 ![图像 4.png](https://i.loli.net/2020/12/12/cvyajqAGlSzIspC.png)
+
+### 变量的测试与替换
+命令格式: `new_var=${old_var[-+=?]content}`
