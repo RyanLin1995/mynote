@@ -193,5 +193,7 @@ PS:
 |var=${str:?content}|content输出stderr|content输出stderr|var=$str|
 
 PS:
-1. str: 代表 str 没设定或赋予了空
+1. str: 代表 str 没设定或赋予了**空**字符串
 2. str 代表 str 没有赋值
+
+一些例子:
