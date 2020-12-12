@@ -201,3 +201,4 @@ PS:
 ![5.png](https://i.loli.net/2020/12/12/hUsxJD28mn7yHFq.png)
 
 2. 存在 str，尝试使用(-)：
+![图像 6.png](https://i.loli.net/2020/12/12/TErQtwznypmPAK1.png)
