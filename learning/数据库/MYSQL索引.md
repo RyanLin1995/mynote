@@ -20,3 +20,5 @@ PS:
 3. 不要创建过多的索引，会影响插入跟更新的性能
 
 ## 索引demo
+![图像 9.png](https://i.loli.net/2020/12/12/EVDRW2oYsev8gTH.png)
+
