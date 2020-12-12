@@ -164,8 +164,8 @@ PS:
 |${变量名#关键词}|从变量左边开始匹配符合关键词的，将符合关键词的最长数据删除|
 
 例子:
-1. 最短匹配原则删除 path 变量中的 bin:
+1. 最短匹配原则删除 path 变量中 bin: 结尾的数据:
 ![图像 1.png](https://i.loli.net/2020/12/12/mrzy9AgB57bpxKv.png)
 
-2. 最长匹配原则删除 path 变量中的 bin:
-
+2. 最长匹配原则删除 path 变量中 bin: 结尾的数据:
+![图像 2.png](https://i.loli.net/2020/12/12/dGyWqmj8wRVnxkO.png)
