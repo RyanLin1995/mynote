@@ -173,7 +173,7 @@ PS:
 ![图像 2.png](https://i.loli.net/2020/12/12/dGyWqmj8wRVnxkO.png)
 
 3. 从**右边**开始进行最**短**匹配原则删除 path 变量中 sbin: 结尾的数据:
-
+![图像 3.png](https://i.loli.net/2020/12/12/MlwBgLSEtKfzoHY.png)
 
 4. 从**右边**开始进行最**长**匹配原则删除 path 变量中 sbin: 结尾的数据:
-
+![图像 4.png](https://i.loli.net/2020/12/12/cvyajqAGlSzIspC.png)
