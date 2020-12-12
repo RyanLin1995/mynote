@@ -181,7 +181,7 @@ PS:
 ### 变量的测试与替换
 命令格式: `var=${str[-+=?]content}`
 
-|变量设定方式|str 没有赋值时|str 为空时|str 已赋予非空值时|
+|变量设定方式|str 没有赋值时|str 为空字符串时|str 已赋予非空值时|
 |-|-|-|-|
 |var=${str-content}|var=content|var=|var=$str|
 |var=${str:-content}|var=content|var=content|var=$str|
