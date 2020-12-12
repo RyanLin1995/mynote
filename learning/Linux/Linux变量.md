@@ -165,6 +165,7 @@ PS:
 
 例子:
 1. 最短匹配原则删除 path 变量中的 bin:
+![图像 1.png](https://i.loli.net/2020/12/12/mrzy9AgB57bpxKv.png)
 
 2. 最长匹配原则删除 path 变量中的 bin:
 
