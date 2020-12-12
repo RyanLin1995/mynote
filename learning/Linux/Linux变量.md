@@ -198,6 +198,6 @@ PS:
 
 一些例子:
 1. 不存在 str，尝试使用(-)：
+![5.png](https://i.loli.net/2020/12/12/hUsxJD28mn7yHFq.png)
 
-
-2. 
+2. 存在 str，尝试使用(-)：
