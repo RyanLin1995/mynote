@@ -189,4 +189,5 @@ PS:
 |var=${str:+content}|var=|var=|var=content|
 |var=${str=content}|str=content;var=content|str不变;var=content|str不变;var=$str|
 |var=${str:=content}|str=content;var=content|str=content;var=content|str不变;var=$str|
-|||||
+|var=${str?content}|content输出srderr|var=|var=$str|
+|var=${str:?content}|content输出srderr|content输出srderr|var=$str|
