@@ -185,4 +185,5 @@ PS:
 |-|-|-|-|
 |var=${str-content}|var=content|var=|var=$str|
 |var=${str:-content}|var=content|var=content|var=$str|
-|var=||||
+|var=${str+content}|var=|var=content|var=content|
+|var=${str+:content}|var=|
