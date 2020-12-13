@@ -81,6 +81,8 @@ PS:
 
 ### 历史命令: history
 可以通过 history 命令翻查之前输入过的命令
+用法: `history [n]`
+用法: `history [-c]`
 
 |选项与参数|说明|
 |-|-|
