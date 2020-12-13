@@ -83,7 +83,9 @@ PS:
 可以通过 history 命令翻查之前输入过的命令
 用法: `history [n]`
 用法: `history [-c]`
+用法: `histroy [-arw] histfiles`
 
 |选项与参数|说明|
 |-|-|
-|||
+|n|数字，代表要列出多少行最近执行的命令|
+|-c|将 shell 中的所有 |
