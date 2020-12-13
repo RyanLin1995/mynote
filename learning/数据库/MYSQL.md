@@ -97,16 +97,18 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 2. 选择数据库: `use mysql`
 3. 创建用户: `create 用户名@主机名 identified by 密码;` 或 `create user 用户名 identified by 密码;`
 4. 修改密码: `ALTER USER 用户名@主机名 IDENTIFIED BY 密码;` 或 `UPDATE mysql.user SET authentication_string = md5(密码) WHERE User = 用户名 AND Host = 主机名;`
-5. 单独授予权限(用户名不存在时可以创建用户名): `grant [select, insert, update, delete, create, drop] on 数据库名.表名 to '用户名'@'主机' identified by 密码;`
-6. 针对某用户单独授予某数据库权限: `grant all privileges on 数据库名.* to '用户名'`
-7. 授予全部权限: `grant all privileges on *.* to '用户名'@'%' identified by '密码';`
-8. 授予全部权限并使用户有权限授权别人权限: `grant all privileges on *.* to '用户名'@'%' identified by 密码 with grant option;`
-9. 更新权限: `grant 权限[select, insert, update, delete, create, drop] on *.* to '用户名'@'%' identified by '密码' with grant option;`
-9. 查看授予的权限: `show grants for '用户名'@'主机名'`
-10. 撤销权限: `revoke all privileges from 用户名;`
-11. 删除用户: `drop user 用户名;`
-12. 生效: `flush privileges;`
-13. 查看用户: `select user,host from user;`
+5. 删除用户: `drop user 用户名;`
+6. 查看用户: `select user,host from user;`
+
+### 授予权限
+1. 单独授予权限(用户名不存在时可以创建用户名): `grant [select, insert, update, delete, create, drop] on 数据库名.表名 to '用户名'@'主机' identified by 密码;`
+2. 针对某用户单独授予某数据库权限: `grant all privileges on 数据库名.* to '用户名'`
+3. 授予全部权限: `grant all privileges on *.* to '用户名'@'%' identified by '密码';`
+4. 授予全部权限并使用户有权限授权别人权限: `grant all privileges on *.* to '用户名'@'%' identified by 密码 with grant option;`
+5. 更新权限: `grant 权限[select, insert, update, delete, create, drop] on *.* to '用户名'@'%' identified by '密码' with grant option;`
+6. 查看授予的权限: `show grants for '用户名'@'主机名'`
+7. 撤销权限: `revoke all privileges from 用户名;`
+8. 生效: `flush privileges;`
 
 ## MYSQL 数据库相关:
 1. 查看数据库: `show databases;`
