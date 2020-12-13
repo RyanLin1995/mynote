@@ -110,4 +110,5 @@ PS:
  ~/.bash_history 当中。
 * 也可以用 history -w 强制立刻写入到 ~/.bash_history 写入时如果超过 HISTFILESIZE 限制，那么旧的记录会被删除，仅保留最新的
 
-#### 
+#### history 记录时间
+想在 history 里显示时间，只能通过修改 bash 
