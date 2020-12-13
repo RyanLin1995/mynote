@@ -114,5 +114,5 @@ PS:
 * 想在 history 里显示时间，可以通过修改 HISTTIMEFORMAT 这个history 会读取的环境变量。但是该变量只在 bash 中显示时间戳，无法记录到 ~/.bash_history 中
 
 * 通过给目前的 bash 设置环境变量 HISTTIMEFORMAT 以显示时间戳
-* 1. 命令: `export HISTTIMEFORMAT="%F %T `whoami` "`
-* 2. 命令: `echo 'export HISTTIMEFORMAT="%F %T `whoami` " >> /etc/profile` 然后 `source`
+* 1. 临时修改命令: `export HISTTIMEFORMAT="%F %T `whoami` "`
+* 2. 全局修改命令: `echo 'export HISTTIMEFORMAT="%F %T `whoami` " >> /etc/profile` 然后 `source`
