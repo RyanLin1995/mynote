@@ -80,4 +80,8 @@ PS:
 ![图像 1.png](https://i.loli.net/2020/12/13/BmZ7e4TrfLHcs6P.png)
 
 ### 历史命令: history
-可以通过 history 命令翻查之前
+可以通过 history 命令翻查之前输入过的命令
+
+|选项与参数|说明|
+|-|-|
+|||
