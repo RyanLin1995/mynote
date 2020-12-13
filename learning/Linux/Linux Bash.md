@@ -114,6 +114,6 @@ PS:
 * 想在 history 里显示时间，可以通过修改 HISTTIMEFORMAT 这个history 会读取的环境变量，给 history 增加时间戳。
 
 * 通过给目前的 bash 设置环境变量 HISTTIMEFORMAT 以显示时间戳:
-  1. 临时生效: export HISTTIMEFORMAT="%F %T \`whoami` "
-  2. 当前用户永久生效: 在 `~/.bash_profile` 最后一行添加 `export HISTTIMEFORMAT="%F %T `whoami` "` 然后 `source ~/.bash_profile`
-  3. 全局用户永久生效: 在 `/etc/profile` 最后一行添加 `export HISTTIMEFORMAT="%F %T `whoami` "` 然后 `source /etc/profile`
+  1. 临时生效: export HISTTIMEFORMAT="%F %T \`whoami\` "
+  2. 当前用户永久生效: 在 `~/.bash_profile` 最后一行添加 export HISTTIMEFORMAT="%F %T \`whoami\` " 然后 `source ~/.bash_profile`
+  3. 全局用户永久生效: 在 `/etc/profile` 最后一行添加 export HISTTIMEFORMAT="%F %T \`whoami` " 然后 `source /etc/profile`
