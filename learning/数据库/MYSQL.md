@@ -225,4 +225,5 @@ PS:
 ## 免密登录(!)
 ### MariaDB
 1. 修改 /etc/mysql/mariadb.conf.d/50-server.cnf 中的 [mysqld]，将skip-grant-tables 注释掉
-2. 修改密码: ``
+2. 重启服务: `systemctl restart mysql.services`
+3. 修改密码: `UPDATE mysql.user SET authentication_string = md5(密码) WHERE User = 用户名 AND Host = 主机名;`
