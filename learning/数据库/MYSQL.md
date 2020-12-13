@@ -209,4 +209,5 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 3. 取消外键: `alter table 表名 drop foreign key 外键名称`
 
 ## 远程登录
-MariaDB
+### MariaDB
+修改 /etc/mysql/mariadb.conf.d/50-server.cnf 中的 bind-addr，将其注释掉
