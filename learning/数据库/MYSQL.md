@@ -210,7 +210,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 
 ## 远程登录
 ### MariaDB
-修改 /etc/mysql/mariadb.conf.d/50-server.cnf 中的 bind-addr，将其注释掉
+1. 修改 /etc/mysql/mariadb.conf.d/50-server.cnf 中的 bind-addr，将其注释掉
+2. 创建用户: `create user ''`
 
 ### MySQL
-修改 /etc/mysql/mariadb.conf.d/50-server.cnf 中的 bind-addr，将其注释掉
