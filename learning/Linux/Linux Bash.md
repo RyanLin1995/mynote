@@ -100,5 +100,5 @@ PS:
 
 |选项与参数|说明|
 |-|-|
-|number|代表第几个命令|
-|command|由最近的命令向前搜寻串开头为 command』的那个指令，并执行|
+|number|代表第几个命令，`!number` 指的是通过 `history` 查出相应的历史命令号码，再通过 `!number`|
+|command|由最近的命令向前搜寻命令开头为 command 的命令，并执行|
