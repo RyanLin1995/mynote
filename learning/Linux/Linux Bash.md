@@ -70,4 +70,6 @@ PS:
 例子:
 ![图像 8.png](https://i.loli.net/2020/12/12/7SBkcAeXCHoK43U.png)
 
-### 
+### 别名命令: alias
+可以通过 alias 命令重命名命令
+用法: `alias `
