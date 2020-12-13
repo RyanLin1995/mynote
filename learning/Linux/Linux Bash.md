@@ -95,4 +95,10 @@ PS:
 |-w|将目前的 history 内容写入 histfiles 中|
 
 #### 特殊的历史命令使用方法: !
-用法: `!number` 或 ``
+用法: `!number` 或 `!command`
+用法: `!!`
+
+|选项与参数|说明|
+|-|-|
+|number|代表第几个命令|
+|command|由最近的命令向前搜寻串开头为 command』的那个指令，并执行|
