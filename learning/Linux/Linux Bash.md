@@ -103,3 +103,5 @@ PS:
 |number|代表第几个命令。`!number` 指的是通过 `history` 查出相应的历史命令号码，再通过 `!历史命令号码` 执行命令|
 |command|由最近的命令向前搜寻命令开头为 command 的命令，并执行|
 |!!|就是执行上一个指令(相当于按<kbd>↑</kbd>后，按 <kbd>Enter</kbd>)|
+
+#### history 
