@@ -106,6 +106,6 @@ PS:
 
 #### history 读取与记录过程:
 * 当以 bash 登入 Linux 主机之后，系统会主动的由家目录的 ~/.bash_history 读取以前曾经执行过的命令，保存的上限与 bash 的 HISTFILESIZE 变量设定值有关
-* 这次登入主机后，共下达过 100 次命令，等我注销时，系统就会将 101~1100 这总共 1000 笔历史命令 更新到 ~/.bash_history 当中。历史命令在注销时，会将最近的 HISTFILESIZE 笔记录到的纪录文件
-  当然，也可以用 history -w 强制立刻写入的！那为何用『更新』两个字呢？ 因为 ~/.bash_history 记录的笔
-数永远都是 HISTFILESIZE 那么多，旧的讯息会被主动的拿掉！ 仅保留最新的！
+* 历史命令在注销时，会将最近的 HISTFILESIZE 笔记录到~/.bash_history中。例如本次登入主机后，共下达了 100 次命令，等注销时，系统就会将 101~1100 这总共 1000 笔历史命令 更新到
+ ~/.bash_history 当中。
+* 也可以用 history -w 强制立刻写入呢？ 因为 ~/.bash_history 记录的笔数永远都是 HISTFILESIZE 那么多，旧的讯息会被主动的拿掉！ 仅保留最新的！
