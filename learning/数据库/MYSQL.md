@@ -95,8 +95,8 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 ### 创建用户
 1. 登录 MYSQL: `mysql -uroot -p`
 2. 选择数据库: `use mysql`
-3. 创建用户: `create 用户名@主机名 identified by 密码;` 或 `create user 用户名 identified by 密码;`
-4. 修改密码: `ALTER USER 用户名@主机名 IDENTIFIED BY 密码;` 或 `UPDATE mysql.user SET authentication_string = md5(密码) WHERE User = 用户名 AND Host = 主机名;`
+3. 创建用户: `create user '用户名'@'主机名' identified by 密码;`
+4. 修改密码: `ALTER USER '用户名'@'主机名' IDENTIFIED BY 密码;` 或 `UPDATE mysql.user SET authentication_string = md5(密码) WHERE User = 用户名 AND Host = 主机名;`
 5. 删除用户: `drop user 用户名;`
 6. 查看用户: `select user,host from user;`
 
