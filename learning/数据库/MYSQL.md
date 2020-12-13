@@ -100,6 +100,7 @@ MySQL 是一个关系型数据库管理系统。关联数据库将数据保存�
 6. 针对某用户单独授予某数据库权限: `grant all privileges on 数据库名.* to '用户名'`
 7. 授予全部权限: `grant all privileges on *.* to '用户名'@'%' identified by 密码;`
 8. 授予全部权限并使用户有权限授权别人权限: `grant all privileges on *.* to 用户名@% identified by 密码 with grant option;`
+9. 更新权限: `grant 权限[select, insert, update, delete, create, drop] on *.* to '用户名'@% identified by 密码 with grant option;`
 9. 查看授予的权限: `show grants for '用户名'@'主机名'`
 10. 撤销权限: `revoke all privileges from 用户名;`
 11. 删除用户: `drop user 用户名;`
