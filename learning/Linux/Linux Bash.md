@@ -115,4 +115,4 @@ PS:
 
 * 通过给目前的 bash 设置环境变量 HISTTIMEFORMAT 以显示时间戳
 * 1. 临时修改命令: `export HISTTIMEFORMAT="%F %T `whoami` "`
-* 2. 全局修改命令: `echo 'export HISTTIMEFORMAT="%F %T `whoami` " >> /etc/profile` 然后 `source`
+* 2. 全局修改命令: `echo export HISTTIMEFORMAT="%F %T `whoami` " >> /etc/profile` 然后 `source`
