@@ -113,5 +113,5 @@ PS:
 #### history 记录时间
 想在 history 里显示时间，只能通过修改 bash 配置，在 bash 中显示而已，无法记录到 ~/.bash_history 中
 
-通过给目前的 bash 设置环境变量 HISTTIMEFORMAT
+通过给目前的 bash 设置环境变量 HISTTIMEFORMAT 以显示时间
 命令: `export HISTTIMEFORMAT="%F %T `whoami` "`
