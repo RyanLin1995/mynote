@@ -80,7 +80,7 @@ PS:
 ![图像 1.png](https://i.loli.net/2020/12/13/BmZ7e4TrfLHcs6P.png)
 
 ### 历史命令: history
-可以通过 history 命令翻查之前输入过的命令
+#### 可以通过 history 命令翻查之前输入过的命令
 用法: `history [n]`
 用法: `history [-c]`
 用法: `histroy [-arw] histfiles`
@@ -94,4 +94,5 @@ PS:
 |-r|将 histfiles 的内容读到目前这个 shell 的 history 中|
 |-w|将目前的 history 内容写入 histfiles 中|
 
-特殊的历史命令使用
+#### 特殊的历史命令使用方法: !
+用法: `!number` 或 ``
