@@ -111,8 +111,8 @@ PS:
 * 也可以用 history -w 强制立刻写入到 ~/.bash_history 写入时如果超过 HISTFILESIZE 限制，那么旧的记录会被删除，仅保留最新的
 
 #### history 记录时间
-想在 history 里显示时间，只能通过修改 bash 配置，在 bash 中显示时间戳而已，无法记录到 ~/.bash_history 中
+* 想在 history 里显示时间，只能通过修改 bash 配置，在 bash 中显示时间戳而已，无法记录到 ~/.bash_history 中
 
-通过给目前的 bash 设置环境变量 HISTTIMEFORMAT 以显示时间戳
-命令: `export HISTTIMEFORMAT="%F %T `whoami` "`
-命令: `echo 'export HISTTIMEFORMAT="%F %T `whoami` " >> /etc/profile`
+* 通过给目前的 bash 设置环境变量 HISTTIMEFORMAT 以显示时间戳
+* 1. 命令: `export HISTTIMEFORMAT="%F %T `whoami` "`
+* 2. 命令: `echo 'export HISTTIMEFORMAT="%F %T `whoami` " >> /etc/profile` 然后 `source`
