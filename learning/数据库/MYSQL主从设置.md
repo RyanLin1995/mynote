@@ -38,4 +38,4 @@ PS：
 MariaDB: /etc/mysql/mariadb.conf.d/50-server.cnf
 Mysql8.0: /etc/my.cnf.d/mysql-server.cnf
 
-
+找到 server-id 跟 log_bin，去掉注释，修改主服务器 ID 为1，从服务器 ID 为2
