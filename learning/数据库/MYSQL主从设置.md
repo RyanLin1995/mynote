@@ -36,4 +36,6 @@ PS：
 
 ### 修改配置文件
 MariaDB: /etc/mysql/mariadb.conf.d/50-server.cnf
-Mysql8.1
+Mysql8.0: /etc/my.cnf.d/mysql-server.cnf
+
+
