@@ -24,11 +24,12 @@ Mysql服务器之间的主从同步是基于二进制日志机制，主服务器
 
 ## 配置方法
 ### 执行备份命令
-`mysqldump -uroot -p --all-databases --lock-all-tables > ~/master_db.sql`
+备份: `mysqldump -uroot -p --all-databases --lock-all-tables > ~/master_db.sql`
 
 PS：
 1. --all-databases: 导出所有数据库
 2. --lock-all-tables: 把所有数据表上锁，禁止修改
 
-### 复制数据库备份文件 SQL 到从服务器
-`scp ~/master_db.sql 用户名@主机地址:~/`
+### 复制数据库备份文件 SQL 到从服务器并导入
+复制: `scp ~/master_db.sql 用户名@主机地址:~/`
+导入: `mysqldump -uroot -p < ~/master`
