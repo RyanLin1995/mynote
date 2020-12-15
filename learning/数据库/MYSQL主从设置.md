@@ -27,4 +27,5 @@ Mysql服务器之间的主从同步是基于二进制日志机制，主服务器
 `mysqldump -uroot -p --all-databases --lock-all-tables > ~/master_db.sql`
 
 PS：
-1. --all-databases
+1. --all-databases: 导出所有数据库
+2. --lock-all-tables: 把所有数据表上锁，禁止修改
