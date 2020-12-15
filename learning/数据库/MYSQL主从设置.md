@@ -33,3 +33,5 @@ PS：
 ### 复制数据库备份文件 SQL 到从服务器并导入
 复制: `scp ~/master_db.sql 用户名@主机地址:~/`
 导入: `mysqldump -uroot -p < ~/master_db.sql`
+
+### 
