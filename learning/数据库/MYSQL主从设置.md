@@ -30,4 +30,5 @@ PS：
 1. --all-databases: 导出所有数据库
 2. --lock-all-tables: 把所有数据表上锁，禁止修改
 
-### 复制
+### 复制数据库备份文件 SQL 到从服务器
+`scp ~/master_db.sql 用户名@主机地址:~/`
