@@ -23,4 +23,8 @@ Mysql服务器之间的主从同步是基于二进制日志机制，主服务器
 5. 配置从服务器要连接的主服务器的IP地址和登陆授权，二进制日志文件名和位置
 
 ## 配置方法
-### 执行
+### 执行备份命令
+`mysqldump -uroot -p --all-databases --lock-all-tables > ~/master_db.sql`
+
+PS：
+1. --all-databases
