@@ -34,4 +34,6 @@ PS：
 复制: `scp ~/master_db.sql 用户名@主机地址:~/`
 导入: `mysqldump -uroot -p < ~/master_db.sql`
 
-### 
+### 修改配置文件
+MariaDB: /etc/mysql/mariadb.conf.d/50-server.cnf
+Mysql8.1
