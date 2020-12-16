@@ -48,3 +48,6 @@ Mysql8.0: /etc/my.cnf.d/mysql-server.cnf
 获取信息: `show master status;`
 
 其中 File 作为日志名称，Position 作为日志文件位置
+
+### 在从服务器中链接主服务器
+命令: `change master to master_host=主服务器IP地址, master_user="用户名",master_password="密码"`
