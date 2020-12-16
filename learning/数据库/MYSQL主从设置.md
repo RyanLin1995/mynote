@@ -42,3 +42,4 @@ Mysql8.0: /etc/my.cnf.d/mysql-server.cnf
 
 ### 创建同步账号
 创建账号: `grant replication slave on *.* to 'salve'@'%' identified by 'salve';`
+刷新权限: `flush privileges;`
