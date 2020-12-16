@@ -40,4 +40,5 @@ Mysql8.0: /etc/my.cnf.d/mysql-server.cnf
 
 找到 server-id 跟 log_bin，去掉注释，修改主服务器 ID 为1，从服务器 ID 为2，然后重启服务: `systemctl restart mysql.service`
 
-### 创建用户
+### 创建同步账号
+创建账号: `grant replication salve on *.* to 'salve'@'%' identified by 'salve'`
