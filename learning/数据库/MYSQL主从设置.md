@@ -52,6 +52,6 @@ Mysql8.0: /etc/my.cnf.d/mysql-server.cnf
 ### 在从服务器中链接主服务器
 命令: `change master to master_host="主服务器IP地址", master_user="用户名", master_password="密码", master_log_file="主服务器 status 中的File", master_log_pos=主服务器 status 中的Position;`
 
-### 开始同步并查看同步情况
-在从服务器启动同步: `start slave;`
+### 在从服务器开始同步并查看同步情况
+启动同步: `start slave;`
 查看同步情况命令: `show slave status \G`
