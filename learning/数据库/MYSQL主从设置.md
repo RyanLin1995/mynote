@@ -53,4 +53,4 @@ Mysql8.0: /etc/my.cnf.d/mysql-server.cnf
 命令: `change master to master_host="主服务器IP地址", master_user="用户名", master_password="密码", master_log_file="主服务器 status 中的File", master_log_pos=主服务器 status 中的Position;`
 
 ### 查看同步情况
-命令: `show slave status \G;`
+命令: `show slave status \G`
