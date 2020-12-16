@@ -47,4 +47,4 @@ Mysql8.0: /etc/my.cnf.d/mysql-server.cnf
 ### 获取主服务器二进制日志信息
 获取信息: `show master status;`
 
-其中
+其中 File 作为日志名称，Position 作为日志文件位置
