@@ -164,3 +164,5 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 ![centos7_bashrc_1.gif](https://linux.vbird.org/linux_basic/centos7/0320bash/centos7_bashrc_1.gif)
 
 ### login shell 会读取的配置文件
+#### /etc/profile
+全局
