@@ -152,4 +152,4 @@ Bash 还可以设置登陆显示信息，即使用者登录后会显示(例如�
 ![2.png](https://i.loli.net/2020/12/19/MPzgmFivsEUbheI.png)
 
 2. 在登录时显示 Hello? 提示字符
-具体命令: 为在 /etc/motd 文件增加 Hello? 字符
+具体命令: 在 /etc/motd 文件增加 Hello? 字符
