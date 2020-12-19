@@ -181,4 +181,4 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 由 /etc/profile.d/lang.sh 呼叫进来的,也是决定 bash 预设使用何种语系的重要配置文件
 
 ##### /usr/share/bash-completion/completions/*
-关系
+由/etc/profile.d/bash_completion.sh 这个载入，关系到<kbd>tab</kbd>的自动补全功能
