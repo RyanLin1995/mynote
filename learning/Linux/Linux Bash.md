@@ -203,4 +203,4 @@ non-login shell 这种非登入情况取得 bash 操作接口的环境配置文�
 
 PS:
 1. /etc/bash 为 Red Hat 系统独有文件
-2. 万一删除了
+2. 万一删除了 ~/.bashrc ，可以复制 /etc/skel/.bashrc 到家目录进行重新设置
