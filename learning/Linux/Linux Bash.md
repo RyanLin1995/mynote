@@ -119,6 +119,8 @@ PS:
   3. 全局用户永久生效: 在 `/etc/profile` 最后一行添加 export HISTTIMEFORMAT="%F %T \`whoami\` " 然后 `source /etc/profile`
 
 ### 命令搜寻顺序
+一般情况下可以通过 `type -a 命令` 来显示一个命令的搜寻顺序
+
 命令搜寻顺序如下:
 1. 以相对/绝对路径执行指令，例如 `/bin/ls` 或 `./ls` ；
 2. 由 alias 找到该指令来执行；
