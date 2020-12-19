@@ -207,4 +207,4 @@ PS:
 
 ### 其他相关配置文件
 #### /etc/man_db.conf
-该文件的规范了使用 man 命令时，man page 的路径。
+该文件的规范了使用 man 命令时，man page 的路径。一般用户 tarball 安装软件时，把存放于 /usr/local//man 的
