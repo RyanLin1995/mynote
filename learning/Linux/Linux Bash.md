@@ -166,7 +166,7 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 ![centos7_bashrc_1.gif](https://linux.vbird.org/linux_basic/centos7/0320bash/centos7_bashrc_1.gif)
 
 ### login shell 会读取的配置文件
-#### 系统整体设置 /etc/profile
+#### 1. 系统整体设置 /etc/profile
 包括以下变量:
 * PATH: 会依据 UID 决定 PATH 变量要不要含有 sbin 的系统指令目录
 * MAIL: 依据账号设定好使用者的 mailbox 到 /var/spool/mail/账号名
@@ -185,10 +185,11 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 ##### /usr/share/bash-completion/completions/*
 由/etc/profile.d/bash_completion.sh 这个载入，关系到<kbd>tab</kbd>的自动补全功能
 
-#### 个人配置文件
+#### 2. 个人配置文件
 个人配置文件按 bash 读取顺序分有:
 1. ~/.bash_profile
 2. ~/.bash_login
 3. ~/.profile
 
 Bash 的 login shell 只要读取到其中一个文件，就不会再读取其他文件。如果想修改个人的 Bash login shell，可以修改以上三个文件之一
+
