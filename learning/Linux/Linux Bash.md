@@ -155,4 +155,5 @@ Bash 还可以设置登陆显示信息，即使用者登录后会显示(例如�
 具体命令: 在 /etc/motd 文件增加 Hello? 字符
 
 ## Bash 环境配置文件
-Linux 中的 shell 分为 login shell 与 
+Linux 中的 shell 分为 login shell 与 non-login shell
+login shell: 取得 bash 时需要完整的登入流程的，就称为 login shell。如用账号与密码登陆 tty1 ~ tty7 取得的 bash 就称为『 login shell 』啰；
