@@ -155,7 +155,7 @@ Bash 还可以设置登陆显示信息，即使用者登录后会显示(例如�
 具体命令: 在 /etc/motd 文件增加 Hello? 字符
 
 ## Bash 环境配置文件
-要想设置自己的 Bash，例如创建Linux 中的 shell 分为 login shell 与 non-login shell
+要想设置自己的 Bash，例如创建别名命令，自定义变量等，光在 Bash 中输出后，在注销 Bash 就消失。想要永久生效，需要将其Linux 中的 shell 分为 login shell 与 non-login shell
 * login shell: 取得 bash 时需要完整的登入流程的，就称为 login shell。如用账号与密码登陆 tty1 ~ tty7 取得的 bash 就称为 login shell。login shell 会读取 /etc/profile(系统整体设定) 与 ~/.bash_profile 或 ~/.bash_login 或 ~/.profile(使用者设定) 来规划 bash 的环境
 
 * non-login shell: 只取得 bash 接口的方法而不需要重复登入的。如在原本的 bash 环境下再次下达 bash 命令，所得到的 bash (子程序) 就是 non-login shell。non-login shell 仅读取 ~/.bashrc
