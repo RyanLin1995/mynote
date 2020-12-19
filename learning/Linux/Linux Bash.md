@@ -174,7 +174,9 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 * umask: 包括 root 默认为 022 而一般用户为 002 等
 
 **同时 /etc/profile 还会读入以下外部程序: **
-##### * /etc/profile.d/*.sh
+##### /etc/profile.d/*.sh
 只要在 /etc/profile.d/ 这个目录内，扩展名为 .sh 且使用者能够具有 r 权限的，那么该文件就会被 /etc/profile 呼叫进来。目录底下的文件规范了 bash 操作接口的颜色、语系、ll 与 ls 指令的命令别名、vi 的命令别名、which的命令别名等等。如果需要帮所有使用者设定一些共享的命令别名时，可以在这个目录底下自行建立扩展名为 .sh 的文件，并将所需要的数据写入
 
-##### 
+##### /etc/locale.conf
+这个文件是由 /etc/profile.d/lang.sh 呼叫进来的！这也是我们决定 bash 预设使用何种语系的重要
+配置文件
