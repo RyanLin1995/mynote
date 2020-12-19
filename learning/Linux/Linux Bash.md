@@ -106,7 +106,7 @@ PS:
 * 当以 bash 登入 Linux 主机之后，系统会主动的由家目录的 ~/.bash_history 读取以前曾经执行过的命令，保存的上限与 bash 的 HISTFILESIZE 变量设定值有关
 * 历史命令在注销时，会将最近的 HISTFILESIZE 笔记录到~/.bash_history中。例如本次登入主机后，共下达了 100 次命令，等注销时，系统就会将 101~1100 这总共 1000 笔历史命令 更新到
  ~/.bash_history 当中。
-* 也可以用 history -w 强制立刻写入到 ~/.bash_history 写入时如果超过 HISTFILESIZE 限制，那么旧的记录会被删除，仅保留最新的
+* 也可以用 history -w 强制立刻写入到 ~/.bash_history。写入时如果超过 HISTFILESIZE 限制，那么旧的记录会被删除，仅保留最新的
 
 #### history 记录时间
 * 想在 history 里显示时间，可以通过修改 HISTTIMEFORMAT 这个history 会读取的环境变量，给 history 增加时间戳。
