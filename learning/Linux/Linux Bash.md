@@ -174,4 +174,4 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 * umask: 包括 root 默认为 022 而一般用户为 002 等
 
 同时 /etc/profile 还会读入以下外部程序
-####
+##### /etc/profile.d/*.sh
