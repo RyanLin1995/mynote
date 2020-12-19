@@ -210,4 +210,4 @@ PS:
 该文件的规范了使用 man 命令时，man page 的路径。一般用户 tarball 安装软件时，把存放于 /usr/local/软件名称/man 的man page 手动添加到 /etc/man_db.conf 里
 
 #### ~/.bash_history
-历史命令
+历史命令的保存位置。上限与
