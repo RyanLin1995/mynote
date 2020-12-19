@@ -183,4 +183,5 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 ##### /usr/share/bash-completion/completions/*
 由/etc/profile.d/bash_completion.sh 这个载入，关系到<kbd>tab</kbd>的自动补全功能
 
-#### 
+#### 个人配置文件
+个人配置文件
