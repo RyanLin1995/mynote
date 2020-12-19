@@ -147,6 +147,8 @@ Bash 还可以设置登陆显示信息，即使用者登录后会显示(例如�
 
 例子:
 1. 修改登陆欢迎信息为如下:
+![1.png](https://i.loli.net/2020/12/19/sJVBbW6lq1hc3nx.png)
+具体命令:
+![2.png](https://i.loli.net/2020/12/19/MPzgmFivsEUbheI.png)
 
-
-2. 
+2. 在登录时显示 Hello 
