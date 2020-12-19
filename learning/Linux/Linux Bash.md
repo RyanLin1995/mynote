@@ -184,4 +184,9 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 由/etc/profile.d/bash_completion.sh 这个载入，关系到<kbd>tab</kbd>的自动补全功能
 
 #### 个人配置文件
-个人配置文件
+个人配置文件按 bash 读取顺序分有:
+1. ~/.bash_profile
+2. ~/.bash_login
+3. ~/.profile
+
+Bash 的login shell 只要读取到其中一个文件，就不会
