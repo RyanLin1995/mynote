@@ -193,5 +193,6 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 
 Bash 的 login shell 只要读取到其中一个文件，就不会再读取其他文件。如果想修改个人的 Bash login shell，可以修改以上三个文件之一
 
-### non-login shell 会读取的配置文件
-#### ~/.bashrc
+### non-login shell 会读取的配置文件:  ~/.bashrc
+
+non-login shell 这种非登入情况取得 bash 操作接口的环境配置文件是 ~/.bashrc 。
