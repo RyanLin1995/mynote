@@ -118,3 +118,9 @@ PS:
   2. 当前用户永久生效: 在 `~/.bash_profile` 最后一行添加 export HISTTIMEFORMAT="%F %T \`whoami\` " 然后 `source ~/.bash_profile`
   3. 全局用户永久生效: 在 `/etc/profile` 最后一行添加 export HISTTIMEFORMAT="%F %T \`whoami\` " 然后 `source /etc/profile`
 
+### 命令搜寻顺序
+命令搜寻顺序如下:
+1. 以相对/绝对路径执行指令，例如 `/bin/ls` 或 `./ls` ；
+2. 由 alias 找到该指令来执行；
+3. 由 bash 内建的 (builtin) 指令来执行；
+4. 透过 $PATH 这个变量的顺序搜寻到的第一个指令来执行。
