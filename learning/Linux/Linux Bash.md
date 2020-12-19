@@ -204,3 +204,7 @@ non-login shell 这种非登入情况取得 bash 操作接口的环境配置文�
 PS:
 1. /etc/bash 为 Red Hat 系统独有文件
 2. 万一删除了 ~/.bashrc ，可以复制 /etc/skel/.bashrc 到家目录进行重新设置
+
+### 其他相关配置文件
+#### /etc/man_db.conf
+该文件的规范了使用 man 命令时，man page 的路径。
