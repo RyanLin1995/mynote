@@ -189,4 +189,4 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 2. ~/.bash_login
 3. ~/.profile
 
-Bash 的login shell 只要读取到其中一个文件，就不会
+Bash 的login shell 只要读取到其中一个文件，就不会再读取其他文件
