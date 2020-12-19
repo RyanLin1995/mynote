@@ -175,3 +175,4 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 
 同时 /etc/profile 还会读入以下外部程序
 ##### /etc/profile.d/*.sh
+只要在 /etc/profile.d/ 这个目录内，扩展名为 .sh 且使用者能够具有 r 权限的，那么该文件就会被 /etc/profile 呼叫进来
