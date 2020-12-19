@@ -195,4 +195,8 @@ Bash 的 login shell 只要读取到其中一个文件，就不会再读取其�
 
 ### non-login shell 会读取的配置文件:  ~/.bashrc
 
-non-login shell 这种非登入情况取得 bash 操作接口的环境配置文件是 ~/.bashrc 。
+non-login shell 这种非登入情况取得 bash 操作接口的环境配置文件是 ~/.bashrc 。在 ~/.bashrc 中还会调用  /etc/bashrc 帮 bash 定义出以下数据:
+
+* 依据不同的 UID 规范出 umask 的值；
+* 依据不同的 UID 规范出提示字符 (就是 PS1 变量)；
+* 呼叫 /etc/profile.d/*.sh 的设定
