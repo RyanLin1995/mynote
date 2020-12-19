@@ -162,8 +162,10 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 
 * non-login shell: 只取得 bash 接口的方法而不需要重复登入的。如在原本的 bash 环境下再次下达 bash 命令，所得到的 bash (子程序) 就是 non-login shell。non-login shell 仅读取 ~/.bashrc
 
-图解 login shell:
+**图解 login shell:**
 ![centos7_bashrc_1.gif](https://linux.vbird.org/linux_basic/centos7/0320bash/centos7_bashrc_1.gif)
+
+实线的的方向是主线流程，虚线的方向则是被呼叫的配置文件
 
 ### login shell 会读取的配置文件
 #### 1. 系统整体设置 /etc/profile
