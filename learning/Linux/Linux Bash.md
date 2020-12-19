@@ -200,3 +200,7 @@ non-login shell 这种非登入情况取得 bash 操作接口的环境配置文�
 * 依据不同的 UID 规范出 umask 的值；
 * 依据不同的 UID 规范出提示字符 (就是 PS1 变量)；
 * 呼叫 /etc/profile.d/*.sh 的设定
+
+PS:
+1. /etc/bash 为 Red Hat 系统独有文件
+2. 万一删除了
