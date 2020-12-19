@@ -155,4 +155,4 @@ Bash 还可以设置登陆显示信息，即使用者登录后会显示(例如�
 具体命令: 在 /etc/motd 文件增加 Hello? 字符
 
 ## Bash 环境配置文件
-Bash 中的 shell 
+Linux 中的 shell 分为 login shell 与 
