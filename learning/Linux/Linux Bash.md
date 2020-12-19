@@ -210,4 +210,7 @@ PS:
 该文件的规范了使用 man 命令时，man page 的路径。一般用户 tarball 安装软件时，把存放于 /usr/local/软件名称/man 的man page 手动添加到 /etc/man_db.conf 里
 
 #### ~/.bash_history
-历史命令的保存位置，上限与 HISTFILESIZE 有关。每次登入 bash 后，bash 会自动把所有历史命令加载到
+历史命令的保存位置，上限与 HISTFILESIZE 有关。每次登入 bash 后，bash 会自动把所有历史命令加载到内存中
+
+#### ~/.bash_logout
+该文件记录了注销 bash 后，系统再帮我做完什么动作后才离开
