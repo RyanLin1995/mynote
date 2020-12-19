@@ -88,8 +88,7 @@ PS:
 |-|-|
 |n|数字，代表要列出多少行最近执行的命令|
 |-c|将 shell 中的所有 history 内容清空|
-|-a|将目前新增的 history 命令添加到 histfiles 中，若没有加 histfiles ，预设写入
- ~/.bash_history|
+|-a|将目前新增的 history 命令添加到 histfiles 中，若没有加 histfiles ，预设写入 ~/.bash_history|
 |-r|将 histfiles 的内容读到目前这个 shell 的 history 中|
 |-w|将目前的 history 内容写入 histfiles 中|
 
