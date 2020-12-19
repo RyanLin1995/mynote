@@ -117,3 +117,4 @@ PS:
   1. 临时生效: export HISTTIMEFORMAT="%F %T \`whoami\` "
   2. 当前用户永久生效: 在 `~/.bash_profile` 最后一行添加 export HISTTIMEFORMAT="%F %T \`whoami\` " 然后 `source ~/.bash_profile`
   3. 全局用户永久生效: 在 `/etc/profile` 最后一行添加 export HISTTIMEFORMAT="%F %T \`whoami\` " 然后 `source /etc/profile`
+
