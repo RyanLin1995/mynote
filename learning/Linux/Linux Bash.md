@@ -164,8 +164,8 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 ![centos7_bashrc_1.gif](https://linux.vbird.org/linux_basic/centos7/0320bash/centos7_bashrc_1.gif)
 
 ### login shell 会读取的配置文件
-#### /etc/profile
-系统整体设置，包括以下变量
+#### 系统整体设置 /etc/profile
+包括以下变量:
 * PATH: 会依据 UID 决定 PATH 变量要不要含有 sbin 的系统指令目录
 * MAIL: 依据账号设定好使用者的 mailbox 到 /var/spool/mail/账号名
 * USER: 根据用户的账号设定此变量内容
@@ -173,7 +173,7 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 * HISTSIZE: 历史命令记录笔数，默认设定为 1000 
 * umask: 包括 root 默认为 022 而一般用户为 002 等
 
-**同时 /etc/profile 还会读入以下外部程序: **
+**同时 /etc/profile 还会读入以下外部程序:**
 ##### /etc/profile.d/*.sh
 只要在 /etc/profile.d/ 这个目录内，扩展名为 .sh 且使用者能够具有 r 权限的，那么该文件就会被 /etc/profile 呼叫进来。目录底下的文件规范了 bash 操作接口的颜色、语系、ll 与 ls 指令的命令别名、vi 的命令别名、which的命令别名等等。如果需要帮所有使用者设定一些共享的命令别名时，可以在这个目录底下自行建立扩展名为 .sh 的文件，并将所需要的数据写入
 
@@ -182,3 +182,5 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 
 ##### /usr/share/bash-completion/completions/*
 由/etc/profile.d/bash_completion.sh 这个载入，关系到<kbd>tab</kbd>的自动补全功能
+
+#### 
