@@ -12,14 +12,14 @@ Shell 是可以与操作系统核心沟通的一个应用程序，即壳程序�
 ### 什么是 Bash
 Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bourne SHell)。
 主要优点有:
-1. 命令编修能力(history): 可以通过上下键查询历史指令，最多保存一千条，保存位置为~/.bash_history
-2. 命令与文件补全功能([tab]): 可以通过 [tab] 自动补全
-3. 命令别名设定功能(alias): 可以通过 `alias` 查询所有的别名，也可以通过 `alias '别名'='命令'`设置新的别名
+1. 命令编修能力(history)：可以通过上下键查询历史指令，最多保存一千条，保存位置为~/.bash_history
+2. 命令与文件补全功能([tab])：可以通过 [tab] 自动补全
+3. 命令别名设定功能(alias)：可以通过 `alias` 查询所有的别名，也可以通过 `alias '别名'='命令'`设置新的别名
 4. 工作控制、前景背景控制(job control, foreground, background)：前、背景的控制
 5. 程序化脚本(shell scripts)：可以编写 Shell scrips
 6. 通配符(Wildcard)：即 *
-7. 快速编辑: 让光标移动到整个指令串的最前面 ([ctrl]+a) 或最后面 ([ctrl]+e)；从光标处向前删除指令串 ([ctrl]+u) 及向后删除指令串 ([ctrl]+k)
-8. 转义字符: \
+7. 快速编辑：让光标移动到整个指令串的最前面 ([ctrl]+a) 或最后面 ([ctrl]+e)；从光标处向前删除指令串 ([ctrl]+u) 及向后删除指令串 ([ctrl]+k)
+8. 转义字符：\
 
 ### 查看指令为 Bash 内建指令还是外部指令: type
 用法: `type -tpa name`
