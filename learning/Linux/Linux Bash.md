@@ -248,4 +248,8 @@ PS:
 4. 修改按键例子: `stty quit ^A` (从<kbd>ctrl</kbd> + <kbd>c</kbd> 退出变为 <kbd>ctrl</kbd> + <kbd>a</kbd>退出) 
 
 ### 设置终端机设定值: set
-set 命令除了可以显示变量设置外，还可以
+set 命令除了可以显示变量设置外，还可以设定终端的输入/输出环境
+用法: `set [-uvCHhmBx]`
+
+|选项与参数|说明|
+|||
