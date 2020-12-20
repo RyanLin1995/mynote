@@ -245,4 +245,6 @@ PS:
 1. 图中的 ^ 表示 <kbd>ctrl</kbd>
 2. 图中字母为大写，实际操作时不需要大写
 3. ^? 表示退格键(backspace)
-4. 修改按键例子: `stty quit ^A` (从<kbd>ctrl) 
+4. 修改按键例子: `stty quit ^A` (从<kbd>ctrl</kbd> + <kbd>c</kbd> 退出变为 <kbd>ctrl</kbd> + <kbd>a</kbd>退出) 
+
+### 
