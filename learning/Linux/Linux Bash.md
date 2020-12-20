@@ -238,7 +238,10 @@ stty图示:
 |kill|删除目前列上所有的文字|
 |eof|End of file，输入结束|
 |start|程序停止/冻结后重启启动/解冻|
-|stop||
+|stop|停止程序(暂停屏幕输出)|
+|susp|发送 terminal stop 的讯号给正在 run 的程序|
 
 PS:
 1. 图中的 ^ 表示 <kbd>ctrl</kbd>
+2. 图中字母为大写，实际操作时不需要大写
+3. 
