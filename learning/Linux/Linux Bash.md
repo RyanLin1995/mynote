@@ -232,8 +232,10 @@ stty图示:
 
 |字符|功能|
 |-|-|
-|intr|送出一个 interrupt (中断) 的讯号给目前正在 run 的程序|
-||
+|intr|中断(interrupt)目前正在 run 的程序|
+|quit|退出(quit)目前正在 run 的程序|
+|erase|删除字符|
+|kill|删除目前列上|
 
 PS:
 1. 图中的 ^ 表示 <kbd>ctrl</kbd>
