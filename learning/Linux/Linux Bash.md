@@ -247,4 +247,5 @@ PS:
 3. ^? 表示退格键(backspace)
 4. 修改按键例子: `stty quit ^A` (从<kbd>ctrl</kbd> + <kbd>c</kbd> 退出变为 <kbd>ctrl</kbd> + <kbd>a</kbd>退出) 
 
-### 
+### 设置终端机设定值: set
+set 命令除了可以显示变量设置外，还可以
