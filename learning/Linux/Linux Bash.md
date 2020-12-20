@@ -228,3 +228,7 @@ PS:
 修改用法: `stty 内容 按键`
 
 stty图示:
+![图像 1.png](https://i.loli.net/2020/12/20/73YvE2qd4LFZs6x.png)
+
+PS:
+1. 图中的 ^ 表示 <kbd>ctrl
