@@ -22,7 +22,9 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 8. 转义字符：\
 
 ### Bash 常用组合键
-|||
+|组合键|作用|
+|<kbd>ctrl</kbd> + <kbd>c</kbd>|终止目前程序|
+|<kbd>ctrl</kbd> + <kbd>d</kbd>|结束输入(End of file)|
 
 ### 查看指令为 Bash 内建指令还是外部指令: type
 用法: `type -tpa name`
