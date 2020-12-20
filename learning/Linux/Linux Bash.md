@@ -221,4 +221,6 @@ PS:
 用法: `source 配置文件名` 或 `. 配置文件名`
 
 ## 终端机环境设置
-影响 tty1~tty7 环境设置的命令有 stty 跟 set，其中 stty 影响按键设置(如 <kbd>ctrl</kbd> + <kbd>c</kbd> 终止程序)；set 影响 终端机的设定值。一般情况下，Linux 
+影响 tty1~tty7 环境设置的命令有 stty 跟 set，其中 stty 影响按键设置(如 <kbd>ctrl</kbd> + <kbd>c</kbd> 终止程序)；set 影响 终端机的设定值。一般情况下，Linux Distributions 已经设置好所有的环境，不建议再进行修改
+
+### 查看/修改终端按键: stty
