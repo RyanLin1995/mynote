@@ -21,6 +21,9 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 7. 快速编辑：让光标移动到整个指令串的最前面 ([ctrl]+a) 或最后面 ([ctrl]+e)；从光标处向前删除指令串 ([ctrl]+u) 及向后删除指令串 ([ctrl]+k)
 8. 转义字符：\
 
+### Bash 常用组合键
+|||
+
 ### 查看指令为 Bash 内建指令还是外部指令: type
 用法: `type -tpa name`
 
