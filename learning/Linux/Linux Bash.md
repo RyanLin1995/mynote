@@ -235,7 +235,10 @@ stty图示:
 |intr|中断(interrupt)目前正在 run 的程序|
 |quit|退出(quit)目前正在 run 的程序|
 |erase|删除字符|
-|kill|删除目前列上|
+|kill|删除目前列上所有的文字|
+|eof|End of file，输入结束|
+|start|程序停止/冻结后重启启动/解冻|
+|stop||
 
 PS:
 1. 图中的 ^ 表示 <kbd>ctrl</kbd>
