@@ -28,6 +28,8 @@ Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bour
 |<kbd>ctrl</kbd> + <kbd>m</kbd>|等同于 Enter|
 |<kbd>ctrl</kbd> + <kbd>s</kbd>|暂停屏幕输出(冻结程序)|
 |<kbd>ctrl</kbd> + <kbd>q</kbd>|恢复屏幕输出(恢复程序)|
+|<kbd>ctrl</kbd> + <kbd>u</kbd>|删除整行|
+|<kbd>ctrl</kbd> + <kbd>z</kbd>|暂停目前程序|
 
 ### 查看指令为 Bash 内建指令还是外部指令: type
 用法: `type -tpa name`
