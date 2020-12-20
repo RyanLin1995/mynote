@@ -230,5 +230,7 @@ PS:
 stty图示:
 ![图像 1.png](https://i.loli.net/2020/12/20/73YvE2qd4LFZs6x.png)
 
+|常用命令||
+
 PS:
-1. 图中的 ^ 表示 <kbd>ctrl
+1. 图中的 ^ 表示 <kbd>ctrl</kbd>
