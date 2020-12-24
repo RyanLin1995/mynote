@@ -23,7 +23,7 @@ Mysql服务器之间的主从同步是基于二进制日志机制，主服务器
 5. 配置从服务器要连接的主服务器的IP地址和登陆授权，二进制日志文件名和位置
 
 ## 配置方法
-### 主服务器执行备份命令
+### 主数据库执行备份命令
 备份: `mysqldump -uroot -p --all-databases --lock-all-tables > ~/master_db.sql`
 
 PS：
@@ -38,7 +38,7 @@ PS：
 MariaDB: /etc/mysql/mariadb.conf.d/50-server.cnf
 Mysql8.0: /etc/my.cnf.d/mysql-server.cnf
 
-添加 server-id 跟 log_bin修改主服务器 ID 为1，从服务器 ID 为2，然后重启服务: `systemctl restart mysql.service`
+其中在主数据库添加 server-id=1 跟 log_bin=mysql-bin 或 log_bin=修改主服务器 ID 为1，从服务器 ID 为2，然后重启服务: `systemctl restart mysql.service`
 
 ### 创建同步账号
 创建账号: `grant replication slave on *.* to 'salve'@'%' identified by 'salve';`
