@@ -32,7 +32,7 @@ PS：
 
 ### 复制数据库备份文件 SQL 到从服务器并导入
 复制: `scp ~/master_db.sql 用户名@主机地址:~/`
-导入: `mysqldump -uroot -p < ~/master_db.sql`
+导入: `mysqldump -uroot -p` 然后 `source ~/master_db.sql`
 
 ### 修改配置文件
 MariaDB 配置文件: /etc/mysql/mariadb.conf.d/50-server.cnf
@@ -53,7 +53,7 @@ Mysql8.0 配置文件: /etc/my.cnf.d/mysql-server.cnf
 
 其中 File 作为日志名称，Position 作为日志文件位置
 
-### 在**从**数据库中链接主数据库
+### 在从数据库中链接主数据库
 命令: `change master to master_host="主服务器IP地址", master_user="用户名", master_password="密码", master_log_file="主服务器 status 中的File", master_log_pos=主服务器 status 中的Position;`
 
 ### 在从服务器开始同步并查看同步情况
