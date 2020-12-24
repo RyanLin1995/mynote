@@ -38,22 +38,22 @@ PS：
 MariaDB 配置文件: /etc/mysql/mariadb.conf.d/50-server.cnf
 Mysql8.0 配置文件: /etc/my.cnf.d/mysql-server.cnf
 
-1. 在主数据库[mysqld]添加 server-id=1 跟 log_bin=mysql-bin 或 log_bin=/var/log/mysql/mysql-bin.log
+1. 在主数据库 [mysqld] 添加 server-id=1 跟 log_bin=mysql-bin 或 log_bin=/var/log/mysql/mysql-bin.log
 
-2. 在备份数据库添加 server-id=2 跟 log_bin=mysql-bin 或 log_bin=/var/log/mysql/mysql-bin.log
+2. 在从数据库 [mysqld] 添加 server-id=2 跟 log_bin=mysql-bin 或 log_bin=/var/log/mysql/mysql-bin.log
 
 3. 重启服务: `systemctl restart mysql.service`
 
-### 创建同步账号
+### 主数据库创建同步账号
 创建账号: `grant replication slave on *.* to 'salve'@'%' identified by 'salve';`
 刷新权限: `flush privileges;`
 
-### 获取主服务器二进制日志信息
+### 获取主数据库二进制日志信息
 获取信息: `show master status;`
 
 其中 File 作为日志名称，Position 作为日志文件位置
 
-### 在从服务器中链接主服务器
+### 在**从**数据库中链接主数据库
 命令: `change master to master_host="主服务器IP地址", master_user="用户名", master_password="密码", master_log_file="主服务器 status 中的File", master_log_pos=主服务器 status 中的Position;`
 
 ### 在从服务器开始同步并查看同步情况
