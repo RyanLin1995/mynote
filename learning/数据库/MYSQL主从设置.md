@@ -35,10 +35,14 @@ PS：
 导入: `mysqldump -uroot -p < ~/master_db.sql`
 
 ### 修改配置文件
-MariaDB: /etc/mysql/mariadb.conf.d/50-server.cnf
-Mysql8.0: /etc/my.cnf.d/mysql-server.cnf
+MariaDB 配置文件: /etc/mysql/mariadb.conf.d/50-server.cnf
+Mysql8.0 配置文件: /etc/my.cnf.d/mysql-server.cnf
 
-其中在主数据库添加 server-id=1 跟 log_bin=mysql-bin 或 log_bin=修改主服务器 ID 为1，从服务器 ID 为2，然后重启服务: `systemctl restart mysql.service`
+1. 在主数据库[mysqld]添加 server-id=1 跟 log_bin=mysql-bin 或 log_bin=/var/log/mysql/mysql-bin.log
+
+2. 在备份数据库添加 server-id=2 跟 log_bin=mysql-bin 或 log_bin=/var/log/mysql/mysql-bin.log
+
+3. 重启服务: `systemctl restart mysql.service`
 
 ### 创建同步账号
 创建账号: `grant replication slave on *.* to 'salve'@'%' identified by 'salve';`
