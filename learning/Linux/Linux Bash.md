@@ -340,4 +340,5 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
 
 用法：`com1 | com2 | com3`
 
-管道符 | 仅能处理由前一个指令传来的 standard output，对于 standard output 没有处理能力。如果需要处理 standard output，需要用数据流输出重定向 2&>1 或 &>
+* 管道符 | 仅能处理由前一个指令传来的 standard output，对于 standard output 没有处理能力。如果需要处理 standard output，需要用数据流输出重定向 2&>1 或 &>。
+* 对于管道符 | 后一个命令，需要是可以处理
