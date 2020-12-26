@@ -331,4 +331,4 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
    * 图解:
 ![cmd_1.gif](https://linux.vbird.org/linux_basic/centos7/0320bash//cmd_1.gif)
 
-3. 
+3. 以 ls 测试 /tmp/vbirding 是否存在，若存在则显示 "exist" ，若不存在，则显示 "not exist"
