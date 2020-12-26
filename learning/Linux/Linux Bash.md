@@ -329,5 +329,6 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
    * 若 /tmp/abc 不存在，$?≠0，则因为 || 遇到不为 0 的 $?，故开始执行 `mkdir /tmp/abc`，由于 `mkdir /tmp/abc` 会成功进行，所以回传 $?=0。因为 && 遇到 $?=0 故会执行 `touch /tmp/abc/hehe`， hehe 被建立
    * 若 /tmp/abc 存在，$?=0，则因为 || 遇到 0 的 $? 不会进行，此时 $?=0 继续向后传，因为 && 遇到 $?=0 就开始建立 `/tmp/abc/hehe`， 最终 /tmp/abc/hehe 被建立
    * 图解:
+![cmd_1.gif](https://linux.vbird.org/linux_basic/centos7/0320bash//cmd_1.gif)
 
 3. 
