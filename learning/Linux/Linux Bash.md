@@ -321,4 +321,7 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
 
 例子:
 1. 在关闭电脑前先同步数据: `sync;sync;shutdown -h now`
-2. 
+2. 不清楚 /tmp/abc 是否存在，但就是要建立 /tmp/abc/hehe 文件:
+`ls /tmp/abs || mkdir /tmp/abc && touch /tmp/abc/hehe`
+
+3. 
