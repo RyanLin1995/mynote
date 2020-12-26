@@ -324,4 +324,6 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
 2. 不清楚 /tmp/abc 是否存在，但就是要建立 /tmp/abc/hehe 文件:
 `ls /tmp/abs || mkdir /tmp/abc && touch /tmp/abc/hehe`
 
+   上述案例中，无论/tmp/abc
+
 3. 
