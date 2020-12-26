@@ -325,8 +325,7 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
 `ls /tmp/abs || mkdir /tmp/abc && touch /tmp/abc/hehe`
 
    上述案例中，无论 /tmp/abc 目录是否存在，都必然会创建 hehe 文件，因为：
-  ** 若 /tmp/abc 不存在故回传 $?≠0，则 (2)因为 || 遇到非为 0 的 $? 故开始 mkdir /tmp/abc，由于 mkdir
-/tmp/abc 会成功进行，所以回传 $?=0 (3)因为 && 遇到 $?=0 故会执行 touch /tmp/abc/hehe，最终 hehe 就
+   * 若 /tmp/abc 不存在，$?≠0，则因为 || 遇到不为 0 的 $?，故开始 mkdir /tmp/abc，由于 mkdir /tmp/abc 会成功进行，所以回传 $?=0。因为 && 遇到 $?=0 故会执行 touch /tmp/abc/hehe，最终 hehe 就
 被建立了；
 
 3. 
