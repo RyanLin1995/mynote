@@ -334,3 +334,5 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
 3. 以 ls 测试 /tmp/test 是否存在，若存在则显示 "exist" ，若不存在，则显示 "not exist"
 `ls /tmp/test && echo "exist" || echo "not exist"`
    * 上述案例中，因为要进行多次判断，必须使用 `cmd1 && cmd2 || cmd3` 的格式，不能调换 && 跟 || 的位置，不然永远会执行 cmd2 跟 cmd3
+
+## 管线命令
