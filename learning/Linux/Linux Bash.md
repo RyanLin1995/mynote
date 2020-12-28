@@ -365,5 +365,5 @@ PS:
 2. 截取 export 的数据并只保留 declare -x 后的信息(declare -x总共11个字符)
 ![图像 3.png](https://i.loli.net/2020/12/28/pEM6XJPRQx2fHk9.png)
 
-3. 
+3. 只取 last 的第一段结果
 
