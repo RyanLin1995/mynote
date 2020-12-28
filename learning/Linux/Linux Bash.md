@@ -360,6 +360,7 @@ PS:
 
 例子:
 1. 截取 PATH 第二个字段的信息
+![图像 2.png](https://i.loli.net/2020/12/28/T7AgQKBuvnzxVrj.png)
 
-2. 
+2. 截取
 
