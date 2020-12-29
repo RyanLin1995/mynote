@@ -367,3 +367,6 @@ PS:
 
 3. 只取 last 的第一段结果
 ![图像 4.png](https://i.loli.net/2020/12/28/LcKP9hvmgNpQ165.png)
+
+### 排序命令：sort，wc,uniq
+#### 
