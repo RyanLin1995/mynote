@@ -370,4 +370,8 @@ PS:
 
 ### 排序命令：sort，wc,uniq
 #### 对数据进行排序：sort
-用法：``
+用法：`sort [-fbMnrtuk] file or stdin`
+
+|选项与参数|说明|
+|-f|忽略大小写|
+|-b|忽略最前边的空格|
