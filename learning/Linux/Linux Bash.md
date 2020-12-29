@@ -373,6 +373,7 @@ PS:
 用法：`sort [-fbMnrtuk] file or stdin`
 
 |选项与参数|说明|
+|-|-|
 |-f|忽略大小写|
 |-b|忽略最前边的空格|
 |-M|以月份进行排序，如JAN，DEC等|
@@ -384,5 +385,7 @@ PS:
 
 例子：
 1. 对 /etc/passwd 的数据进行排序
+![图像 2.png](https://i.loli.net/2020/12/29/QSB97yDA1rkKqNl.png)
 
 2. 以 /etc/passwd 的数据的第三个区间进行排序
+![图像 3.png](https://i.loli.net/2020/12/29/Tcr95aKvkSGLxVo.png)
