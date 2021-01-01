@@ -389,3 +389,5 @@ PS:
 
 2. 以 /etc/passwd 的数据的第三个区间进行排序
 ![图像 3.png](https://i.loli.net/2020/12/29/Tcr95aKvkSGLxVo.png)
+
+#### 对数据去重: uniq
