@@ -418,4 +418,4 @@ PS：
 1. 显示 /etc/passwd 中整体数据
 ![图像 3.png](https://i.loli.net/2021/01/01/k4vnlFBhXtJQHxc.png)
 
-2. 一行指令串取得登入系统的总人次
+2. 一行指令串取得登入系统的总人次: `last | grep [a-zA-Z] | grep -v 'wtmp' | grep -v 'reboot' | grep -v 'unknown' |wc -l`
