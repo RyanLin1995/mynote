@@ -391,3 +391,9 @@ PS:
 ![图像 3.png](https://i.loli.net/2020/12/29/Tcr95aKvkSGLxVo.png)
 
 #### 对数据去重: uniq
+用法: `uniq [-ic]`
+
+|选项与参数|说明|
+|-|-|
+|-i|忽略大小写|
+|-c||
