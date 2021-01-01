@@ -398,6 +398,9 @@ PS:
 |-i|忽略大小写|
 |-c|计数|
 
+PS：
+1. uniq 的核心是对
+
 例子：
 1. 显示 last 中登陆过的用户名：`last | cut -d " " -f 1 | sort | uniq`
 2. 计数 last 中的用户登录总次数：`last | cut -d " " -f 1 | sort | uniq -c`
