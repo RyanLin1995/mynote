@@ -368,7 +368,7 @@ PS:
 3. 只取 last 的第一段结果
 ![图像 4.png](https://i.loli.net/2020/12/28/LcKP9hvmgNpQ165.png)
 
-### 排序命令：sort，wc,uniq
+### 排序命令：sort，wc，uniq
 #### 对数据进行排序：sort
 用法：`sort [-fbMnrtuk] file or stdin`
 
@@ -420,7 +420,7 @@ PS：
 
 2. 一行指令串取得登入系统的总人次: `last | grep [a-zA-Z] | grep -v 'wtmp' | grep -v 'reboot' | grep -v 'unknown' |wc -l`
 
-#### 数据双向重定向：tee
+### 数据双向重定向：tee
 tee 可以让 standard output 转存一份到文件内并将同样的数据继续送到屏幕去处理
 用法: `tee [-a] file`
 
@@ -430,3 +430,5 @@ tee 可以让 standard output 转存一份到文件内并将同样的数据继�
 
 例子：
 1. 读取 last 的数据并保存到 last.txt 中并统计每个有效账号登录次数: `last | grep [a-zA-Z] | grep -v "reboot" | grep -v "wtmp" | cut -d " " -f 1 | sort | uniq -c | tee last.txt`
+
+### 字符转换
