@@ -445,4 +445,5 @@ tr 可以用来删除一段信息中的文字，或者是进行文字的替换
 1. 将 /etc/passwd 转存成 dos 断行到 /root/passwd 中，再将 ^M 符号删除
 ![图像 1.png](https://i.loli.net/2021/01/02/kE1NwCWscVRg3xy.png)
 
-#### 
+#### 根据
+两个文件当中，有 " 相同数据" 的那一行，才将他加在一起
