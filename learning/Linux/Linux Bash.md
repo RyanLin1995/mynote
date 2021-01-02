@@ -465,4 +465,6 @@ PS：
 2. 用 join 一同显示 /etc/passwd 跟 /etc/group 中的信息：
 ![图像 3.png](https://i.loli.net/2021/01/02/sofvl8BWdnHmYUP.png)
 
-#### 多个文件一起显示：pas
+#### 多个文件一起显示：paste
+paste 可以简单粗暴的将多个文件一起显示
+用法
