@@ -421,4 +421,7 @@ PS：
 2. 一行指令串取得登入系统的总人次: `last | grep [a-zA-Z] | grep -v 'wtmp' | grep -v 'reboot' | grep -v 'unknown' |wc -l`
 
 #### 数据双向重定向：tee
+tee 可以让 standard output 转存一份到文件内并将同样的数据继续送到屏幕去处理
+用法: `tee [-a] file`
+
 
