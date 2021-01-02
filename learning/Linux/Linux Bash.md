@@ -472,4 +472,7 @@ paste 可以简单粗暴的将多个文件一起显示
 |选项与参数|说明|
 |-|-|
 |-d|后面接分隔符，默认为<kbd>tab</kbd>|
-|-|file 写成 - |
+|-|file 写成 - ，指的是 stdin|
+
+例子：
+1. 将 /etc/passwd，/etc/shadow，/etc/group 同一行显示：``
