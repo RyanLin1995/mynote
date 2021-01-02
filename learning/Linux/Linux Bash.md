@@ -462,4 +462,4 @@ PS：
 例子：
 1. 用 join 一同显示 /etc/passwd 跟 /etc/shadow 中的信息：
 ![图像 2.png](https://i.loli.net/2021/01/02/akGnciqUVEQe8wD.png)
-2. 用 join 一同显示 /etc/passwd 跟 /etc/group 中的信息
+2. 用 join 一同显示 /etc/passwd 跟 /etc/group 中的信息：
