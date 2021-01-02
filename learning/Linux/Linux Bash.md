@@ -476,4 +476,4 @@ paste 可以简单粗暴的将多个文件一起显示
 
 例子：
 1. 将 /etc/passwd，/etc/shadow，/etc/group 同一行显示：`paste /etc/passwd /etc/shadow /etc/group | head -n 5`
-2. 先将 /etc/group 读出，然后与/etc/shadow，/etc/group 同一行显示且仅取出前三行：`cat /etc/group|paste /etc/passwd /etc/shadow - - |head - - n 3`
+2. 先将 /etc/group 读出，然后与/etc/shadow，/etc/group 同一行显示且仅取出前三行：`cat /etc/group|paste /etc/passwd /etc/shadow - |head -n 3`（其中 - 代表管道符 | 前的 `cat /etc/passwd` 的结果）
