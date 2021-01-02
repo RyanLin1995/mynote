@@ -460,4 +460,5 @@ PS：
 1. 使用 join 命令前建议先将数据进行排序
 
 例子：
-1. 用 jion 一同显示 /etc/passwd 跟 /etc/shadow 中的账号信息：``
+1. 用 join 一同显示 /etc/passwd 跟 /etc/shadow 中的信息：
+2. 用 join 一同显示 /etc/passwd 跟 /etc/group 中的信息
