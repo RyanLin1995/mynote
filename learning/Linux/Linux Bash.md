@@ -505,4 +505,5 @@ split 可以将文件根据大小或行数进行切割
 
 例子：
 1. 将一个 1.5M 的文件分割成3个 500K 的：`split -b 500k master_db.sql master_db.sql`
-2. 将被分割的文件组合成一个文件：``
+2. 将被分割的文件组合成一个文件：`cat master_db.sqla* >> master_db.sql.bak`
+3. 读取根目录的信息并按照每行10条的信息进行切割：``
