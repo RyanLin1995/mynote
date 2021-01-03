@@ -403,6 +403,7 @@ PS：
 
 例子：
 1. 显示 last 中登陆过的用户名：`last | cut -d " " -f 1 | sort | uniq`
+
 2. 计数 last 中的用户登录总次数：`last | cut -d " " -f 1 | sort | uniq -c`
 
 #### 统计信息的整体数据(行，英文字数，字符串)：wc
@@ -466,6 +467,7 @@ PS：
 例子：
 1. 用 join 一同显示 /etc/passwd 跟 /etc/shadow 中的信息：
 ![图像 2.png](https://i.loli.net/2021/01/02/akGnciqUVEQe8wD.png)
+
 2. 用 join 一同显示 /etc/passwd 跟 /etc/group 中的信息：
 ![图像 3.png](https://i.loli.net/2021/01/02/sofvl8BWdnHmYUP.png)
 
@@ -480,6 +482,7 @@ paste 可以简单粗暴的将多个文件一起显示
 
 例子：
 1. 将 /etc/passwd，/etc/shadow，/etc/group 同一行显示：`paste /etc/passwd /etc/shadow /etc/group | head -n 5`
+
 2. 先将 /etc/group 读出，然后与/etc/shadow，/etc/group 同一行显示且仅取出前三行：`cat /etc/group|paste /etc/passwd /etc/shadow - |head -n 3`（其中 - 代表管道符 | 前的 `cat /etc/passwd` 的结果）
 
 #### tab 与 空格的转换：expand
@@ -505,7 +508,9 @@ split 可以将文件根据大小或行数进行切割
 
 例子：
 1. 将一个 1.5M 的文件分割成3个 500K 的：`split -b 500k master_db.sql master_db.sql`
+
 2. 将被分割的文件组合成一个文件：`cat master_db.sqla* >> master_db.sql.bak`
+
 3. 读取 ~ 的信息并按照每行10条的信息进行切割：`ll -a ~ | split -l 10 - home`(其中 - 为管道符前命令的stdout，在 split 中作为stdin)
 
 #### 参数替换：xargs
@@ -522,5 +527,7 @@ xargs 可以为不支持管线命令的命令来提供该standard input
 
 例子：
 1. 取出 /etc/passwd 的第一栏并传到 id 命令中：`cut -d ":" -d 1 /etc/passwd | head -n 3 | xargs -n 1 id`(因为 id 命令不是管线命令且只支持每次传入一个参数)
+
 2. 将所有的 /etc/passwd 内的账号都以 id 查阅，但查到 sync 就结束：`cut -d ":" -f 1 /etc/passwd | xargs -e"sync" -n 1 id`(注意 -e 参数后面没有空格)
-3. 找出 /usr/sbin 底下具有特殊权限的文件名，并列出详细属性：`find /usr/sbin/ -perm /7000 | xargs ls -l` 或 ``
+
+3. 找出 /usr/sbin 底下具有特殊权限的文件名，并列出详细属性：`find /usr/sbin/ -perm /7000 | xargs ls -l` 或 `ll $(find /usr/sbin -perm /7000)`
