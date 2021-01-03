@@ -494,4 +494,9 @@ unexpand 可以转换文件中的 空格 为 tab
 例子：
 ![图像 4.png](https://i.loli.net/2021/01/02/psFI9AxeV2DOM3h.png)
 
-#### 
+#### 切割文件：split
+split 可以将文件根据大小或行数进行切割
+用法：`split [-bl] file P`
+
+|选项与参数|说明|
+|-|-|
