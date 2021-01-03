@@ -540,4 +540,5 @@ xargs 可以为不支持管线命令的命令来提供该standard input
 在管道符当中，常常会使用到前一个指令的 stdout 作为这次的 stdin，就可以使用 - 
 
 例子：
- ·tar - - cvf - - /home | tar - - xvf - - - -
+将 /home 的文件打包压缩后
+ `tar -cvf - /home | tar -xvf - -C ~/test`
