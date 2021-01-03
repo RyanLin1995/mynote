@@ -536,4 +536,8 @@ xargs 可以为不支持管线命令的命令来提供该standard input
 
 3. 找出 /usr/sbin 底下具有特殊权限的文件名，并列出详细属性：`find /usr/sbin/ -perm /7000 | xargs ls -l` 或 `ll $(find /usr/sbin -perm /7000)`
 
-#### 关于 - 的
+#### 关于 - 的用途：
+在管道符当中，常常会使用到前一个指令的 stdout 作为这次的 stdin，就可以使用 - 
+
+例子：
+ ·tar - - cvf - - /home | tar - - xvf - - - -
