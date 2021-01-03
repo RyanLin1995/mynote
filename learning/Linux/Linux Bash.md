@@ -535,3 +535,5 @@ xargs 可以为不支持管线命令的命令来提供该standard input
 2. 将所有的 /etc/passwd 内的账号都以 id 查阅，但查到 sync 就结束：`cut -d ":" -f 1 /etc/passwd | xargs -e"sync" -n 1 id`(注意 -e 参数后面没有空格)
 
 3. 找出 /usr/sbin 底下具有特殊权限的文件名，并列出详细属性：`find /usr/sbin/ -perm /7000 | xargs ls -l` 或 `ll $(find /usr/sbin -perm /7000)`
+
+#### 关于 - 的
