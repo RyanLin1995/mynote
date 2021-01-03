@@ -522,4 +522,4 @@ xargs 可以为不支持管线命令的命令来提供该standard input
 
 例子：
 1. 取出 /etc/passwd 的第一栏并传到 id 命令中：`cut -d ":" -d 1 /etc/passwd | head -n 3 | xargs -n 1 id`(因为 id 命令不是管线命令且只支持每次传入一个参数)
-2. 将所有的 /etc/passwd 内的账号都以 id 查阅，但查到 sync 就结束
+2. 将所有的 /etc/passwd 内的账号都以 id 查阅，但查到 sync 就结束：`cut -d ":" -f 1 /etc/passwd | xargs -e"sync" -n 1 id`
