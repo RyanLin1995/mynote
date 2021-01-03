@@ -508,4 +508,5 @@ split 可以将文件根据大小或行数进行切割
 2. 将被分割的文件组合成一个文件：`cat master_db.sqla* >> master_db.sql.bak`
 3. 读取 ~ 的信息并按照每行10条的信息进行切割：`ll -a ~ | split -l 10 - home`(其中 - 为管道符前命令的stdout，在 split 中作为stdin)
 
-#### 参数替换：
+#### 参数替换：xargs
+xargs 可以为不支持管线命令的命令来提供该指令引用 standard input
