@@ -521,4 +521,4 @@ xargs 可以为不支持管线命令的命令来提供该standard input
 |xargs|当 xargs 后边没有参数时，默认以 echo 输出|
 
 例子：
-1. 取出 /etc/passwd 的第一栏并传到 id 命令中：`cut -d ":" -d 1 /etc/passwd | `
+1. 取出 /etc/passwd 的第一栏并传到 id 命令中：`cut -d ":" -d 1 /etc/passwd | head -n 3 | xargs -n 1 id`(因为)
