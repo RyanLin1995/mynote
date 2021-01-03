@@ -445,6 +445,8 @@ tr 可以用来删除一段信息中的文字，或者是进行文字的替换
 1. 将 /etc/passwd 转存成 dos 断行到 /root/passwd 中，再将 ^M 符号删除
 ![图像 1.png](https://i.loli.net/2021/01/02/kE1NwCWscVRg3xy.png)
 
+2. 将一个文件中的 ryan 字符替换为 
+
 #### 整合两个文件相同地方的数据：join
 join 可以在两个文件中，有相同数据的那一行，将他们加在一起显示
 用法：`join [-ti12] file1 file2`
