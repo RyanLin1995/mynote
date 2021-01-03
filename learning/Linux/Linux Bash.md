@@ -517,8 +517,8 @@ xargs 可以为不支持管线命令的命令来提供该standard input
 |-0|数字的0。xargs 一般以空格作为分隔。如果输入的stdin 含有特殊字符(`，\)之类的，将其转为一般字符|
 |-e|End of File的意思，一般后边接字符串。即 xargs 分析到这个字符串就停止|
 |-p|传入参数后，执行每个命令时，都会询问|
-|-n|接次数，即每次 command 执行时获 stdin 的第几个字段作为参数|
+|-n|接次数，即每次 command 执行时获 stdin 的几个数值作为参数|
 |xargs|当 xargs 后边没有参数时，默认以 echo 输出|
 
 例子：
-1. 将 /etc/pa
+1. 取出 /etc/passwd 的第一栏并
