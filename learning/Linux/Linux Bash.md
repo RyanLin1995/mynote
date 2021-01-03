@@ -496,7 +496,9 @@ unexpand 可以转换文件中的 空格 为 tab
 
 #### 切割文件：split
 split 可以将文件根据大小或行数进行切割
-用法：`split [-bl] file P`
+用法：`split [-bl] file PREFIX`
 
 |选项与参数|说明|
 |-|-|
+|-b|接大小，即按大小来分割文件，可接单位(b，k，m)|
+|-l|接|
