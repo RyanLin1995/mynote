@@ -1,5 +1,5 @@
 ## 按行截取信息：grep
-用法：`grep [-acinv] [--color=auto] '搜索字符串' 文件名`
+基本用法：`grep [-acinv] [--color=auto] '搜索字符串' 文件名`
 
 |选项与参数|说明|
 |-a|将二进制(binary)文件以 text 文件的方式进行搜寻数据|
@@ -12,6 +12,9 @@
 例子：
 1. 找到 last 中的非 reboot 用户：`last | grep -v reboot`
 2. 找到 /etc/passwd 中的 nologin 用户：`grep nologin /etc/passwd`
+
+进阶用法：`grep -[AB] `
+
 
 ## 正则表达式(Regular Expression)
 正则表示法就是处理字符串的方法，以行为单位来进行字符串的处理行为， 正规表示法透过一些特殊符号的辅助，可以让使用者轻易的达到搜寻/删除/取代某特定字符串的处理程序
