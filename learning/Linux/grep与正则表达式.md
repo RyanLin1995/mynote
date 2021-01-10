@@ -14,4 +14,4 @@
 2. 找到 /etc/passwd 中的 nologin 用户：`grep nologin /etc/passwd`
 
 ## 正则表达式(Regular Expression)
-
+正则表示法就是处理字符串的方法，以行为单位来进行字符串的处理行为， 正规表示法透过一些特殊符号的辅助，可以让使用者轻易的达到搜寻/删除/取代某特定字符串的处理程序
