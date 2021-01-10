@@ -14,8 +14,11 @@
 1. 找到 last 中的非 reboot 用户：`last | grep -v reboot`
 2. 找到 /etc/passwd 中的 nologin 用户：`grep nologin /etc/passwd`
 
-进阶用法：`grep -[AB] 搜寻字符串 文件名`
+### 进阶用法：`grep -[AB] 搜寻字符串 文件名`
 
+|选项与参数|说明|
+|-|-|
+|-A|后面接数字，为 after 的意思。即除了显示该行外，还显示后面 n 行|
 
 
 
