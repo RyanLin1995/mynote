@@ -1,7 +1,8 @@
 ## 按行截取信息：grep
-基本用法：`grep [-acinv] [--color=auto] '搜索字符串' 文件名`
+### 基本用法：`grep [-acinv] [--color=auto] 搜索字符串 文件名`
 
 |选项与参数|说明|
+|-|-|
 |-a|将二进制(binary)文件以 text 文件的方式进行搜寻数据|
 |-c|仅显示搜寻结果的行号|
 |-i|忽略大小写|
@@ -13,7 +14,9 @@
 1. 找到 last 中的非 reboot 用户：`last | grep -v reboot`
 2. 找到 /etc/passwd 中的 nologin 用户：`grep nologin /etc/passwd`
 
-进阶用法：`grep -[AB] `
+进阶用法：`grep -[AB] 搜寻字符串 文件名`
+
+
 
 
 ## 正则表达式(Regular Expression)
