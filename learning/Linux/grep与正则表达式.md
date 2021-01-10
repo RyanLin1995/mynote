@@ -53,4 +53,7 @@
 `LANG=C; export LC_ALL=C`
 
 1. 搜寻特定字符串 "the" ：`grep the 文件名`
-2. 反向搜寻特定字符串 "the" ：
+
+2. 反向搜寻特定字符串 "the" ：`grep -v the 文件名`
+
+3. 
