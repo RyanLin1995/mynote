@@ -13,4 +13,5 @@
 1. 找到 last 中的非 reboot 用户：`last | grep -v reboot`
 2. 找到 /etc/passwd 中的 nologin 用户：`grep nologin /etc/passwd`
 
-## 正则表达式((Regular Expression)
+## 正则表达式(Regular Expression)
+
