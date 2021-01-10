@@ -10,5 +10,5 @@
 |--color=auto|自动高亮找到的关键字|
 
 例子：
-1. 找到 last 中的非 reboot 用户：`last | grep `
-2. 
+1. 找到 last 中的非 reboot 用户：`last | grep -v reboot`
+2. 找到 /etc/passwd 中的 nologin 用户：`grep nol;`
