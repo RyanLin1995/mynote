@@ -149,3 +149,6 @@ function 有如下的参数：
 
 ### 以行为单位新增/删除功能
 1. 删除 /etc/passwd 文件的2到5行：`nl /etc/passwd | sed '2,5d'`
+![sed1.png](https://i.loli.net/2021/01/16/XeAzYQKI29LsMqn.png)
+
+2. 
