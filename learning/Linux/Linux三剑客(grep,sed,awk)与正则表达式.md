@@ -157,4 +157,4 @@ function 有如下的参数：
 3. 在 /etc/passwd 文件的第二行前加上 'test' 字样：`nl /etc/passwd | sed '2i test'`
 
 
-4. 在 /etc/passwd 文件的第二行后加上 'test' 字样：`nl /etc/passwd | sed '2a test'`
+4. 在 /etc/passwd 文件的第二行后加上 'test' 与 'test2' 字样：`nl /etc/passwd | sed '2a test\test2'`
