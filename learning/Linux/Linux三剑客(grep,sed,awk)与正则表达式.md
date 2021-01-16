@@ -148,11 +148,11 @@ function 有如下的参数：
 |s|取代，可以直接进行取代的工作，通常可以搭配正规表示法，如替换1到20行数据：1,20s/old/new/g|
 
 ### 以行为单位新增/删除功能
-1. 删除 /etc/passwd 文件的2到5行：`nl /etc/passwd | sed '2,5d'`
+1. 删除 /etc/passwd 文件的2到5行：`nl /etc/passwd | sed '2,5d'`(如果要删除到行尾用 $ 符号替代，行首用 ^ 符号替代)
 ![sed1.png](https://i.loli.net/2021/01/16/XeAzYQKI29LsMqn.png)
 
 2. 在 /etc/passwd 文件的第二行后加上 'test' 字样：`nl /etc/passwd | sed '2a test'`
-
+![sed2.png](https://i.loli.net/2021/01/16/UXLT29ltnY8GWoQ.png)
 
 3. 在 /etc/passwd 文件的第二行前加上 'test' 字样：`nl /etc/passwd | sed '2i test'`
 
