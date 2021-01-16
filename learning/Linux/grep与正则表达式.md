@@ -107,9 +107,7 @@
 |-|-|-|
 |^word|搜寻以字符串(word)为行首的数据|搜寻行首为 # 开始的那一行，并列出行号：`grep -n '^#' regular_express.txt`|
 |word$|搜寻以字符串(word)为行尾的数据|将行尾为 ! 的那一行打印出来，并列出行号：`grep -n '!$' regular_express.txt`|
-|.|代表『一定有一个任意字符』的字符|搜寻的字符串可以是 (eve) (eae) (eee) (e e)， 但不能仅有 (ee) ！亦即 e 与 e
-中间『一定』仅有一个字符，而空格符也是字符！
-grep -n 'e.e' regular_express.txt
+|.|匹配任意字符|搜寻字符串可以是(eve)(eae)(eee)(e e)，但不能仅有 (ee)e 与 e 中间『一定』仅有一个字符，而空格符也是字符！grep -n 'e.e' regular_express.txt
 \
 意义：跳脱字符，将特殊符号的特殊意义去除！
 范例：搜寻含有单引号 ' 的那一行！
