@@ -109,13 +109,8 @@
 |word$|搜寻以字符串(word)为行尾的数据|将行尾为 ! 的那一行打印出来，并列出行号：`grep -n '!$' regular_express.txt`|
 |.|匹配任意字符|搜寻两个 e 中有且仅有一个字符(包括空格符)：`grep -n 'e.e' regular_express.txt`|
 |\\|转义字符，将特殊符号的特殊意义去除|搜寻含有单引号 ' 的那一行！grep -n \' regular_express.txt|
-|\*|重复匹配前一个 RE 字符零到无穷多次|找出含有 (es) (ess) (esss) 等等的字符串，注意，因为 * 可以是 0 个，所以 es 也
-是符合带搜寻字符串。另外，因为 * 为重复『前一个 RE 字符』的符号， 因此，在 * 之前必须
-要紧接着一个 RE 字符喔！例如任意字符则为 『.*』 ！
-grep -n 'ess*' regular_express.txt
-[list]
-意义：字符集合的 RE 字符，里面列出想要撷取的字符！
-范例：搜寻含有 (gl) 或 (gd) 的那一行，需要特别留意的是，在 [] 当中『谨代表一个待搜寻
+|\*|重复匹配前一个 RE 字符零到无穷多次|找出含有es、ess、esss等等的字符串：`grep -n 'ess*' regular_express.txt`|
+|[list]|对搜寻进行分类|搜寻含有 (gl) 或 (gd) 的那一行，需要特别留意的是，在 [] 当中『谨代表一个待搜寻
 的字符』， 例如『 a[afl]y 』代表搜寻的字符串可以是 aay, afy, aly 即 [afl] 代表 a 或
 f 或 l 的意思！
 grep -n 'g[ld]' regular_express.txt
