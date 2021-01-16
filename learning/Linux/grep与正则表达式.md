@@ -111,11 +111,7 @@
 |\\|转义字符，将特殊符号的特殊意义去除|搜寻含有单引号 ' 的那一行！grep -n \' regular_express.txt|
 |\*|重复匹配前一个 RE 字符零到无穷多次|找出含有es、ess、esss等等的字符串：`grep -n 'ess*' regular_express.txt`|
 |[list]|对搜寻进行分类|搜寻含有 gl 或 gd 的那一行：`grep -n 'g[ld]' regular_express.txt`
-|[n1-n2]|字符集合的 RE 字符，里面列出想要撷取的字符范围|搜寻含有任意数字的那一行！需特别留意，在字符集合 [] 中的减号 - 是有特殊意义的，
-他代表两个字符之间的所有连续字符！但这个连续与否与 ASCII 编码有关，因此，你的编码需要
-设定正确(在 bash 当中，需要确定 LANG 与 LANGUAGE 的变量是否正确！) 例如所有大写字
-符则为 [A-Z]
-grep -n '[A-Z]' regular_express.txt
+|[n1-n2]|字符集合的 RE 字符，里面列出想要撷取的字符范围|搜寻含有任意数字的那一行grep -n '[A-Z]' regular_express.txt
 [^list]
 意义：字符集合的 RE 字符，里面列出不要的字符串或范围！
 范例：搜寻的字符串可以是 (oog) (ood) 但不能是 (oot) ，那个 ^ 在 [] 内时，代表的意
