@@ -110,10 +110,9 @@
 |.|匹配任意字符|搜寻两个 e 中有且仅有一个字符(包括空格符)：`grep -n 'e.e' regular_express.txt`|
 |\\|转义字符，将特殊符号的特殊意义去除|搜寻含有单引号 ' 的那一行！grep -n \' regular_express.txt|
 |\*|重复匹配前一个 RE 字符零到无穷多次|找出含有es、ess、esss等等的字符串：`grep -n 'ess*' regular_express.txt`|
-|[list]|对搜寻进行分类|搜寻含有 gl 或 gd 的那一行：`grep -n 'g[ld]' regular_express.txt`
-|[n1-n2]|对搜寻进行分类|搜寻含有任意数字的那一行：`grep -n '[0-9]' regular_express.txt`
-|[^list]|字符集合的 RE 字符，里面列出不要的字符串或范围！
-范例：搜寻的字符串可以是 (oog) (ood) 但不能是 (oot) ，那个 ^ 在 [] 内时，代表的意
+|[list]|对搜寻进行分类，匹配单个数字或字符|搜寻含有 gl 或 gd 的那一行：`grep -n 'g[ld]' regular_express.txt`
+|[n1-n2]|对搜寻进行分类，匹配单个连续数字或字符|搜寻含有任意数字的那一行：`grep -n '[0-9]' regular_express.txt`
+|[^list]|字符集合的 RE|搜寻的字符串可以是 (oog) (ood) 但不能是 (oot) ，那个 ^ 在 [] 内时，代表的意
 义是『反向选择』的意思。 例如，我不要大写字符，则为 [^A-Z]。但是，需要特别注意的是，
 如果以 grep -n [^A-Z] regular_express.txt 来搜寻，却发现该文件内的所有行都被列
 出，为什么？因为这个 [^A-Z] 是『非大写字符』的意思， 因为每一行均有非大写字符，例如第
