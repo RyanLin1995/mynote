@@ -152,3 +152,9 @@ function 有如下的参数：
 ![sed1.png](https://i.loli.net/2021/01/16/XeAzYQKI29LsMqn.png)
 
 2. 在 /etc/passwd 文件的第二行后加上 'test' 字样：`nl /etc/passwd | sed '2a test'`
+
+
+3. 在 /etc/passwd 文件的第二行前加上 'test' 字样：`nl /etc/passwd | sed '2i test'`
+
+
+4. 在 /etc/passwd 文件的第二行后加上 'test' 字样：`nl /etc/passwd | sed '2a test'`
