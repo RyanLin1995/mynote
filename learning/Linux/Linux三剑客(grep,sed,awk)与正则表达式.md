@@ -1,5 +1,5 @@
 # 按行截取信息：grep
-### 基本用法：`grep [-acinv] [--color=auto] 搜索字符串 文件名`
+基本用法：`grep [-acinv] [--color=auto] 搜索字符串 文件名`
 
 |选项与参数|说明|
 |-|-|
@@ -131,6 +131,7 @@
 |()|找出群组的字符串|搜寻 glad 或 good 这两个字符串的数据：`egrep -n 'g(la|oo)d' 文件名`|
 |()+|多个重复群组的判断|搜寻 AxyzxyzxyzxyzC 这个字符的数据：`egrep 'A(xyz)+C'`|
 
+---
 # sed 工具
 sed 可以将数据进行取代、删除、新增、截取特定行等等的功能
 

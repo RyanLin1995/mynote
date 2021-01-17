@@ -8,6 +8,7 @@ Shell 是可以与操作系统核心沟通的一个应用程序，即壳程序�
 
 在 Linux 中，可以透过 `cat /etc/shells` 查看支持的 Shell
 
+---
 ## Bash
 ### 什么是 Bash
 Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bourne SHell)。
