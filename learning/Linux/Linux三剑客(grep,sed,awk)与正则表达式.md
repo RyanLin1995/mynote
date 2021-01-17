@@ -161,4 +161,4 @@ function 有如下的参数：
 ![sed4.png](https://i.loli.net/2021/01/16/CUsiZEPAumfoycz.png)
 
 #### 二、以行为单位的取代与显示功能
-1. 将 /etc/passwd 中2-7行的数据取代为hahahahahahaha：``
+1. 将 /etc/passwd 中2-7行的数据取代为hahahahahahaha：`nl /etc/passwd | sed '2,7c hahahahahahaha'`
