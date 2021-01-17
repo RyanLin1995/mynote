@@ -123,7 +123,33 @@
 
 |RE字符|意义|范例|
 |-|-|-|
-
++
+意义：重复『一个或一个以上』的前一个 RE 字符
+范例：搜寻 (god) (good) (goood)... 等等的字符串。 那个 o+ 代表『一个以上的 o 』所以，底下
+的执行成果会将第 1, 9, 13 行列出来。
+egrep -n 'go+d' regular_express.txt
+?
+意义：『零个或一个』的前一个 RE 字符
+范例：搜寻 (gd) (god) 这两个字符串。 那个 o? 代表『空的或 1 个 o 』所以，上面的执行成果会将
+第 13, 14 行列出来。 有没有发现到，这两个案例( 'go+d' 与 'go?d' )的结果集合与 'go*d' 相同？
+想想看，这是为什么喔！ ^_^
+egrep -n 'go?d' regular_express.txt
+|
+意义：用或( or )的方式找出数个字符串
+范例：搜寻 gd 或 good 这两个字符串，注意，是『或』！ 所以，第 1,9,14 这三行都可以被打印出来喔！
+那如果还想要找出 dog 呢？
+egrep -n 'gd|good' regular_express.txt
+egrep -n 'gd|good|dog' regular_express.txt
+()
+意义：找出『群组』字符串
+范例：搜寻 (glad) 或 (good) 这两个字符串，因为 g 与 d 是重复的，所以， 我就可以将 la 与 oo 列
+于 ( ) 当中，并以 | 来分隔开来，就可以啦！
+egrep -n 'g(la|oo)d' regular_express.txt
+()+
+意义：多个重复群组的判别
+范例：将『AxyzxyzxyzxyzC』用 echo 叫出，然后再使用如下的方法搜寻一下！
+echo 'AxyzxyzxyzxyzC' | egrep 'A(xyz)+C'
+上面的例子意思是说，我要找开头是 A 结尾是 C ，中间有一个以上的 "xyz" 字符串的意思～
 
 
 # sed 工具
