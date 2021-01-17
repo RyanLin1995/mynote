@@ -167,4 +167,5 @@ function 有如下的参数：
 2. 只显示 /etc/passwd 中的2-7行：`nl /etc/passwd |sed -n '2,7p'`
 ![sed2.png](https://i.loli.net/2021/01/17/1u6LCZGiNzWsTRD.png)
 
+#### 三、部分数据的搜寻与取代功能
 
