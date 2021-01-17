@@ -159,3 +159,5 @@ function 有如下的参数：
 
 4. 在 /etc/passwd 文件的第二行后加上 'test' 与 'test2' 字样：`nl /etc/passwd | sed '2a test \test2'`
 ![sed4.png](https://i.loli.net/2021/01/16/CUsiZEPAumfoycz.png)
+
+#### 二、以行为单位的取代与显示功能
