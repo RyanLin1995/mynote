@@ -168,4 +168,6 @@ function 有如下的参数：
 ![sed2.png](https://i.loli.net/2021/01/17/1u6LCZGiNzWsTRD.png)
 
 #### 三、部分数据的搜寻与取代功能
+sed 以行为单位进行部分数据的搜寻并取代的格式：`sed 's/旧数据内容/新数据内容/g'`
 
+1. 找出 ifconfig 
