@@ -40,13 +40,13 @@
 ### GPT分区表使用的工具: gdisk
 用法: `gdisk [device name]`
 
-`gdisk` 解析:
+* `gdisk` 解析:
 ![捕获1.PNG](https://i.loli.net/2020/10/02/VpAM6JsB4OjbEKn.png)
 PS:
    1. 利用 `gdisk` 打开了磁盘后，可以先看到磁盘的分区情况。在 `Command` 中输入 `?` 或 `help` 即可打印 `gdisk` 菜单
    2. `gdisk` 退出方式有两种，分别为 `q` 和 `w`。其中 `q` 仅退出而不保存，`w` 退出且保存操作。
 
-`gdisk p` 解析:
+* `gdisk p` 解析:
  ![捕获3.PNG](https://i.loli.net/2020/10/02/EkHlo3Jbd79jcaw.png)
 |分区表信息名称|意义|
 |-|-|
@@ -57,7 +57,7 @@ PS:
 |Code|分区的文件系统类型。Linux 为8300，swap为8200.不过只是一个提示，不代表真正的文件系统|
 |Name|文件系统名称|
 
-新增一个分区: `gdisk n`
+* 新增一个分区: `gdisk n`
 ![tempsnip.png](https://i.loli.net/2020/10/02/6LiZXkMvYdRDz31.png)
 PS：
 1. 新增分区号码时，按照默认值即可
@@ -68,7 +68,7 @@ PS：
 6. 但是利用`cat /proc/partitions` 、'lsblk'、`blkid` 等命令没有看到新建磁盘，是因为系统在运行当中，为了防止系统出现问题，需要重启后分区才能生效
 7. 如果不想重启的话，可以使用 `partprobe [-s]` 更新 Linux 核心分区表，使分区生效
 
-删除一个分区: `gdisk d`
+* 删除一个分区: `gdisk d`
 ![tempsnip2.png](https://i.loli.net/2020/10/03/NoJyz9PbCKOx2ju.png)
 PS:
 1. 不能直接删除正在使用的分区。直接删除正在使用的分区，可能导致系统稳定性问题。如果想删除正在使用的分区，必须先卸载掉，再删除，最后更新分区表
