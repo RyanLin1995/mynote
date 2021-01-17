@@ -127,7 +127,7 @@
 |+|重复匹配前一个 RE 字符一次或一次以上|搜寻含有关键字 god、good、goood 的数据：`egrep -n 'go+d' 文件名`|
 |?|匹配前一个 RE 字符零次或一次|搜寻含有关键字 gd 与 god 的数据：`egrep -n 'go?d' 文件名`|
 |\||用或( or )的方式找出数个关键字|搜寻 gd 或 good 这两个字符串的数据：`egrep -n 'gd|good' 文件名`|
-|()|找出群组的字符串|搜寻 glad 或 good 这两个字符串的数据：egrep -n 'g(la|oo)d' 文件名|
+|()|找出群组的字符串|搜寻 glad 或 good 这两个字符串的数据：`egrep -n 'g(la|oo)d' 文件名`|
 |()+|多个重复群组的判断|搜寻 AxyzxyzxyzxyzC 这个字符的数据：`egrep 'A(xyz)+C'`|
 
 # sed 工具
