@@ -173,4 +173,5 @@ sed 以行为单位进行部分数据的搜寻并取代的格式：`sed 's/旧�
 1. 找出 ifconfig 中的 ip 地址：
 
 
-2. 找出 man_db.conf 
+2. 找出 man_db.conf 中带有关键字为 "MAN" 的且不为空和注释的数据：
+
