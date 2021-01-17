@@ -124,10 +124,8 @@
 |RE字符|意义|范例|
 |-|-|-|
 |+|重复匹配前一个 RE 字符一次或一次以上|搜寻含有关键字 god、good、goood 的数据：`egrep -n 'go+d' 文件名`
-|?|匹配前一个 RE 字符零次或一次|搜寻含有关键字 ggod 这两个字符串egrep -n 'go?d' regular_express.txt
-|
-意义：用或( or )的方式找出数个字符串
-范例：搜寻 gd 或 good 这两个字符串，注意，是『或』！ 所以，第 1,9,14 这三行都可以被打印出来喔！
+|?|匹配前一个 RE 字符零次或一次|搜寻含有关键字 gd 与 god 的数据：`egrep -n 'go?d' 文件名`
+|\||用或( or )的方式找出数个|搜寻 gd 或 good 这两个字符串，注意，是『或』！ 所以，第 1,9,14 这三行都可以被打印出来喔！
 那如果还想要找出 dog 呢？
 egrep -n 'gd|good' regular_express.txt
 egrep -n 'gd|good|dog' regular_express.txt
