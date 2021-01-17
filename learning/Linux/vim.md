@@ -159,10 +159,12 @@ vim 时将会按照以下设置打开
 |<kbd>ctrl</kbd> + <kbd>x</kbd> --> <kbd>ctrl</kbd> + <kbd>f</kbd>|以当前目录内的文件名作为关键词，予以补齐|
 |<kbd>ctrl</kbd> + <kbd>x</kbd> --> <kbd>ctrl</kbd> + <kbd>o</kbd>|以扩展名作为语法补充，以 vim 内建的关键词，予以补齐|
 
-### vim 命令详细图解:
+---
+## vim 命令详细图解:
 ![19105004_eXTo.jpg](https://i.loli.net/2020/11/08/9soZc68wFCpMJDy.jpg)
 
-### vim 救援模式
+---
+## vim 救援模式
 vim 打开文件时，都会在当前工作目录建立一个 .filename.swap 的临时文件，如果文件被不正常关闭或打开该文件时，有其他人或程序正在编辑这个文件，就会出现打开该临时文件，如图所示:
 ![捕获4.PNG](https://i.loli.net/2020/11/08/jDuFp5TWEmR18AK.png)
 
