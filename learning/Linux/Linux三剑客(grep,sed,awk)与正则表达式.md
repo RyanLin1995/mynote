@@ -197,3 +197,6 @@ sed 直接修改文件的内容格式：`sed -i '动作' 文件名`
 1. 将文件中的 . 换为 ！：`sed -i 's/\./!/g' 文件名`
 
 2. 在文件中最后一行添加 hahahahaha ：`sed -i '$a hahahahaha' 文件名` 或 `sed '$a hahahahaha' 文件名`
+
+---
+
