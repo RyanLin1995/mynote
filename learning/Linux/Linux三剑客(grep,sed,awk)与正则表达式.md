@@ -214,3 +214,7 @@ awk 可将一行当中的数据分成数个字段来处理
 ![awk2.png](https://i.loli.net/2021/01/23/J6fbWRxvcgeK8oA.png)
 
 2. 读取 /etc/passwd 中的 UID 并显示其所在段落的字段数。各数据中用 tab 做分割：
+![awk3.png](https://i.loli.net/2021/01/23/1Ph9iawNEOUMCf2.png)
+
+### awk 逻辑运算符
+awk 逻辑运算符一般用于
