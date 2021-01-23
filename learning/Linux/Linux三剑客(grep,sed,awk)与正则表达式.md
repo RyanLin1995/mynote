@@ -232,4 +232,4 @@ PS:
 
 例子：
 1. 读取 /etc/passwd 中的 ID 跟 UID ，其中 UID 需要大于500。各数据中用 tab 做分割：
-![awk4.png](https://i.loli.net/2021/01/23/wzOsXDlMeBnig7y.png)
+![awk5.png](https://i.loli.net/2021/01/23/LcfjtIObFUDdE8h.png)
