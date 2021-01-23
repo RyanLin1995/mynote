@@ -186,10 +186,10 @@ function 有如下的参数：
 sed 以行为单位进行部分数据的搜寻并取代的格式：`sed 's/旧数据内容/新数据内容/g'`
 
 1. 找出 ifconfig 中的 ip 地址：
-![图像 3.png](https://i.loli.net/2021/01/17/Ru8nW3Yo1MwDXcp.png)
+![sed3.png](https://i.loli.net/2021/01/23/pNhUxiVIkW3l6RC.png)
 
 2. 找出 man_db.conf 中带有关键字为 "MAN" 的且不为空和注释的数据：
-![图像 4.png](https://i.loli.net/2021/01/17/5KyN2elmvBPA6Jf.png)
+![sed4.png](https://i.loli.net/2021/01/23/mI1Q89CUB3xy6cJ.png)
 
 #### 四、直接修改文件内容(!!!)
 sed 直接修改文件的内容格式：`sed -i '动作' 文件名`
