@@ -20,4 +20,7 @@ shell script 是利用 shell 的功能所写的一个程序(program)，这个程
 
 PS：
 1. 脚本在执行前需要确保拥有执行权限
-2. 
+2. 可以利用 sh 的参数 -n 及 -x 来检查与追踪 shell.sh 的语法是否正确
+
+---
+## Shell Scrip格式
