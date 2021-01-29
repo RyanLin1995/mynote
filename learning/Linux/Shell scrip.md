@@ -13,7 +13,7 @@ shell script 是利用 shell 的功能所写的一个程序(program)，这个程
 
 ### Shell Scrip的执行
 * 直接指令下达： shell.sh 文件必须要具备可读与可执行 (rx) 的权限，然后：
-o  绝对路径：使用 /home/dmtsai/shell.sh 来下达指令；
-o  相对路径：假设工作目录在 /home/dmtsai/ ，则使用 ./shell.sh 来执行
-o  变量『PATH』功能：将 shell.sh 放在 PATH 指定的目录内，例如： ~/bin/
-* 以 bash 程序来执行：透过『 bash shell.sh 』或『 sh shell.sh 』来执行
+  * 绝对路径：使用 /home/用户名/shell.sh 来下达指令；
+  * 相对路径：假设工作目录在 /home/用户名/，则使用 ./shell.sh 来执行
+  * 变量 PATH 功能：将 shell.sh 放在 PATH 指定的目录内，例如： ~/bin/
+* 以 bash 程序来执行：透过 bash shell.sh 』或『 sh shell.sh 』来执行
