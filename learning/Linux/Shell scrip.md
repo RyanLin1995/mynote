@@ -16,4 +16,8 @@ shell script 是利用 shell 的功能所写的一个程序(program)，这个程
   * 绝对路径：使用 /home/用户名/shell.sh 来下达指令；
   * 相对路径：假设工作目录在 /home/用户名/，则使用 ./shell.sh 来执行
   * 变量 PATH 功能：将 shell.sh 放在 PATH 指定的目录内，例如： ~/bin/
-* 以 bash 程序来执行：透过 bash shell.sh 』或『 sh shell.sh 』来执行
+* 以 bash 程序来执行：透过 bash shell.sh 或 sh shell.sh 来执行
+
+PS：
+1. 脚本在执行前需要确保拥有执行权限
+2. 
