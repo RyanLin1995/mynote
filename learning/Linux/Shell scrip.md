@@ -48,7 +48,7 @@ PS：
 以利用 exit 这个指令来让程序中断，并且回传一个数值给系统。在这个例子是 exit 0 ，这代表离开 script 并且回传一个 0 给系统
 
 ---
-## 脚本执行区别
+## Scrip 执行区别
 不同的 script 执行方式会造成不一样的结果：
 ### 1、利用直接执行的方式来执行 script
 即直接运行脚本或使用 bash 或 sh 或 ./ 执行脚本，该 script 都会使用一个新的 bash 环境(子程序)来执行脚本内的代码
@@ -64,24 +64,24 @@ PS：
 
 ---
 ## 一些简单的案例
-### 交互式脚本
+### 1、交互式脚本
 交互式脚本，其变量内容由用户决定
 ![read.png](https://i.loli.net/2021/01/30/1XcgJWmaERSuCfj.png)
 
-### 呼叫外部命令脚本
+### 2、呼叫外部命令脚本
 通过呼叫 date 进行文件的建立
 ![date.png](https://i.loli.net/2021/01/30/KR4eSq5bTxl3AuU.png)
 
-### 计算式脚本
-#### 整数计算
+### 3、计算式脚本
+* 整数计算
 脚本中可以使用 declare -i total=${firstnu}*${secnu} 或 var=$((运算内容)) 进行整数的计算(+, -, *, /, %)，其中 % 为取余
 ![cal.png](https://i.loli.net/2021/01/30/1IVsc3JhPvBry4G.png)
 
-#### 小数运算
+* 小数运算
 计算圆周率，一般可用这个脚本测试服务器性能
 ![pi.png](https://i.loli.net/2021/01/30/VY26yAls8Ivp74U.png)
 
-* 代码：
+  * 代码：
 `#!/bin/bash`
 `# Program:`
 `#       User input a scale number to calculate pi number.`
