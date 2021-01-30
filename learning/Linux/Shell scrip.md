@@ -49,3 +49,7 @@ PS：
 
 ## 一些简单的案例
 ### 交互式脚本
+交互式脚本，其变量内容由用户决定
+![read.png](https://i.loli.net/2021/01/30/1XcgJWmaERSuCfj.png)
+
+### 
