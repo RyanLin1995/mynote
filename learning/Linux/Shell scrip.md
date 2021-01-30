@@ -54,3 +54,10 @@ PS：
 
 ### 呼叫外部命令脚本
 通过呼叫 date 进行文件的建立
+![date.png](https://i.loli.net/2021/01/30/KR4eSq5bTxl3AuU.png)
+
+### 计算式脚本
+#### 整数计算
+脚本中可以使用 declare -i total=${firstnu}*${secnu} 也可以使用上面的方式来进
+行！基本上，鸟哥比较建议使用这样的方式来进行运算：
+var=$((运算内容))
