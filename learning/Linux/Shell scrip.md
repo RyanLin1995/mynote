@@ -11,13 +11,6 @@ shell script 是利用 shell 的功能所写的一个程序(program)，这个程
 5. 至于如果一行的内容太多，则可以使用 \Enter 来延伸至下一行；
 6.  \# 可做为批注！任何加在 # 后面的资料将全部被视为批注文字而被忽略！
 
-### Shell Scrip的执行
-* 直接指令下达： shell.sh 文件必须要具备可读与可执行 (rx) 的权限，然后：
-  * 绝对路径：使用 /home/用户名/shell.sh 来下达指令；
-  * 相对路径：假设工作目录在 /home/用户名/，则使用 ./shell.sh 来执行
-  * 变量 PATH 功能：将 shell.sh 放在 PATH 指定的目录内，例如： ~/bin/
-* 以 bash 程序来执行：透过 bash shell.sh 或 sh shell.sh 来执行
-
 PS：
 1. 脚本在执行前需要确保拥有执行权限
 
@@ -48,7 +41,16 @@ PS：
 以利用 exit 这个指令来让程序中断，并且回传一个数值给系统。在这个例子是 exit 0 ，这代表离开 script 并且回传一个 0 给系统
 
 ---
-## Scrip 执行区别
+## Scrip 执行与执行区别
+
+### Shell Scrip的执行
+* 直接指令下达： shell.sh 文件必须要具备可读与可执行 (rx) 的权限，然后：
+  * 绝对路径：使用 /home/用户名/shell.sh 来下达指令；
+  * 相对路径：假设工作目录在 /home/用户名/，则使用 ./shell.sh 来执行
+  * 变量 PATH 功能：将 shell.sh 放在 PATH 指定的目录内，例如： ~/bin/
+* 以 bash 程序来执行：透过 bash shell.sh 或 sh shell.sh 来执行
+
+### Shell Scrip的执行
 不同的 script 执行方式会造成不一样的结果：
 ### 1、利用直接执行的方式来执行 script
 即直接运行脚本或使用 bash 或 sh 或 ./ 执行脚本，该 script 都会使用一个新的 bash 环境(子程序)来执行脚本内的代码
@@ -73,11 +75,11 @@ PS：
 ![date.png](https://i.loli.net/2021/01/30/KR4eSq5bTxl3AuU.png)
 
 ### 3、计算式脚本
-* 整数计算
+* **整数计算**
 脚本中可以使用 declare -i total=${firstnu}*${secnu} 或 var=$((运算内容)) 进行整数的计算(+, -, *, /, %)，其中 % 为取余
 ![cal.png](https://i.loli.net/2021/01/30/1IVsc3JhPvBry4G.png)
 
-* 小数运算
+* **小数运算**
 计算圆周率，一般可用这个脚本测试服务器性能
 ![pi.png](https://i.loli.net/2021/01/30/VY26yAls8Ivp74U.png)
 
