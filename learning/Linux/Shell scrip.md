@@ -63,6 +63,9 @@ PS：
 
 #### 小数运算
 计算圆周率，一般可用这个脚本测试服务器性能
+![pi.png](https://i.loli.net/2021/01/30/VY26yAls8Ivp74U.png)
+
+代码：
 `#!/bin/bash`
 `# Program:`
 `#       User input a scale number to calculate pi number.`
@@ -72,8 +75,7 @@ PS：
 ` export PATH`
 ` echo -e "This program will calculate pi value. \n"`
 ` echo -e "You should input a float number to calculate pi value.\n"`
- read -p "The scale number (10~10000) ? " checking
- num=${checking:-"10"} # 开始判断有否有输入数值
- echo -e "Starting calcuate pi value. Be patient."
- time echo "scale=${num}; 4*a(1)" | bc -lq`
-![pi.png](https://i.loli.net/2021/01/30/VY26yAls8Ivp74U.png)
+` read -p "The scale number (10~10000) ? " checking`
+` num=${checking:-"10"} # 开始判断有否有输入数值`
+` echo -e "Starting calcuate pi value. Be patient."`
+` time echo "scale=${num}; 4*a(1)" | bc -lq`
