@@ -54,10 +54,13 @@ PS：
 即直接运行脚本或使用 bash 或 sh 或 ./ 执行脚本，该 script 都会使用一个新的 bash 环境(子程序)来执行脚本内的代码
 
 示意图：
-![在子程序当中运作的示意图.gif](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts/centos7_non-source.gif)
+![](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts/centos7_non-source.gif)
 
 ### 2、利用 source 来执行脚本
 即使用 source 命令执行 script，该 scrip 是在父程序中执行
+
+示意图：
+![](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts/centos7_source.gif)
 
 ---
 ## 一些简单的案例
@@ -78,7 +81,7 @@ PS：
 计算圆周率，一般可用这个脚本测试服务器性能
 ![pi.png](https://i.loli.net/2021/01/30/VY26yAls8Ivp74U.png)
 
-代码：
+* 代码：
 `#!/bin/bash`
 `# Program:`
 `#       User input a scale number to calculate pi number.`
