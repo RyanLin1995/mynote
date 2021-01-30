@@ -52,7 +52,12 @@ PS：
 不同的 script 执行方式会造成不一样的结果：
 ### 1、利用直接执行的方式来执行 script
 即直接运行脚本或使用 bash 或 sh 执行脚本，该 script 都会使用一个新的 bash 环境(子程序)来执行脚本内的代码
+
+示意图：
 ![在子程序当中运作的示意图.gif](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts/centos7_non-source.gif)
+
+### 2、利用 source 来执行脚本
+在父程序中执行
 ---
 ## 一些简单的案例
 ### 交互式脚本
