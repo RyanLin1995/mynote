@@ -57,7 +57,7 @@ PS：
 ![在子程序当中运作的示意图.gif](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts/centos7_non-source.gif)
 
 ### 2、利用 source 来执行脚本
-在父程序中执行
+即使用 ./ 或 source，该 script在父程序中执行
 ---
 ## 一些简单的案例
 ### 交互式脚本
