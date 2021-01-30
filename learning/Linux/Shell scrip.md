@@ -52,4 +52,5 @@ PS：
 交互式脚本，其变量内容由用户决定
 ![read.png](https://i.loli.net/2021/01/30/1XcgJWmaERSuCfj.png)
 
-### 
+### 呼叫外部命令脚本
+通过呼叫 date 进行文件的建立
