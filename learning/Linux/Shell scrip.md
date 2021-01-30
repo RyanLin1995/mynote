@@ -50,18 +50,21 @@ PS：
   * 变量 PATH 功能：将 shell.sh 放在 PATH 指定的目录内，例如： ~/bin/
 * 以 bash 程序来执行：透过 bash shell.sh 或 sh shell.sh 来执行
 
-### Shell Scrip的执行
+### Shell Scrip的执行区别
 不同的 script 执行方式会造成不一样的结果：
-### 1、利用直接执行的方式来执行 script
+
+#### 1、利用直接执行的方式来执行 script
 即直接运行脚本或使用 bash 或 sh 或 ./ 执行脚本，该 script 都会使用一个新的 bash 环境(子程序)来执行脚本内的代码
 
 示意图：
+
 ![](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts/centos7_non-source.gif)
 
-### 2、利用 source 来执行脚本
+#### 2、利用 source 来执行脚本
 即使用 source 命令执行 script，该 scrip 是在父程序中执行
 
 示意图：
+
 ![](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts/centos7_source.gif)
 
 ---
