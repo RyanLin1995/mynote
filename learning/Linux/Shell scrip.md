@@ -164,3 +164,5 @@ PS:
 |-a|(and)两状况同时成立。如 test -r file -a -x file，则 file 同时具有 r 与 x 权限时，才为 true|
 |-o|(or)两状况任何一个成立。如 test -r file -o -x file，则 file 具有 r 或 x 权限时，才为 true|
 |!|反相状态，如 test ! -x file ，当 file 不具有 x 时，才为 true|
+
+**一个例子：**
