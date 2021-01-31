@@ -150,7 +150,17 @@ PS：
 **5. 判定字符串的数据，例如 test -z string**
 |测试的标志|代表意义|
 |-|-|
-|test -z string|判定字符串长度是否为 0 ，若 string 为空字符串，则为 true|
-|test -n string|-n 可省略。判定字符串长度是否非为 0 ，若 string 为空字符串，则为 false|
-|test str1 == str2|判定 str1 是否等于 str2 ，若相等，则回传 true|
-|test str1 != str2 判定 str1 是否不等于 str2 ，若相等，则回传 false
+|-z string|判定字符串长度是否为 0 ，若 string 为空字符串，则为 true|
+|-n string|-n 可省略。判定字符串长度是否非为 0 ，若 string 为空字符串，则为 false|
+|str1 == str2|判定 str1 是否等于 str2 ，若相等，则为 true|
+|str1 != str2|判定 str1 是否不等于 str2 ，若相等，则为 false|
+
+**6. 多重条件判定，例如： test -r filename -a -x filename**
+|测试的标志|代表意义|
+|-|-|
+|-a(and)两状况同时成立！例如 test -r file -a -x file，则 file 同时具有 r 与 x 权限
+时，才回传 true。
+-o
+(or)两状况任何一个成立！例如 test -r file -o -x file，则 file 具有 r 或 x 权限时，
+就可回传 true。
+! 反相状态，如 test ! -x file ，当 file 不具有 x 时，回传 true
