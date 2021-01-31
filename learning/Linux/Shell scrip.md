@@ -166,6 +166,7 @@ PS:
 |!|反相状态，如 test ! -x file ，当 file 不具有 x 时，才为 true|
 
 **一个例子：**
+
 ![test.png](https://i.loli.net/2021/01/31/DJwIl5aH2C9PirB.png)
 
 ### 简化测试命令：[]
@@ -178,3 +179,5 @@ PS:
 * 在中括号内的常量，最好都以单或双引号括号起来
 
 **一个例子：**
+
+![test2.png](https://i.loli.net/2021/01/31/4BKYq1gjIhHxXF8.png)
