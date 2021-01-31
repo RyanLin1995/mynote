@@ -138,3 +138,13 @@ PS：
 |-ef|判断 file1 与 file2 是否为同一文件，可用于判断 hard link ，即看两个文件是否均指向同一个 inode |
 
 **4. 两个整数之间的比较，例如 test n1 -eq n2 **
+|测试的标志|代表意义|
+|-|-|
+|-eq|两数值相等(equal)|
+|-ne|两数值不等(not equal)|
+|-gt|n1 大于 n2 (greater than)|
+|-lt|n1 小于 n2 (less than)|
+|-ge|n1 大于等于 n2 (greater than or equal)|
+|-le|n1 小于等于 n2 (less than or equal)|
+
+**5. 判定字符串的数据**
