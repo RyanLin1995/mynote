@@ -158,9 +158,6 @@ PS：
 **6. 多重条件判定，例如： test -r filename -a -x filename**
 |测试的标志|代表意义|
 |-|-|
-|-a(and)两状况同时成立！例如 test -r file -a -x file，则 file 同时具有 r 与 x 权限
-时，才回传 true。
--o
-(or)两状况任何一个成立！例如 test -r file -o -x file，则 file 具有 r 或 x 权限时，
-就可回传 true。
-! 反相状态，如 test ! -x file ，当 file 不具有 x 时，回传 true
+|-a|(and)两状况同时成立。如 test -r file -a -x file，则 file 同时具有 r 与 x 权限时，才为 true|
+|-o|(or)两状况任何一个成立。如 test -r file -o -x file，则 file 具有 r 或 x 权限时，才为 true|
+|!|反相状态，如 test ! -x file ，当 file 不具有 x 时， true|
