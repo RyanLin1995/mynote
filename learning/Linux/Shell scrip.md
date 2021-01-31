@@ -135,4 +135,4 @@ PS：
 |-|-|
 |-nt|newer than，判断 file1 是否比 file2 新|
 |-ot|older than，判断 file1 是否比 file2 旧|
-|-ef|判断 file1 与 file2 是否为同一文件，可用在判断 hard link 的判定上。主要意义在两个文件是否均指向同一个 inode 哩！
+|-ef|判断 file1 与 file2 是否为同一文件，可用于判断 hard link ，即看两个文件是否均指向同一个 inode |
