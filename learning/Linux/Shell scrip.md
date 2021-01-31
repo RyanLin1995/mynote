@@ -107,7 +107,7 @@ PS：
 当要检测系统上面某些文件或者是相关的属性时，可以使用 test 。其执行结果并不会显示任何讯息，但可以透过 $? 或 && 及 || 来展示
 用法：`test [参数] 文件名`
 
-**1.关于某个文件名的文件类型判断，例如 test -e filename **
+**1.关于某个文件名的文件类型判断，例如 test -e filename**
 |测试的标志|代表意义|
 |-|-|
 |-e|该文件名是否存在(常用)|
@@ -119,7 +119,7 @@ PS：
 |-p|该文件名是否存在且为一个 FIFO(pipe) 文件|
 |-L|该文件名是否存在且为一个链接文件|
 
-**2. 关于文件的权限检测( root 权限有例外)，例如 test -r filename **
+**2. 关于文件的权限检测( root 权限有例外)，例如 test -r filename**
 |测试的标志|代表意义|
 |-|-|
 |-r|检测该文件名是否存在且具有可读(read)的权限|
@@ -130,14 +130,17 @@ PS：
 |-k|检测该文件名是否存在且具有 Sticky bit 的属性|
 |-s|检测该文件名是否存在且为非空白文件|
 
-**3. 两个文件之间的比较，例如：test file1 -nt file2 **
+PS:
+1. 
+
+**3. 两个文件之间的比较，例如：test file1 -nt file2**
 |测试的标志|代表意义|
 |-|-|
 |-nt|newer than，判断 file1 是否比 file2 新|
 |-ot|older than，判断 file1 是否比 file2 旧|
 |-ef|判断 file1 与 file2 是否为同一文件，可用于判断 hard link ，即看两个文件是否均指向同一个 inode |
 
-**4. 两个整数之间的比较，例如 test n1 -eq n2 **
+**4. 两个整数之间的比较，例如 test n1 -eq n2**
 |测试的标志|代表意义|
 |-|-|
 |-eq|两数值相等(equal)|
@@ -160,4 +163,4 @@ PS：
 |-|-|
 |-a|(and)两状况同时成立。如 test -r file -a -x file，则 file 同时具有 r 与 x 权限时，才为 true|
 |-o|(or)两状况任何一个成立。如 test -r file -o -x file，则 file 具有 r 或 x 权限时，才为 true|
-|!|反相状态，如 test ! -x file ，当 file 不具有 x 时， true|
+|!|反相状态，如 test ! -x file ，当 file 不具有 x 时，才为 true|
