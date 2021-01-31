@@ -100,3 +100,7 @@ PS：
 ` num=${checking:-"10"} # 开始判断有否有输入数值`
 ` echo -e "Starting calcuate pi value. Be patient."`
 ` time echo "scale=${num}; 4*a(1)" | bc -lq`
+
+---
+## Scrip 的判断式
+### 测试
