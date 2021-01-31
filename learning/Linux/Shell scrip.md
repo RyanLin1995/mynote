@@ -168,3 +168,5 @@ PS:
 **一个例子：**
 ![test.png](https://i.loli.net/2021/01/31/DJwIl5aH2C9PirB.png)
 
+### 简化测试命令：[]
+
