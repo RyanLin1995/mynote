@@ -150,9 +150,7 @@ PS：
 **5. 判定字符串的数据，例如 test -z string**
 |测试的标志|代表意义|
 |-|-|
-|test -z string 判定字符串是否为 0 ？若 string 为空字符串，则为 true
-test -n string
-判定字符串是否非为 0 ？若 string 为空字符串，则为 false。
-注： -n 亦可省略
-test str1 == str2 判定 str1 是否等于 str2 ，若相等，则回传 true
-test str1 != str2 判定 str1 是否不等于 str2 ，若相等，则回传 false
+|test -z string|判定字符串长度是否为 0 ，若 string 为空字符串，则为 true|
+|test -n string|-n 可省略。判定字符串长度是否非为 0 ，若 string 为空字符串，则为 false|
+|test str1 == str2|判定 str1 是否等于 str2 ，若相等，则回传 true|
+|test str1 != str2 判定 str1 是否不等于 str2 ，若相等，则回传 false
