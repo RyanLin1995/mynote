@@ -166,3 +166,5 @@ PS:
 |!|反相状态，如 test ! -x file ，当 file 不具有 x 时，才为 true|
 
 **一个例子：**
+![test.png](https://i.loli.net/2021/01/31/DJwIl5aH2C9PirB.png)
+
