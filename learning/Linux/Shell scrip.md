@@ -136,3 +136,5 @@ PS：
 |-nt|newer than，判断 file1 是否比 file2 新|
 |-ot|older than，判断 file1 是否比 file2 旧|
 |-ef|判断 file1 与 file2 是否为同一文件，可用于判断 hard link ，即看两个文件是否均指向同一个 inode |
+
+**4. 关于两个整数之间的判定，例如 test n1 -eq n2**
