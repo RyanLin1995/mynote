@@ -181,3 +181,5 @@ PS:
 **一个例子：**
 
 ![test2.png](https://i.loli.net/2021/01/31/4BKYq1gjIhHxXF8.png)
+
+### Shell Scrip的参数传递
