@@ -182,4 +182,5 @@ PS:
 
 ![test2.png](https://i.loli.net/2021/01/31/4BKYq1gjIhHxXF8.png)
 
-### Shell Scrip的参数传递
+### Shell Scrip的默认参数
+Shell scrip除了可以使用 read 命令传入参数外，其实还有一些默认的参数。
