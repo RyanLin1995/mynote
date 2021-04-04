@@ -195,9 +195,12 @@ Shell scrip除了可以使用 read 命令传入参数外，其实还有一些默
   * $* : 代表 "$1c$2c$3c$4" ，其中 c 为分隔字符，默认为空格键，如 "$1 $2 $3 $4" 
 
 **一个例子：**
+#### 代码：
+####
 ![scrip2.png](https://i.loli.net/2021/04/04/vK3TIgzYM7boBG6.png)
 
 **参数号码偏移(shift):**
 偏移(shift)：指移动变量，代表去掉最前面的几个参数的意思。shift 后面可以接数字
 
 * 例如：
+![scrip3.png](https://i.loli.net/2021/04/04/vaiMgp3XxQqfBre.png)
