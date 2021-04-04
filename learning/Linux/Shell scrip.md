@@ -184,3 +184,7 @@ PS:
 
 ### Shell Scrip的默认参数
 Shell scrip除了可以使用 read 命令传入参数外，其实还有一些默认的参数。
+如下图：
+![scrip1.png](https://i.loli.net/2021/04/04/GfOkglH8ZoIB41C.png)
+
+* 图中的 $0 
