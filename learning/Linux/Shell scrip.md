@@ -196,7 +196,7 @@ Shell scrip除了可以使用 read 命令传入参数外，其实还有一些默
 
 **一个例子：**
 #### 代码：
-####
+#### 结果：
 ![scrip2.png](https://i.loli.net/2021/04/04/vK3TIgzYM7boBG6.png)
 
 **参数号码偏移(shift):**
