@@ -200,7 +200,7 @@ Shell scrip除了可以使用 read 命令传入参数外，其实还有一些默
 #### 结果：
 ![scrip2.png](https://i.loli.net/2021/04/04/vK3TIgzYM7boBG6.png)
 
-**参数号码偏移(shift):**
+### 参数号码偏移(shift):
 偏移(shift)：指移动变量，代表去掉最前面的几个参数的意思。shift 后面可以接数字
 
 * 例如：
@@ -208,3 +208,5 @@ Shell scrip除了可以使用 read 命令传入参数外，其实还有一些默
 ![scrip3-code.png](https://i.loli.net/2021/04/04/Xb4P7gcS3uVULq6.png)
 #### 结果：
 ![scrip3.png](https://i.loli.net/2021/04/04/vaiMgp3XxQqfBre.png)
+
+---
