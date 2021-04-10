@@ -216,3 +216,4 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 
 #### 单层、简单条件判断：
 **样式：**
+![if.png](https://i.loli.net/2021/04/10/hp6eDOnmFQksVBS.png)
