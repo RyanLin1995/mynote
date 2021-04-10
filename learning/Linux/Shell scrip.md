@@ -228,3 +228,6 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 ![if2.png](https://i.loli.net/2021/04/10/o7im5hvgYfGd1tA.png)
 **样式2：**
 ![if3.png](https://i.loli.net/2021/04/10/bN5w9QGcK3T7CWs.png)
+
+**一个例子：**
+![if4.png](https://i.loli.net/2021/04/10/JlcBgoE9Tf84ZxA.png)
