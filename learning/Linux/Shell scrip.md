@@ -210,3 +210,4 @@ Shell scrip除了可以使用 read 命令传入参数外，其实还有一些默
 ![scrip3.png](https://i.loli.net/2021/04/04/vaiMgp3XxQqfBre.png)
 
 ---
+## 条件判断
