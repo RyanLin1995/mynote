@@ -233,4 +233,6 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 ![if4.png](https://i.loli.net/2021/04/10/JlcBgoE9Tf84ZxA.png)
 
 ### 2. case...esac
-如果需要既定变量执行某些代码，
+如果需要既定变量执行某些代码，可以使用case....esac
+
+**样式:**
