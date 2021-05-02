@@ -268,5 +268,4 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 ![while.png](https://i.loli.net/2021/05/02/4Ecp6MLoeG9UkWv.png)
 
 **until样式:**
-当条件成立时，就终止循环， 否则就持续进行
-循环的程序段
+当条件成立时，就终止循环， 否则就持续进行循环的程序段(与 while 相反)
