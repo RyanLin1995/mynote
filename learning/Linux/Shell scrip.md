@@ -255,5 +255,5 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 ![function1.png](https://i.loli.net/2021/05/02/oWcXR9H81AdBqIx.png)
 
 ### Function 内建变量
-
+function 也拥有内建变量，与 shell script 的类似， 函数名称为 $0 ，而后续接的变量也是以 $1, $2... 来取代。但是function 的
  
