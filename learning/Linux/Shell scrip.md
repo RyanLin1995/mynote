@@ -267,6 +267,7 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 当条件成立时，就进行循环，直到条件不成立才停止
 **样式:**
 ![while.png](https://i.loli.net/2021/05/02/4Ecp6MLoeG9UkWv.png)
+**例子:**
 
 
 
