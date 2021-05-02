@@ -240,3 +240,6 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 
 **一个例子:**
 ![case2.png](https://i.loli.net/2021/05/01/h7VKyeo5mNaH9lM.png)
+
+---
+## 函数Function
