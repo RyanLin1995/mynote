@@ -275,3 +275,4 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 **样式:**
 ![until.png](https://i.loli.net/2021/05/02/as2DwoEGWlemNQ9.png)
 **例子:**
+![until1.png](https://i.loli.net/2021/05/02/g3I8yF7oOezBKjs.png)
