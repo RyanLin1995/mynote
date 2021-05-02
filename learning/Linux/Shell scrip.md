@@ -251,6 +251,9 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 因为 shell script 的执行方式是由上而下，由左而右，因此在 shell script 当中的 function 的设定一
 定要在程序的最前面
 
-** 一个例子 **
+**一个例子:**
+![function1.png](https://i.loli.net/2021/05/02/oWcXR9H81AdBqIx.png)
+
+### Function 内建变量
 
  
