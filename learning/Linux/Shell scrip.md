@@ -246,3 +246,7 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 将需要重复使用的代码封装在一起并给予一个名字，这就是函数(Function)
 
 **样式**
+![function.png](https://i.loli.net/2021/05/02/GAMEYcj1KaBr3Dy.png)
+
+PS:
+1. 
