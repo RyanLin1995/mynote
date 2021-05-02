@@ -265,9 +265,11 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 ### 不定循环 while do done 与 until do done
 #### while样式:
 当条件成立时，就进行循环，直到条件不成立才停止
+**样式:**
 ![while.png](https://i.loli.net/2021/05/02/4Ecp6MLoeG9UkWv.png)
 
 
-#### until样式:**
+
+#### until样式:
 当条件成立时，就终止循环， 否则就持续进行循环的程序段(与 while 相反)
 ![until.png](https://i.loli.net/2021/05/02/as2DwoEGWlemNQ9.png)
