@@ -256,4 +256,10 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 
 ### Function 内建变量
 function 也拥有内建变量，与 shell script 的类似， 函数名称为 $0 ，而后续接的变量也是以 $1, $2... 来取代。但是 function 的内建变量仅属于 function，与 shell script 的 $0，$1... 等无关
- 
+
+**代码说明**
+![function3.png](https://i.loli.net/2021/05/02/efhq76w5GVxsbHp.png)
+
+---
+## 循环
+### 
