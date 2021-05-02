@@ -245,7 +245,7 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 ## 函数Function
 将需要重复使用的代码封装在一起并给予一个名字，这就是函数(Function)
 
-**样式**
+**样式:**
 ![function.png](https://i.loli.net/2021/05/02/GAMEYcj1KaBr3Dy.png)
 
 因为 shell script 的执行方式是由上而下，由左而右，因此在 shell script 当中的 function 的设定一
@@ -263,4 +263,7 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 ---
 ## 循环
 ### 不定循环 while do done, until do done
+当条件成立时，就进行循环，直到条件不成立才停止
+
+**样式:**
 
