@@ -262,7 +262,7 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 
 ---
 ## 循环
-### 不定循环 while do done 与 until do done
+### 1. 不定循环 while do done 与 until do done
 #### while样式:
 当条件成立时，就进行循环，直到条件不成立才停止
 **样式:**
@@ -280,3 +280,6 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 #### 案例
 计算 1+2+3+....+100
 ![图像 9.png](https://i.loli.net/2021/05/02/lhu9OxWnkMp6IS2.png)
+
+### 2. 固定循环 for...do...done
+#
