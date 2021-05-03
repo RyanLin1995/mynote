@@ -285,6 +285,8 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 #### 一般固定循环
 **样式:**
 ![for1.png](https://i.loli.net/2021/05/03/kZ3nrJ7MmP2sWTF.png)
-**例子一:**
+**例子一:简单循环**
 ![for2.png](https://i.loli.net/2021/05/03/DVnlQYdwfvNtBW6.png)
 **例子二:**
+![for3.png](https://i.loli.net/2021/05/03/VszOZyM2AnLDdbr.png)
+**例子三:**
