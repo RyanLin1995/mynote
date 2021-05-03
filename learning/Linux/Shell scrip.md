@@ -290,3 +290,7 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 **例子二：数字for循环**
 ![for3.png](https://i.loli.net/2021/05/03/VszOZyM2AnLDdbr.png)
 **例子三：文件检测for循环**
+![for4.png](https://i.loli.net/2021/05/03/aF5DTsQnAIoOZBm.png)
+
+#### 步进循环
+**样式：**
