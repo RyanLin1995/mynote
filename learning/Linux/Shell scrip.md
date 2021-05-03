@@ -284,3 +284,4 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 ### 2. 固定循环 for...do...done
 #### 一般固定循环
 **样式:**
+![for1.png](https://i.loli.net/2021/05/03/kZ3nrJ7MmP2sWTF.png)
