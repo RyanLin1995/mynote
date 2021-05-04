@@ -68,7 +68,7 @@ PS：
 ![](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts/centos7_source.gif)
 
 ---
-# 一些简单的案例
+# 一些简单的Shell Script案例
 ## 1、交互式脚本
 交互式脚本，其变量内容由用户决定
 ![read.png](https://i.loli.net/2021/01/30/1XcgJWmaERSuCfj.png)
@@ -102,8 +102,8 @@ PS：
 ` time echo "scale=${num}; 4*a(1)" | bc -lq`
 
 ---
-## Scrip 的判断式
-### 测试命令：test
+# Scrip 的判断式
+## 测试命令：test
 当要检测系统上面某些文件或者是相关的属性时，可以使用 test 。其执行结果并不会显示任何讯息，但可以透过 $? 或 && 及 || 来展示
 用法：`test [参数] 文件名`
 
@@ -169,7 +169,7 @@ PS:
 
 ![test.png](https://i.loli.net/2021/01/31/DJwIl5aH2C9PirB.png)
 
-### 简化测试命令：[]
+## 简化测试命令：[]
 简化的测试命令[]，其参数与 test 一直，但是必须要注意中括号的两端需要有空格符来分隔。[] 比较常用在条件判断式中
 用法：`[ 参数 文件名 ]`
 
@@ -182,7 +182,7 @@ PS:
 
 ![test2.png](https://i.loli.net/2021/01/31/4BKYq1gjIhHxXF8.png)
 
-### Shell Scrip的默认参数
+## Shell Scrip的默认参数
 Shell scrip除了可以使用 read 命令传入参数外，其实还有一些默认的参数。
 如下图：
 ![scrip1.png](https://i.loli.net/2021/04/04/GfOkglH8ZoIB41C.png)
@@ -195,18 +195,18 @@ Shell scrip除了可以使用 read 命令传入参数外，其实还有一些默
   * $* : 代表 "$1c$2c$3c$4" ，其中 c 为分隔字符，默认为空格键，如 "$1 $2 $3 $4" 
 
 **一个例子：**
-#### 代码：
+### 代码：
 ![scrip2-code.png](https://i.loli.net/2021/04/04/lTviqweSyRMm4oI.png)
-#### 结果：
+### 结果：
 ![scrip2.png](https://i.loli.net/2021/04/04/vK3TIgzYM7boBG6.png)
 
-### 参数号码偏移(shift):
+## 参数号码偏移(shift):
 偏移(shift)：指移动变量，代表去掉最前面的几个参数的意思。shift 后面可以接数字
 
 **例如：**
-##### 代码：
+### 代码：
 ![scrip3-code.png](https://i.loli.net/2021/04/04/Xb4P7gcS3uVULq6.png)
-##### 结果：
+### 结果：
 ![scrip3.png](https://i.loli.net/2021/04/04/vaiMgp3XxQqfBre.png)
 
 ---
