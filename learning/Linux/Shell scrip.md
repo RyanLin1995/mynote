@@ -302,3 +302,6 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 
 **例子：计算1到输入的数字**
 ![for6.png](https://i.loli.net/2021/05/03/EzZ94ukJysfjMwW.png)
+
+---
+## Shell Script 追踪和Debug
