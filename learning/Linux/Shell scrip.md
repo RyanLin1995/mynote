@@ -308,4 +308,8 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 scripts 在执行之前，可以使用 `sh` 命令检查是否有问题
 基本用法: `sh [-nvx] script name`
 
-|选项与参数||
+|选项与参数|说明|
+|-|-|
+|-n|不执行 script，仅查询语法问题|
+|-v|执行 sccript 前，先将 scripts 的内容输出到屏幕上|
+|-x|将使用到的 script 内容显示到屏幕上|
