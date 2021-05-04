@@ -242,7 +242,7 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 ![case2.png](https://i.loli.net/2021/05/01/h7VKyeo5mNaH9lM.png)
 
 ---
-## 函数Function
+# 函数Function
 将需要重复使用的代码封装在一起并给予一个名字，这就是函数(Function)
 
 **样式:**
@@ -254,35 +254,35 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 **一个例子:**
 ![function1.png](https://i.loli.net/2021/05/02/oWcXR9H81AdBqIx.png)
 
-### Function 内建变量
+## Function 内建变量
 function 也拥有内建变量，与 shell script 的类似， 函数名称为 $0 ，而后续接的变量也是以 $1, $2... 来取代。但是 function 的内建变量仅属于 function，与 shell script 的 $0，$1... 等无关
 
 **代码说明**
 ![function3.png](https://i.loli.net/2021/05/02/efhq76w5GVxsbHp.png)
 
 ---
-## 循环
-### 1. 不定循环 while do done 与 until do done
-#### while样式:
+# 循环
+## 1. 不定循环 while do done 与 until do done
+### while样式:
 当条件成立时，就进行循环，直到条件不成立才停止
 **样式:**
 ![while.png](https://i.loli.net/2021/05/02/4Ecp6MLoeG9UkWv.png)
 **例子:**
 ![while1.png](https://i.loli.net/2021/05/02/GL9y7xXamUVNckw.png)
 
-#### until样式:
+### until样式:
 当条件成立时，就终止循环， 否则就持续进行循环的程序段(与 while 相反)
 **样式:**
 ![until.png](https://i.loli.net/2021/05/02/as2DwoEGWlemNQ9.png)
 **例子:**
 ![until1.png](https://i.loli.net/2021/05/02/g3I8yF7oOezBKjs.png)
 
-#### 案例
+### 案例
 计算 1+2+3+....+100
 ![图像 9.png](https://i.loli.net/2021/05/02/lhu9OxWnkMp6IS2.png)
 
-### 2. 固定循环 for...do...done
-#### 一般固定循环
+## 2. 固定循环 for...do...done
+### 一般固定循环
 **样式:**
 ![for1.png](https://i.loli.net/2021/05/03/kZ3nrJ7MmP2sWTF.png)
 **例子一：文件读取for循环**
@@ -292,7 +292,7 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 **例子三：文件检测for循环**
 ![for4.png](https://i.loli.net/2021/05/03/aF5DTsQnAIoOZBm.png)
 
-#### 步进循环
+### 步进循环
 **样式：**
 ![for5.png](https://i.loli.net/2021/05/03/eXxnMhbgNdmrSfA.png)
 
@@ -306,4 +306,6 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 ---
 # Shell Script 追踪和Debug
 scripts 在执行之前，可以使用 `sh` 命令检查是否有问题
-基本用法
+基本用法: `sh [-nvx] script name`
+
+|选项与参数||
