@@ -305,3 +305,6 @@ function 也拥有内建变量，与 shell script 的类似， 函数名称为 $
 
 ---
 ## Shell Script 追踪和Debug
+scripts 在执行之前，最怕的就是出现语法错误的问题了！那么我们如何 debug 呢？有没有办法不需
+要透过直接执行该 scripts 就可以来判断是否有问题呢？呵呵！当然是有的！我们就直接以 bash 的
+相关参数来进行判断吧！
