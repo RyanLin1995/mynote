@@ -68,7 +68,7 @@ PS：
 ![](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts/centos7_source.gif)
 
 ---
-# 一些简单的Shell Script案例
+# 一些简单的 Shell Script 案例
 ## 1、交互式脚本
 交互式脚本，其变量内容由用户决定
 ![read.png](https://i.loli.net/2021/01/30/1XcgJWmaERSuCfj.png)
@@ -195,26 +195,26 @@ Shell scrip除了可以使用 read 命令传入参数外，其实还有一些默
   * $* : 代表 "$1c$2c$3c$4" ，其中 c 为分隔字符，默认为空格键，如 "$1 $2 $3 $4" 
 
 **一个例子：**
-### 代码：
+**代码：**
 ![scrip2-code.png](https://i.loli.net/2021/04/04/lTviqweSyRMm4oI.png)
-### 结果：
+**结果：**
 ![scrip2.png](https://i.loli.net/2021/04/04/vK3TIgzYM7boBG6.png)
 
 ## 参数号码偏移(shift):
 偏移(shift)：指移动变量，代表去掉最前面的几个参数的意思。shift 后面可以接数字
 
 **例如：**
-### 代码：
+**代码：**
 ![scrip3-code.png](https://i.loli.net/2021/04/04/Xb4P7gcS3uVULq6.png)
-### 结果：
+**结果：**
 ![scrip3.png](https://i.loli.net/2021/04/04/vaiMgp3XxQqfBre.png)
 
 ---
-## 条件判断
-### 1. if...then...
+# 条件判断
+## 1. if...then...
 if .... then 是最常见的条件判断式。即当符合某个条判的时候，就进行某项工作。
 
-#### 单层、简单条件判断：
+### 单层、简单条件判断：
 **样式：**
 ![if.png](https://i.loli.net/2021/04/10/hp6eDOnmFQksVBS.png)
 
@@ -223,7 +223,7 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 **一个例子：**
 ![if1.png](https://i.loli.net/2021/04/10/kc6XZ5dgzi37KEh.png)
 
-#### 多层、复杂条件判断
+### 多层、复杂条件判断
 **样式1：**
 ![if2.png](https://i.loli.net/2021/04/10/o7im5hvgYfGd1tA.png)
 **样式2：**
@@ -232,7 +232,7 @@ if .... then 是最常见的条件判断式。即当符合某个条判的时候�
 **一个例子：**
 ![if4.png](https://i.loli.net/2021/04/10/JlcBgoE9Tf84ZxA.png)
 
-### 2. case...esac
+## 2. case...esac
 如果需要既定变量执行某些代码，可以使用case....esac
 
 **样式:**
