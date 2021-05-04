@@ -79,7 +79,7 @@ PS：
 
 ## 3、计算式脚本
 * **整数计算**
-脚本中可以使用 declare -i total=${firstnu}*${secnu} 或 var=$((运算内容)) 进行整数的计算(+, -, *, /, %)，其中 % 为取余
+脚本中可以使用 `declare -i total=${firstnu}*${secnu}` 或 `var=$((运算内容))` 进行整数的计算(+, -, *, /, %)，其中 % 为取余
 ![cal.png](https://i.loli.net/2021/01/30/1IVsc3JhPvBry4G.png)
 
 * **小数运算**
