@@ -10,4 +10,4 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 3. 如果一切都 OK ，就进入 Shell 
 
 ### /etc/passwd 文件结构
-/etc/passwd
+`/etc/passwd`中的文件结构是每一行都代表一个账号，有几行就代表有几个账号在系统中
