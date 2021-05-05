@@ -64,7 +64,7 @@ PS:
 2. gzip/bzip2/xz 三个压缩命令参数基本通用
 
 ---
-# 2. Linux 打包
+# Linux 打包
 在 Linux 中对于目录的压缩，是指对这个目录中所有的文件分别进行压缩，而不是像 Windows 那样将多个数据压缩成一个文件。因此如果想要在 Linux 中把多个数据压缩成一个文件，需要用到 `tar` 这个打包功能
 
 ## tar 基本命令
@@ -176,7 +176,7 @@ PS：
 5. 对 /boot 进行增量备份: `xfsdump -l 1 -M boot_1 -L boot_1 -f /srv/boot.dump1 /boot`
 6. 通过 `ll -h /srv/boot*` 发现新增了一个10M的文件，然后通过 `xfsdump -I` 发现 level1 信息的存在，增量备份成功
 
-### xfs 文件系统备份还原: xfsrestore
+## xfs 文件系统备份还原: xfsrestore
 查看已有备份: `xfsrestore -I`
 单一文件复原: `xfsrestore [-f 备份文件] [-L S-label] [-s] 待复原目录`
 累积备份文件复原: `xfsrestore [-f 备份文件] -r 待复原目录`
@@ -191,7 +191,7 @@ PS：
 |-r|如果以文件来存储备份数据，可以不需要这个参数。但是如果是一个磁盘内有多个文件，则需要这个参数|
 |-i|进入交互模式，一般用不到|
 
-### 一些案例:
+## 一些案例:
 1. 复原已有的 /boot 备份: 
 * `xfsrestore -f /srv/boot.dump -L boot_all /boot` 或 `xfsrestore -f /srv/boot.dump /boot`
 
@@ -213,8 +213,8 @@ PS：
 * 交互模式详解: ![tempsnip6.png](https://i.loli.net/2020/10/31/1nvSLmp6QqGyEZO.png)
 
 ---
-## 4. 光盘制作工具
-### 建立镜像文件: mkisofs
+# 光盘制作工具
+## 建立镜像文件: mkisofs
 用法: `mkisofs [-o 镜像文件名] [-Jrv] [-V vol] [-m file] 需要备份的文件 -graft-point isodir=systemdir`
 
 |选项与参数|说明|
@@ -232,7 +232,7 @@ PS:
 2. 使用 -graft-point 参数时，等号左边是镜像文件内的目录，等号右边是实际目录
 3. 想 ISO 文件根据目录进行刻录而不是直接把所有文件放根目录，除了用 -graft-point 外。还可以先把需要刻录的目录放在一个新的目录，然后直接刻录该新的目录
 
-### 一些案例:
+## 一些案例:
 1. 不使用 -graft-point 刻录 /root /home /etc:
 * `mkisofs -o /tmp/system.img -r -v /root /home /etc` 会发现出现了文件名冲突的错误，而且 /root /home /etc 文件均在 ISO 根目录，没有根据文件夹分类
 
@@ -240,8 +240,8 @@ PS:
 * `mkisofs -o /tmp/system.img -r -v -graft-point /root=/root /home=/home /etc=/etc`
 
 ---
-## 5. 其他常见的压缩与备份工具
-### 直接读取磁盘装置内容的工具: DD
+# 其他常见的压缩与备份工具
+## 直接读取磁盘装置内容的工具: DD
 用法: `dd of="input_file" of="outputfile" bs="block_size" count="number"`
 
 |选项与参数|说明|
@@ -256,7 +256,7 @@ PS:
 2. dd 进行备份时，是是一个一个扇区去读/写的，因此会把整个 if 信息抓下来输出到 of (包括superblock, boot sector, meta data 等等)
 3. 如上所述，可以利用 dd 进行整个磁盘的复制，复制完成后，需要利用 `xfs_repair -L of` 修复一下。如果需要用到别的 UUID，需要重新生成，最后使用 `xfs_growfs of` 放大空间
 
-### 可以备份任何东西的备份工具: cpio
+## 可以备份任何东西的备份工具: cpio
 备份用法: `cpio -ovcB > [file|device]`
 还原用法: `cpio -ivcdu < [file|device]`
 查看用法: `cpio -ivct < [file|device]`
@@ -282,7 +282,7 @@ PS:
 1. cpio 命令不会自动寻找备份文件，因此需要配合 find 等命令进行备份
 2. 如上所述，请在需要备份的文件/目录下使用 find 命令而不是通过绝对/相对路径搜索文件/目录。因为 cpio 不会识别路径，如果使用了绝对路径，那么还原时会直接覆盖掉绝对路径的文件
 
-### 一个案例: 通过 cpio 备份/还原 /boot 文件到 /tmp/boot.cpio
+## 一个案例: 通过 cpio 备份/还原 /boot 文件到 /tmp/boot.cpio
 1. 先切换工作目录到 / : `cd /`
 2. 找出 boot 文件夹并通过 cpio 备份到 /tmp/boot.cpio : `find boot | cpio -ocvB > /tmp/boot.cpio`
 3. 还原 boot 文件到 /root : `cd root && cpio -id < /tmp/boot.cpio`
