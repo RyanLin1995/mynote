@@ -1,4 +1,4 @@
-## 1. Linux 压缩
+# Linux 压缩
 就是压缩文件/目录的容量，方便传输。压缩的方法有很多，常见的是把 bit 压缩(如一个文本存储了数字1，其大小为 1 byte，即 8 bit，二进制写作 00000001。那么压缩时就把前面7个0压缩掉) 跟 统计重复压缩(如一个文本存储了数字1，其大小为 1 byte，即 8 bit，二进制写作 00000001。那么压缩时就把前面的 0000000 记录为 7个0)。目前互联网上很多网页都是采用了压缩后再传输的方法，提高了数据传输量。
 
 Linux 中存在多种压缩命令，不同的命令使用的压缩技术不同，因此 Linux 通过扩展名的方式来记录压缩文件，使用户知道需要处理该压缩文件时用到的压缩命令。但是该扩展名仅仅用于提示作用， Linux 的扩展名还是没有特别作用
@@ -16,7 +16,7 @@ Linux 常见压缩扩展名:
 |*.tar.bz2|tar 程序打包的数据，经过了 bzip2 的压缩|
 |*.tar.xz|tar 程序打包的数据，经过了 xz 的压缩|
 
-### gzip 压缩命令和 zcat/zmore/zless/zgrep
+## gzip 压缩命令和 zcat/zmore/zless/zgrep
 用法: 'gzip [-cdtv#] 文件名'
 
 |选项与参数|说明|
@@ -35,7 +35,7 @@ PS:
 5. zcat/zmore/zless/zgrep 可用于不解压情况下查看的 gzip 文本压缩文件
 6. 如果还存在 .Z 文件，可以通过 `znew 文件名` 转为 gzip 文件
 
-### bzip2 压缩命令与 bzcat/bzmore/bzless/bzgrep
+## bzip2 压缩命令与 bzcat/bzmore/bzless/bzgrep
 用法: `bzip2 [-cdkvz#] 文件名`
 
 |选项与参数|说明|
@@ -47,7 +47,7 @@ PS:
 |-z|压缩文件(默认值，可不添加该参数)|
 |-#|压缩的等级，-1最快但是压缩比最差，-9最慢但是压缩比最好。默认为-6|
 
-### xz 压缩命令与 xzcat/xzmore/xzless/xzgrep
+## xz 压缩命令与 xzcat/xzmore/xzless/xzgrep
 用法: `xz [-cdklt#] 文件名`
 
 |选项与参数|说明|
@@ -64,10 +64,10 @@ PS:
 2. gzip/bzip2/xz 三个压缩命令参数基本通用
 
 ---
-## 2. Linux 打包
+# 2. Linux 打包
 在 Linux 中对于目录的压缩，是指对这个目录中所有的文件分别进行压缩，而不是像 Windows 那样将多个数据压缩成一个文件。因此如果想要在 Linux 中把多个数据压缩成一个文件，需要用到 `tar` 这个打包功能
 
-### tar 基本命令
+## tar 基本命令
 压缩: `tar [-z|-j|-J][cv] [-f 待建立的文件名] filename`
 查询: `tar [-z|-j|-J][tv] [-f 现有的 tar 文件名]`
 解压缩: `tar [-z|-j|-J][xv] [-f 现有的 tar 文件名] [-C 目录]`
@@ -94,7 +94,7 @@ PS:
 1. 如果文件仅仅是打包而没有压缩的话，那么文件称为 tarfile；如果文件打包时也压缩的话，那么文件称为tarball
 2. 把文件备份到磁带机(/dev/st0)时，因为磁带是一次性读取/写入的装置，不能使用 `cp` 而要使用 `tar`，例如: `tar -cvf /dev/st0 /home /etc /root`
 
-#### 一些例子:
+### 一些例子:
 1. 压缩
 * 备份 /etc，并保留权限与属性，保存到 /root
 * * 利用 gzip 备份: `tar -zpcvf /root/etc.tar.gz /etc`
@@ -139,8 +139,8 @@ PS:
 * 将 /etc 整个目录一边打包一边在 /tmp 下解开: `tar -cvf - /etc | tar -xvf - /tmp`
 
 ---
-## 3. 备份
-### XFS 文件系统备份: xfsdump
+# 备份
+## XFS 文件系统备份: xfsdump
 xfsdump 是用于 xfs 文件系统备份的命令，其备份类型可分为完整备份 (full backup) 和增量备份 (incremental backup)。完整备份即把整个文件系统完整的备份一次，而增量备份指下一次备份时，只会备份与上一次备份有差异的文件。xfsdump 把完整备份定义为 level0，往后每次备份，level数字+1。所有的 level 文件可在 /var/lib/xfsdump/inventory 中找到。参考如下图:
 
 ![centos7_dump-1.gif](https://i.loli.net/2020/10/25/6MZFbjapJGEq8Uz.gif)
