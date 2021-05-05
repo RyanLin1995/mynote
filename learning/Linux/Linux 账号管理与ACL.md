@@ -3,4 +3,4 @@
 
 每个登入 Linux 的使用者至少都会取得两个 ID ，一个是使用者 ID (User ID ，简称UID)、一个是群组 ID (Group ID ，简称 GID)。文件通过 UID 与 GID 判别它的拥有者与群组，当需要显示文件属性的需求时，系统会依据 /etc/passwd 与 /etc/group 的内容， 找到 UID / GID 对应的账号与组名再显示出来。
 
-## 
+## 使用者账号()
