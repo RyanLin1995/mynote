@@ -10,3 +10,4 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 3. 如果一切都 OK ，就进入 Shell 
 
 ### /etc/passwd 文件结构
+/etc/passwd
