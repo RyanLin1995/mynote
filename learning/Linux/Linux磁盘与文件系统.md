@@ -215,7 +215,7 @@ File Size, Block Maps|16GiB|256GiB|4TiB|256TiB|
 PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 
 ---
-## 5. 文件系统与内存
+# 5. 文件系统与内存
 数据都要先加载到内存，然后 cpu 再对其进行处理。为了解决处理中频繁读取内存和硬盘，Linux 使用异步处理(asynchronously)的方式。即：
 
 当系统加载一个文件到内存后，如果该文件没有被更动过，则在内存区段的文件数据会被设定为干净(clean)的。但如果内存中的文件数据被更改过了(例如你用 nano 去编辑过这个文件)，此时该内存中的数据会被设定为脏的(Dirty)。此时所有的动作都还在内存中执行，并没有写入到磁盘中！系统会不定时的将内存中设定为【Dirty】的数据写回磁盘，以保持磁盘与内存数据的一致性。你也可以用 `sync` 指令来手动强迫写入磁盘。
@@ -228,7 +228,7 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 * 但若不正常关机(如跳电、当机或其他不明原因)，由于数据尚未回写到磁盘内，因此重新启动后可能会花很多时间在进行磁盘检验。甚至可能导致文件系统的损毁(非磁盘损毁)
 
 ---
-## 6. 挂载点的意义(mount point)
+# 6. 挂载点的意义(mount point)
 每个 filesystem 有独立的 inode/block/superblock 信息。磁盘格式化并创建 filesystem 后，需要链接到目录树才能被访问。将 filesystem 跟目录树链接起来的动作称为挂载(mount)。挂载点一定是目录，该目录为进入该 filesystem 的入口。
 
 一个栗子: 
@@ -240,7 +240,7 @@ PS: 查看 Journal 信息: `dumpe2fs | grep Journal` 中关于 Journal 字样的
 答: 从文件系统的观点来看，同一个 filesystem 的某个 inode 只会对应到一个文件内容而已(因为一个文件占用一个 inode 之故)，因为三个文件都在同一个 filesystem 且 inode 均为128，因此三者指向同一个 inode 号码，获取同样的内容(即指向 `/`)
 
 ---
-## 7. Linux 支持的其他文件系统
+# 7. Linux 支持的其他文件系统
 * 传统文件系统：ext2 / minix / MS-DOS / FAT (用 vfat 模块) / iso9660 (光盘)等等；
 * 日志式文件系统： ext3 /ext4 / ReiserFS / Windows' NTFS / IBM's JFS / SGI's XFS / ZFS
 * 网络文件系统： NFS / SMBFS
@@ -250,14 +250,14 @@ PS:
 2. 查看加载到内存中的 filesystem ,可以用 `cat /proc/filesystems`
 
 ---
-## 8. VFS (Virtual Filesystem Switch or Virtual file system)
+# 8. VFS (Virtual Filesystem Switch or Virtual file system)
 Linux 透过 VFS 管理所有 filesystem，是内核中的软件层。VFS 的目的是允许客户端应用程序以统一的方式访问不同类型的具体文件系统。如无缝地访问本地磁盘和网络磁盘。
 
 VFS 简略图：
 ![centos7_vfs.gif](https://i.loli.net/2020/09/20/xQZpS8kCnDfal4j.gif)
 
 ---
-## 9. XFS Filesystem 简介
+# 9. XFS Filesystem 简介
 从 Centos7 开始，预设的文件系统有 Ext 变为了 XFS， 主要是为了应对大数据的产生。EXT 家族对于文件格式化处理，是先固定好inode/block/metadata 的，这种处理在对于大容量磁盘(TB级及以上)不友好。于是 Centos7 使用了对大容量磁盘更友好的 xfs filesystem
 
 XFS filesystem 也是日志式文件系统，主要分为三个部分:
@@ -274,8 +274,8 @@ XFS filesystem 也是日志式文件系统，主要分为三个部分:
 当有文件要被建立时，xfs 会在这个区段里面找一个到数个的 extent 区块，将文件放置在这个区块内，等到分配完毕后，再写入到 data section 的 inode 与 block 去。这个 extent 区块的大小得要在格式化的时候就先指定，最小值是4K 最大可到1G。一般非磁盘阵列的磁盘默认为64K容量，而具有类似磁盘阵列的 stripe 情况下，则建议 extent 设定为与 stripe 一样大较佳。这个 extent 最好不要乱动，因为可能会影响到实体磁盘的性能。
 
 ---
-## 10. 查看 XFS filesystem 命令
-### xfs_info
+# 10. 查看 XFS filesystem 命令
+## xfs_info
 用法: `xfs_info 挂载点|装置文件名`
 |信息|说明|
 |-|-|
@@ -290,8 +290,8 @@ XFS filesystem 也是日志式文件系统，主要分为三个部分:
 |extsz|指 realtime section 里的 extent 容量|
 
 ---
-## 11. 文件系统的简单操作
-### 列出文件系统的整体磁盘使用量: df
+# 11. 文件系统的简单操作
+## 列出文件系统的整体磁盘使用量: df
 用法: `df [-ahHikmT] [目录或文件名]`
 
 |选项与参数|说明|
@@ -310,7 +310,7 @@ PS:
 3. 挂载点 /dev/shm 目录，其实是用内存虚拟出来的磁盘空间，通常是总物理内存的一半。由于是内存虚拟出来的磁盘，在这个目录下建立任何数据文件时，访问的速度都非常快，但是建立的东西下次开机时就会消失
 4. 当使用 `df -h 文件名` 时， 会显示该文件所在的 partition 信息
 
-### 评估文件系统的磁盘使用量(常用于推断目录所占容量): du
+## 评估文件系统的磁盘使用量(常用于推断目录所占容量): du
 用法: `du -[ahkmsS] 文件名或目录名称`
 
 |选项与参数|说明|

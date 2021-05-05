@@ -1,4 +1,4 @@
-# 什么是 Shell
+# 1. 什么是 Shell
 管理整个计算机硬件的其实是操作系统的核心(kernel)，但是核心是需要被保护的，因此我们一般透过 shell 来跟核心沟通，即透过 Shell 将我们输入的指令与 Kernel 沟通，好让 Kernel 可以控制硬件。
 
 Shell 是可以与操作系统核心沟通的一个应用程序，即壳程序。壳程序其实是操作系统提供给用户的一个接口，可以让用户通过这个壳程序把指令传给操作系统核心或其他应用程序
@@ -9,7 +9,7 @@ Shell 是可以与操作系统核心沟通的一个应用程序，即壳程序�
 在 Linux 中，可以透过 `cat /etc/shells` 查看支持的 Shell
 
 ---
-# Bash
+# 2. Bash
 ## 什么是 Bash
 Bash(Bourne Again SHell): 即 /bin/bash, Linux 预设的 Shell， 兼容 sh(Bourne SHell)。
 主要优点有:
@@ -165,7 +165,7 @@ Bash 还可以设置登陆显示信息，即使用者登录后会显示(例如�
 具体命令: 在 /etc/motd 文件增加 Hello? 字符
 
 ---
-# Bash 环境配置文件
+# 3. Bash 环境配置文件
 要想设置自己的 Bash，例如创建别名命令，自定义变量等，光在 Bash 中输出后，在注销 Bash 就消失。想要永久生效，需要将其写入 Bash 的环境变量配置文件中。
 
 Linux 中的 shell 分为 login shell 与 non-login shell
