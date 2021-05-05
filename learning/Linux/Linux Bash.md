@@ -128,7 +128,7 @@ PS:
   2. 当前用户永久生效: 在 `~/.bash_profile` 最后一行添加 export HISTTIMEFORMAT="%F %T \`whoami\` " 然后 `source ~/.bash_profile`
   3. 全局用户永久生效: 在 `/etc/profile` 最后一行添加 export HISTTIMEFORMAT="%F %T \`whoami\` " 然后 `source /etc/profile`
 
-### 命令搜寻顺序
+## 命令搜寻顺序
 一般情况下可以通过 `type -a 命令` 来显示一个命令的搜寻顺序
 
 命令搜寻顺序如下:
@@ -137,7 +137,7 @@ PS:
 3. 由 bash 内建的(builtin)命令来执行；
 4. 透过 $PATH 这个变量的顺序搜寻到的第一个命令来执行。
 
-### Bash 进站与欢迎信息
+## Bash 进站与欢迎信息
 想修改 tty1-tty7 的登录欢迎信息，可以修改 /etc/issue 文件
 
 |issue代码|意义|
@@ -165,7 +165,7 @@ Bash 还可以设置登陆显示信息，即使用者登录后会显示(例如�
 具体命令: 在 /etc/motd 文件增加 Hello? 字符
 
 ---
-## Bash 环境配置文件
+# Bash 环境配置文件
 要想设置自己的 Bash，例如创建别名命令，自定义变量等，光在 Bash 中输出后，在注销 Bash 就消失。想要永久生效，需要将其写入 Bash 的环境变量配置文件中。
 
 Linux 中的 shell 分为 login shell 与 non-login shell
@@ -178,8 +178,8 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 
 实线的的方向是主线流程，虚线的方向则是被呼叫的配置文件
 
-### login shell 会读取的配置文件
-#### 1. 系统整体设置 /etc/profile
+## login shell 会读取的配置文件
+### 1. 系统整体设置 /etc/profile
 包括以下变量:
 * PATH: 会依据 UID 决定 PATH 变量要不要含有 sbin 的系统指令目录
 * MAIL: 依据账号设定好使用者的 mailbox 到 /var/spool/mail/账号名
@@ -189,16 +189,16 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 * umask: 包括 root 默认为 022 而一般用户为 002 等
 
 **同时 /etc/profile 还会读入以下外部程序:**
-##### /etc/profile.d/*.sh
+#### /etc/profile.d/*.sh
 只要在 /etc/profile.d/ 这个目录内，扩展名为 .sh 且使用者能够具有 r 权限的，那么该文件就会被 /etc/profile 呼叫进来。目录底下的文件规范了 bash 操作接口的颜色、语系、ll 与 ls 指令的命令别名、vi 的命令别名、which的命令别名等等。如果需要帮所有使用者设定一些共享的命令别名时，可以在这个目录底下自行建立扩展名为 .sh 的文件，并将所需要的数据写入
 
-##### /etc/locale.conf
+#### /etc/locale.conf
 由 /etc/profile.d/lang.sh 呼叫进来的,也是决定 bash 预设使用何种语系的重要配置文件
 
-##### /usr/share/bash-completion/completions/*
+#### /usr/share/bash-completion/completions/*
 由/etc/profile.d/bash_completion.sh 这个载入，关系到<kbd>tab</kbd>的自动补全功能
 
-#### 2. 个人配置文件
+### 2. 个人配置文件
 个人配置文件按 bash 读取顺序分有:
 1. ~/.bash_profile
 2. ~/.bash_login
@@ -206,7 +206,7 @@ Linux 中的 shell 分为 login shell 与 non-login shell
 
 Bash 的 login shell 只要读取到其中一个文件，就不会再读取其他文件。如果想修改个人的 Bash login shell，可以修改以上三个文件之一
 
-### non-login shell 会读取的配置文件:  ~/.bashrc
+## non-login shell 会读取的配置文件:  ~/.bashrc
 
 non-login shell 这种非登入情况取得 bash 操作接口的环境配置文件是 ~/.bashrc 。在 ~/.bashrc 中还会调用  /etc/bashrc 帮 bash 定义出以下数据:
 
@@ -218,26 +218,26 @@ PS:
 1. /etc/bash 为 Red Hat 系统独有文件
 2. 万一删除了 ~/.bashrc ，可以复制 /etc/skel/.bashrc 到家目录进行重新设置
 
-### 其他相关配置文件
-#### /etc/man_db.conf
+## 其他相关配置文件
+### /etc/man_db.conf
 该文件的规范了使用 man 命令时，man page 的路径。一般用户 tarball 安装软件时，把存放于 /usr/local/软件名称/man 的man page 手动添加到 /etc/man_db.conf 里
 
-#### ~/.bash_history
+### ~/.bash_history
 历史命令的保存位置，上限与 HISTFILESIZE 有关。每次登入 bash 后，bash 会自动把所有历史命令加载到内存中
 
-#### ~/.bash_logout
+### ~/.bash_logout
 该文件记录了注销 bash 后，系统再帮我做完什么动作后才离开
 
-### 读入配置文件: source(.)
+## 读入配置文件: source(.)
 一般情况下，修改了配置文件(系统的或个人的)都需要注销再登录才能生效。也可以通过`source`命令直接读取
 
 用法: `source 配置文件名` 或 `. 配置文件名`
 
 ---
-## 终端机环境设置
+# 终端机环境设置
 影响 tty1~tty7 环境设置的命令有 stty 跟 set，其中 stty 影响按键设置(如 <kbd>ctrl</kbd> + <kbd>c</kbd> 终止程序)；set 影响 终端机的设定值。一般情况下，Linux Distributions 已经设置好所有的环境，不建议再进行修改
 
-### 查看/修改终端按键: stty
+## 查看/修改终端按键: stty
 查看用法: `stty -a`
 修改用法: `stty 内容 按键`
 
@@ -261,7 +261,7 @@ PS:
 3. ^? 表示退格键(backspace)
 4. 修改按键例子: `stty quit ^A` (从<kbd>ctrl</kbd> + <kbd>c</kbd> 退出变为 <kbd>ctrl</kbd> + <kbd>a</kbd>退出) 
 
-### 设置终端机设定值: set
+## 设置终端机设定值: set
 set 命令除了可以显示变量设置外，还可以设定终端的输入/输出环境
 用法: `set [-uvCHhmBx]`
 
@@ -282,7 +282,7 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
 2. 设置/取消使用未定义变量时，则显示错误讯息: `set -/+u`
 
 ---
-## Bash 中的通配符(wildcard)与特殊符号
+# Bash 中的通配符(wildcard)与特殊符号
 **!!! Bash 中的通配符跟正则表达式是没有关系的**
 |符号|意义|
 |-|-|
@@ -302,7 +302,7 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
 4. 找出 /etc 下文件名开头不是小写字母的文件: `ll -d /etc/[^a-z]*`
 
 ---
-## Bash 中的其他特殊符号
+# Bash 中的其他特殊符号
 |符号|意义|
 |-|-|
 |#|注释，常用于 script 当中，在后的数据均不被执行|
@@ -323,7 +323,7 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
 |{ }|在中间为命令区块的组合|
 
 ---
-## Bash 命令执行的判断: ;，&&，||
+# Bash 命令执行的判断: ;，&&，||
 |符号|说明|
 |-|-|
 |cmd;cmd|同时执行多个命令|
@@ -347,7 +347,7 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
    * 上述案例中，因为要进行多次判断，必须使用 `cmd1 && cmd2 || cmd3` 的格式，不能调换 && 跟 || 的位置，不然永远会执行 cmd2 跟 cmd3
 
 ---
-## 管线命令(管道符): |
+# 管线命令(管道符): |
 如果需要把前一个命令得到的结果再处理，可以使用管道符 | 。
 
 用法：`com1 | com2 | com3`
@@ -356,10 +356,10 @@ set 命令除了可以显示变量设置外，还可以设定终端的输入/输
 * 对于管道符 | 后一个命令，需要是可以接收 standard input 的数据的命令(less,more,tail等)
 
 ---
-## 管道命令(即用于处理数据来自stdin的命令)
-### 截取命令: cut
+# 管道命令(即用于处理数据来自stdin的命令)
+## 截取命令: cut
 截取命令就是将一段数据经过分析后，取出所想要的。或者是经由分析关键词，取得所想要的那一行。一般截取命令是以行为单位
-#### 分解一行数据: cut
+### 分解一行数据: cut
 有特定分隔符的用法: `cut -d '分隔符' -f 段数`
 有整齐排列的用法: `cut -c 字符区间`
 
@@ -381,8 +381,8 @@ PS:
 3. 只取 last 的第一段结果
 ![图像 4.png](https://i.loli.net/2020/12/28/LcKP9hvmgNpQ165.png)
 
-### 排序命令：sort，wc，uniq
-#### 对数据进行排序：sort
+## 排序命令：sort，wc，uniq
+### 对数据进行排序：sort
 用法：`sort [-fbMnrtuk] file or stdin`
 
 |选项与参数|说明|
@@ -403,7 +403,7 @@ PS:
 2. 以 /etc/passwd 的数据的第三个区间进行排序
 ![图像 3.png](https://i.loli.net/2020/12/29/Tcr95aKvkSGLxVo.png)
 
-#### 对数据去重: uniq
+### 对数据去重: uniq
 用法: `uniq [-ic]`
 
 |选项与参数|说明|
@@ -419,7 +419,7 @@ PS：
 
 2. 计数 last 中的用户登录总次数：`last | cut -d " " -f 1 | sort | uniq -c`
 
-#### 统计信息的整体数据(行，英文字数，字符串)：wc
+### 统计信息的整体数据(行，英文字数，字符串)：wc
 用法：`wc -[lwm]`
 
 |选项与参数|说明|
