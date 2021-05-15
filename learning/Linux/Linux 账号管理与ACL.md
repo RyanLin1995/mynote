@@ -31,11 +31,9 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 ### /etc/shadow 文件结构
 `/etc/shadow` 文件结构跟 `/etc/passwd` 文件结构类似。每一行对应一个账号
 
-![shadow.png](https://i.loli.net/2021/05/15/TtOZ4NyqVhReXwA.png)
 
-
-问：为什么要有 `/etc/shadow` 文件？
+* 问：为什么要有 `/etc/shadow` 文件？
 答：早期的密码放在 `/etc/passwd` 的第二个字段上，密码也有加密过。程序运行需要到
  `/etc/passwd` 读取账号的权限。因此 `/etc/passwd` 的权限需设定为 `-rw-r--r--`。
-但是加密过的密码够透过暴力破解法破解出来。因为这样的关系，所以后来发展出将密码移动到 /etc/shadow 这个文件分隔开来的技术， 而且还加
-入很多的密码限制参数在 /etc/shadow 里头
+但是加密过的密码够透过暴力破解法破解出来。因为这样，后来发展出将密码移动到 /etc/shadow 这个文件分隔开来的技术， 而且只有 root 有权限访问 `/etc/shadow` 。
+
