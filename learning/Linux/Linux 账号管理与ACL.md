@@ -10,7 +10,8 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 3. 如果一切都 OK ，就进入 Shell 
 
 ### /etc/passwd 文件结构
-`/etc/passwd`中的文件结构是每一行都代表一个账号，有几行就代表有几个账号在系统中
+`/etc/passwd`中的文件结构是每一行都代表一个账号，有几行就代表有几个账号在系统中。
+文件以 : 号作为分隔，每一个 : 是一个字段。
 
 ![passwd.png](https://i.loli.net/2021/05/05/sdBtir6CHN41XAO.png)
 
@@ -33,7 +34,9 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 
 
 * 问：为什么要有 `/etc/shadow` 文件？
-答：早期的密码放在 `/etc/passwd` 的第二个字段上，密码也有加密过。程序运行需要到
+* 答：早期的密码放在 `/etc/passwd` 的第二个字段上，密码也有加密过。程序运行需要到
  `/etc/passwd` 读取账号的权限。因此 `/etc/passwd` 的权限需设定为 `-rw-r--r--`。
 但是加密过的密码够透过暴力破解法破解出来。因为这样，后来发展出将密码移动到 /etc/shadow 这个文件分隔开来的技术， 而且只有 root 有权限访问 `/etc/shadow` 。
+
+![shadow.png](https://i.loli.net/2021/05/15/TtOZ4NyqVhReXwA.png)
 
