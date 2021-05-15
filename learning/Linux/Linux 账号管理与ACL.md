@@ -38,5 +38,7 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
  `/etc/passwd` 读取账号的权限。因此 `/etc/passwd` 的权限需设定为 `-rw-r--r--`。
 但是加密过的密码够透过暴力破解法破解出来。因为这样，后来发展出将密码移动到 /etc/shadow 这个文件分隔开来的技术， 而且只有 root 有权限访问 `/etc/shadow` 。
 
+`/etc/shadow` 同样以 : 为分隔符，一个 : 是一个字段
 ![shadow.png](https://i.loli.net/2021/05/15/TtOZ4NyqVhReXwA.png)
+
 
