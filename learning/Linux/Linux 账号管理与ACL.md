@@ -29,4 +29,9 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 * **7.Shell**：指定用户登入系统后取得 Shell 的类型。如果要禁止账号取得 shell 环境，就是 /sbin/nologin
 
 ### /etc/shadow 文件结构
-`/etc/shadow` 文件结构跟 `/etc/passwd` 
+`/etc/shadow` 文件结构跟 `/etc/passwd` 文件结构类似。每一行对应一个账号
+
+![shadow.png](https://i.loli.net/2021/05/15/TtOZ4NyqVhReXwA.png)
+
+
+为什么
