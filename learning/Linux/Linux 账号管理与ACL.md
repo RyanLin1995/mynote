@@ -11,6 +11,7 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 
 ### /etc/passwd 文件结构
 `/etc/passwd`中的文件结构是每一行都代表一个账号，有几行就代表有几个账号在系统中
+
 ![passwd.png](https://i.loli.net/2021/05/05/sdBtir6CHN41XAO.png)
 
 * **1.账号名称**：即账号，用来登入系统且需要对应 UID 
@@ -28,3 +29,4 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 * **7.Shell**：指定用户登入系统后取得 Shell 的类型。如果要禁止账号取得 shell 环境，就是 /sbin/nologin
 
 ### /etc/shadow 文件结构
+`/etc/shadow` 文件结构跟 `/etc/passwd` 
