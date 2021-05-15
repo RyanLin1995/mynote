@@ -74,20 +74,19 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 `You must wait longer to change your password`
 `passwd: Authentication token manipulation error`
 
-* 由于密码过期日期定义为 60 天后，亦即累积日数为：16559+60=16619，经过计算得到此日数代表日期为 2015/07/03。 这表示：用户必须要在 2015/05/09 （前 5 天不能改） 到 2015/07/03 之间的 60 天限制内去修改自己的密码，若 2015/07/03 之后还是没有变更密码时，该密码就宣告为过期
+* 由于密码过期日期定义为 60 天后，亦即累积日数为：16559+60=16619，经过计算得到此日数代表日期为 2015/07/03。 这表示：用户必须要在 2015/05/09（前 5 天不能改）到 2015/07/03 之间的 60 天限制内去修改自己的密码，若 2015/07/03 之后还是没有变更密码时，该密码就宣告为过期
 
 * 警告日期设为 7 天，亦即是密码过期日前的 7 天，在本例中则代表 2015/06/26 ~ 2015/07/03 这七天。如果用户一直没有更改密码，那么在这 7 天中，只要 dmtsai 登录系统就会发现如下的讯息：
 `Warning: your password will expire in 5 days`
 
-* 如果该账号一直到 2015/07/03 都没有更改密码，那么密码就过期了。但是由于有 5 天的宽限天数，因此dmtsai 在 2015/07/08 前都还可以使用旧密码登入主机。 不过登入时会出现强制更改密码的情况，画面有点像底下这样
-： 你必须要输入一次旧密码以及两次新密码后，才能够开始使用系统的各项资源。 如果你是在 2015/07/08 以后尝试以 dmtsai 登入的话，那么就会出现如下的错误讯息且无法登入，因为此时你的密码就失效去啦！
-You are required to change your password immediately (password aged)
+* 如果该账号一直到 2015/07/03 都没有更改密码，那么密码就过期了。但是由于有 5 天的宽限天数，因此dmtsai 在 2015/07/08 前都还可以使用旧密码登入主机。 不过登入时会出现强制更改密码的情况，画面有点像底下这样：
+`You are required to change your password immediately (password aged)`
 WARNING: Your password has expired.
 You must change your password now and login again!
 Changing password for user dmtsai.
 Changing password for dmtsai
 (current) UNIX password:
-
+你必须要输入一次旧密码以及两次新密码后，才能够开始使用系统的各项资源。 如果你是在 2015/07/08 以后尝试以 dmtsai 登入的话，那么就会出现如下的错误讯息且无法登入，因为此时你的密码就失效去啦！
 Your account has expired; please contact your system administrator
 
 如果用户在 2015/07/03 以前变更过密码，那么第 3 个字段的那个 16559 的天数就会跟着改变，因此， 所有的限制日期也会跟着相对变动喔！ ^_^
