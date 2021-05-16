@@ -147,4 +147,6 @@ PS：一般第一个为当前有效群组，即当用户建立文档或目录时
 PS：用户切换有效群组，实际上是另外以一个 shell 来提供这个功能。虽然用户的环境设定(例如环境变量等等其他数据)不会有影响，但是用户的群组权限将会重新被计算。因此如果你想要回到原本的环境中，需要用`exit`
 
 用户切换有效群组图片说明(来自于鸟哥的Linux)：
-![newgrp.gif](https://linux.vbird.org/linux_basic/centos7/0410accountmanager/newgrp.gif）
+![newgrp.gif](https://linux.vbird.org/linux_basic/centos7/0410accountmanager/newgrp.gif)
+
+###
