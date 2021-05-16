@@ -106,6 +106,8 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 #### /etc/group 结构
 ![group.png](https://i.loli.net/2021/05/16/5S1G6MkQBDUlOFu.png)
 
+`/etc/group` 以 : 进行分割
+
 * **1. 组名：** 群组名字，需要与第三字段的 GID 对应。一般也等同于 `/etc/passwd` 中的账号名
 * **2. 群组密码：** 通常不需要设定，设定了是给群组管理员使用的，但因为存在 `sudo` 命令，目前很少有机会设定群组管理员。密码同样经移动到 /etc/gshadow 中，因此这个字段只会存在一个 x 
 * **3. GID：** 群组 ID 。与 /etc/passwd 第四个字段使用的 GID 对应
@@ -116,3 +118,9 @@ PS: 新版的 Linux 中，初始群组的用户群已经不会加入在自身的
 #### /etc/shadow 文件结构
 ![gshadow.png](https://i.loli.net/2021/05/16/ZvDanlWKk4Qi6mL.png)
 
+`/etc/gshadow` 以 : 进行分割
+
+* **1. 组名**
+* **2. 密码栏，同样的，开头为 ! 表示无合法密码，所以无群组管理员
+3. 群组管理员的账号 (相关信息在 gpasswd 中介绍)
+4. 有加入该群组支持的所属账号 (与 /etc/group 内容相同！)
