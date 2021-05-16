@@ -94,10 +94,11 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 * 无论用户如何动作，到了 16679 (大约是 2015/09/01 左右）该帐号就失效
 
 ## 群组
-群组分为有效群组(effective group)、初始群组(initial group)和支持群组
+群组分为有效群组(effective group)、初始群组(initial group)和支持群组(support groups)
 
-支持群组()：每个使用者都可以拥有多个支持的群组，并拥有该群组的功能。
+* 支持群组(support groups)：每个使用者都可以拥有多个支持的群组，并拥有该群组的功能。
 
-有效群组(effective group): 当前用户所使用的群组，一般为初始群组
+* 有效群组(effective group): 当前用户所使用的群组，一般为初始群组
 
-初始群组(initial group)：一般为账号创建时同时在`/etc/group`创建的群组。该群组与账号同名。一般作为账号登录时的群组
+* 初始群组(initial group)：一般为账号创建时同时在`/etc/group`创建的群组。该群组与账号同名。一般作为账号登录时的群组
+
