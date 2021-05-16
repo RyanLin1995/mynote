@@ -104,3 +104,4 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 
 ### 群组文件 /etc/group 与 /etc/gshadow
 #### /etc/group 结构
+![group.png](https://i.loli.net/2021/05/16/5S1G6MkQBDUlOFu.png)
