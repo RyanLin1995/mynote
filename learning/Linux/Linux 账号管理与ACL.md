@@ -102,3 +102,5 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 
 * 初始群组(initial group)：一般为账号创建时同时在`/etc/group`创建的群组。该群组与账号同名。一般作为账号登录时的群组
 
+### 群组文件 /etc/group 与 /etc/gshadow
+#### /etc/group 结构
