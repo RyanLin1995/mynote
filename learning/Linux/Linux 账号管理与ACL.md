@@ -153,5 +153,6 @@ PS：用户切换有效群组，实际上是另外以一个 shell 来提供这�
 
 ## /etc/passwd、/etc/group/与/etc/shadow 三者关系
 ![centos7_id_link](
-https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.jpg)
-图中，root 的 UID 是 0 ，而 GID 也是 0 ，通过 /etc/group 可知 GID 为 0 时的组名就是 root 。至于密码，则会找到 /etc/shadow 与 /etc/passwd 内同账号名称的那一行
+https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.jpg)^图片来自于鸟哥的Linux^
+
+图中 root 的 UID 是 0 ，而 GID 也是 0 ，通过 /etc/group 可知 GID 为 0 时的组名就是 root 。至于密码，则会找到 /etc/shadow 与 /etc/passwd 内同账号名称的那一行
