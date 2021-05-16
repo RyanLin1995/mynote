@@ -151,4 +151,7 @@ PS：用户切换有效群组，实际上是另外以一个 shell 来提供这�
 用户切换有效群组图片说明(来自于鸟哥的Linux)：
 ![newgrp.gif](https://linux.vbird.org/linux_basic/centos7/0410accountmanager/newgrp.gif)
 
-## /etc/passwd、/etc/group/与
+## /etc/passwd、/etc/group/与/etc/shadow 三者关系
+
+图中，root 的 UID 是 0 ，而 GID 也是 0 ，通过 /etc/group 可知 GID 为 0 时的组名就是 root 哩。 至于密码的寻找中，会找到 /etc/shadow 与 /etc/passwd 内同
+账号名称的那一行
