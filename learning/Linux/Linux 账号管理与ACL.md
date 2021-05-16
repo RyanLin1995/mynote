@@ -114,3 +114,5 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 PS: 新版的 Linux 中，初始群组的用户群已经不会加入在自身的群组的第四个字段
 
 #### /etc/shadow 文件结构
+![gshadow.png](https://i.loli.net/2021/05/16/ZvDanlWKk4Qi6mL.png)
+
