@@ -96,4 +96,4 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 ## 群组
 群组分为有效群组(effective group)与初始群组(initial group)
 
-有效群组(effective group): 
+有效群组(effective group): 也称为支持群组。每个使用者都可以拥有多个支持的群组
