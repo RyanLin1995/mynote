@@ -31,7 +31,7 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 * **6.家目录**：用户的家目录，默认为 `/home/yourIDname`， root 的家目录在 /root 。如果某个账号的使用空间特别的大，可修改这个字段将用户登入家目录修改到别的地方。
 * **7.Shell**：指定用户登入系统后取得 Shell 的类型。如果要禁止账号取得 shell 环境，就是 /sbin/nologin
 ---
-### /etc/shadow 文件结构
+#### /etc/shadow 文件结构
 `/etc/shadow` 文件结构跟 `/etc/passwd` 文件结构类似。每一行对应一个账号
 
 * 问：为什么要有 `/etc/shadow` 文件？
@@ -43,7 +43,7 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 
 ![shadow.png](https://i.loli.net/2021/05/15/TtOZ4NyqVhReXwA.png)
 
-#### 字段详细说明：
+##### 字段详细说明：
 * **1. 账号名称：** 账号，必须要与 /etc/passwd 中的账号相同
 
 * **2. 密码：** 账号真正的密码，经过编码(加密) 。密码的长度不能随意修改，因修改后长度不一致，可能导致密码就会失效(算不出来)。因此很多软件透过这个功能，在此字段前加上 ! 或 * 改变密码字段长度，让密码暂时失效
@@ -102,7 +102,7 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 * 有效群组(effective group): 当前用户所使用的群组，一般为初始群组。影响文件的建立等
 
 * 初始群组(initial group)：一般为账号创建时同时在`/etc/group`创建的群组。该群组与账号同名。一般作为账号登录时的群组
-
+---
 ### 群组文件 /etc/group 与 /etc/gshadow
 #### /etc/group 结构
 ![group.png](https://i.loli.net/2021/05/16/5S1G6MkQBDUlOFu.png)
