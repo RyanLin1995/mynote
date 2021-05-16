@@ -116,7 +116,7 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 
 PS: 新版的 Linux 中，初始群组的用户群已经不会加入在自身的群组的第四个字段
 
-#### /etc/shadow 文件结构
+#### /etc/gshadow 文件结构
 ![gshadow.png](https://i.loli.net/2021/05/16/ZvDanlWKk4Qi6mL.png)
 
 `/etc/gshadow` 以 : 进行分割，以下为字段详细说明：
@@ -151,4 +151,4 @@ PS：用户切换有效群组，实际上是另外以一个 shell 来提供这�
 用户切换有效群组图片说明(来自于鸟哥的Linux)：
 ![newgrp.gif](https://linux.vbird.org/linux_basic/centos7/0410accountmanager/newgrp.gif)
 
-###
+## /etc/passwd、/etc/group/与
