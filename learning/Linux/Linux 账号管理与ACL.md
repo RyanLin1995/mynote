@@ -199,4 +199,5 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 是 -1 则是代表密码永远不会失效，如果是数字，如 30 ，则代表过期 30 天后才失效
 
 * EXPIRE=：账号失效的日期
+与 `/etc/shadow` 的第八个字段账号失效日对应，通常不设定，但如果是付费的会员制系统，这个字段可以设定
 
