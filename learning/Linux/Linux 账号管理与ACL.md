@@ -164,8 +164,8 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 
 |选项与参数|说明|
 |-|-|
-|-u|后面接的是 UID ，是一组数字。直接指定一个特定的 UID 给这个账号； 
-|-g|后面接的那个组名就是我们上面提到的 initial group 啦～ 该群组的 GID 会被放置到 /etc/passwd 的第四个字段内。 
+|-u|后面接是 UID ，一组数字。直接指定一个特定的 UID 给这个账号|
+|-g|后面接 initial group 啦～ 该群组的 GID 会被放置到 /etc/passwd 的第四个字段内。 
 |-G|后面接的组名则是这个账号还可以加入的群组。 这个选项与参数会修改 /etc/group 内的相关资料喔！
 |-M|强制！不要建立用户家目录！(系统账号默认值)
 |-m|强制！要建立用户家目录！(一般账号默认值)
@@ -173,6 +173,5 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 |-d|指定某个目录成为家目录，而不要使用默认值。务必使用绝对路径！
 |-r|建立一个系统的账号，这个账号的 UID 会有限制 (参考 /etc/login.defs)
 |-s|后面接一个 shell ，若没有指定则预设是 /bin/bash 的啦～
-|-e|后面接一个日期，格式为『YYYY-MM-DD』此项目可写入 shadow 第八字段，
- 亦即账号失效日的设定项目啰； -f ：后面接 shadow 的第七字段项目，指定密码是否会失效。0 为立刻失效，
- -1 为永远不失效(密码只会过期而强制于登入时重新设定而已。)
+|-e|后面接一个日期，格式为『YYYY-MM-DD』此项目可写入 shadow 第八字段， 亦即账号失效日的设定项目啰；
+|-f|后面接 shadow 的第七字段项目，指定密码是否会失效。0 为立刻失效，-1 为永远不失效(密码只会过期而强制于登入时重新设定而已。)
