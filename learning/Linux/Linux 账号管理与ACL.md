@@ -218,4 +218,4 @@ UID/GID密码参数参考的是文件 `/etc/login.defs` 不建议对这个文件
 详细说明：
 * mailbox 所在目录：用户的默认 mailbox 文件放置的目录，即为/var/spool/mail
 * shadow 密码第 4, 5, 6 字段内容：设定账号在 `/etc/shadow` 中的4,5,6字段。其中 PASS_MIN_LEN 已失效，因为 PAM 的存在
-* UID/GID 指定数值：
+* UID/GID 指定数值：虽然 Linux 核心支持的账号高达 2^32^ 个，不过过多账号在管理上很麻烦，所以针对 UID/GID 的范围进行规范。注意：
