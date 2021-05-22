@@ -176,4 +176,5 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 |-e|后面接一个日期，格式为 YYYY-MM-DD ，写入 shadow 第八字段，即账号失效日|
 |-f|后面接 shadow 的第七字段项目，指定密码是否会失效。0 为立刻失效，-1 为永远不失效(密码只会过期而强制于登入时重新设定而已)|
 
-PS：`useradd -D` 可以建立账号时的默认参数，所有参数都在 `/etc/default/useradd` 中
+#### useradd 的参考
+`useradd -D` 可以建立账号时的默认参数，所有参数都在 `/etc/default/useradd` 中
