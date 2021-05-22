@@ -183,6 +183,19 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 ![useradd.png](https://i.loli.net/2021/05/22/HEsd5kh6XlNSrzm.png)
 
 详细说明：
-* GROUP=100：新建账号的初始群组使用 GID 为 100 者
-
+* GROUP=100：新建账号的初始群组使用 GID 为 100 
+系统上面 GID 为 100 者即是 users 这个群组，此设定项目指的就是让新设使用者账号的初始群
+组为 users 这一个的意思。 但是我们知道 CentOS 上面并不是这样的，在 CentOS 上面预设的
+群组为与账号名相同的群组。 举例来说， vbird1 的初始群组为 vbird1 。怎么会这样啊？这是因
+为针对群组的角度有两种不同的机制所致， 这两种机制分别是：
+ 私有群组机制：
+系统会建立一个与账号一样的群组给使用者作为初始群组。 这种群组的设定机制会比较有保密性，
+这是因为使用者都有自己的群组，而且家目录权限将会设定为 700 (仅有自己可进入自己的家目录) 
+之故。使用这种机制将不会参考 GROUP=100 这个设定值。代表性的 distributions 有 RHEL, 
+Fedora, CentOS 等；
+ 公共群组机制：
+就是以 GROUP=100 这个设定值作为新建账号的初始群组，因此每个账号都属于 users 这个群组，
+且默认家目录通常的权限会是『 drwxr-xr-x ... username users ... 』，由于每个账号都属于 users 群
+组，因此大家都可以互相分享家目录内的数据之故。代表 distributions 如 SuSE 等。
+由于我们的 CentOS 使用私有群组机制，因此这个设定项目是不会生效的！不要太紧张啊！
 
