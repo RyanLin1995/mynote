@@ -195,5 +195,8 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 用户的家目录通常是与账号同名的目录，这个目录将会摆放在此设定值的目录后
 
 * INACTIVE=-1：密码过期后是否会失效的设定值
-与 `/etc/shadow` 的第七个字段账号对应
+与 `/etc/shadow` 的第七个字段密码失效日对应，如果是 0 代表密码过期立刻失效，如果
+是 -1 则是代表密码永远不会失效，如果是数字，如 30 ，则代表过期 30 天后才失效
+
+* EXPIRE=：账号失效的日期
 
