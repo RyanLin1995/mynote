@@ -211,3 +211,5 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 设定是否创建使用者邮箱
 
 ##### UID/GID密码参数参考：/etc/login.defs
+UID/GID密码参数参考的是文件 `/etc/login.defs` 不建议对这个文件进行修改
+
