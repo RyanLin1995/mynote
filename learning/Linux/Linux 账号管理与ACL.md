@@ -165,7 +165,7 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 |选项与参数|说明|
 |-|-|
 |-u|后面接是 UID ，一组数字。直接指定一个特定的 UID 给这个账号|
-|-g|后面接 initial group 啦～ 该群组的 GID 会被放置到 /etc/passwd 的第四个字段内。 
+|-g|后面接初始群组(initial group)，默认新建账号时会在 /etc/passwd 中新建同名的群组。的 GID 会被放置到 /etc/passwd 的第四个字段内。 
 |-G|后面接的组名则是这个账号还可以加入的群组。 这个选项与参数会修改 /etc/group 内的相关资料喔！
 |-M|强制！不要建立用户家目录！(系统账号默认值)
 |-m|强制！要建立用户家目录！(一般账号默认值)
