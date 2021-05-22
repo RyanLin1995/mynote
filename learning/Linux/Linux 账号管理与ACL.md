@@ -227,3 +227,7 @@ UID/GID密码参数参考的是文件 `/etc/login.defs` 不建议对这个文件
 * **UMASK：** 家目录的初始权限
 
 * **USERGROUPS_ENAB：** 是否在删除用户账号时删除初始群组(前提是该群组不在有其他账号)
+
+* **ENCRYPT_METHOD：** 密码加密机制
+
+#### 
