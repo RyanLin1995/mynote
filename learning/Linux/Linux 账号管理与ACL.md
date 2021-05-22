@@ -158,4 +158,6 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 图中 root 的 UID 是 0 ，而 GID 也是 0 ，通过 `/etc/group` 可知 GID 为 0 时的组名为 root 。至于密码，则会找到 `/etc/shadow` 与 `/etc/passwd`内同名的那一行
 
 # 账号管理
-## 新增
+在 Linux 中想要新增一个账号
+## 新增账号与移除账号
+### 新增账号：useradd
