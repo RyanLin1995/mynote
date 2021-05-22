@@ -180,4 +180,9 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 ##### /etc/default/useradd
 使用 `useradd` 建立账号时的默认参数可以通过 `useradd -D` 来显示，所有参数都在 `/etc/default/useradd` 中
 
+![useradd.png](https://i.loli.net/2021/05/22/HEsd5kh6XlNSrzm.png)
+
+详细说明：
+* GROUP=100：新建账号的初始群组使用 GID 为 100 者
+
 
