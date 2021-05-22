@@ -205,6 +205,9 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 新建账号是系统默认的 shell，如果不想账号可以登入，这里可以填写 /bin/false 或 /sbin/nologin
 
 * SKEL=/etc/skel：用户家目录参考基准目录
-指定用户家目录的参考基准目录。即新建一个账号是其家目录的参考，均由 /etc/skel 所复制过去。比如想以后新建的账号的环境都作出改变，可以编辑 /etc/skel/.bashrc 去编辑一下，
-也可以建立 /etc/skel/www 这个目录，那么未来新增使用者后，在他的家目录下就会有 www 那
-个目录了！这样瞭呼
+指定用户家目录的参考基准目录。即新建一个账号是其家目录的参考，均由 /etc/skel 所复制过去。比如想以后新建的账号的环境都作出改变，可以编辑 /etc/skel/.bashrc
+
+* CREATE_MAIL_SPOOL=yes：建立使用者的 mailbox
+设定是否创建使用者邮箱
+
+##### /etc/login.defs
