@@ -168,7 +168,7 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 |-g|后面接初始群组(initial group)，默认新建账号时会在 /etc/passwd 中新建同名的群组|
 |-G|后面接支持群组(support groups)，即让新建的用户加入已存在的组|
 |-M|强制不建立用户家目录(系统账号默认值)|
-|-m|强制要建立用户家目录(一般账号默认值)|
+|-m|强制要建立用户家目录(一般账号默认值)，权限为700|
 |-c|即 /etc/passwd 的第五栏的说明内容，可以随便设定|
 |-d|指定某个目录成为家目录，而不要使用默认值。需绝对路径|
 |-r|建立一个系统的账号，这个账号的 UID 会有限制 (参考 /etc/login.defs)|
