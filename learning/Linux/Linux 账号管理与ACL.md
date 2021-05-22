@@ -201,3 +201,5 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 * EXPIRE=：账号失效的日期
 与 `/etc/shadow` 的第八个字段账号失效日对应，通常不设定，但如果是付费的会员制系统，这个字段可以设定
 
+* SHELL=/bin/bash：默认使用的 shell 程序文件名
+新建账号是系统默认的 shell，如果不想账号可以登入，这里可以填写 /bin/false 或 /sbin/nologin
