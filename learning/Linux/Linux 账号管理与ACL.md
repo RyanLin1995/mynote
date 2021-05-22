@@ -160,4 +160,4 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 # 账号管理
 ## 新增账号
 ### 新增账号命令：useradd
-用法：`useradd [-u UID] [-g 初始]`
+用法：`useradd [-u UID] [-g 初始群组] [-G 支持群组] [-mM] [-c 说明栏] [-d ]`
