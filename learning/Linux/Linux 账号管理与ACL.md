@@ -175,3 +175,4 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 |-s|后面用户可使用的 shell ，若没有指定则预设为 /bin/bash ；如果需要账号无法登录 shell ，可以使用 /bin/false|
 |-e|后面接一个日期，格式为 YYYY-MM-DD ，写入 shadow 第八字段，即账号失效日|
 |-f|后面接 shadow 的第七字段项目，指定密码是否会失效。0 为立刻失效，-1 为永远不失效(密码只会过期而强制于登入时重新设定而已)|
+
