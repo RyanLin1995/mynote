@@ -193,5 +193,7 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 
 * HOME=/home：用户家目录的基准目录(basedir)
 用户的家目录通常是与账号同名的目录，这个目录将会摆放在此设定值的目录后
+
 * INACTIVE=-1：密码过期后是否会失效的设定值
+与 `/etc/shadow` 的第七个字段账号对应
 
