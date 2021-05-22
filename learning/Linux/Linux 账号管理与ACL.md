@@ -213,3 +213,7 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 ##### UID/GID密码参数参考：/etc/login.defs
 UID/GID密码参数参考的是文件 `/etc/login.defs` 不建议对这个文件进行修改
 
+![useradd2.png](https://i.loli.net/2021/05/22/tnOmb3W9iGF7yrA.png)
+
+详细说明：
+* mailbox 所在目录：用户的默认 mailbox 文件放置的目录，即为
