@@ -203,3 +203,9 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 
 * SHELL=/bin/bash：默认使用的 shell 程序文件名
 新建账号是系统默认的 shell，如果不想账号可以登入，这里可以填写 /bin/false 或 /sbin/nologin
+
+* SKEL=/etc/skel：用户家目录参考基准目录
+指定用户家目录的参考基准目录。即新建一个账号是其家目录的参考由 /etc/skel 所复制过去的～所以呢，未来如果我想要让新增使
+用者时，该用户的环境变量 ~/.bashrc 就设定妥当的话，您可以到 /etc/skel/.bashrc 去编辑一下，
+也可以建立 /etc/skel/www 这个目录，那么未来新增使用者后，在他的家目录下就会有 www 那
+个目录了！这样瞭呼
