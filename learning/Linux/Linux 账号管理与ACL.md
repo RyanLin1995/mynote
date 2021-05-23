@@ -273,5 +273,6 @@ PS:
 #### 一些关于 `passwd` 命令的例子
 ![passwd2.png](https://i.loli.net/2021/05/23/QaDdJGTIE4WLClm.png)
 
-## 查看账号信息和修改账号信息
-### 查看账号信息：
+## 查看、修改、删除账号信息
+### 查看账号信息：chage
+用法：`chage [-ldEImMW] 账号`
