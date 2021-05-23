@@ -273,4 +273,5 @@ PS:
 #### 一些关于 `passwd` 命令的例子
 ![passwd2.png](https://i.loli.net/2021/05/23/QaDdJGTIE4WLClm.png)
 
-## 查看
+## 查看账号信息和修改账号信息
+### 查看账号信息：
