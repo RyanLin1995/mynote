@@ -9,6 +9,7 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 2. 再来则是在 `/etc/shadow` 里面找出对应的账号与 UID，然后核对一下输入的密码与保存的密码是否一致；
 3. 如果一切都 OK ，就进入 Shell 
 
+---
 ### /etc/passwd 与 /etc/shadow
 #### /etc/passwd 文件结构
 `/etc/passwd`中的文件结构是每一行都代表一个账号，有几行就代表有几个账号在系统中。
@@ -94,6 +95,7 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 
 * 无论用户如何动作，到了 16679 (大约是 2015/09/01 左右）该帐号就失效
 
+---
 ## 群组
 群组分为有效群组(effective group)、初始群组(initial group)和支持群组(support groups)
 
