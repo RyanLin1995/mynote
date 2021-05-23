@@ -289,4 +289,7 @@ PS:
 
 ![chage.png](https://i.loli.net/2021/05/23/gWqcyGslVUOinXS.png)
 
-### 修改
+PS：如果想要新建用户第一次登录时需要修改密码，可将
+
+### 修改账号信息：usermod
+用法：`usermod `
