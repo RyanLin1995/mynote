@@ -269,4 +269,5 @@ PS:
 1. 用户自行修改密码，只需输入 `passwd` 命令即可，然后输入当前密码跟两次新的密码，出现 successfully 字样说明修改成功。出现在输入完新的密码后没出现 Retype 而出现 New，说明新密码无法通过 PAM 模块检验，需要重新输入新密码
 2. root 用户修改任何(自身或其他用户)密码不需要键入当前密码，而是直接键入新密码
 
-一些关于`passwd`
+#### 一些关于 `passwd` 命令的例子
+![passwd2.png](https://i.loli.net/2021/05/23/QaDdJGTIE4WLClm.png)
