@@ -287,3 +287,6 @@ PS:
 |-M|后面接天数，修改 shadow 第五字段(密码多久需要进行变更)|
 |-W|后面接天数，修改 shadow 第六字段(密码过期前警告天数)|
 
+![chage.png](https://i.loli.net/2021/05/23/gWqcyGslVUOinXS.png)
+
+### 修改
