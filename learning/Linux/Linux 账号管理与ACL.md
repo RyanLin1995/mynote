@@ -254,4 +254,10 @@ UID/GID密码参数参考的是文件 `/etc/login.defs` 不建议对这个文件
 ![passwd.png](https://i.loli.net/2021/05/23/rv5MHXIEijG9sSe.png)
 `passwd --stdin` 接收由前一个管道命令所得的 std output 作为 std input 。常用在 shell script 中。但不是每个 Linux 发行版都支持该命令
 
-用法2
+用法2详解：
+|选项与参数|说明|
+|-|-|
+|-l| Lock 的意思，会将 /etc/shadow 第二栏最前面加上 ! 使密码失效；
+|-u|与 -l 相对，即 Unlock 的意思
+-S ：列出密码相关参数，亦即 shadow 文件内的大部分信息。
+-n ：后面接天数，shadow 的第 4 字段，多久不可修改密码天数 -x ：后面接天数，shadow 的第 5 字段，多久内必须要更动密码 -w ：后面接天数，shadow 的第 6 字段，密码过期前的警告天数 -i ：后面接『日期』，shadow 的第 7 字段，密码失效日期
