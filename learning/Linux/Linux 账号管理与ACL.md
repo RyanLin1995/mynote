@@ -42,7 +42,7 @@ Linux 系统上面的用户如果需要登入主机以取得 shell 的环境来�
 
 `/etc/shadow` 同样以 : 为分隔符，一个 : 是一个字段
 
-![shadow.png](https://i.loli.net/2021/05/15/TtOZ4NyqVhReXwA.png)
+![shadow.png](https://i.loli.net/2021/05/23/OWdtXuInCJbqizg.png)
 
 ##### 字段详细说明：
 * **1. 账号名称：** 账号，必须要与 /etc/passwd 中的账号相同
