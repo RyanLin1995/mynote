@@ -252,3 +252,4 @@ UID/GID密码参数参考的是文件 `/etc/login.defs` 不建议对这个文件
 
 用法1详解：
 
+`passwd --stdin` 接收由前一个管道命令
