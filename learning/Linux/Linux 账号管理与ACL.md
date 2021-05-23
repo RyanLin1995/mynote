@@ -251,5 +251,5 @@ UID/GID密码参数参考的是文件 `/etc/login.defs` 不建议对这个文件
 用法2：`passwd [-l] [-u] [-S] [-n 天数] [-x 天数] [-w 天数] [-i 天数] 账号`
 
 用法1详解：
-
-`passwd --stdin` 接收由前一个管道命令所得 std input 作为密码。常用在 shell script 中。但不是每个 Linux 发行版都支持该
+![passwd.png](https://i.loli.net/2021/05/23/rv5MHXIEijG9sSe.png)
+`passwd --stdin` 接收由前一个管道命令所得的数据作为 std input 密码。常用在 shell script 中。但不是每个 Linux 发行版都支持该命令
