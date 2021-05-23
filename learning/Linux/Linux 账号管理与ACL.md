@@ -252,4 +252,6 @@ UID/GID密码参数参考的是文件 `/etc/login.defs` 不建议对这个文件
 
 用法1详解：
 ![passwd.png](https://i.loli.net/2021/05/23/rv5MHXIEijG9sSe.png)
-`passwd --stdin` 接收由前一个管道命令所得的数据作为 std input 密码。常用在 shell script 中。但不是每个 Linux 发行版都支持该命令
+`passwd --stdin` 接收由前一个管道命令所得的 std output 作为 std input 。常用在 shell script 中。但不是每个 Linux 发行版都支持该命令
+
+用法2
