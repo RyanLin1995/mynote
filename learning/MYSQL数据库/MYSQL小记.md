@@ -15,7 +15,7 @@
 ## 重置 MYSQL/ MariaDB 密码的方法:
 1. 验证 MYSQL/MariaDB 版本: `mysql -V`
 2. 停止服务: `systemctl stop mariadb.service/mysqld.service`
-3. 以免登录模式开启 MYSQL/MariaDB: `mysqld_safe --skip-grant-tables &` 或修改 my.cnf 文件，在[mysql]下
+3. 以免登录模式开启 MYSQL/MariaDB: `mysqld_safe --skip-grant-tables &` 或修改 my.cnf 文件，在 [mysql] 下添加 skip-grant-tables 使设置无效
 4. 新建一个窗口，登录 MYSQL: `mysql -u root`
 5. * MYSQL 5.7.6 跟 MariaDB 10.1.20 版本后重置密码方法: `ALTER USER 'root'@'localhost' IDENTIFIED BY 'NEW_PASSWORD';` 或 `UPDATE mysql.user SET authentication_string = PASSWORD('MY_NEW_PASSWORD') WHERE User = 'root' AND Host = 'localhost';`
    * MYSQL 5.7.6 跟 MariaDB 10.1.20 版本前重置密码方法: `SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MY_NEW_PASSWORD');`
