@@ -364,4 +364,6 @@ PS：
 用法：`groupadd [-g gid] [-r] 群组`
 
 |选项与参数|解析|
-|||
+|-|-|
+|-g|接特定的 GID ，用来直接将这个 GID 给予到 group|
+|-r|建立系统群组，与 /etc/login.defs 内的 GID_MIN 有关|
