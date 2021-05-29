@@ -340,4 +340,4 @@ PS：
 
 ### 修改 finger 信息：chfn
 `chfn` 参数也是默认不安装，改命令只用于修改 `finger` 显示的信息
-用法：`chfn [-foph] [账号名]`
+用法：`chfn [-foph] [username]`
