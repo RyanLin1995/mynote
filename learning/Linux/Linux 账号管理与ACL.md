@@ -310,7 +310,7 @@ PS：如果想要新建用户第一次登录时需要修改密码，可先设置
 |-U|将 /etc/shadow 密码栏的 ! 拿掉，解冻账号|
 
 ### 删除账号：userdel
-用法：`userdel [-r] 账号名称`
+用法：`userdel [-r] 账号`
 
 |选项与参数|说明|
 |-|-|
@@ -324,13 +324,13 @@ PS：
 以下是几个用户可能的账号管理命令，其权限均为 SUID
 
 ### 查询简单账号信息：ID
-用法：`ID [用户名]`
+用法：`ID 账号`
 ![id.png](https://i.loli.net/2021/05/29/3ivfpnyXcLmYqBC.png)
 
 ### 查询详细账号信息：finger
 注意：`finger` 命令在很多发行版上是默认不安装的，因为 `finger` 命令实际上是读取 `/etc/passwd` 里面的信息
 
-用法：`finger [-sm] [username]`
+用法：`finger [-sm] 账号`
 
 |选项与参数|解析|
 |-|-|
@@ -342,7 +342,7 @@ PS：
 ### 修改 finger 信息：chfn
 `chfn` 参数也是默认不安装，改命令只用于修改 `finger` 显示的信息，实际上也是修改 `/etc/passwd` 中的第五个字段(用户信息栏)
 
-用法：`chfn [-foph] [username]`
+用法：`chfn [-foph] 账号`
 
 |选项与参数|解析|
 |-|-|
@@ -361,7 +361,7 @@ PS：
 
 ## 群组管理：新增与删除
 ### 新增群组：groupadd
-用法：`groupadd [-g gid] [-r] 群组`
+用法：`groupadd [-g gid] [-r] [groupname]`
 
 |选项与参数|解析|
 |-|-|
