@@ -367,3 +367,6 @@ PS：
 |-|-|
 |-g|接特定的 GID ，用来直接将这个 GID 给予到 group|
 |-r|建立系统保留群组，与 /etc/login.defs 内的 GID_MIN 有关|
+
+### 修改群组：groupmod
+用法：`groupmod [-g gid] [-n group_name] 群组名`
