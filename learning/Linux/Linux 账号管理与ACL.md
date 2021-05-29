@@ -338,4 +338,5 @@ PS：
 |-p|和-l一样，但是不显示.plan、.project、.pgpkey文件|
 |-m|不查找用户真实姓名|
 
-### 
+### 修改 finger 信息：chfn
+`chfn` 参数也是默认不安装，改命令
