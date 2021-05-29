@@ -273,7 +273,7 @@ PS:
 #### 一些关于 `passwd` 命令的例子
 ![passwd2.png](https://i.loli.net/2021/05/23/QaDdJGTIE4WLClm.png)
 
-## 查看、修改、删除账号信息
+## 查看、修改、删除
 ### 查看账号详细信息：chage
 用法：`chage [-ldEImMW] 账号`
 
@@ -359,4 +359,4 @@ PS：
 |-l|列出目前系统上面可用的 shell ，即 /etc/shells 的内容|
 |-s|修改自己的 Shell |
 
-## 群组
+## 群组管理：新增与删除
