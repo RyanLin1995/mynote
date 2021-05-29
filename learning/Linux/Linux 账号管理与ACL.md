@@ -143,7 +143,7 @@ PS：一般第一个为当前有效群组，即当用户建立文档或目录时
 #### 有效群组的切换：newgrp
 当用户需要切换自己的有效群组时，可以使用 `newgrp` 进行切换。但只能将账号支持群组切换为有效群组
 
-用法：`newgrp [group name]`
+用法：`newgrp 群名`
 
 ![newgrp.png](https://i.loli.net/2021/05/16/wrI3JUi8lbudL4y.png)
 
@@ -161,7 +161,7 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 # 账号与群组管理
 ## 新增账号
 ### 新增账号命令：useradd
-用法：`useradd [-u UID] [-g 初始群组] [-G 支持群组] [-mM] [-c 说明栏] [-d 家目录绝对路径] [-s shell] 账号名称`
+用法：`useradd [-u UID] [-g 初始群组] [-G 支持群组] [-mM] [-c 说明栏] [-d 家目录绝对路径] [-s shell] 账号`
 
 |选项与参数|说明|
 |-|-|
