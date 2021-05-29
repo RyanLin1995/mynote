@@ -328,6 +328,6 @@ PS：
 ![id.png](https://i.loli.net/2021/05/29/3ivfpnyXcLmYqBC.png)
 
 ### 查询详细账号信息：finger
-注意：`finger` 命令在很多设备上是
+注意：`finger` 命令在很多发行版上是默认不安装的，因为 `finger` 命令实际上是读取 `/etc/passwd` 里面的信息
 用法：`finger [-sm] [username]`
 
