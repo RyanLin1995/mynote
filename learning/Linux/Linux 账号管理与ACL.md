@@ -327,4 +327,7 @@ PS：
 用法：`ID [用户名]`
 ![id.png](https://i.loli.net/2021/05/29/3ivfpnyXcLmYqBC.png)
 
-### 查阅详细账号信息
+### 查询详细账号信息：finger
+注意：`finger` 命令在很多设备上是
+用法：`finger [-sm] [username]`
+
