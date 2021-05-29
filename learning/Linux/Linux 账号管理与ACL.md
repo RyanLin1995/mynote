@@ -352,7 +352,7 @@ PS：
 |-h|家里的电话号码|
 
 ### 修改账号默认 shell：chsh
-用法：`chsh [-ls]`
+用法：`chsh [-ls] 账号`
 
 |选项与参数|解析|
 |-|-|
@@ -361,7 +361,7 @@ PS：
 
 ## 群组管理：新增与删除
 ### 新增群组：groupadd
-用法：`groupadd [-g gid] [-r] [groupname]`
+用法：`groupadd [-g gid] [-r] 群名`
 
 |选项与参数|解析|
 |-|-|
@@ -370,3 +370,9 @@ PS：
 
 ### 修改群组：groupmod
 用法：`groupmod [-g gid] [-n group_name] 群组名`
+
+|选项与参数|解析|
+|-|-|
+|-g|修改 GID 数字|
+|-n|修改既有的组名|
+
