@@ -158,7 +158,7 @@ https://linux.vbird.org/linux_basic/centos7/0410accountmanager/centos7_id_link.j
 
 图中 root 的 UID 是 0 ，而 GID 也是 0 ，通过 `/etc/group` 可知 GID 为 0 时的组名为 root 。至于密码，则会找到 `/etc/shadow` 与 `/etc/passwd`内同名的那一行
 
-# 账号管理
+# 账号与群组管理
 ## 新增账号
 ### 新增账号命令：useradd
 用法：`useradd [-u UID] [-g 初始群组] [-G 支持群组] [-mM] [-c 说明栏] [-d 家目录绝对路径] [-s shell] 账号名称`
@@ -238,7 +238,7 @@ UID/GID密码参数参考的是文件 `/etc/login.defs` 不建议对这个文件
 * 在 /etc/group 里面加入一个与账号名称一模一样的组名；
 * 在 /home 底下建立一个与账号同名的目录作为用户家目录，且权限为 700
 
-## 修改密码
+## 修改账号密码
 ### 修改密码命令：passwd
 新建完账号后是无法直接登录的，因为该账号还没有密码，需要使用 `passwd` 设置密码。密码设置建议如下：
 * 密码不能与账号相同
