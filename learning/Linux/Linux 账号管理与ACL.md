@@ -381,7 +381,7 @@ PS：
 
 PS：如果删除一个群名是提示无法删除，可能群名在被使用，可通过 GID 在 `/etc/passwd` 跟 '/etc/group' 中查看
 
-### 群组管理：gpasswd
+### 管理群组：gpasswd
 管理员可用命令：`gpasswd [-A user1,...] [-M user3,...] [-rR] 群名`
 
 |选项与参数|解析|
