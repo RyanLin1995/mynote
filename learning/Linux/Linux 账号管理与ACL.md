@@ -409,3 +409,5 @@ ACL(Access Control List) 主要的目的是提供传统的 owner,group,others �
 
 在众多 Linux 发行版本中，ACL 是默认支持并启动的，可以使用使用 `dmesg | grep -i acl` 查看(Debian发行版不一定支持该命令)
 
+### 设置ACL：setfacl
+用法：`setfacl [-bkRd] [{-m|-x} acl 参数] 目标文件名`
