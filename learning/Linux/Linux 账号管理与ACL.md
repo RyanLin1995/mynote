@@ -410,5 +410,13 @@ ACL(Access Control List) 主要的目的是提供传统的 owner,group,others �
 在众多 Linux 发行版本中，ACL 是默认支持并启动的，可以使用使用 `dmesg | grep -i acl` 查看(Debian发行版不一定支持该命令)
 
 ### 设置ACL：setfacl
-用法：`setfacl [-bkRd] [{-m|-x} acl 参数] 目标文件名`
+用法：`setfacl [-bkRd] [{-m|-x} acl 参数] 文件名`
 针对特定账号用法：`setfacl [参数] -m u:账号名:权限(rwx) 文件名`
+
+|选项与参数|解析|
+|-|-|
+|-m|设定后续的 acl 参数给文件使用，不可与 -x 合用|
+|-x|删除后续的 acl 参数，不可与 -m 合用|
+|-b|移除『所有的』 ACL 设定参数|
+|-k|移除『预设的』 ACL 参数，关于所谓的『预设』参数于后续范例中介绍
+|-R|递归设定 acl ，亦即包括次目录都会被设定起来； -d ：设定『预设 acl 参数』的意思！只对目录有效，在该目录新建的数据会引用此默认值
