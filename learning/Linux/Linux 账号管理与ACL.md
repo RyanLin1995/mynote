@@ -402,4 +402,7 @@ PS：如果删除一个群名是提示无法删除，可能群名在被使用，
 # 权限的细致划分：ACL
 传统的Linux权限只有rwx三种，如果需要对单一用户、群组以及文件/目录进行权限设置，就需要用到ACL(Access Control List)
 
-ACL(Access Control List) 主要的目的是提供传统的 owner,group,others 的 read,write,execute 权限之外更精细的权限设定。ACL 可以针对单一使用者，单一文件/目录来进行 r,w,x 的权限规范。ACL 针对不同
+ACL(Access Control List) 主要的目的是提供传统的 owner,group,others 的 read,write,execute 权限之外更精细的权限设定。ACL 可以针对单一使用者，单一文件/目录来进行 r,w,x 的权限规范。ACL 针对不同项目可以不同的权限划分：
+* 用户 (user)：可以针对特定用户设置权限；
+* 群组 (group)：可以针对特定群组设权限；
+* 默认属性 (mask)：还可以针对在该目录下在建立新文件/目录时，规范新数据的默认权限；
