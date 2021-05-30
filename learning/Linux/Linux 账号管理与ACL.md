@@ -411,3 +411,4 @@ ACL(Access Control List) 主要的目的是提供传统的 owner,group,others �
 
 ### 设置ACL：setfacl
 用法：`setfacl [-bkRd] [{-m|-x} acl 参数] 目标文件名`
+针对特定账号用法：`setfacl [参数] -m u:账号名:权限(rwx) 文件名`
