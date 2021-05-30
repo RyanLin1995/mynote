@@ -407,5 +407,5 @@ ACL(Access Control List) 主要的目的是提供传统的 owner,group,others �
 * 群组 (group)：可以针对特定群组设置权限
 * 默认属性 (mask)：可以针对在该目录下新建文件/目录时，规范新数据的默认权限
 
-在众多 Linux 发行版本中，ACL 是默认支持并启动的，可以使用
+在众多 Linux 发行版本中，ACL 是默认支持并启动的，可以使用使用 `dmesg | grep -i acl` 查看是否有
 
