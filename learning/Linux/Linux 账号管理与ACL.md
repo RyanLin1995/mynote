@@ -411,14 +411,14 @@ ACL(Access Control List) 主要的目的是提供传统的 owner,group,others �
 
 ### 设置ACL：setfacl
 用法：`setfacl [-bkRd] [{-m|-x} acl 参数] 文件名`
-针对特定账号用法：`setfacl [参数] -m u:账号名:权限(rwx) 文件名`
-针对特定群组用法：`setfacl [参数] -m g:群组名:权限(rwx) 文件名`
-针对有效权限 mask 用法：`setfacl [参数] -m m:权限(rwx) 文件名`
+针对特定账号用法：`setfacl [参数] -m u:账号名:权限(rwx/-) 文件名`
+针对特定群组用法：`setfacl [参数] -m g:群组名:权限(rwx/-) 文件名`
+针对有效权限 mask 用法：`setfacl [参数] -m m:权限(rwx/-) 文件名`
 
 |选项与参数|解析|
 |-|-|
 |-m|设置 acl 参数，不可与 -x 合用|
-|-x|删除 acl 参数，不可与 -m 合用|
+|-x|删除 acl 参数，不可与 -m 合用。用法 `serfacl -x [ug]:名称 文件名`|
 |-b|移除所有 ACL 设定参数|
 |-k|移除预设 ACL 参数|
 |-R|递归设定 acl |
