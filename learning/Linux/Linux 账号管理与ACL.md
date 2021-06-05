@@ -413,7 +413,7 @@ ACL(Access Control List) 主要的目的是提供传统的 owner,group,others �
 用法：`setfacl [-bkRd] [{-m|-x} acl 参数] 文件名`
 针对特定账号用法：`setfacl [参数] -m u:账号名:权限(rwx) 文件名`
 针对特定群组用法：`setfacl [参数] -m g:群组名:权限(rwx) 文件名`
-针对有效权限 用法：`setfacl [参数] -m m:群组名:权限(rwx) 文件名`
+针对有效权限 mask 用法：`setfacl [参数] -m m:权限(rwx) 文件名`
 
 |选项与参数|解析|
 |-|-|
@@ -423,6 +423,9 @@ ACL(Access Control List) 主要的目的是提供传统的 owner,group,others �
 |-k|移除预设 ACL 参数|
 |-R|递归设定 acl |
 |-d|设定预设 acl 参数，只对目录有效，在该目录下新建的文件/目录会引用此默认值|
+
+PS：
+有效权限(mask)：账号或群组所设定的权限必须要存在于 mask 的权限设定范围内才会生效
 
 ### 查看ACL：getfacl
 用法：`getfacl 文件名`
