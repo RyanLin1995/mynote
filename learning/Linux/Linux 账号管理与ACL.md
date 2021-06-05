@@ -427,7 +427,7 @@ ACL(Access Control List) 主要的目的是提供传统的 owner,group,others �
 PS：
 1. 有效权限(mask)：账号或群组所设定的权限必须要与 mask 的权限设定重叠才会生效。如：user1 对于 A 文件夹的 ACL 权限为 rx；group1 对于 A 文件夹的 ACL 权限为 rw；但是 mask 的 ACL 权限仅为 r，那么 user1 跟 group1 的 ACL 权限仅有 r 生效。
 
-2. ACL 权限默认是没有继承的，需要继承 ACL 权限，就要用
+2. ACL 权限默认是没有继承的，需要继承 ACL 权限，就要用针对预设权限的设定方式来设定 ACL
 
 ### 查看ACL：getfacl
 用法：`getfacl 文件名`
