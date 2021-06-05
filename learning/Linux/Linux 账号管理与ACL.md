@@ -432,3 +432,5 @@ PS：
 
 ### 查看ACL：getfacl
 用法：`getfacl 文件名`
+
+# Linux 账号切换
