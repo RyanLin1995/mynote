@@ -421,3 +421,6 @@ ACL(Access Control List) 主要的目的是提供传统的 owner,group,others �
 |-k|移除预设 ACL 参数|
 |-R|递归设定 acl |
 |-d|设定预设 acl 参数，只对目录有效，在该目录下新建的文件/目录会引用此默认值|
+
+### 查看ACL：getfacl
+用法：`getfacl 文件名`
