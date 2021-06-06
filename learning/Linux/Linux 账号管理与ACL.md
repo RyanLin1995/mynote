@@ -506,3 +506,5 @@ PS：
    * 在可下达的命令中填入命令（命令必须是绝对路径）后，该账号只能通过提权执行填入的命令。其中 ! 代表不可执行的命令。因此图中填入的意思为：可以执行 `passwd 任意字符`，但是 `passwd` 与 `passwd root`这两个命令除外
 
 5. 通过别名设置 visudo：
+![visudo5.png](https://i.loli.net/2021/06/06/a7fR9j6BOqIWQLn.png)
+   * 可通过User_Alias(账号别名)、Cmnd_Alias(命令别名)、Host_Alias(来源主机名别名)
