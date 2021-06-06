@@ -484,4 +484,6 @@ PS：
 
 
 ### /etc/sudoers 与 visudo
-除了 root 之外的其他账号，想要使用 sudo 执行属于 root 的权限命令(提权)，则 root 需要先使用 visudo 去修改 /etc/sudoers ，让该账号能够使用全部或部分的 root 指令功能
+除了 root 之外的其他账号，想要使用 sudo 执行属于 root 的权限命令(提权)，则 root 需要先使用 visudo 去修改 /etc/sudoers ，让该账号能够使用全部或部分的 root 命令功能。因为 /etc/sudoers 文件具有设定语法，建议使用 ·visudo 去修改 /etc/sudoers
+
+
