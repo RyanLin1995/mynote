@@ -511,3 +511,4 @@ PS：
 
 6. visudo 与 su 结合使用
 ![visudo6.png](https://i.loli.net/2021/06/06/EQwa2BKCLvY4DrJ.png)
+   * 通过上述设置后，进行 `su -` 命令时不再需要输入 root 的密码
