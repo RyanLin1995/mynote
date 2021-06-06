@@ -478,13 +478,14 @@ PS：
 
 ### sudo 命令执行流程：
 1. 当用户执行 `sudo` 时，系统于 /etc/sudoers 文件中搜寻该用户是否有执行 sudo 的权限；
-2. 若用户具有可执行 `sudo` 的权限后，则让用户输入用户自己的密码来确认；
-3. 若密码输入成功，便开始进行 sudo 后续接的指令(但 root 执行 sudo 时，不需要输入密码)；
-4. 若切换的身份与执行者身份相同，则不需要输入密码。
+2. 若用户具有可执行 `sudo` 的权限后，则让用户输入用户自己的密码来确认
+3. 若密码输入成功，便开始进行 sudo 后续接的指令(但 root 执行 sudo 时，不需要输入密码)
+4. 若切换的身份与执行者身份相同，则不需要输入密码
+5. 
 
 
 ### /etc/sudoers 与 visudo
-除了 root 之外的其他账号，想要使用 sudo 执行属于 root 的权限命令(提权)，则 root 需要先使用 `visudo` 去修改 /etc/sudoers ，让该账号能够使用全部或部分的 root 命令功能。因为 /etc/sudoers 文件具有设定语法，建议使用 `visudo` 去修改 /etc/sudoers（实际上 `visudo` 就是用 `vi` 去修改 /etc/sudoers）
+除了 root 之外的其他账号，想要使用 sudo 执行属于 root 的权限命令(提权)，则 root 需要先修改 /etc/sudoers ，让该账号能够使用全部或部分的 root 命令功能。因为 /etc/sudoers 文件具有设定语法，建议使用 `visudo` 去修改 /etc/sudoers（实际上 `visudo` 就是用 `vi` 去修改 /etc/sudoers）
 
 #### 关于 visudo 的几种设定方法
 1. 单一用户可进行 root 所有命令（设定大约在 `visudo` 的100行）：
