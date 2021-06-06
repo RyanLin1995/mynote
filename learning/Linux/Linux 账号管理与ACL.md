@@ -469,4 +469,5 @@ PS：
 * 例子1：利用 sshd 身份在 /tmp 下建立 mysshd 文件
 ![sudo.png](https://i.loli.net/2021/06/06/Fzb2dpEkyOGUBlY.png)
 
-* 例子2：利用 Ryan 身份在家目录下创建
+* 例子2：利用 Ryan 身份在家目录下创建一个文件夹，文件夹中包含一个 html 文件
+
