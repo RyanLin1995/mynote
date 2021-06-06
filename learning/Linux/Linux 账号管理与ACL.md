@@ -501,4 +501,4 @@ PS：
 3. 群组免密进行 sudo 提权（设定大约在 `visudo` 的109行）
 ![visudo3.png](https://i.loli.net/2021/06/06/oOM2j1tFlhTXZid.png)
 
-4. 
+4. 有限的命令操作
