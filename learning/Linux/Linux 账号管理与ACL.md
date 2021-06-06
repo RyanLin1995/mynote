@@ -467,4 +467,6 @@ PS：
 |-u|后面可以接欲切换的使用者，若无此项则代表切换身份为 root|
 
 * 例子1：利用 sshd 身份在 /tmp 下建立 mysshd 文件
+![sudo.png](https://i.loli.net/2021/06/06/Fzb2dpEkyOGUBlY.png)
 
+* 例子2：利用 Ryan 身份在家目录下创建
