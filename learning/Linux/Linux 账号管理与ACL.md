@@ -510,3 +510,4 @@ PS：
    * 可通过User_Alias(账号别名)、Cmnd_Alias(命令别名)、Host_Alias(来源主机名别名)来进行别名设置。别名后定义的名称必须是**大写**
 
 6. visudo 与 su 结合使用
+![visudo6.png](https://i.loli.net/2021/06/06/EQwa2BKCLvY4DrJ.png)
