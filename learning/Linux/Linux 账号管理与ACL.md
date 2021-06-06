@@ -470,4 +470,5 @@ PS：
 ![sudo.png](https://i.loli.net/2021/06/06/Fzb2dpEkyOGUBlY.png)
 
 * 例子2：利用 Ryan 身份在家目录下创建一个文件夹，文件夹中包含一个 html 文件
-
+![sudo2.png](https://i.loli.net/2021/06/06/PGKLhdy2bc458Ie.png)
+PS: 使用 `sh -c` 是因为 `sudo`
