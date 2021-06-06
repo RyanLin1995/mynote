@@ -488,5 +488,4 @@ PS：
 
 #### visudo 的几种设定方法
 1. 单一用户可进行 root 所有指令：
-
-
+![visudo.png](https://i.loli.net/2021/06/06/C1URaqYTQfrlSHF.png)
