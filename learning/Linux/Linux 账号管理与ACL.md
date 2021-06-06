@@ -498,4 +498,5 @@ PS：
 ![visudo2.png](https://i.loli.net/2021/06/06/kKItrEvi4bfQARX.png)
    * 图中意思为任何加入 wheel 这个群组的账号，就能够使用 sudo 获取任何身份权限来执行任何命令，因为 wheel 群组已经被设置在 visudo 文件中（%代表后面接的是群组的意思）
 
-3. 群组免密进行 sudo 提权（设定大约在 `visudo` 的106行）
+3. 群组免密进行 sudo 提权（设定大约在 `visudo` 的109行）
+![visudo3.png](https://i.loli.net/2021/06/06/oOM2j1tFlhTXZid.png)
