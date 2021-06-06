@@ -495,3 +495,4 @@ PS：
    * 4. 可下达的命令：可用该身份下达什么命令。这个命令请务必使用绝对路径。预设 root 可以获取任何身份权限且进行任何命令
 
 2. 利用 wheel 群组设定 sudo：
+![visudo2.png](https://i.loli.net/2021/06/06/kKItrEvi4bfQARX.png)
