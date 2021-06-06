@@ -507,4 +507,4 @@ PS：
 
 5. 通过别名设置 visudo：
 ![visudo5.png](https://i.loli.net/2021/06/06/a7fR9j6BOqIWQLn.png)
-   * 可通过User_Alias(账号别名)、Cmnd_Alias(命令别名)、Host_Alias(来源主机名别名)
+   * 可通过User_Alias(账号别名)、Cmnd_Alias(命令别名)、Host_Alias(来源主机名别名)来进行别名设置。别名后定义的名称必须是
