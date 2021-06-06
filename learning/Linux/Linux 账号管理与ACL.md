@@ -483,4 +483,5 @@ PS：
 4. 若切换的身份与执行者身份相同，则不需要输入密码。
 
 
-### 与 sudo 有关的文件：/etc/sudoers
+### /etc/sudoers 与 visudo
+除了 root 之外的其他账号，想要使用 sudo 执行属于 root 的权限命令(提权)，则 root 需要先使用 visudo 去修改 /etc/sudoers ，让该账号能够使用全部或部分的 root 指令功能
