@@ -487,15 +487,13 @@ PS：
 除了 root 之外的其他账号，想要使用 sudo 执行属于 root 的权限命令(提权)，则 root 需要先使用 `visudo` 去修改 /etc/sudoers ，让该账号能够使用全部或部分的 root 命令功能。因为 /etc/sudoers 文件具有设定语法，建议使用 `visudo` 去修改 /etc/sudoers（实际上 `visudo` 就是用 `vi` 去修改 /etc/sudoers）
 
 #### 关于 visudo 的几种设定方法
-1. 单一用户可进行 root 所有命令：
+1. 单一用户可进行 root 所有命令（设定大约在 `visudo` 的100行）：
 ![visudo.png](https://i.loli.net/2021/06/06/C1URaqYTQfrlSHF.png)
-设定大约在 `visudo` 
    * 1. 账号：系统的哪个账号可以使用 sudo 这个指令的意思；
    * 2. 登入的来源主机：账号由哪部主机联机到本 Linux 主机。意思是这个账号可能是由哪一部网络主机联机过来的，这个设定值可以指定客户端计算机(信任的来源的意思)。默认值 root 可来自任何一部网络主机
    * 3. (可获取权限的身份)：这个账号可以获取哪些身份的权限来下达后续的命令，默认 root 可以获取任何身份权限
    * 4. 可下达的命令：可用该身份下达什么命令。这个命令请务必使用绝对路径。预设 root 可以获取任何身份权限且进行任何命令
 
-2. 利用 wheel 群组设定 sudo：
+2. 利用 wheel 群组设定 sudo（设定大约在 `visudo` 的106行）：
 ![visudo2.png](https://i.loli.net/2021/06/06/kKItrEvi4bfQARX.png)
-   * 图中意思为任何加入 wheel 这个群组的账号，就能够使用 sudo 切换任何身份来操
-作任何指令
+   * 图中意思为任何加入 wheel 这个群组的账号，就能够使用 sudo 获取任何身份权限来执行任何命令，
