@@ -502,3 +502,5 @@ PS：
 ![visudo3.png](https://i.loli.net/2021/06/06/oOM2j1tFlhTXZid.png)
 
 4. 有限的命令操作
+![visudo4.png](https://i.loli.net/2021/06/06/i7D9P3qvjmVeQbw.png)
+   * 在可下达的命令中填入命令的
