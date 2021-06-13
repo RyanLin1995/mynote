@@ -523,4 +523,6 @@ PS：
 
 ## 登录用户直接对话：write,mesg,wall
 命令：`write 账号 用户所在终端端口`
-`write` 命令输入后会
+`write` 命令输入后会让你输入需要发送给用户的信息。输入完后以 <kbd>ctrl</kbd> + <kbd>c</kbd> 结束
+
+命令：
