@@ -514,4 +514,5 @@ PS：
 ![visudo6.png](https://i.loli.net/2021/06/06/EQwa2BKCLvY4DrJ.png)
    * 通过上述设置后，进行 `su -` 命令时不再需要输入 root 的密码
 
-## 
+# Linux 传递用户信息
+## 查看当前登录用户：w,who,last,lastlog
