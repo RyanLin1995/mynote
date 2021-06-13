@@ -521,4 +521,6 @@ PS：
 命令：`last`
 命令：`lastlog`
 
-## 登录用户对话
+## 登录用户直接对话：write,mesg,wall
+命令：`write 账号 用户所在终端端口`
+`write` 命令输入后会
