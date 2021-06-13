@@ -523,7 +523,9 @@ PS：
 
 ## 登录用户直接对话：write,mesg,wall
 命令：`write 账号 用户所在终端端口`
-`write` 命令输入后会让你输入需要发送给用户的信息。输入完后以 <kbd>ctrl</kbd> + <kbd>c</kbd> 结束
+* `write` 命令输入后会让你输入需要发送给用户的信息。输入完后以 <kbd>ctrl</kbd> + <kbd>c</kbd> 结束
 
-命令：`mesg n/y`
-当命令 `mesg` 设置为 n 时，代表用户不接受任何的信息，即无法通过 `write` 给用户发送信息
+命令：`mesg [n|y]`
+* 当命令 `mesg` 设置为 n 时，代表用户不接受任何的信息，即无法通过 `write` 给用户发送信息(除了 root 用户)
+
+命令：`wall `
