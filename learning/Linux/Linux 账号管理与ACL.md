@@ -516,3 +516,9 @@ PS：
 
 # Linux 传递用户信息
 ## 查看当前登录用户：w,who,last,lastlog
+命令：`w`
+命令：`who`
+命令：`last`
+命令：`lastlog`
+
+## 登录用户对话
