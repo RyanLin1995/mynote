@@ -2,6 +2,7 @@
 用法：
 查询：`mdadm --detail /dev/md[*]`
 创建：`mdadm --create /dev/md[0-9] --auto=yes --level=[015] --chunk=NK --raid-devices=N --spare-devices=N /dev/sdx /dev/hdx...`
+管理：`mdadm --manage /dev/md[0-9] [--add 装置] `
 
 |选项与参数|说明|
 |-|-|
