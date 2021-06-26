@@ -21,4 +21,4 @@ RAID（磁盘阵列）全称为 Redundant Arrays of Inexpensive Disks, RAID，�
 
 性能上，RAID 0+1 比 RAID 1+0 有着更快的读写速度。可靠性上，当 RAID 1+0 有一个硬盘受损，其余三个硬盘会继续运作。RAID 0+1 只要有一个硬盘受损，同组RAID 0的另一只硬盘亦会停止运作，只剩下两个硬盘运作，可靠性较低。因此，RAID 10 远较 RAID 01 常用，零售主板绝大部份支持RAID 0/1/5/10，但不支持RAID 01。
 
-## RAID5（）
+## RAID5：读写效果与数据备份的均衡考虑
