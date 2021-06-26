@@ -2,7 +2,7 @@
 用法：
 查询：`mdadm --detail /dev/md[*]`
 创建：`mdadm --create /dev/md[0-9] --auto=yes --level=[015] --chunk=NK --raid-devices=N --spare-devices=N /dev/sdx /dev/hdx...`
-管理：`mdadm --manage /dev/md[0-9] [--add 装置] `
+管理：`mdadm --manage /dev/md[0-9] [--add 装置] [--remove 装置] [--fail 装置]`
 
 |选项与参数|说明|
 |-|-|
@@ -18,3 +18,6 @@
 |-r|移除设备|
 |-Q|查看摘要信息|
 |-S|停止RAID磁盘阵列|
+|--add|会将后面的装置加入到这个 md 中|
+|--remove|会将后面的装置从这个 md 中移除|
+|--fail|将后面的装置设定成为出错的状态|
