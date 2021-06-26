@@ -6,9 +6,9 @@
 |选项与参数|说明|
 |-|-|
 |--create/-C|创建 RAID |
-|--auto=yes/-a{yes}|自动创建目标RAID设备的设备文件，亦即 /dev/md0, /dev/md1...|
+|--auto=yes/-a{yes|no}|自动创建目标RAID设备的设备文件，亦即 /dev/md0, /dev/md1...|
 |--chunk=Nk|装置的 chunk(块大小) 大小，也可以当成 stripe 大小，一般是 64K 或 512K|
-|--raid-devices=N|使用几个磁盘 (partition) 作为磁盘阵列的装置|
+|--raid-devices=N/-b|使用几个磁盘 (partition) 作为磁盘阵列的装置|
 |--spare-devices=N|使用几个磁盘作为备用 (spare) 装置|
 |--level=[015]|设定这组磁盘阵列的等级。支持很多，不过建议只要用 0, 1, 5 即可|
 |--detail|后面所接的那个磁盘阵列装置的详细信息|
