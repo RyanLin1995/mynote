@@ -44,4 +44,5 @@ Linux 下，如果是使用软件版 RAID，需要用到 `mdadm` 命令创建 RA
   3. 将新的磁盘加入 RAID 盘当中
 
 ## 关闭 RAID 方法
-1. 
+1. 卸载已挂载的 RAID 盘并修改 `/etc/fstab`
+2. 重写 RAID 盘的 metadata 以及 XFS 的 superblock：``
