@@ -6,7 +6,7 @@ Linux 下，如果是使用软件版 RAID，需要用到 `mdadm` 命令创建 RA
 创建：`mdadm --create /dev/md[0-9] --auto=yes --level=[015] --chunk=NK --raid-devices=N --spare-devices=N /dev/sdx /dev/hdx...`
 管理：`mdadm --manage /dev/md[0-9] [--add 装置] [--remove 装置] [--fail 装置]`
 
-|选项与参数|说明|
+|创建 RAID 盘选项与参数|说明|
 |-|-|
 |--create/-C|创建 RAID |
 |--auto=yes/-a{yes\|no}|自动创建目标RAID设备的设备文件，亦即 /dev/md0, /dev/md1...|
@@ -14,9 +14,14 @@ Linux 下，如果是使用软件版 RAID，需要用到 `mdadm` 命令创建 RA
 |--raid-devices=N/-n|使用几个磁盘 (partition) 作为磁盘阵列的装置|
 |--spare-devices=N/-x|使用几个磁盘作为备用 (spare) 装置|
 |--level=[015]/-l|设定这组磁盘阵列的等级|
+
+|查看 RAID 盘选项与参数|说明|
+|-|-|
 |--detail/-D|显示接的那个磁盘阵列装置的详细信息|
 |-v|显示过程|
 |-Q|查看摘要信息|
+
+
 |-S|停止RAID磁盘阵列|
 |--add|管理模式下将后面的装置加入到这个 md 中|
 |--remove/-r|管理模式下将后面的装置从这个 md 中移除|
