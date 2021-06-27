@@ -29,7 +29,7 @@ Linux 下，如果是使用软件版 RAID，需要用到 `mdadm` 命令创建 RA
 |-Q|查看摘要信息|
 
 ### 管理：
-`mdadm --manage /dev/md[0-9] [--add 装置] [--remove 装置] [--fail 装置]`
+命令：`mdadm --manage /dev/md[0-9] [--add 装置] [--remove 装置] [--fail 装置]`
 
 |管理 RAID 盘选项与参数|说明|
 |-|-|
