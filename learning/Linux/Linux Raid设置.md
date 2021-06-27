@@ -1,9 +1,9 @@
 # Linux RAID
 Linux 下，如果是使用软件版 RAID，需要用到 `mdadm` 命令创建 RAID 盘
 ## Linux RAID 设置命令：mdadm
-用法：
+### 创建：
 
-* 创建：`mdadm --create /dev/md[0-9] --auto=yes --level=[015] --chunk=NK --raid-devices=N --spare-devices=N /dev/sdx /dev/hdx...`
+命令：`mdadm --create /dev/md[0-9] --auto=yes --level=[015] --chunk=NK --raid-devices=N --spare-devices=N /dev/sdx /dev/hdx...`
 
 |创建 RAID 盘选项与参数|说明|
 |-|-|
@@ -19,7 +19,8 @@ Linux 下，如果是使用软件版 RAID，需要用到 `mdadm` 命令创建 RA
   2. 格式化硬盘为 fd 格式
   3. 创建 RAID 盘
 
-* 查询：`mdadm --detail /dev/md[*]` 或 `cat /proc/mdstat`
+### 查询：
+命令：`mdadm --detail /dev/md[*]` 或 `cat /proc/mdstat`
 
 |查看 RAID 盘选项与参数|说明|
 |-|-|
@@ -27,7 +28,8 @@ Linux 下，如果是使用软件版 RAID，需要用到 `mdadm` 命令创建 RA
 |-v|显示过程|
 |-Q|查看摘要信息|
 
-### 管理：`mdadm --manage /dev/md[0-9] [--add 装置] [--remove 装置] [--fail 装置]`
+### 管理：
+`mdadm --manage /dev/md[0-9] [--add 装置] [--remove 装置] [--fail 装置]`
 
 |管理 RAID 盘选项与参数|说明|
 |-|-|
