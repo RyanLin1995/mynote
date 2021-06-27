@@ -1,5 +1,5 @@
 # Linux RAID
-Linux 下需要用到 `mdadm` 命令创建 RAID 盘
+Linux 下，如果是使用需要用到 `mdadm` 命令创建 RAID 盘
 ## Linux RAID 设置命令：mdadm
 用法：
 查询：`mdadm --detail /dev/md[*]` 或 `cat /proc/mdstat`
