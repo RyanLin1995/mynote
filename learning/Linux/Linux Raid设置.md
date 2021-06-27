@@ -2,7 +2,6 @@
 Linux 下，如果是使用软件版 RAID，需要用到 `mdadm` 命令创建 RAID 盘
 ## Linux RAID 设置命令：mdadm
 用法：
-查询：`mdadm --detail /dev/md[*]` 或 `cat /proc/mdstat`
 创建：`mdadm --create /dev/md[0-9] --auto=yes --level=[015] --chunk=NK --raid-devices=N --spare-devices=N /dev/sdx /dev/hdx...`
 管理：`mdadm --manage /dev/md[0-9] [--add 装置] [--remove 装置] [--fail 装置]`
 
@@ -16,9 +15,11 @@ Linux 下，如果是使用软件版 RAID，需要用到 `mdadm` 命令创建 RA
 |--level=[015]/-l|设定这组磁盘阵列的等级|
 
 * 创建软件 RAID 盘步骤：
-  1. 添加硬盘到系统中，可用 `lsblk` 查看
-  2.   3. 将新的磁盘加入 RAID 盘当中
+  1. 添加硬盘到系统中，可用 `lsblk` 查看新增硬盘名称
+  2. 格式化硬盘为 fd 格式
+  3. 创建 RAID 盘
 
+查询：`mdadm --detail /dev/md[*]` 或 `cat /proc/mdstat`
 |查看 RAID 盘选项与参数|说明|
 |-|-|
 |--detail/-D|显示接的那个磁盘阵列装置的详细信息|
