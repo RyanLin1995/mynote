@@ -3,5 +3,7 @@ LVM(Logical Volume Manager)：逻辑逻辑卷管理员。将几个实体的 part
 
 ## LVM 的PV, PE, VG, LV
 ### PV：Physical Volume, 物理卷
-由实际的 partition 或 Disk 组成。需要先将其系统标识符 (system ID) 成为 8e (LVM 的标识符) 再进行
+由实际的 partition 或 Disk 组成。需要先将其系统标识符 (system ID) 成为 8e (LVM 的标识符) 再使用 `pvcreate` 指令将其转成 LVM 最底层的物理卷 (PV)
+
+### VG：Volume Group
 
