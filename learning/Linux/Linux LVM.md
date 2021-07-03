@@ -1,2 +1,3 @@
 # Linux LVM
-LVM(Logical Volume Manager)：逻辑滚动条管理员。
+LVM(Logical Volume Manager)：逻辑滚动条管理员。将几个实体的
+partitions (或 disk) 透过软件组合成为一块看起来是独立的大磁盘 (VG) ，然后将这块大磁盘再经过分区成为可使用分区槽 (LV)， 最终就能够挂载使用
