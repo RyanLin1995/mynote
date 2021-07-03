@@ -14,4 +14,8 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 ### PE：Physical Extent，基本物理单元
 整个 LVM 最小存储区块，类似于文件系用的 block 
 
-LVM 实际创建流程
+### LVM 实际创建流程
+![LVM创建流程](https://linux.vbird.org/linux_basic/centos7/0420quota/centos7_lvm.jpg)
+
+PS：
+*
