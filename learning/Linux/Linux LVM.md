@@ -11,5 +11,7 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 ### LV：Logical Volume，逻辑卷
 由 VG 分割而成，即最终的可被格式化与挂载的分区。容量大小与 PE 有关
 
-### PE：Physical Extent，物理区块
+### PE：Physical Extent，基本物理单元
+整个 LVM 最小存储区块，
+
 
