@@ -22,3 +22,13 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
   2. 交错模式 (triped)：将一笔数据拆成两部分，分别写入 /dev/vda1 与 /dev/vdb1 ，类似于 RAID 0 。即一份数据用两颗硬盘来写入，理论上读写的效果会比较好。
 
 * PS：LVM 最主要的用处是在实现一个可以弹性调整容量的文件系统上，而不是在建立一个具有容灾的文件系统
+
+## 常用的 LVM 部署命令
+|功能/命令|物理卷管理|卷组管理|逻辑卷管理|
+|-|-|-|-|
+|扫描|pvscan|vgscan|lvscan |
+建立 pvcreate vgcreate lvcreate 
+显示 pvdisplay vgdisplay lvdisplay 
+删除 pvremove vgremove lvremove 
+扩展 vgextend lvextend 
+缩小 vgreduce lvreduce
