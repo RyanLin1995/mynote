@@ -17,5 +17,6 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 ### LVM 实际创建流程
 ![LVM创建流程](https://linux.vbird.org/linux_basic/centos7/0420quota/centos7_lvm.jpg)
 
-PS：
-*
+* PS：LVM 的写入模式有以下两种
+  1. 线性模式 (linear)：假如将 /dev/vda1, /dev/vdb1 这两个 partition 加入到 VG 当中，并且整个 VG 只有一个 LV 时，那么所谓的线性模式就是：当 /dev/vda1 的容量用完之后，/dev/vdb1 的硬盘才会被使用到，这也是LVM的默认模式。
+  2. 
