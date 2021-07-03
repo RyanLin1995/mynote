@@ -9,5 +9,5 @@ LVM(Logical Volume Manager)：逻辑逻辑卷管理员。将几个实体的 part
 VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 
 ### LV：Logical Volume，逻辑卷
-由 VG 分割而成
+由 VG 分割而成，即最终的可被格式化与挂载的分区。
 
