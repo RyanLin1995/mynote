@@ -47,4 +47,4 @@ Linux 下，如果是使用软件版 RAID，需要用到 `mdadm` 命令创建 RA
 1. 卸载已挂载的 RAID 盘并修改 `/etc/fstab`
 2. 重写 RAID 盘的 metadata 防止重启后出现未知错误：`dd if=/dev/zero of=/dev/md0 bs=1M count=50`
 3. 关闭 RAID 盘：`mdadm -S /dev/md0`
-4. 
+4. 重写用于 RAID 盘中的硬盘的 metadata ：`dd if=/dev/zero of=/dev/sd* bs=1M count=50`
