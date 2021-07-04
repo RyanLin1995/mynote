@@ -30,8 +30,9 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 |建立|pvcreate|vgcreate|lvcreate|
 |显示|pvdisplay|vgdisplay|lvdisplay|
 |删除|pvremove|vgremove|lvremove|
-|扩展|vgextend|lvextend|
-|缩小|vgreduce|lvreduce|
+|扩展||vgextend|lvextend|
+|缩小||vgreduce|lvreduce|
+|调整容量|pvresize||lvresi
 
 ## 创建和管理 LVM
 ### 创建：
