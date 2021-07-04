@@ -36,6 +36,8 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 ## 创建和管理 LVM
 ### 创建：
 1. PV 阶段：
-	1. 使用 `pvcreate 设备名称` 创建 PV
+   1. 使用 `pvcreate 设备名称` 创建 PV
+   2. 创建完成后可以使用 `pvscan` 跟 `pvdispaly` 查看创建结果
 2. VG 阶段：
+   1. 
 3. LV 阶段：
