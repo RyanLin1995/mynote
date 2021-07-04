@@ -39,5 +39,7 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
    1. 使用 `pvcreate 设备名称` 创建 PV
    2. 创建完成后可以使用 `pvscan` 跟 `pvdispaly` 查看创建结果
 2. VG 阶段：
-   1. 使用 `vgcreate [-s N[mgt]] VG 名称 PV 名称` 创建 VG，其中 -s 为设置 PE size 的参数，
+   1. 使用 `vgcreate [-s N[mgt]] VG名称 PV名称` 创建 VG，其中 -s 为设置 PE size 的参数，可接容量(M,G,T)
+   2. 创建完成后可以使用 `pvscan` 跟 `pvdispaly` 查看创建结果
 3. LV 阶段：
+   1. 
