@@ -34,4 +34,7 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 |缩小|vgreduce|lvreduce|
 
 ## 创建和管理 LVM
-### 
+### 创建：
+1. PV 阶段：
+2. VG 阶段：
+3. LV 
