@@ -32,7 +32,7 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 |删除|pvremove|vgremove|lvremove|
 |扩展||vgextend|lvextend|
 |缩小||vgreduce|lvreduce|
-|调整容量|pvresize||lvresi
+|调整容量|pvresize||lvresize|
 
 ## 创建和管理 LVM
 ### 创建：
@@ -51,4 +51,4 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 放大容量准确来说是放大 LV 的容量，其有三个前置条件：
 1. 所在 VG 需要有剩余的容量
 2. 所在 LV 可以产生更多的可用容量
-3. 文件系统可以放大（因为最终目的是）
+3. 文件系统可以放大（因为最要放大的是文件系统，所以文件系统必须要支持放大）
