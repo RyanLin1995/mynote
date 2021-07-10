@@ -58,3 +58,6 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 2. 使用文件系统扩容命令扩容：
    1. xfs 文件系统：`xfs_grows 设备名称`
    2. ext4 文件系统：`resize2fs -f 设备名称`
+
+## LVM Snapshot
+Snapshot(快照)的作用是用于备份
