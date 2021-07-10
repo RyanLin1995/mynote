@@ -60,5 +60,5 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
    2. ext4 文件系统：`resize2fs -f 设备名称`
 
 ## LVM Snapshot
-Snapshot(快照)是利用COW(copy-on-write，写时复制)进行备份，其仅备份原始数据物理位置的元数据而并不对物理数据进行备份(参考下图)
+Snapshot(快照)是利用COW(copy-on-write，写时复制)进行备份，其仅备份原始数据物理位置的元数据而并不对物理数据进行备份，因此快照可以创建一旦原始数据(参考下图)
 ![snapshot](https://linux.vbird.org/linux_basic/centos7/0420quota//snapshot.gif)
