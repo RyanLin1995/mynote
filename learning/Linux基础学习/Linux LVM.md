@@ -69,4 +69,4 @@ Snapshot(快照)是利用COW(copy-on-write，写时复制)进行备份，其仅�
 1. Snapshot 的创建: `lvcreate -s -n snapshot 名称 需要做快照的 LV 名称`
 2. 查看 LVM 卷使用情况: `lvs`
 3. 挂载刚创建的快照到目录
-4. 备份刚挂载的目录
+4. 备份刚挂载的目录(可用cp)
