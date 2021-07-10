@@ -60,4 +60,4 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
    2. ext4 文件系统：`resize2fs -f 设备名称`
 
 ## LVM Snapshot
-Snapshot(快照)的作用是
+Snapshot(快照)是修改
