@@ -65,7 +65,7 @@ Snapshot(快照)是利用COW(copy-on-write，写时复制)进行备份，其仅�
 
 ![snapshot](https://linux.vbird.org/linux_basic/centos7/0420quota//snapshot.gif)
 
-### 完整的 Snapshot 创建备份与恢复过程(以 xfs 文件系统为例)
+### 完整的 Snapshot 创建备份与恢复过程
 1. Snapshot 的创建: `lvcreate -s -n snapshot 名称 需要做快照的 LV 名称`
 2. 查看 LVM 卷使用情况: `lvs`
-3. 
+3. 备份快照，可用
