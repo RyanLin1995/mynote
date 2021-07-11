@@ -28,11 +28,12 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
 |-|-|-|-|-|
 |扫描|pvscan|vgscan|lvscan|lsblk,blkid|
 |建立|pvcreate|vgcreate|lvcreate|mkfs|
-|显示|pvdisplay|vgdisplay|lvdisplay|df,mount|
+|显示|pvdisplay|vgdisplay|lvdisplay|df, mount|
 |删除|pvremove|vgremove|lvremove|umount|
 |扩展||vgextend|lvextend||
 |缩小||vgreduce|lvreduce||
-|调整容量|pvresize||lvresize|xfs_grows,resize2fs|
+|调整容量|pvresize||lvresize|xfs_grows, resize2fs|
+|改变属性|pvchange|vgchange|lvchange|/etc/fstab, remount|
 
 ## 创建和管理 LVM
 ### 创建：
