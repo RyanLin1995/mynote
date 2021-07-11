@@ -59,8 +59,13 @@ VG 由众多 PV 组成，即上边所说的 LVM 大磁盘。
    1. xfs 文件系统：`xfs_grows 设备名称`
    2. ext4 文件系统：`resize2fs -f 设备名称`
 
-### 移除 LVM:
-
+### 移除:
+1. 先卸除系统上面的 LVM 文件系统 (包括快照与所有 LV)；
+2. 使用 lvremove 移除 LV ；
+3. 使用 vgchange -a n VGname 让 VGname 这个 VG 不具有 Active 的标志；
+4. 使用 vgremove 移除 VG：
+5. 使用 pvremove 移除 PV；
+6. 最后，使用 fdisk 修改 ID 回来啊！
 
 ## LVM Snapshot
 Snapshot(快照)是利用COW(copy-on-write，写时复制)进行备份，其仅备份原始数据物理位置的元数据而并不对物理数据进行备份，因此快照可以迅速创建。而当原始数据 PE 的数据发生改变时，先将原始卷数据的 PE 放入快照中，再用新数据 PE 覆盖原始卷 PE，其他数据的 PE 不做改变(参考下图)
