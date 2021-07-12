@@ -15,3 +15,13 @@ Linux 下实现定时任务的命令为 at 与 crontab
 |-d|at -d 相当于 atrm ，可以取消一个在 at 排程中的任务|
 |-v|可以使用较明显的时间格式列出 at 排程中的任务栏表|
 |-c|接任务编号，可以列出该任务的实际指令内容|
+
+|Time时间格式|说明|
+|-|-|
+|HH:MM ex> 04:00|在今日的 HH:MM 时刻进行，若该时刻已超过，则明天的 HH:MM 进行此工作|
+|HH:MM YYYY-MM-DD ex> 04:00 2015-07-30|强制规定在某年某月的某一天的特殊时刻进行该工作|
+ HH:MM[am|pm] [Month] [Date] ex> 04pm July 30
+也是一样，强制在某年某月某日的某时刻进行！
+ HH:MM[am|pm] + number [minutes|hours|days|weeks]
+ex> now + 5 minutes ex> 04pm + 3 days
+就是说，在某个时间点『再加几个时间后』才进行。
