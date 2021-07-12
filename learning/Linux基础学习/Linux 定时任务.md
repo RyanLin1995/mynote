@@ -19,9 +19,6 @@ Linux 下实现定时任务的命令为 at 与 crontab
 |Time时间格式|说明|
 |-|-|
 |HH:MM ex> 04:00|在今日的 HH:MM 时刻进行，若该时刻已超过，则明天的 HH:MM 进行此工作|
-|HH:MM YYYY-MM-DD ex> 04:00 2015-07-30|强制规定在某年某月的某一天的特殊时刻进行该工作|
- HH:MM[am|pm] [Month] [Date] ex> 04pm July 30
-也是一样，强制在某年某月某日的某时刻进行！
- HH:MM[am|pm] + number [minutes|hours|days|weeks]
-ex> now + 5 minutes ex> 04pm + 3 days
-就是说，在某个时间点『再加几个时间后』才进行。
+|HH:MM YYYY-MM-DD ex> 04:00 2015-07-30|强制规定在某年某月的某天的特殊时刻进行该工作|
+|HH:MM[am\|pm] [Month] [Date] ex> 04pm July 30|一样，强制在某年某月某日的某时刻进行|
+|HH:MM[am\|pm] + number [minutes\|hours\|days\|weeks] ex> now + 5 minutes ex> 04pm + 3 days|就是说，在某个时间点『再加几个时间后』才进行|
