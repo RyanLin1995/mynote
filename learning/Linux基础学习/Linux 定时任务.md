@@ -6,4 +6,7 @@ Linux 下实现定时任务的命令为 at 与 crontab
 ## 一次性定时任务: at
 **at 命令需要 atd 服务的支持，清先确认 atd 服务已运行**
 
-用法：at [-mldv] TIME
+用法：`at [-mldv] TIME` 跟 `at -c 任务编号 `
+
+|选项与参数||
+|-|-|
