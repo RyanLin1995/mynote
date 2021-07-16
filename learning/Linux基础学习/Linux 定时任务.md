@@ -34,6 +34,6 @@ at 命令是以文本方式将所有任务写入到 `/var/spool/at/` 目录内�
 `/etc/at.allow`: 允许使用 at 指令的用户
 `/etc/at.deny`: 禁止使用 at 指令的用户
 
-
+因此，实际上 at 指令的
 
 ## 循环性工作任务: crontab
