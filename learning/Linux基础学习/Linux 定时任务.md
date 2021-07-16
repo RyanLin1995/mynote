@@ -22,3 +22,6 @@ Linux 下实现定时任务的命令为 at 与 crontab
 |HH:MM YYYY-MM-DD ex> 04:00 2015-07-30|强制规定在某年某月的某天进行该任务|
 |HH:MM[am\|pm] [Month] [Date] ex> 04pm July 30|一样，强制在某年某月某日的某时刻进行任务|
 |HH:MM[am\|pm] + number [minutes\|hours\|days\|weeks] ex> now + 5 minutes ex> 04pm + 3 days|就是说，在某个时间点再加几个时间后才进行任务|
+
+* 例子：
+![at.png](https://i.loli.net/2021/07/14/tjZJvO1e8USiyQ7.png)
