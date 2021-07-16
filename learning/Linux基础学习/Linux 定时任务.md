@@ -28,6 +28,7 @@ Linux 下实现定时任务的命令为 at 与 crontab
 * 例子：
 ![at.png](https://i.loli.net/2021/07/14/tjZJvO1e8USiyQ7.png)
 
-### 扩展：
+### 扩展：at 的运行方式
+at 命令/etc/at.allow 与 /etc/at.deny 这两个文件来进行 at 的使用限制
 
 ## 循环性工作任务: crontab
