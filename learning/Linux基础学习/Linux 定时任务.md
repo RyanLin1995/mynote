@@ -44,4 +44,4 @@ at 命令是以文本方式将所有任务写入到 /var/spool/at/ 目录内。�
 
 
 ## 循环性工作任务: crontab
-**
+**crontab 命令需要 crond 服务支持，Linux 下是默认开启这服务**
