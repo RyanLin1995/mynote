@@ -47,4 +47,7 @@ at 命令是以文本方式将所有任务写入到 /var/spool/at/ 目录内。�
 **crontab 命令需要 crond 服务支持，Linux 下是默认开启这服务**
 
 用法：`crontab [-u username] [-l|-e|-r]`
-
+|选项与参数|解析说明|
+|-|-|
+|-u|只有 root 才能使用的参数，亦即帮其他建立/移除 crontab 工作排程；
+-e ：编辑 crontab 的工作内容 -l ：查阅 crontab 的工作内容 -r ：移除所有的 crontab 的工作内容，若仅要移除一项，请用 -e 去编辑。
