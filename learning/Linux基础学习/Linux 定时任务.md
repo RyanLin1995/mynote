@@ -93,5 +93,5 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 
   ![hourly.png](https://i.loli.net/2021/07/17/yL4uk8mVxapXt5P.png)
 
-  * PS: /etc/cron.hourly 代表每小时执行的
+  * PS: /etc/cron.hourly 代表每小时 crontab 需要执行的 script ；/etc/cron.daily/, /etc/cron.weekly/, /etc/cron.monthly/ 分别代表每日，每周，每月要执行的 script
 
