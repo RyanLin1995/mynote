@@ -78,7 +78,8 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 >当用户使用 crontab 这个指令来建立工作排程之后，该项工作就会被纪录到 /var/spool/cron/ 里面,而且是以账号来作为判别
 
 ### crontab 扩展2：系统的 crontab
-crontab 指令不仅仅是给用户使用，也是给系统使用的，但是系统使用时不是使用 `crontab` 命令直接执行，而是编辑 /etc/crontab 文件。cron 服务的最低检测单位是分钟，所以 cron 会每分钟去读取一次 /etc/crontab 与/var/spool/cron 里面的数据内容，因此
+* crontab 指令不仅仅是给用户使用，也是给系统使用的，但是系统使用时不是使用 `crontab` 命令直接执行，而是编辑 /etc/crontab 文件。
+* cron 服务的最低检测单位是分钟，所以 cron 会每分钟去读取一次 /etc/crontab 与/var/spool/cron 里面的数据内容，因此
 
 /etc/crontab 文件内容：
 ![etc_crontab.png](https://i.loli.net/2021/07/17/dLwv197rgsqJZOu.png)
