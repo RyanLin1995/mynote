@@ -87,11 +87,11 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 
 * crontab 服务还跟 /etc/cron.d/* 文件夹有关，/etc/cron.d 文件夹里面的文件是类似于 /etc/crontab 格式的文件
 
-![cron.d.png](https://i.loli.net/2021/07/17/TNXFCB6my2KplM9.png)
+  ![cron.d.png](https://i.loli.net/2021/07/17/TNXFCB6my2KplM9.png)
 
-* PS: 可以看到 /etc/cron.d 文件夹里面的文件最后一行的 `run-parts /etc/cron.hourly` ，代表的是执行 /etc/cron.hourly 文件夹里面所有的脚本，也就是说 /etc/cron.hourly 下的文件都是 script 文件
+  * 可以看到 /etc/cron.d 文件夹里面的文件最后一行的 `run-parts /etc/cron.hourly` ，代表的是执行 /etc/cron.hourly 文件夹里面所有的脚本，也就是说 /etc/cron.hourly 下的文件都是 script 文件
 
-![hourly.png](https://i.loli.net/2021/07/17/yL4uk8mVxapXt5P.png)
+  ![hourly.png](https://i.loli.net/2021/07/17/yL4uk8mVxapXt5P.png)
 
 PS: 
 
