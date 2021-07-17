@@ -95,5 +95,11 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 
   * PS: /etc/cron.hourly 代表每小时 crontab 需要执行的 script，而 /etc/cron.daily/，/etc/cron.weekly/，/etc/cron.monthly/ 分别代表每日，每周，每月要执行的 script，但是这三个目录是由 anacron 所执行的，而 anacron 的执行方式则是放在 /etc/cron.hourly/0anacron 里面
 
-
-
+### crontab 总结
+* 个人化的行为使用『 crontab -e 』：如果你是依据个人需求来建立的例行工作排程，建议直接使用 crontab -e 来建立你的工作排程较佳！ 这样也能保障你的指令行为不会被大家看到 (/etc/crontab 是大家都能读取的权
+限喔！)； 
+* 系统维护管理使用『 vim /etc/crontab 』：如果你这个例行工作排程是系统的重要工作，为了让自己管理方便，同时容易追踪，建议直接写入 /etc/crontab 较佳！
+* 自己开发软件使用『 vim /etc/cron.d/newfile 』：如果你是想要自己开发软件，那当然最好就是使用全新的配置文件，并且放置于 /etc/cron.d/ 目录内即可。
+ 固定每小时、每日、每周、每天执行的特别工作：如果与系统维护有关，还是建议放置到 /etc/crontab 中来
+集中管理较好。 如果想要偷懒，或者是一定要再某个周期内进行的任务，也可以放置到上面谈到的几个目
+录中，直接写入指令即可！
