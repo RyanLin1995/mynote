@@ -81,6 +81,5 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 crontab 指令不仅仅是给用户使用，也是给系统使用的，但是系统使用时不是使用 `crontab` 命令直接执行，而是编辑 /etc/crontab 文件
 
 /etc/crontab 文件内容：
-
 ![etc_crontab.png](https://i.loli.net/2021/07/17/dLwv197rgsqJZOu.png)
 
