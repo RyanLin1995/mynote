@@ -93,5 +93,5 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 
   ![hourly.png](https://i.loli.net/2021/07/17/yL4uk8mVxapXt5P.png)
 
-PS: 
+  * PS: /etc/cron.hourly 代表每小时执行的
 
