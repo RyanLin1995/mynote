@@ -82,5 +82,5 @@ crontab 指令不仅仅是给用户使用，也是给系统使用的，但是系
 
 /etc/crontab 文件内容：
 
-
+![etc_crontab.png](https://i.loli.net/2021/07/17/dLwv197rgsqJZOu.png)
 
