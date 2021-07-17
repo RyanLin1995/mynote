@@ -28,7 +28,7 @@ Linux 下实现定时任务的命令为 at 与 crontab
 * 例子：
 ![at.png](https://i.loli.net/2021/07/14/tjZJvO1e8USiyQ7.png)
 
-### 扩展：at 的运行方式
+### 扩展：at 的限制使用
 at 命令是以文本方式将所有任务写入到 /var/spool/at/ 目录内。为了安全起见，需要配合 /etc/at.allow 与 /etc/at.deny 这两个文件来进行 at 的使用限制
 
 `/etc/at.allow`: 允许使用 at 指令的用户
@@ -69,7 +69,7 @@ at 命令是以文本方式将所有任务写入到 /var/spool/at/ 目录内。�
 * PS：
 1. 周的 0 与 7 均表示星期天
 
-### crontab 扩展1：crontab 运作方式
+### crontab 扩展1：crontab 限制使用
 crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cron.deny，且 /etc/cron.allow 比 /etc/cron.deny 优先
 
 * /etc/cron.allow：记录允许使用 crontab 的用户
