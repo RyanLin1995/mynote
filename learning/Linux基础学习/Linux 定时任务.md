@@ -87,3 +87,6 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 
 * crontab 服务还跟 /etc/cron.d/* 文件夹有关，/etc/cron.d 文件夹里面的文件是类似于 /etc/crontab 格式的文件
 
+![cron.d.png](https://i.loli.net/2021/07/17/TNXFCB6my2KplM9.png)
+
+PS：
