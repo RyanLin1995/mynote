@@ -79,7 +79,9 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 
 ### crontab 扩展2：系统的 crontab
 * crontab 指令不仅仅是给用户使用，也是给系统使用的，但是系统使用时不是使用 `crontab` 命令直接执行，而是编辑 /etc/crontab 文件。
-* cron 服务的最低检测单位是分钟，所以 cron 会每分钟去读取一次 /etc/crontab 与/var/spool/cron 里面的数据内容，因此
+* cron 服务的最低检测单位是分钟，所以 cron 会每分钟去读取一次 /etc/crontab
+ 与/var/spool/cron 里面的数据内容，因此编辑了 /etc/crontab 文件后保存即可（由于 crontab 是读到内存当中的，所以在你修改完 /etc/crontab 
+之后，可能并不会马上执行， 这个时候请重新启动 crond 这个服务吧！『systemctl restart crond』）
 
 /etc/crontab 文件内容：
 ![etc_crontab.png](https://i.loli.net/2021/07/17/dLwv197rgsqJZOu.png)
