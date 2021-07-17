@@ -89,4 +89,4 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 
 ![cron.d.png](https://i.loli.net/2021/07/17/TNXFCB6my2KplM9.png)
 
-PS：可以看到 /etc/cron.d 文件夹里面的文件最后一行的 `run-parts /etc/`
+PS：可以看到 /etc/cron.d 文件夹里面的文件最后一行的 `run-parts /etc/cron.hourly` ，代表的是
