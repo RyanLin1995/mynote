@@ -77,3 +77,5 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 
 >当用户使用 crontab 这个指令来建立工作排程之后，该项工作就会被纪录到 /var/spool/cron/ 里面,而且是以账号来作为判别
 
+### crontab 扩展2：crontab 的
+
