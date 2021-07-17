@@ -54,4 +54,4 @@ at 命令是以文本方式将所有任务写入到 /var/spool/at/ 目录内。�
 |-l|查阅 crontab 的工作内容|
 |-r|移除所有的 crontab 的工作内容，若仅要移除一项，则用 -e 去编辑|
 
-在输入了 `crontab -e` 后会进入到 vi 的编辑界面，这个编辑界面是 /bin/sh 环境来的，如果想要切换环境
+在输入了 `crontab -e` 后会进入到 vi 的编辑界面，这个编辑界面的 shell 是 /bin/sh ，如果想要切换 shell 需要在顶部声明要切换的 shell
