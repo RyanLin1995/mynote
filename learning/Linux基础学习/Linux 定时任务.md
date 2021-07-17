@@ -73,6 +73,8 @@ at 命令是以文本方式将所有任务写入到 /var/spool/at/ 目录内。�
 ### crontab 扩展1：crontab 运作方式
 crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cron.deny，且 /etc/cron.allow 比 /etc/cron.deny 优先
 
-* /etc/cron.allow：允许使用 crontab 的用户
-* /etc/cron.deny： 不可使用 crontab 的，若未记录到这个文件当中的使用者，就可以使用 crontab 。
+* /etc/cron.allow：记录允许使用 crontab 的用户
+* /etc/cron.deny： 记录不可使用 crontab 的用户
+
+>当用户使用 crontab 这个指令来建立工作排程之后，该项工作就会被纪录到 /var/spool/cron/ 里面
 
