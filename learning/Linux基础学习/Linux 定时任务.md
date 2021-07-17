@@ -39,8 +39,7 @@ at 命令是以文本方式将所有任务写入到 /var/spool/at/ 目录内。�
 2. 如果 /etc/at.allow 不存在，就寻找 /etc/at.deny 这个文件，写在这个 at.deny 的使用者则不能使用 at 
 3. 如果两个文件都不存在，那么只有 root 可以使用 at 这个指令
 
-> /etc/at.allow 是管理较为严格的方式，而 /etc/at.deny 则较为松散 (因为账
-号没有在该文件中，就能够执行 at 了)。在一般的 Linux 发行当中，由于假设系统上的所有用户都是可信任的，因此系统通常会保留一个空的 /etc/at.deny 文件，意思是允许所有人使用 at 指令的意思 。当你不希望某些使用者使用 at 的话，将那个使用者的账号写入 /etc/at.deny 即可，一个账号写一行。
+> /etc/at.allow 是管理较为严格的方式，而 /etc/at.deny 则较为松散 (因为账号没有在该文件中，就能够执行 at 了)。在一般的 Linux 发行当中，由于假设系统上的所有用户都是可信任的，因此系统通常会保留一个空的 /etc/at.deny 文件，意思是允许所有人使用 at 指令的意思 。当你不希望某些使用者使用 at 的话，将那个使用者的账号写入 /etc/at.deny 即可，一个账号写一行。
 
 
 ## 循环性工作任务: crontab
@@ -76,5 +75,5 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 * /etc/cron.allow：记录允许使用 crontab 的用户
 * /etc/cron.deny： 记录不可使用 crontab 的用户
 
->当用户使用 crontab 这个指令来建立工作排程之后，该项工作就会被纪录到 /var/spool/cron/ 里面
+>当用户使用 crontab 这个指令来建立工作排程之后，该项工作就会被纪录到 /var/spool/cron/ 里面,而且是以账号来作为判别
 
