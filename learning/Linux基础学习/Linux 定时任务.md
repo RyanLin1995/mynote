@@ -105,3 +105,6 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 
 ## 执行过时任务：anacron
 当设定了循环定时任务后，如果设备关机了，再重新打开设备时，anacron 命令会帮助我们重新执行过时的命令。anacron 预设会以一天、七天、一个月为期去检测系统未进行的 crontab 任务，即 anacron 会检测 /etc/cron.daily/，/etc/cron.weekly/，/etc/cron.monthly/ 三个文件。检测这三个文件的时间戳 (timestamps) 与现在时间的差别来判断是否需要执行过时任务
+
+用法：`anacron [-sfn] [job]` 或 `anacron -u [job]`
+
