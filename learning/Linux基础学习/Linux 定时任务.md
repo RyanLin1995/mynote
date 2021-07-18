@@ -68,7 +68,7 @@ at 命令是以文本方式将所有任务写入到 /var/spool/at/ 目录内。�
 
 * PS：
 1. 周的 0 与 7 均表示星期天
-2. 
+2. 周与日月尽量不要同时出现，因为每年的周都是在变化
 
 ### crontab 扩展1：crontab 限制使用
 crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cron.deny，且 /etc/cron.allow 比 /etc/cron.deny 优先
