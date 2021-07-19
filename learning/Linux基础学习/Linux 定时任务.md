@@ -84,18 +84,15 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
  与/var/spool/cron 里面的数据内容，因此编辑了 /etc/crontab 文件后保存即可（由于 crontab 是读到内存当中的，所以在修改完 /etc/crontab 之后，可能并不会马上执行，这时候重新启动 crond 服务即可）
 
 3. /etc/crontab 文件内容：
-4. 
 ![etc_crontab.png](https://i.loli.net/2021/07/17/dLwv197rgsqJZOu.png)
 
-* crontab 服务还跟 /etc/cron.d/* 文件夹有关，/etc/cron.d 文件夹里面的文件是类似于 /etc/crontab 格式的文件
+4. crontab 服务还跟 /etc/cron.d/* 文件夹有关，/etc/cron.d 文件夹里面的文件是类似于 /etc/crontab 格式的文件
+![cron.d.png](https://i.loli.net/2021/07/17/TNXFCB6my2KplM9.png)
 
-  ![cron.d.png](https://i.loli.net/2021/07/17/TNXFCB6my2KplM9.png)
+   * 可以看到 /etc/cron.d 文件夹里面的文件最后一行的 `run-parts /etc/cron.hourly` ，代表的是执行 /etc/cron.hourly 文件夹里面所有的脚本，也就是说 /etc/cron.hourly 下的文件都是 script 文件。`0anacron` 
+![hourly.png](https://i.loli.net/2021/07/17/yL4uk8mVxapXt5P.png)
 
-  * 可以看到 /etc/cron.d 文件夹里面的文件最后一行的 `run-parts /etc/cron.hourly` ，代表的是执行 /etc/cron.hourly 文件夹里面所有的脚本，也就是说 /etc/cron.hourly 下的文件都是 script 文件。`0anacron` 
-
-  ![hourly.png](https://i.loli.net/2021/07/17/yL4uk8mVxapXt5P.png)
-
-  * PS: /etc/cron.hourly 代表每小时 crontab 需要执行的 script，而 /etc/cron.daily/，/etc/cron.weekly/，/etc/cron.monthly/ 分别代表每日，每周，每月要执行的 script，但是这三个目录是由 anacron 所执行的，而 anacron 的执行方式则是放在 /etc/cron.hourly/0anacron 里面
+* PS: /etc/cron.hourly 代表每小时 crontab 需要执行的 script，而 /etc/cron.daily/，/etc/cron.weekly/，/etc/cron.monthly/ 分别代表每日，每周，每月要执行的 script，但是这三个目录是由 anacron 所执行的，而 anacron 的执行方式则是放在 /etc/cron.hourly/0anacron 里面
 
 ### crontab 总结
 * 个人化的任务使用 `crontab -e`：如果是依据个人需求来建立的循环任务，建议直接使用
