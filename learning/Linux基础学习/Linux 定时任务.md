@@ -115,3 +115,5 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 |-u|仅更新时间记录文件的时间戳，不进行任何工作|
 |job|由 /etc/anacrontab 定义的各项工作名称|
 
+PS: 
+1. anacron 的配置文件存在于 /etc/anacron 
