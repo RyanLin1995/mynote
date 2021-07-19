@@ -79,18 +79,19 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 >当用户使用 crontab 这个指令来建立工作排程之后，该项工作就会被纪录到 /var/spool/cron/ 里面,而且是以账号来作为判别
 
 ### crontab 扩展2：系统的 crontab
-* crontab 指令不仅仅是给用户使用，也是给系统使用的，但是系统使用时不是使用 `crontab` 命令直接执行，而是编辑 /etc/crontab 文件。
-* cron 服务的最低检测单位是分钟，所以 cron 会每分钟去读取一次 /etc/crontab
+1. crontab 指令不仅仅是给用户使用，也是给系统使用的，但是系统使用时不是使用 `crontab` 命令直接执行，而是编辑 /etc/crontab 文件。
+2. cron 服务的最低检测单位是分钟，所以 cron 会每分钟去读取一次 /etc/crontab
  与/var/spool/cron 里面的数据内容，因此编辑了 /etc/crontab 文件后保存即可（由于 crontab 是读到内存当中的，所以在修改完 /etc/crontab 之后，可能并不会马上执行，这时候重新启动 crond 服务即可）
 
-/etc/crontab 文件内容：
+3. /etc/crontab 文件内容：
+4. 
 ![etc_crontab.png](https://i.loli.net/2021/07/17/dLwv197rgsqJZOu.png)
 
 * crontab 服务还跟 /etc/cron.d/* 文件夹有关，/etc/cron.d 文件夹里面的文件是类似于 /etc/crontab 格式的文件
 
   ![cron.d.png](https://i.loli.net/2021/07/17/TNXFCB6my2KplM9.png)
 
-  * 可以看到 /etc/cron.d 文件夹里面的文件最后一行的 `run-parts /etc/cron.hourly` ，代表的是执行 /etc/cron.hourly 文件夹里面所有的脚本，也就是说 /etc/cron.hourly 下的文件都是 script 文件
+  * 可以看到 /etc/cron.d 文件夹里面的文件最后一行的 `run-parts /etc/cron.hourly` ，代表的是执行 /etc/cron.hourly 文件夹里面所有的脚本，也就是说 /etc/cron.hourly 下的文件都是 script 文件。`0anacron` 
 
   ![hourly.png](https://i.loli.net/2021/07/17/yL4uk8mVxapXt5P.png)
 
