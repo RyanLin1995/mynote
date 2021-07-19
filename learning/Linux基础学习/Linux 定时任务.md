@@ -92,7 +92,7 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
    * 可以看到 /etc/cron.d 文件夹里面的文件最后一行的 `run-parts /etc/cron.hourly` ，代表的是执行 /etc/cron.hourly 文件夹里面所有的脚本，也就是说 /etc/cron.hourly 下的文件都是 script 文件。
 ![hourly.png](https://i.loli.net/2021/07/17/yL4uk8mVxapXt5P.png)
 
-* PS: /etc/cron.hourly 代表每小时 crontab 需要执行的 script，而 /etc/cron.daily/，/etc/cron.weekly/，/etc/cron.monthly/ 分别代表每日，每周，每月要执行的 script，但是这三个目录是由 anacron 所执行的，而 anacron 的执行方式则是放在 /etc/cron.hourly/0anacron 里面。`0anacron` 其实是 `anacron` 命令的
+* PS: /etc/cron.hourly 代表每小时 crontab 需要执行的 script，而 /etc/cron.daily/，/etc/cron.weekly/，/etc/cron.monthly/ 分别代表每日，每周，每月要执行的 script，但是这三个目录是由 anacron 所执行的，而 anacron 的执行方式则是放在 /etc/cron.hourly/0anacron 里面。`0anacron` 其实是加了判断的 `anacron` 命令脚本
 
 ### crontab 总结
 * 个人化的任务使用 `crontab -e`：如果是依据个人需求来建立的循环任务，建议直接使用
