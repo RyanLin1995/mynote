@@ -127,9 +127,8 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 
 ### anacron 执行流程
 1. 根据 anacron 配置文件 /etc/anacrontab 的设定， cron.daily 这项任务的执行天数为 1 天
-2. 从 /var/spool/anacron/cron.daily 取出最近一次执行 anacron 的时间戳；
-3. 由上个步骤与目前的时间比较，若差异天数为 1 天以上 (含 1 天)，就准备进行指令；
-4. 若准备进行指令，根据 /etc/anacrontab 的设定，将延迟 5 分钟 + 3 小时 (看 START_HOURS_RANGE 的
-设定)；
+2. 从 /var/spool/anacron/cron.daily 取出最后一次执行 anacron 的时间戳
+3. 将取出的时间戳与目前的时间对比，若差异天数为 1 天以上 (含 1 天)，就准备进行任务
+4. 若准备执行任务，根据 /etc/anacrontab 的设定，将延迟 5 分钟 + 3 小时 (看START_HOURS_RANGE 的设定)；
 5. 延迟时间过后，开始执行后续指令，亦即『 run-parts /etc/cron.daily 』这串指令；
 6. 执行完毕后， anacron 程序结束。
