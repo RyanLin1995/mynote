@@ -89,7 +89,7 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 4. crontab 服务还跟 /etc/cron.d/* 文件夹有关，/etc/cron.d 文件夹里面的文件是类似于 /etc/crontab 格式的文件
 ![cron.d.png](https://i.loli.net/2021/07/17/TNXFCB6my2KplM9.png)
 
-   * 可以看到 /etc/cron.d 文件夹里面的文件最后一行的 `run-parts /etc/cron.hourly` ，代表的是执行 /etc/cron.hourly 文件夹里面所有的脚本，也就是说 /etc/cron.hourly 下的文件都是 script 文件。
+   * 可以看到 /etc/cron.d/0hourly 文件夹里面的文件最后一行的 `run-parts /etc/cron.hourly` ，代表的是执行 /etc/cron.hourly 文件夹里面所有的脚本，也就是说 /etc/cron.hourly 下的文件都是 script 文件。
 ![hourly.png](https://i.loli.net/2021/07/17/yL4uk8mVxapXt5P.png)
 
 * PS: /etc/cron.hourly 代表每小时 crontab 需要执行的 script，而 /etc/cron.daily/，/etc/cron.weekly/，/etc/cron.monthly/ 分别代表每日，每周，每月要执行的 script，但是这三个目录是由 anacron 所执行的，而 anacron 的执行方式则是放在 /etc/cron.hourly/0anacron 里面。`0anacron` 其实是加了判断的 `anacron` 命令脚本
@@ -120,7 +120,7 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
    * 天数：anacron 执行当下与时间戳 (/var/spool/anacron/ 内的时间纪录文件) 相差的天数，若超过此天数，就准备开始执行，若没有超过则不予执行
    * 延迟时间：若确定超过天数导致要执行任务的延迟执行的时间
    * 工作名称：这个没啥意义，就是个名字
-   * 实际要进行的命令：类似于 /etc/
+   * 实际要进行的命令：类似于 /etc/cron.d/0hourly 的命令
 2. anacron 时间戳保存在 /var/spool/anacron/ 下
 ![spool_anacron.png](https://i.loli.net/2021/07/21/NkwEgdFS3WLCqX1.png)
 3. 
