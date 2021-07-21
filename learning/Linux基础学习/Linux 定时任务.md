@@ -120,7 +120,7 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
    * 天数：anacron 执行当下与时间戳 (/var/spool/anacron/ 内的时间纪录文件) 相差的天数，若超过此天数，就准备开始执行，若没有超过则不予执行
    * 延迟时间：若确定超过天数导致要执行任务的延迟执行的时间
    * 工作名称：这个没啥意义，就是个名字
-*实际要进行的指令串：有没有跟 0hourly 很像啊！没错！相同的作法啊！透过 run-parts 来处理的！
+   * 实际要进行的命令：类似于 /etc/
 2. anacron 时间戳保存在 /var/spool/anacron/ 下
 ![spool_anacron.png](https://i.loli.net/2021/07/21/NkwEgdFS3WLCqX1.png)
 3. 
