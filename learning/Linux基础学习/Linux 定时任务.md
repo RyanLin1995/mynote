@@ -116,4 +116,4 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 ### anacron 配置文件
 1. anacron 的配置文件存在于 /etc/anacron 中
 ![anacron.png](https://i.loli.net/2021/07/19/8b564IegEFZ2Qcj.png)
-2. 
+2. anacron 时间戳
