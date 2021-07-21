@@ -137,7 +137,5 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 ## crond 与 anacron 关系
 1. crond 会主动去读取 /etc/crontab, /var/spool/cron/*, /etc/cron.d/* 等配置文件，并依据分、时、日、月、星期的时间设定去执行各项任务
 2. 根据 /etc/cron.d/0hourly 的设定，主动去执行 /etc/cron.hourly/ 目录下的所有脚本
-3. 因为 /etc/cron.hourly/0anacron 这个脚本文件的缘故，主动的每小时执行 anacron ，并呼叫 /etc/anacrontab 
-的配置文件；
-4. 根据 /etc/anacrontab 的设定，依据每天、每周、每月去分析 /etc/cron.daily/, /etc/cron.weekly/, /etc/cron.monthly/ 
-内的执行文件，以进行固定周期需要执行的指令。
+3. 因为 /etc/cron.hourly/0anacron 这个脚本文件的缘故，系统主动的每小时执行 anacron ，读入 /etc/anacrontab 配置文件
+4. 根据 /etc/anacrontab 的设定，依据每天、每周、每月去分析 /etc/cron.daily/, /etc/cron.weekly/, /etc/cron.monthly/ 内的执行文件，以进行固定周期的任务
