@@ -114,7 +114,7 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 |job|由 /etc/anacrontab 定义的各项工作名称|
 
 ### anacron 配置文件
-1. anacron 的配置文件存在于 /etc/anacron 中
+1. anacron 的配置文件存在于 /etc/anacrontab 中
 ![anacron.png](https://i.loli.net/2021/07/19/8b564IegEFZ2Qcj.png)
 字段详解：
    * 天数：anacron 执行当下与时间戳 (/var/spool/anacron/ 内的时间纪录文件) 相差的天数，若超过此天数，就准备开始执行，若没有超过则不予执行
@@ -138,4 +138,4 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 1. crond 会主动去读取 /etc/crontab, /var/spool/cron/*, /etc/cron.d/* 等配置文件，并依据分、时、日、月、星期的时间设定去执行各项任务
 2. 根据 /etc/cron.d/0hourly 的设定，主动去执行 /etc/cron.hourly/ 目录下的所有脚本
 3. 因为 /etc/cron.hourly/0anacron 这个脚本文件的缘故，系统主动的每小时执行 anacron ，读入 /etc/anacrontab 配置文件
-4. 根据 /etc/anacrontab 的设定，依据每天、每周、每月去分析 /etc/cron.daily/, /etc/cron.weekly/, /etc/cron.monthly/ 内的执行文件，以进行固定周期的任务
+4. 根据 /etc/anacrontab 的设定，每天、每周、每月去分析 /etc/cron.daily/, /etc/cron.weekly/, /etc/cron.monthly/ 内的执行文件，以进行固定周期的任务
