@@ -133,3 +133,11 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
  START_HOURS_RANGE 的设定) + 随机分钟(看 RANDOM_DELAY 的设定)
 5. 延迟时间过后，开始执行后续指令，亦即 `run-parts /etc/cron.daily`
 6. 执行完毕后， anacron 程序结束
+
+## crond 与 anacron 关系
+1. crond 会主动去读取 /etc/crontab, /var/spool/cron/*, /etc/cron.d/* 等配置文件，并依据分、时、日、月、的时间设定去各项工作排程；
+2. 根据 /etc/cron.d/0hourly 的设定，主动去 /etc/cron.hourly/ 目录下，执行所有在该目录下的执行文件；
+3. 因为 /etc/cron.hourly/0anacron 这个脚本文件的缘故，主动的每小时执行 anacron ，并呼叫 /etc/anacrontab 
+的配置文件；
+4. 根据 /etc/anacrontab 的设定，依据每天、每周、每月去分析 /etc/cron.daily/, /etc/cron.weekly/, /etc/cron.monthly/ 
+内的执行文件，以进行固定周期需要执行的指令。
