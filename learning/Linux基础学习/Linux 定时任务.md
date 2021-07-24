@@ -139,3 +139,4 @@ crontab 运作方式与 at 相识，同样的存在 /etc/cron.allow 与 /etc/cro
 2. 根据 /etc/cron.d/0hourly 的设定，系统主动去执行 /etc/cron.hourly/ 目录下的所有脚本
 3. 因为 /etc/cron.hourly/0anacron 这个脚本文件的缘故，系统主动的每小时执行 anacron ，读入 /etc/anacrontab 配置文件
 4. 根据 /etc/anacrontab 的设定，系统每天、每周、每月去执行 /etc/cron.daily/, /etc/cron.weekly/, /etc/cron.monthly/ 内的脚本，以达到执行周期的任务的目的
+                  
