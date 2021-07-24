@@ -8,6 +8,10 @@
 
 ### 进程与程序
 >系统是仅认识 binary file 的，那么当我们要让系统工作的时候，就需要启动一个 binary file ，那个 binary file 就是程序 (program)。
-每个程序都有三组 r/w/x 的权限，所以：不同的使用者身份执行这个 program 时，系统给予的权限也都不相同！举例来说，当 root 利用 touch 来建立一个空的文件，他取得的是 UID/GID = 0/0 的权限，而当 dmtsai (UID/GID=501/501) 执行这个 touch 时，他的权限就跟 root 不一样.
+
+程序被加载成为程序以及相关资料的示意图:
 ![程序被加载成为程序以及相关资料的示意图.gif](https://linux.vbird.org/linux_basic/centos7/0440processcontrol/process_1.gif)
-程序被加载成为程序以及相关资料的示意图
+
+
+
+> 每个程序都有三组 r/w/x 的权限，所以：不同的使用者身份执行这个 program 时，系统给予的权限也都不相同！举例来说，当 root 利用 touch 来建立一个空的文件，他取得的是 UID/GID = 0/0 的权限，而当 dmtsai (UID/GID=501/501) 执行这个 touch 时，他的权限就跟 root 不一样。
