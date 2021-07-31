@@ -34,4 +34,4 @@
 * 子进程与父进程：从原本运作的进程中衍生出来的进程称为子进程。子进程与父进程基本一致，但是子进程的 PPID(Parent PID) 会指向父进程的 PID 且子进程是可以继承父进程的环境变量
 * fork and exec：fork and exec 是进程呼叫的流程。在 Linux 的进程呼叫通常称为 fork-and-exec 的流程，进程都会藉由父进程以复制 (fork) 的方式产生一个一模一样的子进程， 然后被复制出来的子进程再以 exec 的方式来执行实际要进行的程序，如下图
 ![fork-and-exec](https://linux.vbird.org/linux_basic/centos7/0440processcontrol/fork-and-exec.gif)
-* 内存常驻进程：通常系统会有一些进程进程一直在运行，为的是提供
+* 内存常驻进程：通常系统会有一些进程进程一直在运行，为的是提供各种各样系统所需的功能。这些进程称为服务(daemon)
