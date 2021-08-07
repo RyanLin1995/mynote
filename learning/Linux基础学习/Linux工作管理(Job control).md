@@ -13,4 +13,5 @@ Linux 的工作管理，是指当登入系统取得 bash shell 之后，在单�
 |命令|解析说明|
 |-|-|
 |&|将任务放到后台中执行|
-|<kbd>ctrl</kbd>+<kbd>z</kbd>|将当前任务放到后台并暂停|
+|<kbd>ctrl</kbd>+<kbd>z</kbd>|将当前任务放到后台并暂停![job1.png](https://i.loli.net/2021/08/07/dA2XFWginYpEsjG.png)|
+|`jobs [-lrs]`|观察目前的|
