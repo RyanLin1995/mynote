@@ -8,3 +8,6 @@ Linux 的工作管理，是指当登入系统取得 bash shell 之后，在单�
    * 前景：可以控制与下达指令的这个环境称为前景的工作 (foreground)；
    * 背景：可以自行运作的工作，无法使用 <kbd>Ctrl</kbd>+<kbd>c</kbd> 终止，可使用 bg/fg 呼叫该工作；
    * 背景中运行的进程不能等待 terminal/shell 的输入(input)
+
+## 工作管理命令
+工作管理()
