@@ -14,4 +14,4 @@ Linux 的工作管理，是指当登入系统取得 bash shell 之后，在单�
 |-|-|
 |&|将任务放到背景中执行|
 |<kbd>ctrl</kbd>+<kbd>z</kbd>|将当前任务放到背景并暂停![job1.png](https://i.loli.net/2021/08/07/dA2XFWginYpEsjG.png)|
-|`jobs [-lrs]`|观察目前的背景工作状态- l：|
+|`jobs [-lrs]`|观察目前的背景工作状态。l：除了列出 job number 与指令串之外，同时列出 PID 的号码；r：仅列出正在背景 run 的工作；s：|
