@@ -20,4 +20,4 @@
 5. * MYSQL 5.7.6 跟 MariaDB 10.1.20 版本后重置密码方法: `ALTER USER 'root'@'localhost' IDENTIFIED BY 'NEW_PASSWORD';` 或 `UPDATE mysql.user SET authentication_string = PASSWORD('MY_NEW_PASSWORD') WHERE User = 'root' AND Host = 'localhost';`
    * MYSQL 5.7.6 跟 MariaDB 10.1.20 版本前重置密码方法: `SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MY_NEW_PASSWORD');`
 6. 刷新数据库: `FLUSH PRIVILEGES;`
-7. 如果修改完还是出现 ERROR 1698 (28000): Access denied for user 'root'@'localhost' 错误，可能是 user 表中的 plugin 没更新，使用 ``
+7. 如果修改完还是出现 ERROR 1698 (28000): Access denied for user 'root'@'localhost' 错误，可能是 user 表中的 plugin 没更新，使用 `update mysql.user set authentication_string=password('MY_NEW_PASSWORD'),plugin='mysql_native_password' where user='root';` 更新 plugin 即可
